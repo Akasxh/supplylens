@@ -403,29 +403,29 @@
           return;
         }
 
-        let globalIdx = 0;
-        const indexMap = new Map();
-        modalContacts.forEach((c, i) => indexMap.set(c, i));
+        const nameToIdx = {};
+        modalContacts.forEach((c, i) => { nameToIdx[c.name + '|' + c.title] = i; });
 
         container.innerHTML = groups.map(g => {
           const rows = g.contacts.map(c => {
-            const idx = indexMap.get(c);
+            const idx = nameToIdx[c.name + '|' + c.title] ?? 0;
             const verifiedCount = (c.business_emails || []).length;
             const predictedCount = (c.predicted_emails || []).length;
             const emailBadge = verifiedCount > 0
-              ? `<span class="text-[10px] px-2 py-0.5 bg-green-50 text-green-700 rounded">${verifiedCount} verified email${verifiedCount>1?'s':''}</span>`
+              ? `<span class="text-[10px] px-2 py-0.5 bg-green-50 text-green-700 rounded">${verifiedCount} verified</span>`
               : predictedCount > 0
                 ? `<span class="text-[10px] px-2 py-0.5 bg-yellow-50 text-yellow-700 rounded" title="Guessed from name + domain">${predictedCount} predicted</span>`
                 : '';
+            const eduStr = (c.education || []).length > 0 ? `<span class="text-[10px] text-surface-300">${c.education[0]}</span>` : '';
             return `
               <div class="flex items-center justify-between py-2.5 pl-3 border-l-2 border-brand-100 mb-1.5 bg-surface-50/40 rounded-r">
                 <div class="min-w-0 flex-1">
-                  <div class="font-medium text-sm truncate">${c.name || 'Unknown'}</div>
-                  <div class="text-xs text-surface-300 truncate">${c.title || ''}${c.seniority ? ' &middot; ' + c.seniority : ''}</div>
-                  <div class="flex items-center gap-1.5 mt-1">${emailBadge}${c.location ? `<span class="text-[10px] text-surface-300">${c.location}</span>` : ''}</div>
+                  <div class="font-medium text-sm truncate">${c.name || 'Unknown'}${c.linkedin ? ` <a href="${c.linkedin}" target="_blank" onclick="event.stopPropagation()" class="text-blue-600 hover:underline text-xs ml-1">LinkedIn</a>` : ''}</div>
+                  <div class="text-xs text-surface-300 truncate">${c.title || ''}${c.seniority ? ' · ' + c.seniority : ''}</div>
+                  ${c.headline && c.headline !== c.title ? `<div class="text-[10px] text-surface-300 truncate mt-0.5">${c.headline}</div>` : ''}
+                  <div class="flex items-center gap-1.5 mt-1 flex-wrap">${emailBadge}${c.location ? `<span class="text-[10px] text-surface-300">${c.location}</span>` : ''}${eduStr}</div>
                 </div>
                 <div class="flex items-center gap-1.5 shrink-0 ml-2">
-                  ${c.linkedin ? `<a href="${c.linkedin}" target="_blank" class="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded hover:bg-blue-100 transition">in</a>` : ''}
                   <button onclick="openDraftPanel(${idx})"
                     class="text-xs px-2.5 py-1 bg-brand-600 text-white rounded hover:bg-brand-700 transition font-medium">Draft Email</button>
                 </div>

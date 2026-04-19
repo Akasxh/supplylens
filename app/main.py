@@ -205,16 +205,20 @@ async def get_contacts(domain: str = Query(...)) -> dict[str, Any]:
     people = data.get("profiles", data.get("people", []))
     contacts = []
     for p in people:
-        basic = p.get("basic_info", p.get("basic_profile", {}))
+        basic = p.get("basic_profile", p.get("basic_info", {}))
         exp = p.get("experience", {})
         contact_info = p.get("contact", {})
+        social = p.get("social_handles", {})
+        edu = p.get("education", {})
         current_list = exp.get("employment_details", {}).get("current", [])
         current = current_list[0] if isinstance(current_list, list) and current_list else (current_list if isinstance(current_list, dict) else {})
 
-        name = basic.get("full_name", "") or basic.get("name", "")
+        name = basic.get("name", "") or basic.get("full_name", "")
         loc = basic.get("location", current.get("location", {}))
         if isinstance(loc, dict):
             loc = loc.get("raw", "")
+
+        linkedin = social.get("professional_network_identifier", {}).get("profile_url", "")
 
         title = current.get("title", "")
         raw_dept = current.get("function_category", "")
@@ -222,15 +226,21 @@ async def get_contacts(domain: str = Query(...)) -> dict[str, Any]:
         business_emails = contact_info.get("business_emails", []) or []
         predicted = _predict_emails(name, domain) if not business_emails else []
 
+        headline = basic.get("headline", "")
+        schools = [s.get("school", "") for s in edu.get("schools", [])[:2] if s.get("school")]
+
         contacts.append({
             "name": name,
             "title": title,
+            "headline": headline,
             "seniority": current.get("seniority_level", ""),
             "department": department,
-            "linkedin": basic.get("professional_network_url", ""),
+            "linkedin": linkedin,
             "business_emails": business_emails,
             "predicted_emails": predicted,
             "location": loc,
+            "education": schools,
+            "profile_picture": basic.get("profile_picture_permalink", ""),
         })
 
     groups: dict[str, list[dict[str, Any]]] = {}
@@ -255,13 +265,58 @@ async def enrich_company(domain: str = Query(...)) -> dict[str, Any]:
     except Exception as e:
         raise HTTPException(status_code=502, detail=f"Crustdata API error: {e}")
 
-    companies = data.get("companies", [])
-    if not companies:
+    results = data if isinstance(data, list) else data.get("results", [])
+    if not results or not results[0].get("matches"):
         raise HTTPException(status_code=404, detail="Company not found")
 
-    company = companies[0]
+    company = results[0]["matches"][0].get("company_data", {})
     score_data = legitimacy_score(company)
     return {"company": company, "legitimacy": score_data}
+
+
+class PersonEnrichRequest(BaseModel):
+    profile_urls: list[str] | None = None
+    emails: list[str] | None = None
+
+
+@app.post("/api/person/enrich")
+async def person_enrich(req: PersonEnrichRequest) -> dict[str, Any]:
+    if not client:
+        raise HTTPException(status_code=500, detail="Client not initialized")
+    if not req.profile_urls and not req.emails:
+        raise HTTPException(status_code=400, detail="Provide profile_urls or emails")
+    try:
+        data = await client.enrich_person(
+            profile_urls=req.profile_urls,
+            emails=req.emails,
+        )
+    except httpx.HTTPStatusError as e:
+        raise HTTPException(status_code=502, detail=f"Crustdata API error {e.response.status_code}: {e.response.text[:300]}")
+    except Exception as e:
+        raise HTTPException(status_code=502, detail=f"Crustdata API error: {type(e).__name__}: {e}")
+
+    results = data if isinstance(data, list) else []
+    people = []
+    for r in results:
+        for match in r.get("matches", []):
+            pd = match.get("person_data", {})
+            bp = pd.get("basic_profile", {})
+            contact_info = pd.get("contact", {})
+            exp = pd.get("experience", {})
+            people.append({
+                "name": bp.get("name", ""),
+                "headline": bp.get("headline", ""),
+                "location": bp.get("location", {}).get("raw", ""),
+                "current_title": bp.get("current_title", ""),
+                "business_emails": contact_info.get("business_emails", []),
+                "phone_numbers": contact_info.get("phone_numbers", []),
+                "experience": exp,
+                "skills": pd.get("skills", {}),
+                "education": pd.get("education", {}),
+                "dev_platforms": pd.get("dev_platform_profiles", []),
+                "confidence": match.get("confidence_score"),
+            })
+    return {"people": people, "total": len(people)}
 
 
 @app.post("/api/voice")

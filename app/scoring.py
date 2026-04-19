@@ -14,7 +14,7 @@ def legitimacy_score(company: dict[str, Any]) -> dict[str, Any]:
 
     year_founded = basic.get("year_founded")
     if year_founded:
-        age = datetime.now().year - int(year_founded)
+        age = datetime.now().year - int(str(year_founded)[:4])
         if age >= 10:
             score += 25
             factors.append({"name": "Company Age", "value": f"{age} years", "points": 25, "status": "strong"})

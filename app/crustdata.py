@@ -17,7 +17,7 @@ class CrustdataClient:
         self._client = httpx.AsyncClient(
             base_url=BASE_URL,
             headers=self._headers,
-            timeout=30.0,
+            timeout=60.0,
         )
 
     async def search_companies(
@@ -32,6 +32,7 @@ class CrustdataClient:
             "conditions": [
                 {"field": "basic_info.industries", "type": "(.)", "value": query},
                 {"field": "basic_info.name", "type": "(.)", "value": query},
+                {"field": "taxonomy.categories", "type": "(.)", "value": query},
             ],
         }
         body: dict[str, Any] = {
@@ -42,8 +43,11 @@ class CrustdataClient:
                 "basic_info",
                 "headcount",
                 "funding",
+                "hiring",
                 "locations",
                 "taxonomy",
+                "followers",
+                "revenue",
             ],
         }
         if cursor:
@@ -52,25 +56,30 @@ class CrustdataClient:
         resp.raise_for_status()
         return resp.json()
 
-    async def enrich_company(self, domain: str) -> dict[str, Any]:
-        body = {
-            "filters": {
-                "field": "basic_info.primary_domain",
-                "type": "=",
-                "value": domain,
-            },
-            "limit": 1,
+    async def enrich_company(self, domain: str) -> list[dict[str, Any]]:
+        body: dict[str, Any] = {
+            "domains": [domain],
             "fields": [
                 "basic_info",
                 "headcount",
                 "funding",
+                "hiring",
+                "web_traffic",
+                "seo",
+                "competitors",
+                "employee_reviews",
+                "people",
                 "locations",
                 "taxonomy",
-                "competitors",
-                "seo",
+                "followers",
+                "news",
+                "revenue",
+                "software_reviews",
+                "social_profiles",
+                "status",
             ],
         }
-        resp = await self._client.post("/company/search", json=body)
+        resp = await self._client.post("/company/enrich", json=body)
         resp.raise_for_status()
         return resp.json()
 
@@ -78,9 +87,9 @@ class CrustdataClient:
         self,
         company_domain: str,
         *,
-        limit: int = 10,
+        limit: int = 25,
     ) -> dict[str, Any]:
-        body = {
+        body: dict[str, Any] = {
             "filters": {
                 "op": "and",
                 "conditions": [
@@ -92,19 +101,48 @@ class CrustdataClient:
                 ],
             },
             "limit": limit,
+            "sorts": [{"field": "professional_network.connections", "order": "desc"}],
             "fields": [
-                "basic_info",
                 "basic_profile",
                 "experience",
                 "contact",
+                "skills",
+                "social_handles",
+                "education",
             ],
         }
         resp = await self._client.post("/person/search", json=body)
         resp.raise_for_status()
         return resp.json()
 
+    async def enrich_person(
+        self,
+        *,
+        profile_urls: list[str] | None = None,
+        emails: list[str] | None = None,
+    ) -> list[dict[str, Any]]:
+        body: dict[str, Any] = {
+            "fields": [
+                "basic_profile",
+                "experience",
+                "contact",
+                "skills",
+                "education",
+                "dev_platform_profiles",
+            ],
+        }
+        if profile_urls:
+            body["professional_network_profile_urls"] = profile_urls[:25]
+        elif emails:
+            body["business_emails"] = emails
+        else:
+            return []
+        resp = await self._client.post("/person/enrich", json=body)
+        resp.raise_for_status()
+        return resp.json()
+
     async def web_search(self, query: str) -> dict[str, Any]:
-        body = {"query": query, "limit": 10}
+        body: dict[str, Any] = {"query": query, "limit": 10}
         resp = await self._client.post("/web/search/live", json=body)
         resp.raise_for_status()
         return resp.json()
