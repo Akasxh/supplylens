@@ -1,0 +1,3 @@
+[    5745ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://app.getdecimal.ai') does not match the recipient window's origin ('https://docs.composio.dev'). @ https://app.getdecimal.ai/widget/v1/widget.js:121
+[    5750ms] [WARNING] Failed to execute 'postMessage' on 'DOMWindow': The target origin provided ('https://app.getdecimal.ai') does not match the recipient window's origin ('https://docs.composio.dev'). @ https://app.getdecimal.ai/widget/v1/widget.js:191
+[   11836ms] [LOG] Error @ https://app.getdecimal.ai/149e9513-01fa-4fb0-aad4-566afd725d1b/2d206a39-8ed7-437e-a3be-862e0f06eea3/a-4-a/c.js?i=0&v=3&h=app.getdecimal.ai:0

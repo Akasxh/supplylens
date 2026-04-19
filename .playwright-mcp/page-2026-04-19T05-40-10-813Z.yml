@@ -1,0 +1,363 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Person API Search People" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Person API
+              - img [ref=e39]
+            - generic [ref=e41]: Search People
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "Person API" [ref=e50] [cursor=pointer]:
+            - /url: /api-reference/person-apis/search-people-using-filters-and-sorting
+          - generic [ref=e51]:
+            - heading "Search People" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: Search the Crustdata person database using flexible filter conditions, sorting, and cursor-based pagination. Supports filtering on hundreds of fields including job title, company, location, seniority, industry, education, and more. Use compound conditions with AND/OR logic to build complex queries. Results can be sorted and paginated using cursors.
+          - generic [ref=e65]:
+            - img "Note" [ref=e67]
+            - paragraph [ref=e70]:
+              - text: Default
+              - code [ref=e71]: rate-limit
+              - text: is 15 requests per minute. Send an email to
+              - link "gtm@crustdata.co" [ref=e72] [cursor=pointer]:
+                - /url: mailto:gtm@crustdata.co
+              - text: to discuss higher limits if needed for your use case.
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e76]:
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: POST
+              - generic [ref=e79]:
+                - generic [ref=e80]: https://api.crustdata.com
+                - generic [ref=e81]:
+                  - generic [ref=e82]: /
+                  - generic [ref=e83]: person
+                  - generic [ref=e84]: /
+                  - generic [ref=e85]: search
+            - button "Try it" [ref=e86] [cursor=pointer]:
+              - generic [ref=e87]: Try it
+              - img [ref=e88]
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - button "cURL" [ref=e93] [cursor=pointer]:
+                  - generic [ref=e94]:
+                    - paragraph [ref=e95]: cURL
+                    - img [ref=e96]
+                - generic [ref=e98]:
+                  - button "search_by_title" [ref=e99] [cursor=pointer]:
+                    - generic [ref=e100]:
+                      - paragraph [ref=e101]: search_by_title
+                      - img [ref=e102]
+                  - generic [ref=e104]:
+                    - button "Copy the contents from the code block" [ref=e107] [cursor=pointer]:
+                      - img [ref=e108]
+                    - button "Ask AI" [ref=e112] [cursor=pointer]:
+                      - img [ref=e113]
+              - region "Code snippet" [ref=e116]:
+                - generic [ref=e119]: "curl --request POST \\ --url https://api.crustdata.com/person/search \\ --header 'Authorization: Bearer <token>' \\ --header 'Content-Type: application/json' \\ --header 'x-api-version: <x-api-version>' \\ --data ' { \"filters\": { \"field\": \"experience.employment_details.current.title\", \"type\": \"=\", \"value\": \"CEO\" }, \"limit\": 1 } '"
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - button "200" [ref=e122] [cursor=pointer]:
+                  - generic [ref=e123]:
+                    - paragraph [ref=e124]: "200"
+                    - img [ref=e125]
+                - generic [ref=e127]:
+                  - button "search_by_title_response" [ref=e128] [cursor=pointer]:
+                    - generic [ref=e129]:
+                      - paragraph [ref=e130]: search_by_title_response
+                      - img [ref=e131]
+                  - generic [ref=e133]:
+                    - button "Copy the contents from the code block" [ref=e136] [cursor=pointer]:
+                      - img [ref=e137]
+                    - button "Ask AI" [ref=e141] [cursor=pointer]:
+                      - img [ref=e142]
+              - region "Code snippet" [ref=e145]:
+                - generic [ref=e148]: "{ \"profiles\": [ { \"basic_profile\": { \"name\": \"Nithin Kamath\" }, \"experience\": { \"employment_details\": { \"current\": [ { \"title\": \"CEO\" }, { \"title\": \"Founder & CEO\" } ] } } } ], \"next_cursor\": \"H4sIACIdzWkC...\", \"total_count\": 1105055 }"
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - heading "Authorizations" [level=4] [ref=e154]
+            - generic [ref=e156]:
+              - generic [ref=e159]:
+                - link "Navigate to header" [ref=e160] [cursor=pointer]:
+                  - /url: "#authorization-authorization"
+                  - img [ref=e162]
+                - generic [ref=e165] [cursor=pointer]: Authorization
+                - generic [ref=e166]:
+                  - generic [ref=e167]: string
+                  - generic [ref=e168]: header
+                  - text: required
+              - paragraph [ref=e171]: API key passed as a Bearer token in the Authorization header.
+          - generic [ref=e172]:
+            - heading "Headers" [level=4] [ref=e175]
+            - generic [ref=e177]:
+              - generic [ref=e180]:
+                - link "Navigate to header" [ref=e181] [cursor=pointer]:
+                  - /url: "#parameter-x-api-version"
+                  - img [ref=e183]
+                - generic [ref=e186] [cursor=pointer]: x-api-version
+                - generic [ref=e187]:
+                  - generic [ref=e188]: string
+                  - text: required
+              - generic [ref=e189]:
+                - paragraph [ref=e191]: API version to use. Must match a supported version (e.g., "2025-11-01").
+                - generic [ref=e192]:
+                  - generic [ref=e193]: "Example:"
+                  - paragraph [ref=e195]:
+                    - code [ref=e196]: "\"2025-11-01\""
+          - generic [ref=e197]:
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - heading "Body" [level=4] [ref=e200]
+                - generic [ref=e202]: application/json
+              - paragraph [ref=e205]: Search filters, sorting, pagination, and field selection options.
+            - generic [ref=e208]:
+              - paragraph [ref=e210]: Request body for /person/search. Use filters (optionally grouped with and/or), sorts, limit, and cursor pagination.
+              - generic [ref=e212]:
+                - generic [ref=e214]:
+                  - generic [ref=e217]:
+                    - link "Navigate to header" [ref=e218] [cursor=pointer]:
+                      - /url: "#body-filters"
+                      - img [ref=e220]
+                    - generic [ref=e223] [cursor=pointer]: filters
+                    - generic [ref=e224]:
+                      - generic [ref=e225]: object
+                      - text: required
+                  - generic [ref=e226]:
+                    - paragraph [ref=e228]:
+                      - text: Filter criteria — a single
+                      - code [ref=e229]: PersonSearchCondition
+                      - text: or an and/or
+                      - code [ref=e230]: PersonSearchConditionGroup
+                      - text: .
+                    - generic [ref=e231]:
+                      - generic [ref=e233]:
+                        - tablist "Tabs" [ref=e234]:
+                          - tab "Option 1" [selected] [ref=e235] [cursor=pointer]:
+                            - generic [ref=e236]: Option 1
+                          - tab "Option 2" [ref=e237] [cursor=pointer]:
+                            - generic [ref=e238]: Option 2
+                        - generic:
+                          - tabpanel "Option 1"
+                      - group [ref=e240]:
+                        - generic "Show child attributes" [ref=e241] [cursor=pointer]:
+                          - img [ref=e242]
+                          - paragraph [ref=e244]: Show child attributes
+                      - generic [ref=e245]:
+                        - generic [ref=e246]: "Example:"
+                        - code [ref=e250]: "{ \"field\": \"experience.employment_details.current.title\", \"type\": \"=\", \"value\": \"CEO\" }"
+                - generic [ref=e252]:
+                  - generic [ref=e255]:
+                    - link "Navigate to header" [ref=e256] [cursor=pointer]:
+                      - /url: "#body-sorts"
+                      - img [ref=e258]
+                    - generic [ref=e261] [cursor=pointer]: sorts
+                    - generic [ref=e263]: object[]
+                  - generic [ref=e264]:
+                    - paragraph [ref=e266]: Sort directives applied to matched people in order.
+                    - group [ref=e272]:
+                      - generic "Show child attributes" [ref=e273] [cursor=pointer]:
+                        - img [ref=e274]
+                        - paragraph [ref=e276]: Show child attributes
+                    - generic [ref=e277]:
+                      - generic [ref=e278]: "Example:"
+                      - code [ref=e282]: "[ { \"field\": \"crustdata_person_id\", \"order\": \"asc\" } ]"
+                - generic [ref=e284]:
+                  - generic [ref=e287]:
+                    - link "Navigate to header" [ref=e288] [cursor=pointer]:
+                      - /url: "#body-limit"
+                      - img [ref=e290]
+                    - generic [ref=e293] [cursor=pointer]: limit
+                    - generic [ref=e294]:
+                      - generic [ref=e295]: integer
+                      - generic [ref=e296]: default:20
+                  - generic [ref=e298]:
+                    - text: "Required range:"
+                    - code [ref=e299]: 1 <= x <= 1000
+                - generic [ref=e301]:
+                  - generic [ref=e304]:
+                    - link "Navigate to header" [ref=e305] [cursor=pointer]:
+                      - /url: "#body-count"
+                      - img [ref=e307]
+                    - generic [ref=e310] [cursor=pointer]: count
+                    - generic [ref=e312]: integer
+                  - generic [ref=e313]:
+                    - paragraph [ref=e315]: Alias for limit.
+                    - generic [ref=e316]:
+                      - text: "Required range:"
+                      - code [ref=e317]: 1 <= x <= 1000
+                    - generic [ref=e318]:
+                      - generic [ref=e319]: "Example:"
+                      - paragraph [ref=e321]:
+                        - code [ref=e322]: "20"
+                - generic [ref=e324]:
+                  - generic [ref=e327]:
+                    - link "Navigate to header" [ref=e328] [cursor=pointer]:
+                      - /url: "#body-cursor-one-of-0"
+                      - img [ref=e330]
+                    - generic [ref=e333] [cursor=pointer]: cursor
+                    - generic [ref=e335]: string | null
+                  - generic [ref=e336]:
+                    - paragraph [ref=e338]:
+                      - text: Pagination cursor from a previous response's
+                      - code [ref=e339]: next_cursor
+                      - text: . Omit on the first page.
+                    - generic [ref=e340]:
+                      - generic [ref=e341]: "Example:"
+                      - paragraph [ref=e343]:
+                        - code [ref=e344]: "\"H4sIACIdzWkC...\""
+                - generic [ref=e346]:
+                  - generic [ref=e349]:
+                    - link "Navigate to header" [ref=e350] [cursor=pointer]:
+                      - /url: "#body-post-processing"
+                      - img [ref=e352]
+                    - generic [ref=e355] [cursor=pointer]: post_processing
+                    - generic [ref=e357]: object
+                  - generic [ref=e359]:
+                    - paragraph [ref=e362]: Post-processing options applied to search results (e.g., exclusions).
+                    - group [ref=e364]:
+                      - generic "Show child attributes" [ref=e365] [cursor=pointer]:
+                        - img [ref=e366]
+                        - paragraph [ref=e368]: Show child attributes
+                    - generic [ref=e369]:
+                      - generic [ref=e370]: "Example:"
+                      - code [ref=e374]: "{ \"exclude_profiles\": [\"https://www.linkedin.com/in/jane-doe\"], \"exclude_names\": [\"Jane Doe\"] }"
+                - generic [ref=e376]:
+                  - generic [ref=e379]:
+                    - link "Navigate to header" [ref=e380] [cursor=pointer]:
+                      - /url: "#body-return-query"
+                      - img [ref=e382]
+                    - generic [ref=e385] [cursor=pointer]: return_query
+                    - generic [ref=e386]:
+                      - generic [ref=e387]: boolean
+                      - generic [ref=e388]: default:false
+                  - paragraph [ref=e391]: Debug flag - include search query in response
+                - generic [ref=e393]:
+                  - generic [ref=e396]:
+                    - link "Navigate to header" [ref=e397] [cursor=pointer]:
+                      - /url: "#body-preview"
+                      - img [ref=e399]
+                    - generic [ref=e402] [cursor=pointer]: preview
+                    - generic [ref=e403]:
+                      - generic [ref=e404]: boolean
+                      - generic [ref=e405]: default:false
+                  - paragraph [ref=e408]: Preview mode - return only basic fields for faster response
+          - generic [ref=e409]:
+            - generic [ref=e410]:
+              - generic [ref=e411]:
+                - heading "Response" [level=4] [ref=e412]
+                - generic [ref=e414]:
+                  - button "200" [ref=e416] [cursor=pointer]:
+                    - generic [ref=e417]:
+                      - generic [ref=e418]: "200"
+                      - img [ref=e419]
+                  - generic [ref=e421]:
+                    - button "application/json" [disabled]:
+                      - generic:
+                        - generic: application/json
+              - paragraph [ref=e424]: People matching the search criteria
+            - generic [ref=e427]:
+              - paragraph [ref=e429]: Paginated response from the person search endpoint containing matched profiles and pagination metadata.
+              - generic [ref=e431]:
+                - generic [ref=e433]:
+                  - generic [ref=e436]:
+                    - link "Navigate to header" [ref=e437] [cursor=pointer]:
+                      - /url: "#response-profiles"
+                      - img [ref=e439]
+                    - generic [ref=e442] [cursor=pointer]: profiles
+                    - generic [ref=e443]:
+                      - generic [ref=e444]: object[]
+                      - text: required
+                  - generic [ref=e445]:
+                    - paragraph [ref=e447]: Array of person profiles matching the search criteria
+                    - group [ref=e453]:
+                      - generic "Show child attributes" [ref=e454] [cursor=pointer]:
+                        - img [ref=e455]
+                        - paragraph [ref=e457]: Show child attributes
+                    - generic [ref=e458]:
+                      - generic [ref=e459]: "Example:"
+                      - code [ref=e463]: "[]"
+                - generic [ref=e465]:
+                  - generic [ref=e468]:
+                    - link "Navigate to header" [ref=e469] [cursor=pointer]:
+                      - /url: "#response-next-cursor-one-of-0"
+                      - img [ref=e471]
+                    - generic [ref=e474] [cursor=pointer]: next_cursor
+                    - generic [ref=e476]: string | null
+                  - generic [ref=e477]:
+                    - paragraph [ref=e479]: Opaque cursor string for fetching the next page of results. Pass this value as the cursor parameter in subsequent requests. Null when no more results are available.
+                    - generic [ref=e480]:
+                      - generic [ref=e481]: "Example:"
+                      - paragraph [ref=e483]:
+                        - code [ref=e484]: "\"H4sIACIdzWkC_xWMMQ7DIAwAv...\""
+                - generic [ref=e486]:
+                  - generic [ref=e489]:
+                    - link "Navigate to header" [ref=e490] [cursor=pointer]:
+                      - /url: "#response-total-count-one-of-0"
+                      - img [ref=e492]
+                    - generic [ref=e495] [cursor=pointer]: total_count
+                    - generic [ref=e497]: integer | null
+                  - generic [ref=e498]:
+                    - paragraph [ref=e500]: Total number of profiles matching the search criteria across all pages
+                    - generic [ref=e501]:
+                      - generic [ref=e502]: "Example:"
+                      - paragraph [ref=e504]:
+                        - code [ref=e505]: "1105055"
+      - generic [ref=e507]:
+        - paragraph [ref=e508]: Was this page helpful?
+        - generic [ref=e510]:
+          - button "Yes" [ref=e511] [cursor=pointer]:
+            - img [ref=e512]
+            - generic [ref=e514]: "Yes"
+          - button "No" [ref=e515] [cursor=pointer]:
+            - img [ref=e516]
+            - generic [ref=e518]: "No"
+      - generic [ref=e520]:
+        - textbox "Ask a question..." [ref=e521]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e522]:
+          - img [ref=e523]
+      - contentinfo [ref=e525]:
+        - generic [ref=e526]:
+          - link "x" [ref=e527] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e528]: x
+            - img [ref=e529]
+          - link "linkedin" [ref=e530] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e531]: linkedin
+            - img [ref=e532]

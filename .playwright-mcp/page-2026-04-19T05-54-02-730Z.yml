@@ -1,0 +1,1469 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Company Company Search" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Company
+              - img [ref=e39]
+            - generic [ref=e41]: Company Search
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - link "Products" [ref=e50] [cursor=pointer]:
+                - /url: /company-docs/quickstart
+              - img [ref=e51]
+            - link "Company" [ref=e54] [cursor=pointer]:
+              - /url: /company-docs/quickstart
+          - generic [ref=e55]:
+            - heading "Company Search" [level=1] [ref=e56]
+            - generic [ref=e57]:
+              - button "Copy page" [ref=e58] [cursor=pointer]:
+                - generic [ref=e59]:
+                  - img [ref=e60]
+                  - generic [ref=e63]: Copy page
+              - button "More actions" [ref=e64] [cursor=pointer]:
+                - img [ref=e65]
+        - paragraph [ref=e68]: Learn how to search for companies using structured filters, from simple domain lookups to advanced multi-filter queries with sorting and pagination.
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - strong [ref=e71]: Use this when
+          - text: you want to explore a market, build a target account list, or segment companies by criteria like geography, industry, funding, or headcount.
+        - generic [ref=e72]: The Company Search API lets you find companies by domain, country, industry, funding, headcount, and more. This page walks you through the API step by step, starting with the simplest possible request and building up to advanced queries.
+        - generic [ref=e73]: "Every request goes to the same endpoint:"
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - button "Report incorrect code" [ref=e77] [cursor=pointer]:
+              - img [ref=e78]
+            - button "Copy the contents from the code block" [ref=e81] [cursor=pointer]:
+              - img [ref=e82]
+            - button "Ask AI" [ref=e86] [cursor=pointer]:
+              - img [ref=e87]
+          - code [ref=e93]:
+            - generic [ref=e94]: POST https://api.crustdata.com/company/search
+        - generic [ref=e95]:
+          - img "Note" [ref=e97]
+          - generic [ref=e100]:
+            - text: Replace
+            - code [ref=e101]: YOUR_API_KEY
+            - text: in each example with your actual API key. All requests require the
+            - code [ref=e102]: "x-api-version: 2025-11-01"
+            - text: header.
+        - heading "Navigate to header Request body" [level=3] [ref=e103]:
+          - link "Navigate to header" [ref=e104] [cursor=pointer]:
+            - /url: "#request-body"
+            - img [ref=e106]
+          - generic [ref=e108] [cursor=pointer]: Request body
+        - table [ref=e111]:
+          - rowgroup [ref=e112]:
+            - row "Parameter Type Required Default Description" [ref=e113]:
+              - columnheader "Parameter" [ref=e114]
+              - columnheader "Type" [ref=e115]
+              - columnheader "Required" [ref=e116]
+              - columnheader "Default" [ref=e117]
+              - columnheader "Description" [ref=e118]
+          - rowgroup [ref=e119]:
+            - row "filters object No — A single filter condition or a nested and/or group. Omit to match all companies." [ref=e120]:
+              - cell "filters" [ref=e121]:
+                - code [ref=e122]: filters
+              - cell "object" [ref=e123]
+              - cell "No" [ref=e124]
+              - cell "—" [ref=e125]
+              - cell "A single filter condition or a nested and/or group. Omit to match all companies." [ref=e126]:
+                - text: A single filter condition or a nested
+                - code [ref=e127]: and
+                - text: /
+                - code [ref=e128]: or
+                - text: group. Omit to match all companies.
+            - row "fields string[] No all fields Dot-path fields to include in each company object. Always specify in production." [ref=e129]:
+              - cell "fields" [ref=e130]:
+                - code [ref=e131]: fields
+              - cell "string[]" [ref=e132]
+              - cell "No" [ref=e133]
+              - cell "all fields" [ref=e134]
+              - cell "Dot-path fields to include in each company object. Always specify in production." [ref=e135]
+            - row "sorts object[] No — Sort rules. Each has column (field path) and order (asc or desc)." [ref=e136]:
+              - cell "sorts" [ref=e137]:
+                - code [ref=e138]: sorts
+              - cell "object[]" [ref=e139]
+              - cell "No" [ref=e140]
+              - cell "—" [ref=e141]
+              - cell "Sort rules. Each has column (field path) and order (asc or desc)." [ref=e142]:
+                - text: Sort rules. Each has
+                - code [ref=e143]: column
+                - text: (field path) and
+                - code [ref=e144]: order
+                - text: (
+                - code [ref=e145]: asc
+                - text: or
+                - code [ref=e146]: desc
+                - text: ).
+            - 'row "limit integer No 20 Companies per page. Max: 1000." [ref=e147]':
+              - cell "limit" [ref=e148]:
+                - code [ref=e149]: limit
+              - cell "integer" [ref=e150]
+              - cell "No" [ref=e151]
+              - cell "20" [ref=e152]:
+                - code [ref=e153]: "20"
+              - 'cell "Companies per page. Max: 1000." [ref=e154]':
+                - text: "Companies per page. Max:"
+                - code [ref=e155]: "1000"
+                - text: .
+            - row "cursor string No — Pagination cursor from a previous response." [ref=e156]:
+              - cell "cursor" [ref=e157]:
+                - code [ref=e158]: cursor
+              - cell "string" [ref=e159]
+              - cell "No" [ref=e160]
+              - cell "—" [ref=e161]
+              - cell "Pagination cursor from a previous response." [ref=e162]
+        - heading "Navigate to header Response body" [level=3] [ref=e163]:
+          - link "Navigate to header" [ref=e164] [cursor=pointer]:
+            - /url: "#response-body"
+            - img [ref=e166]
+          - generic [ref=e168] [cursor=pointer]: Response body
+        - table [ref=e171]:
+          - rowgroup [ref=e172]:
+            - row "Field Type Description" [ref=e173]:
+              - columnheader "Field" [ref=e174]
+              - columnheader "Type" [ref=e175]
+              - columnheader "Description" [ref=e176]
+          - rowgroup [ref=e177]:
+            - row "companies array Matching company records with requested fields." [ref=e178]:
+              - cell "companies" [ref=e179]:
+                - code [ref=e180]: companies
+              - cell "array" [ref=e181]
+              - cell "Matching company records with requested fields." [ref=e182]:
+                - text: Matching company records with requested
+                - code [ref=e183]: fields
+                - text: .
+            - row "next_cursor string or null Cursor for the next page. null when no more pages." [ref=e184]:
+              - cell "next_cursor" [ref=e185]:
+                - code [ref=e186]: next_cursor
+              - cell "string or null" [ref=e187]
+              - cell "Cursor for the next page. null when no more pages." [ref=e188]:
+                - text: Cursor for the next page.
+                - code [ref=e189]: "null"
+                - text: when no more pages.
+            - row "total_count integer or null Total matching companies (may be null for broad queries)." [ref=e190]:
+              - cell "total_count" [ref=e191]:
+                - code [ref=e192]: total_count
+              - cell "integer or null" [ref=e193]
+              - cell "Total matching companies (may be null for broad queries)." [ref=e194]:
+                - text: Total matching companies (may be
+                - code [ref=e195]: "null"
+                - text: for broad queries).
+        - heading "Navigate to header Rate limits and credits" [level=3] [ref=e196]:
+          - link "Navigate to header" [ref=e197] [cursor=pointer]:
+            - /url: "#rate-limits-and-credits"
+            - img [ref=e199]
+          - generic [ref=e201] [cursor=pointer]: Rate limits and credits
+        - generic [ref=e202]:
+          - img "Note" [ref=e204]
+          - generic [ref=e207]:
+            - strong [ref=e208]: Current platform behavior
+            - text: "— not specified in the OpenAPI contract:"
+        - generic [ref=e209]:
+          - img [ref=e211]
+          - generic [ref=e213]:
+            - strong [ref=e214]: "Pricing:"
+            - code [ref=e215]: 0.03 credits per result returned
+            - text: . A request with no results does not consume credits.
+        - list [ref=e216]:
+          - listitem [ref=e217]:
+            - strong [ref=e218]: "Rate limit:"
+            - text: 15 requests per minute.
+        - generic [ref=e219]:
+          - img "Info" [ref=e221]
+          - generic [ref=e224]:
+            - text: Search results are intentionally lightweight so you can explore and segment companies at a low credit cost. When you need the full company profile, use
+            - link "Company Enrich" [ref=e225] [cursor=pointer]:
+              - /url: /company-docs/enrichment
+            - text: .
+        - separator [ref=e226]
+        - 'heading "Navigate to header Your first search: find a company by domain" [level=2] [ref=e227]':
+          - link "Navigate to header" [ref=e228] [cursor=pointer]:
+            - /url: "#your-first-search-find-a-company-by-domain"
+            - img [ref=e230]
+          - generic [ref=e232] [cursor=pointer]: "Your first search: find a company by domain"
+        - generic [ref=e233]:
+          - text: The simplest search finds a company by its exact primary domain. You pass a single filter with the
+          - code [ref=e234]: =
+          - text: operator.
+        - generic [ref=e235]:
+          - generic [ref=e236]:
+            - tablist [ref=e237]:
+              - tab "Request" [selected] [ref=e238] [cursor=pointer]:
+                - generic [ref=e239]: Request
+              - tab "Response" [ref=e241] [cursor=pointer]:
+                - generic [ref=e242]: Response
+            - generic [ref=e243]:
+              - button "Report incorrect code" [ref=e245] [cursor=pointer]:
+                - img [ref=e246]
+              - button "Copy the contents from the code block" [ref=e249] [cursor=pointer]:
+                - img [ref=e250]
+              - button "Ask AI" [ref=e254] [cursor=pointer]:
+                - img [ref=e255]
+          - tabpanel "Request" [ref=e259]:
+            - code [ref=e263]:
+              - generic [ref=e264]: curl --request POST \
+              - generic [ref=e265]: "--url https://api.crustdata.com/company/search \\"
+              - generic [ref=e266]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e267]: "--header 'content-type: application/json' \\"
+              - generic [ref=e268]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e269]: "--data '{"
+              - generic [ref=e270]: "\"filters\": {"
+              - generic [ref=e271]: "\"field\": \"basic_info.primary_domain\","
+              - generic [ref=e272]: "\"type\": \"=\","
+              - generic [ref=e273]: "\"value\": \"retool.com\""
+              - generic [ref=e274]: "},"
+              - generic [ref=e275]: "\"limit\": 1,"
+              - generic [ref=e276]: "\"fields\": ["
+              - generic [ref=e277]: "\"crustdata_company_id\","
+              - generic [ref=e278]: "\"basic_info.name\","
+              - generic [ref=e279]: "\"basic_info.primary_domain\","
+              - generic [ref=e280]: "\"basic_info.year_founded\","
+              - generic [ref=e281]: "\"headcount.total\","
+              - generic [ref=e282]: "\"locations.hq_country\","
+              - generic [ref=e283]: "\"funding.total_investment_usd\""
+              - generic [ref=e284]: "]"
+              - generic [ref=e285]: "}'"
+        - heading "Navigate to header Understanding the response" [level=3] [ref=e286]:
+          - link "Navigate to header" [ref=e287] [cursor=pointer]:
+            - /url: "#understanding-the-response"
+            - img [ref=e289]
+          - generic [ref=e291] [cursor=pointer]: Understanding the response
+        - generic [ref=e292]: "Every search response has three fields:"
+        - list [ref=e293]:
+          - listitem [ref=e294]:
+            - strong [ref=e295]:
+              - code [ref=e296]: companies
+            - text: — an array of matching company records. Each record contains the fields you requested in
+            - code [ref=e297]: fields
+            - text: .
+          - listitem [ref=e298]:
+            - strong [ref=e299]:
+              - code [ref=e300]: next_cursor
+            - text: — a pagination token. Pass it in the next request to get the next page.
+            - code [ref=e301]: "null"
+            - text: means there are no more pages.
+          - listitem [ref=e302]:
+            - strong [ref=e303]:
+              - code [ref=e304]: total_count
+            - text: — how many companies match your filters across the full database (may be
+            - code [ref=e305]: "null"
+            - text: for very broad queries).
+        - heading "Navigate to header How to interpret results" [level=3] [ref=e306]:
+          - link "Navigate to header" [ref=e307] [cursor=pointer]:
+            - /url: "#how-to-interpret-results"
+            - img [ref=e309]
+          - generic [ref=e311] [cursor=pointer]: How to interpret results
+        - list [ref=e312]:
+          - listitem [ref=e313]:
+            - strong [ref=e314]:
+              - code [ref=e315]: next_cursor
+              - text: is
+              - code [ref=e316]: "null"
+              - text: ":"
+            - text: You have reached the last page. No more results.
+          - listitem [ref=e317]:
+            - strong [ref=e318]:
+              - code [ref=e319]: total_count
+              - text: is
+              - code [ref=e320]: "null"
+              - text: ":"
+            - text: The exact count is too expensive to compute for this query. Use
+            - code [ref=e321]: next_cursor
+            - text: to determine if more pages exist.
+          - listitem [ref=e322]:
+            - strong [ref=e323]:
+              - text: Empty
+              - code [ref=e324]: companies
+              - text: "array:"
+            - text: No companies matched your filters. Broaden your filters or check values with
+            - link "Autocomplete" [ref=e325] [cursor=pointer]:
+              - /url: /company-docs/autocomplete
+            - text: .
+        - heading "Navigate to header Controlling which fields come back" [level=3] [ref=e326]:
+          - link "Navigate to header" [ref=e327] [cursor=pointer]:
+            - /url: "#controlling-which-fields-come-back"
+            - img [ref=e329]
+          - generic [ref=e331] [cursor=pointer]: Controlling which fields come back
+        - generic [ref=e332]:
+          - text: The
+          - code [ref=e333]: fields
+          - text: parameter lets you pick exactly which fields to include. This keeps your responses small and focused. If you omit
+          - code [ref=e334]: fields
+          - text: ", the API returns all available fields for each company."
+        - separator [ref=e335]
+        - heading "Navigate to header Combine filters with and" [level=2] [ref=e336]:
+          - link "Navigate to header" [ref=e337] [cursor=pointer]:
+            - /url: "#combine-filters-with-and"
+            - img [ref=e339]
+          - generic [ref=e341] [cursor=pointer]:
+            - text: Combine filters with
+            - code [ref=e342]: and
+        - generic [ref=e343]:
+          - text: Real searches need more than one criterion. Wrap multiple conditions inside an
+          - code [ref=e344]: "op: \"and\""
+          - text: group to require all of them.
+        - generic [ref=e345]: This search finds software development companies headquartered in the USA, sorted by headcount (largest first).
+        - generic [ref=e346]:
+          - generic [ref=e347]:
+            - tablist [ref=e348]:
+              - tab "Request" [selected] [ref=e349] [cursor=pointer]:
+                - generic [ref=e350]: Request
+              - tab "Response" [ref=e352] [cursor=pointer]:
+                - generic [ref=e353]: Response
+            - generic [ref=e354]:
+              - button "Report incorrect code" [ref=e356] [cursor=pointer]:
+                - img [ref=e357]
+              - button "Copy the contents from the code block" [ref=e360] [cursor=pointer]:
+                - img [ref=e361]
+              - button "Ask AI" [ref=e365] [cursor=pointer]:
+                - img [ref=e366]
+          - tabpanel "Request" [ref=e370]:
+            - code [ref=e374]:
+              - generic [ref=e375]: curl --request POST \
+              - generic [ref=e376]: "--url https://api.crustdata.com/company/search \\"
+              - generic [ref=e377]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e378]: "--header 'content-type: application/json' \\"
+              - generic [ref=e379]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e380]: "--data '{"
+              - generic [ref=e381]: "\"filters\": {"
+              - generic [ref=e382]: "\"op\": \"and\","
+              - generic [ref=e383]: "\"conditions\": ["
+              - generic [ref=e384]: "{"
+              - generic [ref=e385]: "\"field\": \"taxonomy.professional_network_industry\","
+              - generic [ref=e386]: "\"type\": \"=\","
+              - generic [ref=e387]: "\"value\": \"Software Development\""
+              - generic [ref=e388]: "},"
+              - generic [ref=e389]: "{"
+              - generic [ref=e390]: "\"field\": \"locations.hq_country\","
+              - generic [ref=e391]: "\"type\": \"in\","
+              - generic [ref=e392]: "\"value\": [\"USA\"]"
+              - generic [ref=e393]: "}"
+              - generic [ref=e394]: "]"
+              - generic [ref=e395]: "},"
+              - generic [ref=e396]: "\"sorts\": [{\"column\": \"headcount.total\", \"order\": \"desc\"}],"
+              - generic [ref=e397]: "\"limit\": 2,"
+              - generic [ref=e398]: "\"fields\": ["
+              - generic [ref=e399]: "\"crustdata_company_id\","
+              - generic [ref=e400]: "\"basic_info.name\","
+              - generic [ref=e401]: "\"basic_info.primary_domain\","
+              - generic [ref=e402]: "\"headcount.total\","
+              - generic [ref=e403]: "\"locations.hq_country\""
+              - generic [ref=e404]: "]"
+              - generic [ref=e405]: "}'"
+        - generic [ref=e406]:
+          - img "Note" [ref=e408]
+          - generic [ref=e410]: Response trimmed for clarity.
+        - generic [ref=e411]:
+          - text: "The key difference from the first example: instead of a single"
+          - code [ref=e412]: filters
+          - text: object, you now have a group with
+          - code [ref=e413]: "op: \"and\""
+          - text: and a
+          - code [ref=e414]: conditions
+          - text: array. Every condition must match for a company to be included.
+        - separator [ref=e415]
+        - heading "Navigate to header Use or and nested logic" [level=2] [ref=e416]:
+          - link "Navigate to header" [ref=e417] [cursor=pointer]:
+            - /url: "#use-or-and-nested-logic"
+            - img [ref=e419]
+          - generic [ref=e421] [cursor=pointer]:
+            - text: Use
+            - code [ref=e422]: or
+            - text: and nested logic
+        - generic [ref=e423]:
+          - text: Use
+          - code [ref=e424]: "op: \"or\""
+          - text: when a company should match
+          - strong [ref=e425]: any
+          - text: condition. You can also nest
+          - code [ref=e426]: and
+          - text: /
+          - code [ref=e427]: or
+          - text: groups for complex queries.
+        - generic [ref=e428]: This search finds companies that are either in the software development industry or have over $5M in total investment, AND are headquartered in the USA.
+        - generic [ref=e429]:
+          - generic [ref=e430]:
+            - tablist [ref=e431]:
+              - tab "Request" [selected] [ref=e432] [cursor=pointer]:
+                - generic [ref=e433]: Request
+            - generic [ref=e435]:
+              - button "Report incorrect code" [ref=e437] [cursor=pointer]:
+                - img [ref=e438]
+              - button "Copy the contents from the code block" [ref=e441] [cursor=pointer]:
+                - img [ref=e442]
+              - button "Ask AI" [ref=e446] [cursor=pointer]:
+                - img [ref=e447]
+          - tabpanel "Request" [ref=e451]:
+            - code [ref=e455]:
+              - generic [ref=e456]: curl --request POST \
+              - generic [ref=e457]: "--url https://api.crustdata.com/company/search \\"
+              - generic [ref=e458]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e459]: "--header 'content-type: application/json' \\"
+              - generic [ref=e460]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e461]: "--data '{"
+              - generic [ref=e462]: "\"filters\": {"
+              - generic [ref=e463]: "\"op\": \"and\","
+              - generic [ref=e464]: "\"conditions\": ["
+              - generic [ref=e465]: "{"
+              - generic [ref=e466]: "\"op\": \"or\","
+              - generic [ref=e467]: "\"conditions\": ["
+              - generic [ref=e468]: "{"
+              - generic [ref=e469]: "\"field\": \"taxonomy.professional_network_industry\","
+              - generic [ref=e470]: "\"type\": \"=\","
+              - generic [ref=e471]: "\"value\": \"Software Development\""
+              - generic [ref=e472]: "},"
+              - generic [ref=e473]: "{"
+              - generic [ref=e474]: "\"field\": \"funding.total_investment_usd\","
+              - generic [ref=e475]: "\"type\": \">\","
+              - generic [ref=e476]: "\"value\": 5000000"
+              - generic [ref=e477]: "}"
+              - generic [ref=e478]: "]"
+              - generic [ref=e479]: "},"
+              - generic [ref=e480]: "{"
+              - generic [ref=e481]: "\"field\": \"locations.hq_country\","
+              - generic [ref=e482]: "\"type\": \"=\","
+              - generic [ref=e483]: "\"value\": \"USA\""
+              - generic [ref=e484]: "}"
+              - generic [ref=e485]: "]"
+              - generic [ref=e486]: "},"
+              - generic [ref=e487]: "\"sorts\": [{\"column\": \"headcount.total\", \"order\": \"desc\"}],"
+              - generic [ref=e488]: "\"limit\": 2,"
+              - generic [ref=e489]: "\"fields\": ["
+              - generic [ref=e490]: "\"crustdata_company_id\","
+              - generic [ref=e491]: "\"basic_info.name\","
+              - generic [ref=e492]: "\"headcount.total\","
+              - generic [ref=e493]: "\"taxonomy.professional_network_industry\","
+              - generic [ref=e494]: "\"funding.total_investment_usd\""
+              - generic [ref=e495]: "]"
+              - generic [ref=e496]: "}'"
+        - generic [ref=e497]:
+          - text: The outer
+          - code [ref=e498]: and
+          - text: "requires both conditions: the inner"
+          - code [ref=e499]: or
+          - text: matches either software development companies or well-funded companies, and the outer condition restricts to US-headquartered companies.
+        - separator [ref=e500]
+        - heading "Navigate to header Find well-funded companies in a country" [level=2] [ref=e501]:
+          - link "Navigate to header" [ref=e502] [cursor=pointer]:
+            - /url: "#find-well-funded-companies-in-a-country"
+            - img [ref=e504]
+          - generic [ref=e506] [cursor=pointer]: Find well-funded companies in a country
+        - generic [ref=e507]: "This is a common pattern for sales and investor research: find companies in a specific market with significant funding. This search finds US-based companies with over $10M in total investment, sorted by funding (highest first)."
+        - generic [ref=e508]:
+          - generic [ref=e509]:
+            - tablist [ref=e510]:
+              - tab "Request" [selected] [ref=e511] [cursor=pointer]:
+                - generic [ref=e512]: Request
+              - tab "Response" [ref=e514] [cursor=pointer]:
+                - generic [ref=e515]: Response
+            - generic [ref=e516]:
+              - button "Report incorrect code" [ref=e518] [cursor=pointer]:
+                - img [ref=e519]
+              - button "Copy the contents from the code block" [ref=e522] [cursor=pointer]:
+                - img [ref=e523]
+              - button "Ask AI" [ref=e527] [cursor=pointer]:
+                - img [ref=e528]
+          - tabpanel "Request" [ref=e532]:
+            - code [ref=e536]:
+              - generic [ref=e537]: curl --request POST \
+              - generic [ref=e538]: "--url https://api.crustdata.com/company/search \\"
+              - generic [ref=e539]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e540]: "--header 'content-type: application/json' \\"
+              - generic [ref=e541]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e542]: "--data '{"
+              - generic [ref=e543]: "\"filters\": {"
+              - generic [ref=e544]: "\"op\": \"and\","
+              - generic [ref=e545]: "\"conditions\": ["
+              - generic [ref=e546]: "{"
+              - generic [ref=e547]: "\"field\": \"locations.hq_country\","
+              - generic [ref=e548]: "\"type\": \"in\","
+              - generic [ref=e549]: "\"value\": [\"USA\"]"
+              - generic [ref=e550]: "},"
+              - generic [ref=e551]: "{"
+              - generic [ref=e552]: "\"field\": \"funding.total_investment_usd\","
+              - generic [ref=e553]: "\"type\": \">\","
+              - generic [ref=e554]: "\"value\": 10000000"
+              - generic [ref=e555]: "}"
+              - generic [ref=e556]: "]"
+              - generic [ref=e557]: "},"
+              - generic [ref=e558]: "\"sorts\": [{\"column\": \"funding.total_investment_usd\", \"order\": \"desc\"}],"
+              - generic [ref=e559]: "\"limit\": 2,"
+              - generic [ref=e560]: "\"fields\": ["
+              - generic [ref=e561]: "\"crustdata_company_id\","
+              - generic [ref=e562]: "\"basic_info.name\","
+              - generic [ref=e563]: "\"basic_info.primary_domain\","
+              - generic [ref=e564]: "\"locations.hq_country\","
+              - generic [ref=e565]: "\"funding.total_investment_usd\","
+              - generic [ref=e566]: "\"headcount.total\""
+              - generic [ref=e567]: "]"
+              - generic [ref=e568]: "}'"
+        - generic [ref=e569]:
+          - img "Note" [ref=e571]
+          - generic [ref=e573]: Response trimmed for clarity.
+        - heading "Navigate to header How sorts work" [level=3] [ref=e574]:
+          - link "Navigate to header" [ref=e575] [cursor=pointer]:
+            - /url: "#how-sorts-work"
+            - img [ref=e577]
+          - generic [ref=e579] [cursor=pointer]: How sorts work
+        - generic [ref=e580]:
+          - text: The
+          - code [ref=e581]: sorts
+          - text: "parameter orders your results. Each sort rule needs:"
+        - list [ref=e582]:
+          - listitem [ref=e583]:
+            - strong [ref=e584]:
+              - code [ref=e585]: column
+            - text: — a dot-path field (e.g.,
+            - code [ref=e586]: funding.total_investment_usd
+            - text: ","
+            - code [ref=e587]: headcount.total
+            - text: ","
+            - code [ref=e588]: basic_info.name
+            - text: ).
+          - listitem [ref=e589]:
+            - strong [ref=e590]:
+              - code [ref=e591]: order
+            - text: — either
+            - code [ref=e592]: asc
+            - text: (ascending) or
+            - code [ref=e593]: desc
+            - text: (descending).
+        - generic [ref=e594]: You can provide multiple sort rules. The API applies them in order.
+        - separator [ref=e595]
+        - heading "Navigate to header Find recently founded companies" [level=2] [ref=e596]:
+          - link "Navigate to header" [ref=e597] [cursor=pointer]:
+            - /url: "#find-recently-founded-companies"
+            - img [ref=e599]
+          - generic [ref=e601] [cursor=pointer]: Find recently founded companies
+        - generic [ref=e602]:
+          - text: Use comparison operators like
+          - code [ref=e603]: ">"
+          - text: and
+          - code [ref=e604]: <
+          - text: on numeric or date fields. This search finds companies founded after 2020, sorted by headcount.
+        - generic [ref=e605]:
+          - generic [ref=e606]:
+            - tablist [ref=e607]:
+              - tab "Request" [selected] [ref=e608] [cursor=pointer]:
+                - generic [ref=e609]: Request
+              - tab "Response" [ref=e611] [cursor=pointer]:
+                - generic [ref=e612]: Response
+            - generic [ref=e613]:
+              - button "Report incorrect code" [ref=e615] [cursor=pointer]:
+                - img [ref=e616]
+              - button "Copy the contents from the code block" [ref=e619] [cursor=pointer]:
+                - img [ref=e620]
+              - button "Ask AI" [ref=e624] [cursor=pointer]:
+                - img [ref=e625]
+          - tabpanel "Request" [ref=e629]:
+            - code [ref=e633]:
+              - generic [ref=e634]: curl --request POST \
+              - generic [ref=e635]: "--url https://api.crustdata.com/company/search \\"
+              - generic [ref=e636]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e637]: "--header 'content-type: application/json' \\"
+              - generic [ref=e638]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e639]: "--data '{"
+              - generic [ref=e640]: "\"filters\": {"
+              - generic [ref=e641]: "\"field\": \"basic_info.year_founded\","
+              - generic [ref=e642]: "\"type\": \">\","
+              - generic [ref=e643]: "\"value\": 2020"
+              - generic [ref=e644]: "},"
+              - generic [ref=e645]: "\"sorts\": [{\"column\": \"headcount.total\", \"order\": \"desc\"}],"
+              - generic [ref=e646]: "\"limit\": 2,"
+              - generic [ref=e647]: "\"fields\": ["
+              - generic [ref=e648]: "\"crustdata_company_id\","
+              - generic [ref=e649]: "\"basic_info.name\","
+              - generic [ref=e650]: "\"basic_info.year_founded\","
+              - generic [ref=e651]: "\"headcount.total\","
+              - generic [ref=e652]: "\"locations.hq_country\""
+              - generic [ref=e653]: "]"
+              - generic [ref=e654]: "}'"
+        - generic [ref=e655]:
+          - img "Note" [ref=e657]
+          - generic [ref=e659]: Response trimmed for clarity.
+        - separator [ref=e660]
+        - heading "Navigate to header Paginate through results" [level=2] [ref=e661]:
+          - link "Navigate to header" [ref=e662] [cursor=pointer]:
+            - /url: "#paginate-through-results"
+            - img [ref=e664]
+          - generic [ref=e666] [cursor=pointer]: Paginate through results
+        - generic [ref=e667]:
+          - text: When your search matches more companies than your
+          - code [ref=e668]: limit
+          - text: ", use cursor-based pagination to walk through all pages."
+        - generic [ref=e669]:
+          - strong [ref=e670]: "First page:"
+          - text: send your normal search request.
+        - generic [ref=e671]:
+          - generic [ref=e672]:
+            - tablist [ref=e673]:
+              - tab "First page" [selected] [ref=e674] [cursor=pointer]:
+                - generic [ref=e675]: First page
+            - generic [ref=e677]:
+              - button "Report incorrect code" [ref=e679] [cursor=pointer]:
+                - img [ref=e680]
+              - button "Copy the contents from the code block" [ref=e683] [cursor=pointer]:
+                - img [ref=e684]
+              - button "Ask AI" [ref=e688] [cursor=pointer]:
+                - img [ref=e689]
+          - tabpanel "First page" [ref=e693]:
+            - code [ref=e697]:
+              - generic [ref=e698]: curl --request POST \
+              - generic [ref=e699]: "--url https://api.crustdata.com/company/search \\"
+              - generic [ref=e700]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e701]: "--header 'content-type: application/json' \\"
+              - generic [ref=e702]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e703]: "--data '{"
+              - generic [ref=e704]: "\"filters\": {"
+              - generic [ref=e705]: "\"field\": \"locations.hq_country\","
+              - generic [ref=e706]: "\"type\": \"in\","
+              - generic [ref=e707]: "\"value\": [\"USA\"]"
+              - generic [ref=e708]: "},"
+              - generic [ref=e709]: "\"sorts\": [{\"column\": \"crustdata_company_id\", \"order\": \"asc\"}],"
+              - generic [ref=e710]: "\"limit\": 100,"
+              - generic [ref=e711]: "\"fields\": ["
+              - generic [ref=e712]: "\"crustdata_company_id\","
+              - generic [ref=e713]: "\"basic_info.name\","
+              - generic [ref=e714]: "\"basic_info.primary_domain\""
+              - generic [ref=e715]: "]"
+              - generic [ref=e716]: "}'"
+        - generic [ref=e717]:
+          - strong [ref=e718]: "Next page:"
+          - text: take the
+          - code [ref=e719]: next_cursor
+          - text: value from the response and pass it in your next request. Keep the same
+          - code [ref=e720]: filters
+          - text: ","
+          - code [ref=e721]: sorts
+          - text: ","
+          - code [ref=e722]: limit
+          - text: ", and"
+          - code [ref=e723]: fields
+          - text: .
+        - generic [ref=e724]:
+          - generic [ref=e725]:
+            - tablist [ref=e726]:
+              - tab "Next page" [selected] [ref=e727] [cursor=pointer]:
+                - generic [ref=e728]: Next page
+            - generic [ref=e730]:
+              - button "Report incorrect code" [ref=e732] [cursor=pointer]:
+                - img [ref=e733]
+              - button "Copy the contents from the code block" [ref=e736] [cursor=pointer]:
+                - img [ref=e737]
+              - button "Ask AI" [ref=e741] [cursor=pointer]:
+                - img [ref=e742]
+          - tabpanel "Next page" [ref=e746]:
+            - code [ref=e750]:
+              - generic [ref=e751]: curl --request POST \
+              - generic [ref=e752]: "--url https://api.crustdata.com/company/search \\"
+              - generic [ref=e753]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e754]: "--header 'content-type: application/json' \\"
+              - generic [ref=e755]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e756]: "--data '{"
+              - generic [ref=e757]: "\"filters\": {"
+              - generic [ref=e758]: "\"field\": \"locations.hq_country\","
+              - generic [ref=e759]: "\"type\": \"in\","
+              - generic [ref=e760]: "\"value\": [\"USA\"]"
+              - generic [ref=e761]: "},"
+              - generic [ref=e762]: "\"sorts\": [{\"column\": \"crustdata_company_id\", \"order\": \"asc\"}],"
+              - generic [ref=e763]: "\"limit\": 100,"
+              - generic [ref=e764]: "\"fields\": ["
+              - generic [ref=e765]: "\"crustdata_company_id\","
+              - generic [ref=e766]: "\"basic_info.name\","
+              - generic [ref=e767]: "\"basic_info.primary_domain\""
+              - generic [ref=e768]: "],"
+              - generic [ref=e769]: "\"cursor\": \"PASTE_NEXT_CURSOR_VALUE_HERE\""
+              - generic [ref=e770]: "}'"
+        - generic [ref=e771]:
+          - text: Continue until
+          - code [ref=e772]: next_cursor
+          - text: is
+          - code [ref=e773]: "null"
+          - text: ", which means you have reached the last page."
+        - separator [ref=e774]
+        - heading "Navigate to header Filter operator reference" [level=2] [ref=e775]:
+          - link "Navigate to header" [ref=e776] [cursor=pointer]:
+            - /url: "#filter-operator-reference"
+            - img [ref=e778]
+          - generic [ref=e780] [cursor=pointer]: Filter operator reference
+        - table [ref=e783]:
+          - rowgroup [ref=e784]:
+            - row "Operator Meaning Example value Notes" [ref=e785]:
+              - columnheader "Operator" [ref=e786]
+              - columnheader "Meaning" [ref=e787]
+              - columnheader "Example value" [ref=e788]
+              - columnheader "Notes" [ref=e789]
+          - rowgroup [ref=e790]:
+            - row "= Exact match \"retool.com\" Case-insensitive for text fields" [ref=e791]:
+              - cell "=" [ref=e792]:
+                - code [ref=e793]: =
+              - cell "Exact match" [ref=e794]
+              - cell "\"retool.com\"" [ref=e795]:
+                - code [ref=e796]: "\"retool.com\""
+              - cell "Case-insensitive for text fields" [ref=e797]
+            - row "!= Not equal \"acquired\"" [ref=e798]:
+              - cell "!=" [ref=e799]:
+                - code [ref=e800]: "!="
+              - cell "Not equal" [ref=e801]
+              - cell "\"acquired\"" [ref=e802]:
+                - code [ref=e803]: "\"acquired\""
+              - cell [ref=e804]
+            - row "> Greater than 2020 Numbers and date strings" [ref=e805]:
+              - cell ">" [ref=e806]:
+                - code [ref=e807]: ">"
+              - cell "Greater than" [ref=e808]
+              - cell "2020" [ref=e809]:
+                - code [ref=e810]: "2020"
+              - cell "Numbers and date strings" [ref=e811]
+            - row "< Less than 10000 Numbers and date strings" [ref=e812]:
+              - cell "<" [ref=e813]:
+                - code [ref=e814]: <
+              - cell "Less than" [ref=e815]
+              - cell "10000" [ref=e816]:
+                - code [ref=e817]: "10000"
+              - cell "Numbers and date strings" [ref=e818]
+            - row "=> Greater than or equal \"2024-01-01\" Not >=" [ref=e819]:
+              - cell "=>" [ref=e820]:
+                - code [ref=e821]: =>
+              - cell "Greater than or equal" [ref=e822]
+              - cell "\"2024-01-01\"" [ref=e823]:
+                - code [ref=e824]: "\"2024-01-01\""
+              - cell "Not >=" [ref=e825]:
+                - strong [ref=e826]: Not
+                - code [ref=e827]: ">="
+            - row "=< Less than or equal 50000000 Not <=" [ref=e828]:
+              - cell "=<" [ref=e829]:
+                - code [ref=e830]: =<
+              - cell "Less than or equal" [ref=e831]
+              - cell "50000000" [ref=e832]:
+                - code [ref=e833]: "50000000"
+              - cell "Not <=" [ref=e834]:
+                - strong [ref=e835]: Not
+                - code [ref=e836]: <=
+            - row "in Value is in list [\"USA\", \"GBR\"] Case-sensitive. Matches if any array element matches any list value." [ref=e837]:
+              - cell "in" [ref=e838]:
+                - code [ref=e839]: in
+              - cell "Value is in list" [ref=e840]
+              - cell "[\"USA\", \"GBR\"]" [ref=e841]:
+                - code [ref=e842]: "[\"USA\", \"GBR\"]"
+              - cell "Case-sensitive. Matches if any array element matches any list value." [ref=e843]:
+                - text: Case-sensitive. Matches if
+                - strong [ref=e844]: any
+                - text: array element matches
+                - strong [ref=e845]: any
+                - text: list value.
+            - row "not_in Value is not in list [\"acquired\"]" [ref=e846]:
+              - cell "not_in" [ref=e847]:
+                - code [ref=e848]: not_in
+              - cell "Value is not in list" [ref=e849]
+              - cell "[\"acquired\"]" [ref=e850]:
+                - code [ref=e851]: "[\"acquired\"]"
+              - cell [ref=e852]
+            - row "is_null Field is null — No value needed" [ref=e853]:
+              - cell "is_null" [ref=e854]:
+                - code [ref=e855]: is_null
+              - cell "Field is null" [ref=e856]
+              - cell "—" [ref=e857]
+              - cell "No value needed" [ref=e858]:
+                - text: "No"
+                - code [ref=e859]: value
+                - text: needed
+            - row "is_not_null Field is not null — No value needed" [ref=e860]:
+              - cell "is_not_null" [ref=e861]:
+                - code [ref=e862]: is_not_null
+              - cell "Field is not null" [ref=e863]
+              - cell "—" [ref=e864]
+              - cell "No value needed" [ref=e865]:
+                - text: "No"
+                - code [ref=e866]: value
+                - text: needed
+            - row "(.) Fuzzy text search \"openai\" Tolerates typos, matches word variants" [ref=e867]:
+              - cell "(.)" [ref=e868]:
+                - code [ref=e869]: (.)
+              - cell "Fuzzy text search" [ref=e870]
+              - cell "\"openai\"" [ref=e871]:
+                - code [ref=e872]: "\"openai\""
+              - cell "Tolerates typos, matches word variants" [ref=e873]
+            - row "[.] Exact token match \"Software Development\" No typos allowed, requires exact tokens" [ref=e874]:
+              - cell "[.]" [ref=e875]:
+                - code [ref=e876]: "[.]"
+              - cell "Exact token match" [ref=e877]
+              - cell "\"Software Development\"" [ref=e878]:
+                - code [ref=e879]: "\"Software Development\""
+              - cell "No typos allowed, requires exact tokens" [ref=e880]
+        - generic [ref=e881]:
+          - img "Warning" [ref=e883]
+          - generic [ref=e886]:
+            - text: The operators
+            - code [ref=e887]: ">="
+            - text: and
+            - code [ref=e888]: <=
+            - text: are
+            - strong [ref=e889]: not supported
+            - text: . Use
+            - code [ref=e890]: =>
+            - text: and
+            - code [ref=e891]: =<
+            - text: instead.
+        - heading "Navigate to header Searchable fields" [level=2] [ref=e892]:
+          - link "Navigate to header" [ref=e893] [cursor=pointer]:
+            - /url: "#searchable-fields"
+            - img [ref=e895]
+          - generic [ref=e897] [cursor=pointer]: Searchable fields
+        - generic [ref=e898]:
+          - text: These are common fields that can be used in the
+          - code [ref=e899]: field
+          - text: key of a filter condition. Some indexed filter fields are search-only and are not returned in the response payload. For the full schema, see the
+          - link "API reference" [ref=e900] [cursor=pointer]:
+            - /url: /openapi-specs/2025-11-01/introduction
+          - text: .
+        - table [ref=e903]:
+          - rowgroup [ref=e904]:
+            - row "Field Type Sortable Description" [ref=e905]:
+              - columnheader "Field" [ref=e906]
+              - columnheader "Type" [ref=e907]
+              - columnheader "Sortable" [ref=e908]
+              - columnheader "Description" [ref=e909]
+          - rowgroup [ref=e910]:
+            - row "crustdata_company_id integer Yes Crustdata company ID" [ref=e911]:
+              - cell "crustdata_company_id" [ref=e912]:
+                - code [ref=e913]: crustdata_company_id
+              - cell "integer" [ref=e914]
+              - cell "Yes" [ref=e915]
+              - cell "Crustdata company ID" [ref=e916]
+            - row "metadata.growth_calculation_date datetime Yes Anchor date for growth metrics" [ref=e917]:
+              - cell "metadata.growth_calculation_date" [ref=e918]:
+                - code [ref=e919]: metadata.growth_calculation_date
+              - cell "datetime" [ref=e920]
+              - cell "Yes" [ref=e921]
+              - cell "Anchor date for growth metrics" [ref=e922]
+            - row "basic_info.company_id integer Yes Internal source company ID" [ref=e923]:
+              - cell "basic_info.company_id" [ref=e924]:
+                - code [ref=e925]: basic_info.company_id
+              - cell "integer" [ref=e926]
+              - cell "Yes" [ref=e927]
+              - cell "Internal source company ID" [ref=e928]
+            - row "basic_info.name string Yes Company name" [ref=e929]:
+              - cell "basic_info.name" [ref=e930]:
+                - code [ref=e931]: basic_info.name
+              - cell "string" [ref=e932]
+              - cell "Yes" [ref=e933]
+              - cell "Company name" [ref=e934]
+            - row "basic_info.primary_domain string Yes Primary website domain" [ref=e935]:
+              - cell "basic_info.primary_domain" [ref=e936]:
+                - code [ref=e937]: basic_info.primary_domain
+              - cell "string" [ref=e938]
+              - cell "Yes" [ref=e939]
+              - cell "Primary website domain" [ref=e940]
+            - row "basic_info.website string No Full website URL" [ref=e941]:
+              - cell "basic_info.website" [ref=e942]:
+                - code [ref=e943]: basic_info.website
+              - cell "string" [ref=e944]
+              - cell "No" [ref=e945]
+              - cell "Full website URL" [ref=e946]
+            - row "basic_info.professional_network_url string No Company profile URL" [ref=e947]:
+              - cell "basic_info.professional_network_url" [ref=e948]:
+                - code [ref=e949]: basic_info.professional_network_url
+              - cell "string" [ref=e950]
+              - cell "No" [ref=e951]
+              - cell "Company profile URL" [ref=e952]
+            - row "basic_info.professional_network_id string No Company profile ID" [ref=e953]:
+              - cell "basic_info.professional_network_id" [ref=e954]:
+                - code [ref=e955]: basic_info.professional_network_id
+              - cell "string" [ref=e956]
+              - cell "No" [ref=e957]
+              - cell "Company profile ID" [ref=e958]
+            - row "basic_info.company_type string No e.g., \"Privately Held\", \"Public Company\"" [ref=e959]:
+              - cell "basic_info.company_type" [ref=e960]:
+                - code [ref=e961]: basic_info.company_type
+              - cell "string" [ref=e962]
+              - cell "No" [ref=e963]
+              - cell "e.g., \"Privately Held\", \"Public Company\"" [ref=e964]:
+                - text: e.g.,
+                - code [ref=e965]: "\"Privately Held\""
+                - text: ","
+                - code [ref=e966]: "\"Public Company\""
+            - row "basic_info.year_founded string Yes Year founded (string, e.g., \"2017\")" [ref=e967]:
+              - cell "basic_info.year_founded" [ref=e968]:
+                - code [ref=e969]: basic_info.year_founded
+              - cell "string" [ref=e970]
+              - cell "Yes" [ref=e971]
+              - cell "Year founded (string, e.g., \"2017\")" [ref=e972]:
+                - text: Year founded (string, e.g.,
+                - code [ref=e973]: "\"2017\""
+                - text: )
+            - row "basic_info.employee_count_range string Yes e.g., \"201-500\"" [ref=e974]:
+              - cell "basic_info.employee_count_range" [ref=e975]:
+                - code [ref=e976]: basic_info.employee_count_range
+              - cell "string" [ref=e977]
+              - cell "Yes" [ref=e978]
+              - cell "e.g., \"201-500\"" [ref=e979]:
+                - text: e.g.,
+                - code [ref=e980]: "\"201-500\""
+            - row "basic_info.markets string[] No Market tags" [ref=e981]:
+              - cell "basic_info.markets" [ref=e982]:
+                - code [ref=e983]: basic_info.markets
+              - cell "string[]" [ref=e984]
+              - cell "No" [ref=e985]
+              - cell "Market tags" [ref=e986]
+            - row "basic_info.industries string[] No Industry tags" [ref=e987]:
+              - cell "basic_info.industries" [ref=e988]:
+                - code [ref=e989]: basic_info.industries
+              - cell "string[]" [ref=e990]
+              - cell "No" [ref=e991]
+              - cell "Industry tags" [ref=e992]
+            - row "revenue.estimated.lower_bound_usd integer Yes Revenue lower bound (USD)" [ref=e993]:
+              - cell "revenue.estimated.lower_bound_usd" [ref=e994]:
+                - code [ref=e995]: revenue.estimated.lower_bound_usd
+              - cell "integer" [ref=e996]
+              - cell "Yes" [ref=e997]
+              - cell "Revenue lower bound (USD)" [ref=e998]
+            - row "revenue.estimated.upper_bound_usd integer Yes Revenue upper bound (USD)" [ref=e999]:
+              - cell "revenue.estimated.upper_bound_usd" [ref=e1000]:
+                - code [ref=e1001]: revenue.estimated.upper_bound_usd
+              - cell "integer" [ref=e1002]
+              - cell "Yes" [ref=e1003]
+              - cell "Revenue upper bound (USD)" [ref=e1004]
+            - row "revenue.acquisition_status string No e.g., \"acquired\"" [ref=e1005]:
+              - cell "revenue.acquisition_status" [ref=e1006]:
+                - code [ref=e1007]: revenue.acquisition_status
+              - cell "string" [ref=e1008]
+              - cell "No" [ref=e1009]
+              - cell "e.g., \"acquired\"" [ref=e1010]:
+                - text: e.g.,
+                - code [ref=e1011]: "\"acquired\""
+            - row "funding.total_investment_usd number Yes Total disclosed funding (USD)" [ref=e1012]:
+              - cell "funding.total_investment_usd" [ref=e1013]:
+                - code [ref=e1014]: funding.total_investment_usd
+              - cell "number" [ref=e1015]
+              - cell "Yes" [ref=e1016]
+              - cell "Total disclosed funding (USD)" [ref=e1017]
+            - row "funding.last_round_amount_usd number Yes Last funding round amount (USD)" [ref=e1018]:
+              - cell "funding.last_round_amount_usd" [ref=e1019]:
+                - code [ref=e1020]: funding.last_round_amount_usd
+              - cell "number" [ref=e1021]
+              - cell "Yes" [ref=e1022]
+              - cell "Last funding round amount (USD)" [ref=e1023]
+            - row "funding.last_fundraise_date date Yes Last funding date" [ref=e1024]:
+              - cell "funding.last_fundraise_date" [ref=e1025]:
+                - code [ref=e1026]: funding.last_fundraise_date
+              - cell "date" [ref=e1027]
+              - cell "Yes" [ref=e1028]
+              - cell "Last funding date" [ref=e1029]
+            - row "funding.last_round_type string No e.g., \"series_a\", \"series_b\"" [ref=e1030]:
+              - cell "funding.last_round_type" [ref=e1031]:
+                - code [ref=e1032]: funding.last_round_type
+              - cell "string" [ref=e1033]
+              - cell "No" [ref=e1034]
+              - cell "e.g., \"series_a\", \"series_b\"" [ref=e1035]:
+                - text: e.g.,
+                - code [ref=e1036]: "\"series_a\""
+                - text: ","
+                - code [ref=e1037]: "\"series_b\""
+            - row "funding.investors string[] No Investor names" [ref=e1038]:
+              - cell "funding.investors" [ref=e1039]:
+                - code [ref=e1040]: funding.investors
+              - cell "string[]" [ref=e1041]
+              - cell "No" [ref=e1042]
+              - cell "Investor names" [ref=e1043]
+            - row "funding.tracxn_investors string[] No Indexed investor names for filtering only" [ref=e1044]:
+              - cell "funding.tracxn_investors" [ref=e1045]:
+                - code [ref=e1046]: funding.tracxn_investors
+              - cell "string[]" [ref=e1047]
+              - cell "No" [ref=e1048]
+              - cell "Indexed investor names for filtering only" [ref=e1049]
+            - row "headcount.total integer Yes Total employee count" [ref=e1050]:
+              - cell "headcount.total" [ref=e1051]:
+                - code [ref=e1052]: headcount.total
+              - cell "integer" [ref=e1053]
+              - cell "Yes" [ref=e1054]
+              - cell "Total employee count" [ref=e1055]
+            - row "roles.distribution object No Employee counts per role" [ref=e1056]:
+              - cell "roles.distribution" [ref=e1057]:
+                - code [ref=e1058]: roles.distribution
+              - cell "object" [ref=e1059]
+              - cell "No" [ref=e1060]
+              - cell "Employee counts per role" [ref=e1061]
+            - row "roles.growth_6m object No 6-month role growth" [ref=e1062]:
+              - cell "roles.growth_6m" [ref=e1063]:
+                - code [ref=e1064]: roles.growth_6m
+              - cell "object" [ref=e1065]
+              - cell "No" [ref=e1066]
+              - cell "6-month role growth" [ref=e1067]
+            - row "roles.growth_yoy object No Year-over-year role growth" [ref=e1068]:
+              - cell "roles.growth_yoy" [ref=e1069]:
+                - code [ref=e1070]: roles.growth_yoy
+              - cell "object" [ref=e1071]
+              - cell "No" [ref=e1072]
+              - cell "Year-over-year role growth" [ref=e1073]
+            - 'row "locations.hq_country string Yes HQ country (ISO3: \"USA\", \"GBR\")" [ref=e1074]':
+              - cell "locations.hq_country" [ref=e1075]:
+                - code [ref=e1076]: locations.hq_country
+              - cell "string" [ref=e1077]
+              - cell "Yes" [ref=e1078]
+              - 'cell "HQ country (ISO3: \"USA\", \"GBR\")" [ref=e1079]':
+                - text: "HQ country (ISO3:"
+                - code [ref=e1080]: "\"USA\""
+                - text: ","
+                - code [ref=e1081]: "\"GBR\""
+                - text: )
+            - row "locations.largest_headcount_country string Yes Country with most employees" [ref=e1082]:
+              - cell "locations.largest_headcount_country" [ref=e1083]:
+                - code [ref=e1084]: locations.largest_headcount_country
+              - cell "string" [ref=e1085]
+              - cell "Yes" [ref=e1086]
+              - cell "Country with most employees" [ref=e1087]
+            - row "locations.headquarters string No Full HQ location string" [ref=e1088]:
+              - cell "locations.headquarters" [ref=e1089]:
+                - code [ref=e1090]: locations.headquarters
+              - cell "string" [ref=e1091]
+              - cell "No" [ref=e1092]
+              - cell "Full HQ location string" [ref=e1093]
+            - row "taxonomy.professional_network_industry string No Primary industry label" [ref=e1094]:
+              - cell "taxonomy.professional_network_industry" [ref=e1095]:
+                - code [ref=e1096]: taxonomy.professional_network_industry
+              - cell "string" [ref=e1097]
+              - cell "No" [ref=e1098]
+              - cell "Primary industry label" [ref=e1099]
+            - row "taxonomy.categories string[] No Category tags" [ref=e1100]:
+              - cell "taxonomy.categories" [ref=e1101]:
+                - code [ref=e1102]: taxonomy.categories
+              - cell "string[]" [ref=e1103]
+              - cell "No" [ref=e1104]
+              - cell "Category tags" [ref=e1105]
+            - row "followers.count integer Yes Follower count" [ref=e1106]:
+              - cell "followers.count" [ref=e1107]:
+                - code [ref=e1108]: followers.count
+              - cell "integer" [ref=e1109]
+              - cell "Yes" [ref=e1110]
+              - cell "Follower count" [ref=e1111]
+            - row "followers.mom_percent number No Month-over-month follower growth %" [ref=e1112]:
+              - cell "followers.mom_percent" [ref=e1113]:
+                - code [ref=e1114]: followers.mom_percent
+              - cell "number" [ref=e1115]
+              - cell "No" [ref=e1116]
+              - cell "Month-over-month follower growth %" [ref=e1117]
+            - row "followers.qoq_percent number No Quarter-over-quarter follower growth %" [ref=e1118]:
+              - cell "followers.qoq_percent" [ref=e1119]:
+                - code [ref=e1120]: followers.qoq_percent
+              - cell "number" [ref=e1121]
+              - cell "No" [ref=e1122]
+              - cell "Quarter-over-quarter follower growth %" [ref=e1123]
+            - row "followers.six_months_growth_percent number No 6-month follower growth %" [ref=e1124]:
+              - cell "followers.six_months_growth_percent" [ref=e1125]:
+                - code [ref=e1126]: followers.six_months_growth_percent
+              - cell "number" [ref=e1127]
+              - cell "No" [ref=e1128]
+              - cell "6-month follower growth %" [ref=e1129]
+            - row "followers.yoy_percent number No Year-over-year follower growth %" [ref=e1130]:
+              - cell "followers.yoy_percent" [ref=e1131]:
+                - code [ref=e1132]: followers.yoy_percent
+              - cell "number" [ref=e1133]
+              - cell "No" [ref=e1134]
+              - cell "Year-over-year follower growth %" [ref=e1135]
+            - row "competitors.company_ids integer[] No Competitor Crustdata IDs" [ref=e1136]:
+              - cell "competitors.company_ids" [ref=e1137]:
+                - code [ref=e1138]: competitors.company_ids
+              - cell "integer[]" [ref=e1139]
+              - cell "No" [ref=e1140]
+              - cell "Competitor Crustdata IDs" [ref=e1141]
+            - row "competitors.websites string[] No Competitor domains" [ref=e1142]:
+              - cell "competitors.websites" [ref=e1143]:
+                - code [ref=e1144]: competitors.websites
+              - cell "string[]" [ref=e1145]
+              - cell "No" [ref=e1146]
+              - cell "Competitor domains" [ref=e1147]
+        - generic [ref=e1148]:
+          - img "Tip" [ref=e1150]
+          - generic [ref=e1153]:
+            - text: Use
+            - link "Autocomplete" [ref=e1154] [cursor=pointer]:
+              - /url: /company-docs/autocomplete
+            - text: to discover exact values for fields like
+            - code [ref=e1155]: basic_info.industries
+            - text: ","
+            - code [ref=e1156]: taxonomy.professional_network_industry
+            - text: ","
+            - code [ref=e1157]: locations.hq_country
+            - text: ","
+            - code [ref=e1158]: basic_info.company_type
+            - text: ", and"
+            - code [ref=e1159]: funding.last_round_type
+            - text: .
+        - heading "Navigate to header Response fields" [level=2] [ref=e1160]:
+          - link "Navigate to header" [ref=e1161] [cursor=pointer]:
+            - /url: "#response-fields"
+            - img [ref=e1163]
+          - generic [ref=e1165] [cursor=pointer]: Response fields
+        - generic [ref=e1166]:
+          - text: Each company in the response can include these sections (depending on
+          - code [ref=e1167]: fields
+          - text: "):"
+        - table [ref=e1170]:
+          - rowgroup [ref=e1171]:
+            - row "Section Key fields Description" [ref=e1172]:
+              - columnheader "Section" [ref=e1173]
+              - columnheader "Key fields" [ref=e1174]
+              - columnheader "Description" [ref=e1175]
+          - rowgroup [ref=e1176]:
+            - row "basic_info name, primary_domain, website, professional_network_url, year_founded Core identity and profile" [ref=e1177]:
+              - cell "basic_info" [ref=e1178]:
+                - code [ref=e1179]: basic_info
+              - cell "name, primary_domain, website, professional_network_url, year_founded" [ref=e1180]:
+                - code [ref=e1181]: name
+                - text: ","
+                - code [ref=e1182]: primary_domain
+                - text: ","
+                - code [ref=e1183]: website
+                - text: ","
+                - code [ref=e1184]: professional_network_url
+                - text: ","
+                - code [ref=e1185]: year_founded
+              - cell "Core identity and profile" [ref=e1186]
+            - row "headcount total Employee footprint" [ref=e1187]:
+              - cell "headcount" [ref=e1188]:
+                - code [ref=e1189]: headcount
+              - cell "total" [ref=e1190]:
+                - code [ref=e1191]: total
+              - cell "Employee footprint" [ref=e1192]
+            - row "funding total_investment_usd, last_round_amount_usd, investors Funding and investor data" [ref=e1193]:
+              - cell "funding" [ref=e1194]:
+                - code [ref=e1195]: funding
+              - cell "total_investment_usd, last_round_amount_usd, investors" [ref=e1196]:
+                - code [ref=e1197]: total_investment_usd
+                - text: ","
+                - code [ref=e1198]: last_round_amount_usd
+                - text: ","
+                - code [ref=e1199]: investors
+              - cell "Funding and investor data" [ref=e1200]
+            - row "locations hq_country, hq_state, hq_city Headquarters location" [ref=e1201]:
+              - cell "locations" [ref=e1202]:
+                - code [ref=e1203]: locations
+              - cell "hq_country, hq_state, hq_city" [ref=e1204]:
+                - code [ref=e1205]: hq_country
+                - text: ","
+                - code [ref=e1206]: hq_state
+                - text: ","
+                - code [ref=e1207]: hq_city
+              - cell "Headquarters location" [ref=e1208]
+            - row "taxonomy professional_network_industry, categories, professional_network_specialities Industry and category tags" [ref=e1209]:
+              - cell "taxonomy" [ref=e1210]:
+                - code [ref=e1211]: taxonomy
+              - cell "professional_network_industry, categories, professional_network_specialities" [ref=e1212]:
+                - code [ref=e1213]: professional_network_industry
+                - text: ","
+                - code [ref=e1214]: categories
+                - text: ","
+                - code [ref=e1215]: professional_network_specialities
+              - cell "Industry and category tags" [ref=e1216]
+            - row "revenue estimated, public_markets, acquisition_status Revenue and market data" [ref=e1217]:
+              - cell "revenue" [ref=e1218]:
+                - code [ref=e1219]: revenue
+              - cell "estimated, public_markets, acquisition_status" [ref=e1220]:
+                - code [ref=e1221]: estimated
+                - text: ","
+                - code [ref=e1222]: public_markets
+                - text: ","
+                - code [ref=e1223]: acquisition_status
+              - cell "Revenue and market data" [ref=e1224]
+            - row "hiring openings_count, openings_growth_percent Hiring demand" [ref=e1225]:
+              - cell "hiring" [ref=e1226]:
+                - code [ref=e1227]: hiring
+              - cell "openings_count, openings_growth_percent" [ref=e1228]:
+                - code [ref=e1229]: openings_count
+                - text: ","
+                - code [ref=e1230]: openings_growth_percent
+              - cell "Hiring demand" [ref=e1231]
+            - row "followers count, mom_percent, yoy_percent Social follower metrics" [ref=e1232]:
+              - cell "followers" [ref=e1233]:
+                - code [ref=e1234]: followers
+              - cell "count, mom_percent, yoy_percent" [ref=e1235]:
+                - code [ref=e1236]: count
+                - text: ","
+                - code [ref=e1237]: mom_percent
+                - text: ","
+                - code [ref=e1238]: yoy_percent
+              - cell "Social follower metrics" [ref=e1239]
+            - row "social_profiles twitter_url Third-party profile links" [ref=e1240]:
+              - cell "social_profiles" [ref=e1241]:
+                - code [ref=e1242]: social_profiles
+              - cell "twitter_url" [ref=e1243]:
+                - code [ref=e1244]: twitter_url
+              - cell "Third-party profile links" [ref=e1245]
+        - separator [ref=e1246]
+        - heading "Navigate to header Validation rules" [level=2] [ref=e1247]:
+          - link "Navigate to header" [ref=e1248] [cursor=pointer]:
+            - /url: "#validation-rules"
+            - img [ref=e1250]
+          - generic [ref=e1252] [cursor=pointer]: Validation rules
+        - generic [ref=e1253]:
+          - img "Note" [ref=e1255]
+          - generic [ref=e1258]:
+            - text: Default/max limits and pagination behavior reflect current platform behavior. See the
+            - link "API reference" [ref=e1259] [cursor=pointer]:
+              - /url: /openapi-specs/2025-11-01/introduction
+            - text: for the formal OpenAPI contract.
+        - table [ref=e1262]:
+          - rowgroup [ref=e1263]:
+            - row "Rule Behavior" [ref=e1264]:
+              - columnheader "Rule" [ref=e1265]
+              - columnheader "Behavior" [ref=e1266]
+          - rowgroup [ref=e1267]:
+            - row "filters is optional Omitting filters matches all companies. Always use filters in production to control cost." [ref=e1268]:
+              - cell "filters is optional" [ref=e1269]:
+                - code [ref=e1270]: filters
+                - text: is optional
+              - cell "Omitting filters matches all companies. Always use filters in production to control cost." [ref=e1271]
+            - row "fields is optional Omitting returns all fields (large payload). Always specify in production." [ref=e1272]:
+              - cell "fields is optional" [ref=e1273]:
+                - code [ref=e1274]: fields
+                - text: is optional
+              - cell "Omitting returns all fields (large payload). Always specify in production." [ref=e1275]
+            - 'row "limit range 1–1000. Default: 20." [ref=e1276]':
+              - cell "limit range" [ref=e1277]:
+                - code [ref=e1278]: limit
+                - text: range
+              - 'cell "1–1000. Default: 20." [ref=e1279]'
+            - row "sorts with pagination Always include sorts when paginating to ensure stable result ordering." [ref=e1280]:
+              - cell "sorts with pagination" [ref=e1281]:
+                - code [ref=e1282]: sorts
+                - text: with pagination
+              - cell "Always include sorts when paginating to ensure stable result ordering." [ref=e1283]:
+                - text: Always include
+                - code [ref=e1284]: sorts
+                - text: when paginating to ensure stable result ordering.
+            - row "cursor must match query Changing filters, sorts, or fields between pages invalidates the cursor." [ref=e1285]:
+              - cell "cursor must match query" [ref=e1286]:
+                - code [ref=e1287]: cursor
+                - text: must match query
+              - cell "Changing filters, sorts, or fields between pages invalidates the cursor." [ref=e1288]:
+                - text: Changing
+                - code [ref=e1289]: filters
+                - text: ","
+                - code [ref=e1290]: sorts
+                - text: ", or"
+                - code [ref=e1291]: fields
+                - text: between pages invalidates the cursor.
+        - heading "Navigate to header Errors" [level=2] [ref=e1292]:
+          - link "Navigate to header" [ref=e1293] [cursor=pointer]:
+            - /url: "#errors"
+            - img [ref=e1295]
+          - generic [ref=e1297] [cursor=pointer]: Errors
+        - generic [ref=e1298]: "Common error responses for Search:"
+        - generic [ref=e1299]:
+          - generic [ref=e1300]:
+            - generic "400 — Unsupported field" [ref=e1302]
+            - generic [ref=e1303]:
+              - button "Report incorrect code" [ref=e1305] [cursor=pointer]:
+                - img [ref=e1306]
+              - button "Copy the contents from the code block" [ref=e1309] [cursor=pointer]:
+                - img [ref=e1310]
+              - button "Ask AI" [ref=e1314] [cursor=pointer]:
+                - img [ref=e1315]
+          - code [ref=e1321]:
+            - generic [ref=e1322]: "{"
+            - generic [ref=e1323]: "\"error\": {"
+            - generic [ref=e1324]: "\"type\": \"invalid_request\","
+            - generic [ref=e1325]: "\"message\": \"Unsupported columns in conditions: ['nonexistent_field']\","
+            - generic [ref=e1326]: "\"metadata\": []"
+            - generic [ref=e1327]: "}"
+            - generic [ref=e1328]: "}"
+        - generic [ref=e1329]:
+          - generic [ref=e1330]:
+            - generic "400 — Invalid operator" [ref=e1332]
+            - generic [ref=e1333]:
+              - button "Report incorrect code" [ref=e1335] [cursor=pointer]:
+                - img [ref=e1336]
+              - button "Copy the contents from the code block" [ref=e1339] [cursor=pointer]:
+                - img [ref=e1340]
+              - button "Ask AI" [ref=e1344] [cursor=pointer]:
+                - img [ref=e1345]
+          - code [ref=e1351]:
+            - generic [ref=e1352]: "{"
+            - generic [ref=e1353]: "\"error\": {"
+            - generic [ref=e1354]: "\"type\": \"invalid_request\","
+            - generic [ref=e1355]: "\"message\": \"'filters.type' must be one of the supported operators. Got '>='.\","
+            - generic [ref=e1356]: "\"metadata\": []"
+            - generic [ref=e1357]: "}"
+            - generic [ref=e1358]: "}"
+        - generic [ref=e1359]:
+          - img "Note" [ref=e1361]
+          - generic [ref=e1363]:
+            - text: Use
+            - code [ref=e1364]: =>
+            - text: for greater-than-or-equal and
+            - code [ref=e1365]: =<
+            - text: for less-than-or-equal. The operators
+            - code [ref=e1366]: ">="
+            - text: and
+            - code [ref=e1367]: <=
+            - text: are not supported.
+        - generic [ref=e1368]:
+          - generic [ref=e1369]:
+            - generic "401 — Invalid API key" [ref=e1371]
+            - generic [ref=e1372]:
+              - button "Report incorrect code" [ref=e1374] [cursor=pointer]:
+                - img [ref=e1375]
+              - button "Copy the contents from the code block" [ref=e1378] [cursor=pointer]:
+                - img [ref=e1379]
+              - button "Ask AI" [ref=e1383] [cursor=pointer]:
+                - img [ref=e1384]
+          - code [ref=e1390]:
+            - generic [ref=e1391]: "{"
+            - generic [ref=e1392]: "\"message\": \"Invalid API key in request\""
+            - generic [ref=e1393]: "}"
+        - separator [ref=e1394]
+        - heading "Navigate to header API reference summary" [level=2] [ref=e1395]:
+          - link "Navigate to header" [ref=e1396] [cursor=pointer]:
+            - /url: "#api-reference-summary"
+            - img [ref=e1398]
+          - generic [ref=e1400] [cursor=pointer]: API reference summary
+        - table [ref=e1403]:
+          - rowgroup [ref=e1404]:
+            - row "Detail Value" [ref=e1405]:
+              - columnheader "Detail" [ref=e1406]
+              - columnheader "Value" [ref=e1407]
+          - rowgroup [ref=e1408]:
+            - row "Endpoint POST /company/search" [ref=e1409]:
+              - cell "Endpoint" [ref=e1410]:
+                - strong [ref=e1411]: Endpoint
+              - cell "POST /company/search" [ref=e1412]:
+                - code [ref=e1413]: POST /company/search
+            - 'row "Auth Bearer token + x-api-version: 2025-11-01" [ref=e1414]':
+              - cell "Auth" [ref=e1415]:
+                - strong [ref=e1416]: Auth
+              - 'cell "Bearer token + x-api-version: 2025-11-01" [ref=e1417]':
+                - text: Bearer token +
+                - code [ref=e1418]: "x-api-version: 2025-11-01"
+            - row "Request filters (condition or group), fields, sorts, limit, cursor" [ref=e1419]:
+              - cell "Request" [ref=e1420]:
+                - strong [ref=e1421]: Request
+              - cell "filters (condition or group), fields, sorts, limit, cursor" [ref=e1422]:
+                - code [ref=e1423]: filters
+                - text: (condition or group),
+                - code [ref=e1424]: fields
+                - text: ","
+                - code [ref=e1425]: sorts
+                - text: ","
+                - code [ref=e1426]: limit
+                - text: ","
+                - code [ref=e1427]: cursor
+            - 'row "Response { companies, next_cursor, total_count }" [ref=e1428]':
+              - cell "Response" [ref=e1429]:
+                - strong [ref=e1430]: Response
+              - 'cell "{ companies, next_cursor, total_count }" [ref=e1431]':
+                - code [ref=e1432]: "{ companies, next_cursor, total_count }"
+            - row "Pagination Cursor-based. Pass next_cursor in cursor. null = last page." [ref=e1433]:
+              - cell "Pagination" [ref=e1434]:
+                - strong [ref=e1435]: Pagination
+              - cell "Cursor-based. Pass next_cursor in cursor. null = last page." [ref=e1436]:
+                - text: Cursor-based. Pass
+                - code [ref=e1437]: next_cursor
+                - text: in
+                - code [ref=e1438]: cursor
+                - text: .
+                - code [ref=e1439]: "null"
+                - text: = last page.
+            - 'row "Empty result 200 with \"companies\": []" [ref=e1440]':
+              - cell "Empty result" [ref=e1441]:
+                - strong [ref=e1442]: Empty result
+              - 'cell "200 with \"companies\": []" [ref=e1443]':
+                - code [ref=e1444]: "200"
+                - text: with
+                - code [ref=e1445]: "\"companies\": []"
+            - row "Errors 400 (bad field/operator), 401 (bad auth), 403 (permission/credits), 500 (server error)" [ref=e1446]:
+              - cell "Errors" [ref=e1447]:
+                - strong [ref=e1448]: Errors
+              - cell "400 (bad field/operator), 401 (bad auth), 403 (permission/credits), 500 (server error)" [ref=e1449]:
+                - code [ref=e1450]: "400"
+                - text: (bad field/operator),
+                - code [ref=e1451]: "401"
+                - text: (bad auth),
+                - code [ref=e1452]: "403"
+                - text: (permission/credits),
+                - code [ref=e1453]: "500"
+                - text: (server error)
+        - generic [ref=e1454]:
+          - text: See the
+          - link "full API reference" [ref=e1455] [cursor=pointer]:
+            - /url: /openapi-specs/2025-11-01/introduction
+          - text: for the complete OpenAPI schema.
+        - separator [ref=e1456]
+        - heading "Navigate to header What to do next" [level=2] [ref=e1457]:
+          - link "Navigate to header" [ref=e1458] [cursor=pointer]:
+            - /url: "#what-to-do-next"
+            - img [ref=e1460]
+          - generic [ref=e1462] [cursor=pointer]: What to do next
+        - list [ref=e1463]:
+          - listitem [ref=e1464]:
+            - strong [ref=e1465]: Enrich a company
+            - text: — use
+            - link "Company Enrich" [ref=e1466] [cursor=pointer]:
+              - /url: /company-docs/enrichment
+            - text: to get a detailed profile for a known company.
+          - listitem [ref=e1467]:
+            - strong [ref=e1468]: Discover filter values
+            - text: — use
+            - link "Autocomplete" [ref=e1469] [cursor=pointer]:
+              - /url: /company-docs/autocomplete
+            - text: to find valid values before building search filters.
+          - listitem [ref=e1470]:
+            - strong [ref=e1471]: See more examples
+            - text: — browse
+            - link "company examples" [ref=e1472] [cursor=pointer]:
+              - /url: /company-docs/examples
+            - text: for ready-to-copy patterns.
+      - generic [ref=e1474]:
+        - paragraph [ref=e1475]: Was this page helpful?
+        - generic [ref=e1477]:
+          - button "Yes" [ref=e1478] [cursor=pointer]:
+            - img [ref=e1479]
+            - generic [ref=e1481]: "Yes"
+          - button "No" [ref=e1482] [cursor=pointer]:
+            - img [ref=e1483]
+            - generic [ref=e1485]: "No"
+      - generic [ref=e1487]:
+        - textbox "Ask a question..." [ref=e1488]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e1489]:
+          - img [ref=e1490]
+      - contentinfo [ref=e1492]:
+        - generic [ref=e1493]:
+          - link "x" [ref=e1494] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e1495]: x
+            - img [ref=e1496]
+          - link "linkedin" [ref=e1497] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e1498]: linkedin
+            - img [ref=e1499]

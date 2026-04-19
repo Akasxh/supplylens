@@ -1,0 +1,82 @@
+URL: https://docs.crustdata.com/api-reference/company-apis/search-companies-with-indexed-fields-only
+Title: Search Companies
+
+Description: Search the Crustdata company database using filter conditions. Supports complex AND/OR filter logic, cursor-based pagination, sorting, and field selection. Only indexed fields are searchable; use /company/enrich for non-indexed fields like news, people, or web_traffic.
+
+Rate limit: Default rate-limit is 15 requests per minute. Send an email to gtm@crustdata.co to discuss higher limits if needed for your use case.
+
+Method: POST
+URL: https://api.crustdata.com/company/search
+
+Authorizations:
+- Authorization: string, header, required — API key passed as a Bearer token in the Authorization header.
+
+Headers:
+- x-api-version: string, required — API version to use. Must match a supported version (e.g., "2025-11-01").
+
+Body (application/json):
+  filters: object — Search filters. Use a single SearchCondition or an and/or SearchConditionGroup.
+    filters.field: string, required — Field name to filter on.
+      Valid fields: crustdata_company_id, updated_at, indexed_at, metadata.growth_calculation_date,
+      basic_info.company_id, basic_info.name, basic_info.primary_domain, basic_info.website,
+      basic_info.professional_network_url, basic_info.professional_network_id, basic_info.company_type,
+      basic_info.year_founded, basic_info.employee_count_range, basic_info.markets, basic_info.industries,
+      revenue.estimated.lower_bound_usd, revenue.estimated.upper_bound_usd, revenue.acquisition_status,
+      funding.total_investment_usd, funding.last_round_amount_usd, funding.last_fundraise_date,
+      funding.last_round_type, funding.investors, funding.tracxn_investors,
+      headcount.total, roles.distribution, roles.distribution.accounting, roles.distribution.administrative,
+      roles.distribution.arts_and_design, roles.distribution.business_development,
+      roles.distribution.community_and_social_services, roles.distribution.consulting,
+      roles.distribution.customer_success_and_support, roles.distribution.education,
+      roles.distribution.engineering, roles.distribution.entrepreneurship, roles.distribution.finance,
+      roles.distribution.healthcare_services, roles.distribution.human_resources,
+      roles.distribution.information_technology, roles.distribution.legal, roles.distribution.marketing,
+      roles.distribution.media_and_communication, roles.distribution.military_and_protective_services,
+      roles.distribution.operations, roles.distribution.product_management,
+      roles.distribution.program_and_project_management, roles.distribution.purchasing,
+      roles.distribution.quality_assurance, roles.distribution.real_estate, roles.distribution.research,
+      roles.distribution.sales, roles.distribution.support, roles.growth_6m, roles.growth_yoy,
+      locations.country, locations.state, locations.city, locations.headquarters,
+      headcount.largest_headcount_country, taxonomy.professional_network_industry, taxonomy.categories,
+      followers.count, followers.mom_percent, followers.qoq_percent, followers.six_months_growth_percent,
+      followers.yoy_percent, competitors.company_ids, competitors.websites
+    filters.type: enum, required — Filter operator. 'in'/'not_in' for set membership (value must be array).
+      Options: =, !=, <, =<, >, =>, in, not_in, contains, not_contains, is_null, is_not_null, (.), [.]
+    filters.value: string|number|integer|boolean|array, required
+  cursor: string — Pagination cursor from a previous response's next_cursor. Omit on the first page.
+  limit: integer, default 20, range 1..1000
+  sorts: array of objects
+    sorts.column: string, required — valid sortable fields: crustdata_company_id, updated_at, indexed_at,
+      metadata.growth_calculation_date, basic_info.company_id, basic_info.name, basic_info.primary_domain,
+      basic_info.year_founded, basic_info.employee_count_range, revenue.estimated.lower_bound_usd,
+      revenue.estimated.upper_bound_usd, funding.total_investment_usd, funding.last_round_amount_usd,
+      funding.last_fundraise_date, headcount.total, headcount.largest_headcount_country, followers.count,
+      locations.country
+    sorts.order: enum: asc, desc
+  fields: array<string> — Fields to return. Dot-notation for nested fields. Valid top-level groups for search:
+    basic_info, revenue, headcount, funding, hiring, seo, competitors, locations, taxonomy, followers,
+    social_profiles, software_reviews, roles, skills, metadata, updated_at, indexed_at, crustdata_company_id.
+    Fields NOT in the search index (news, people, web_traffic, employee_reviews) return empty for search —
+    use enrich for those.
+
+Response (200): Paginated response from /company/search
+  companies: array<object>
+    - crustdata_company_id: integer
+    - metadata.growth_calculation_date: string|null
+    - basic_info: { crustdata_company_id, name, primary_domain, website, professional_network_url,
+                    professional_network_id, company_type, year_founded, employee_count_range, markets[],
+                    industries[] }
+    - revenue: { estimated, public_markets, acquisition_status }
+    - headcount: { total, largest_headcount_country }
+    - software_reviews: { review_count, average_rating, review_count_mom_pct, review_count_qoq_pct,
+                         review_count_yoy_pct }
+    - funding: { total_investment_usd, last_round_amount_usd, last_fundraise_date, last_round_type,
+                investors[] }
+    - hiring: { openings_count, openings_growth_percent, by_function_qoq_pct, by_function_6m_pct }
+    - locations: { country, state, city }
+    - social_profiles: { crunchbase, twitter_url }
+    - taxonomy: { professional_network_specialities[], professional_network_industry, categories[] }
+    - followers: { count, mom_percent, qoq_percent, six_months_growth_percent, yoy_percent }
+  next_cursor: string|null
+  total_count: integer|null
+  query: object

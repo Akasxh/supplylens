@@ -1,0 +1,46 @@
+URL: https://docs.crustdata.com/api-reference/web-apis/web-search
+Title: Web Search (Live)
+
+Description: Perform a web search query and return results from multiple sources including web, news, academic articles, academic author profiles, deep research results, and social media. Use for competitive intelligence, market research, lead generation, and content discovery.
+
+Rate limit: Default 15 requests per minute.
+
+Method: POST
+URL: https://api.crustdata.com/web/search/live
+
+Auth: Bearer token (required)
+Headers: x-api-version (enum, required; must equal "2025-11-01")
+
+Body (application/json):
+  query: string (required, 1..5000) — supports site:, filetype:
+  location: string | null — ISO 3166-1 alpha-2 country code (US, CA, MX, BR, AR, CL, CO, PE, VE, GB, DE,
+    FR, IT, ES, PT, NL, BE, CH, AT, PL, SE, NO, DK, FI, IE, RU, UA, CZ, GR, TR, RO, HU, JP, CN, KR, IN,
+    ID, TH, VN, MY, SG, PH, TW, HK, SA, AE, IL, EG, AU, NZ, ZA, NG, KE)
+  sources: array of enum | null — news, web, scholar-articles, scholar-articles-enriched, scholar-author,
+    ai, social
+  site: string | null — restrict to a site domain (e.g., "linkedin.com/company", "site:github.com"),
+    max 500 chars
+  start_date: integer | null — Unix seconds
+  end_date: integer | null — Unix seconds
+  human_mode: boolean (default false) — attempt Cloudflare bypass
+  page: integer (default 1, min 1) — number of result pages
+
+Response (200):
+  success: boolean (required)
+  query: string (required, echoed)
+  timestamp: integer (required, Unix ms)
+  results: array (required) —
+    - source: string ("web"|"news"|"scholar-articles"|"scholar-author"|"ai"|"social"|...)
+    - title: string (for ai: overview title)
+    - url: string
+    - snippet: string (web/news/scholar-articles)
+    - position: integer >=1 (web/news/scholar-articles)
+    - metadata: string | null (scholar-articles citation string)
+    - pdf_url: string | null (scholar-articles)
+    - authors: array | null (scholar-articles)
+    - citations: integer | { all, since_2020 } (scholar-articles | scholar-author)
+    - name, affiliation, website, interests, thumbnail, h_index, i10_index, articles — scholar-author
+    - content: string | null — ai overview content
+    - references: array | null — ai
+    - images: array | null — ai
+  metadata: { totalResults, failedPages, emptyPages } (required)

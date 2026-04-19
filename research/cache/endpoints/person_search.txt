@@ -1,0 +1,71 @@
+URL: https://docs.crustdata.com/api-reference/person-apis/search-people-using-filters-and-sorting
+Title: Search People
+
+Description: Search the Crustdata person database using flexible filter conditions, sorting, and cursor-based pagination. Supports filtering on hundreds of fields including job title, company, location, seniority, industry, education, and more. Use compound conditions with AND/OR logic. Results can be sorted and paginated using cursors.
+
+Rate limit: Default 15 requests per minute.
+
+Method: POST
+URL: https://api.crustdata.com/person/search
+
+Auth: Bearer token in Authorization header (required)
+Headers: x-api-version (required)
+
+Body (application/json):
+  filters: object (required) — PersonSearchCondition or and/or group
+    filters.field: string (required) — Valid fields include:
+      crustdata_person_id, basic_profile.name, basic_profile.headline, basic_profile.summary,
+      basic_profile.languages, basic_profile.last_updated,
+      basic_profile.location, basic_profile.location.full_location, basic_profile.location.city,
+      basic_profile.location.state, basic_profile.location.country, basic_profile.location.continent,
+      basic_profile.first_name, basic_profile.last_name,
+      professional_network.connections, professional_network.open_to_cards,
+      professional_network.location, professional_network.location.raw,
+      skills.professional_network_skills,
+      experience.employment_details.company_name, experience.employment_details.company_id,
+      experience.employment_details.title, experience.employment_details.description,
+      experience.employment_details.location, experience.employment_details.start_date,
+      experience.employment_details.end_date, experience.employment_details.seniority_level,
+      experience.employment_details.function_category, experience.employment_details.company_website_domain,
+      experience.employment_details.company_headcount_latest,
+      experience.employment_details.company_headcount_range,
+      experience.employment_details.company_industries,
+      experience.employment_details.company_professional_network_industry,
+      experience.employment_details.company_type, experience.employment_details.company_headquarters_country,
+      experience.employment_details.company_hq_location,
+      experience.employment_details.years_at_company_raw,
+      experience.employment_details.current.* (name, company_name, title, company_id, seniority_level,
+        start_date, company_website_domain, company_professional_network_industry,
+        company_linkedin_profile_url, company_headcount_range, company_headcount_latest, company_industries,
+        company_type, company_headquarters_country, company_hq_location, function_category,
+        years_at_company_raw, business_email_verified),
+      experience.employment_details.past.* (same set),
+      experience.employment_details.business_email_verified,
+      education.schools.school, education.schools.degree, education.schools.field_of_study,
+      certifications.name, certifications.issue_date, certifications.expiration_date,
+      certifications.credential_url, certifications.issuing_organization, certifications.credential_id,
+      honors.title, social_handles.twitter_handle,
+      recently_changed_jobs, years_of_experience_raw,
+      metadata.last_scraped_source, metadata.updated_at
+    filters.type: enum (required) — =, !=, <, =<, >, =>, in, not_in, (.), [.], geo_distance
+      '(.)' supports | for OR (e.g., "VP|Director|Head of")
+      '[.]' = substring match
+      'geo_distance' value = { location, distance, unit: km|mi|miles|m|ft }
+    filters.value: string|number|boolean|array|object (required)
+  sorts: array
+    sorts.field: string — Valid: crustdata_person_id, basic_profile.name, basic_profile.location (+ .city/.state/.country/.full_location),
+      professional_network.connections, experience.employment_details.start_date,
+      experience.employment_details.company_id, metadata.updated_at
+    sorts.order: asc|desc
+  limit: integer, default 20, range 1..1000
+  count: integer — alias for limit
+  cursor: string | null
+  post_processing: { exclude_profiles: string[], exclude_names: string[] }
+  return_query: boolean (default false) — debug
+  preview: boolean (default false) — faster basic-fields-only response
+
+Response (200):
+  profiles: array of person objects (basic_profile, experience, education, certifications, honors,
+    skills, social_handles, professional_network, metadata)
+  next_cursor: string | null
+  total_count: integer | null

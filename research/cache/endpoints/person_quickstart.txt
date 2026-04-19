@@ -1,0 +1,40 @@
+URL: https://docs.crustdata.com/person-docs/quickstart
+
+Summary: Person APIs = 3 indexed + 2 enterprise-locked live endpoints.
+
+Indexed:
+  /person/search                 Find people by filters
+  /person/search/autocomplete    Discover valid filter values
+  /person/enrich                 Get full profile from URL or email
+
+Enterprise Live (locked):
+  Live Search  🔒   /person/professional_network/search/live   "Search people in real time from the web"  — Book a demo
+  Live Enrich  🔒   /person/professional_network/enrich/live   "Fetch fresh profile data from the web"     — Book a demo
+
+Error codes:
+  400, 401 all; 403 Search/Enrich; 404 Enrich (per spec); 500 all.
+
+No-match behavior:
+  Search: 200 profiles:[]
+  Enrich: 200 matches:[]  (OpenAPI spec says 404, reality = 200 empty)
+  Autocomplete: 200 suggestions:[]
+
+Retry guidance:
+  400/401/403/404 → No retry
+  500 → Yes, exponential backoff (1s, 2s, 4s)
+
+Key filter fields:
+  Profile URL → professional_network_profile_urls (Enrich)
+  Business email → business_emails (Enrich)
+  Person name → basic_profile.name (Search, Autocomplete)
+  Job title → experience.employment_details.current.title (Search, Autocomplete)
+  Current company → experience.employment_details.current.company_name (Search, Autocomplete)
+  Headline → basic_profile.headline (Search, Autocomplete)
+  Location → basic_profile.location (Search)
+
+Footguns:
+  - key is "field", not "column"
+  - one identifier type per Enrich
+  - use full dot-path like experience.employment_details.current.title (not "current_title")
+  - always specify fields in production Search
+  - Enrich returns a top-level array, NOT { results: [...] }

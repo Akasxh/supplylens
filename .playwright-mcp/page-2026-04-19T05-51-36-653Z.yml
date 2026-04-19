@@ -1,0 +1,398 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Job API Search Jobs" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Job API
+              - img [ref=e39]
+            - generic [ref=e41]: Search Jobs
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "Job API" [ref=e50] [cursor=pointer]:
+            - /url: /api-reference/job-apis/search-the-indexed-job-dataset
+          - generic [ref=e51]:
+            - heading "Search Jobs" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: Search the Crustdata job dataset using filter conditions. Each result includes the job’s details (title, category, URL, openings), the hiring company’s core firmographics (basic info, headcount, followers, revenue, funding, competitors), the job location, full job description text, and metadata timestamps.
+          - generic [ref=e65]:
+            - img "Note" [ref=e67]
+            - paragraph [ref=e70]:
+              - text: Default
+              - code [ref=e71]: rate-limit
+              - text: is 15 requests per minute. Send an email to
+              - link "gtm@crustdata.co" [ref=e72] [cursor=pointer]:
+                - /url: mailto:gtm@crustdata.co
+              - text: to discuss higher limits if needed for your use case.
+          - paragraph [ref=e73]:
+            - text: Supports complex AND/OR filter logic, cursor-based pagination, sorting, field selection, and aggregations (count and group_by). Only indexed fields are filterable and sortable — see the
+            - code [ref=e74]: field
+            - text: description on
+            - code [ref=e75]: SearchCondition
+            - text: for the full list.
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e79]:
+            - generic [ref=e80] [cursor=pointer]:
+              - generic [ref=e81]: POST
+              - generic [ref=e82]:
+                - generic [ref=e83]: https://api.crustdata.com
+                - generic [ref=e84]:
+                  - generic [ref=e85]: /
+                  - generic [ref=e86]: job
+                  - generic [ref=e87]: /
+                  - generic [ref=e88]: search
+            - button "Try it" [ref=e89] [cursor=pointer]:
+              - generic [ref=e90]: Try it
+              - img [ref=e91]
+          - generic [ref=e93]:
+            - generic [ref=e94]:
+              - generic [ref=e95]:
+                - button "cURL" [ref=e96] [cursor=pointer]:
+                  - generic [ref=e97]:
+                    - paragraph [ref=e98]: cURL
+                    - img [ref=e99]
+                - generic [ref=e101]:
+                  - button "engineering_jobs_at_company" [ref=e102] [cursor=pointer]:
+                    - generic [ref=e103]:
+                      - paragraph [ref=e104]: engineering_jobs_at_company
+                      - img [ref=e105]
+                  - generic [ref=e107]:
+                    - button "Copy the contents from the code block" [ref=e110] [cursor=pointer]:
+                      - img [ref=e111]
+                    - button "Ask AI" [ref=e115] [cursor=pointer]:
+                      - img [ref=e116]
+              - region "Code snippet" [ref=e119]:
+                - generic [ref=e122]: "curl --request POST \\ --url https://api.crustdata.com/job/search \\ --header 'Authorization: Bearer <token>' \\ --header 'Content-Type: application/json' \\ --header 'x-api-version: <x-api-version>' \\ --data ' { \"filters\": { \"op\": \"and\", \"conditions\": [ { \"field\": \"company.basic_info.company_id\", \"type\": \"=\", \"value\": 631394 }, { \"field\": \"job_details.category\", \"type\": \"=\", \"value\": \"Engineering\" }, { \"field\": \"metadata.date_added\", \"type\": \"=>\", \"value\": \"2025-01-01\" } ] }, \"fields\": [ \"job_details.title\", \"job_details.url\", \"metadata.date_added\", \"location.country\" ], \"sorts\": [ { \"column\": \"metadata.date_added\", \"order\": \"desc\" } ], \"limit\": 2 } '"
+            - generic [ref=e123]:
+              - generic [ref=e124]:
+                - button "200" [ref=e125] [cursor=pointer]:
+                  - generic [ref=e126]:
+                    - paragraph [ref=e127]: "200"
+                    - img [ref=e128]
+                - generic [ref=e130]:
+                  - button "engineering_jobs_response" [ref=e131] [cursor=pointer]:
+                    - generic [ref=e132]:
+                      - paragraph [ref=e133]: engineering_jobs_response
+                      - img [ref=e134]
+                  - generic [ref=e136]:
+                    - button "Copy the contents from the code block" [ref=e139] [cursor=pointer]:
+                      - img [ref=e140]
+                    - button "Ask AI" [ref=e144] [cursor=pointer]:
+                      - img [ref=e145]
+              - region "Code snippet" [ref=e148]:
+                - generic [ref=e151]: "{ \"job_listings\": [ { \"job_details\": { \"title\": \"Integration Engineer (AUNZ)\", \"url\": \"https://www.linkedin.com/jobs/view/4398377738\" }, \"location\": { \"country\": \"Australia\" }, \"metadata\": { \"date_added\": \"2026-04-07T11:37:29\" } }, { \"job_details\": { \"title\": \"Integration Engineer (AUNZ)\", \"url\": \"https://www.linkedin.com/jobs/view/4398371967\" }, \"location\": { \"country\": \"Australia\" }, \"metadata\": { \"date_added\": \"2026-04-07T11:37:27\" } } ], \"next_cursor\": \"H4sIAJJG1mkC_xXMPQ7CMAwG0KtEmTvYiR0nXAWhyvlBHRARbTogxN0J01s-vY99nW1_r5sem70YSzEJErG_VwdSnfeMiVpSjhmbUmkanXqXa5rlqsUlTJApUPO1NrsYe_R9zNcVRZgDRhIAWAwhsA_Ct0lGH_pYSz-ffykR8PsDw2G2zooAAAA=\", \"total_count\": 1676 }"
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - heading "Authorizations" [level=4] [ref=e157]
+            - generic [ref=e159]:
+              - generic [ref=e162]:
+                - link "Navigate to header" [ref=e163] [cursor=pointer]:
+                  - /url: "#authorization-authorization"
+                  - img [ref=e165]
+                - generic [ref=e168] [cursor=pointer]: Authorization
+                - generic [ref=e169]:
+                  - generic [ref=e170]: string
+                  - generic [ref=e171]: header
+                  - text: required
+              - paragraph [ref=e174]: API key passed as a Bearer token in the Authorization header.
+          - generic [ref=e175]:
+            - heading "Headers" [level=4] [ref=e178]
+            - generic [ref=e180]:
+              - generic [ref=e183]:
+                - link "Navigate to header" [ref=e184] [cursor=pointer]:
+                  - /url: "#parameter-x-api-version"
+                  - img [ref=e186]
+                - generic [ref=e189] [cursor=pointer]: x-api-version
+                - generic [ref=e190]:
+                  - generic [ref=e191]: string
+                  - text: required
+              - generic [ref=e192]:
+                - paragraph [ref=e194]: API version to use. Must match a supported version (e.g., "2025-11-01").
+                - generic [ref=e195]:
+                  - generic [ref=e196]: "Example:"
+                  - paragraph [ref=e198]:
+                    - code [ref=e199]: "\"2025-11-01\""
+          - generic [ref=e200]:
+            - generic [ref=e201]:
+              - generic [ref=e202]:
+                - heading "Body" [level=4] [ref=e203]
+                - generic [ref=e205]: application/json
+              - paragraph [ref=e208]: Search filters, pagination, sorting, field selection, and aggregations
+            - generic [ref=e211]:
+              - paragraph [ref=e213]: Request body for searching the indexed job dataset with filters, pagination, sorting, field selection, and aggregations.
+              - generic [ref=e215]:
+                - generic [ref=e217]:
+                  - generic [ref=e220]:
+                    - link "Navigate to header" [ref=e221] [cursor=pointer]:
+                      - /url: "#body-filters"
+                      - img [ref=e223]
+                    - generic [ref=e226] [cursor=pointer]: filters
+                    - generic [ref=e228]: object
+                  - generic [ref=e229]:
+                    - paragraph [ref=e231]:
+                      - text: Search filter conditions. Can be a single condition or a nested group combined with AND/OR logic. Only indexed fields are filterable — see
+                      - code [ref=e232]: SearchCondition.field
+                      - text: for the full list.
+                    - generic [ref=e233]:
+                      - generic [ref=e235]:
+                        - tablist "Tabs" [ref=e236]:
+                          - tab "Option 1" [selected] [ref=e237] [cursor=pointer]:
+                            - generic [ref=e238]: Option 1
+                          - tab "Option 2" [ref=e239] [cursor=pointer]:
+                            - generic [ref=e240]: Option 2
+                        - generic:
+                          - tabpanel "Option 1"
+                      - group [ref=e242]:
+                        - generic "Show child attributes" [ref=e243] [cursor=pointer]:
+                          - img [ref=e244]
+                          - paragraph [ref=e246]: Show child attributes
+                      - generic [ref=e247]:
+                        - generic [ref=e248]: "Example:"
+                        - code [ref=e252]: "{ \"field\": \"company.basic_info.company_id\", \"type\": \"=\", \"value\": 631394 }"
+                - generic [ref=e254]:
+                  - generic [ref=e257]:
+                    - link "Navigate to header" [ref=e258] [cursor=pointer]:
+                      - /url: "#body-cursor"
+                      - img [ref=e260]
+                    - generic [ref=e263] [cursor=pointer]: cursor
+                    - generic [ref=e265]: string
+                  - generic [ref=e266]:
+                    - paragraph [ref=e268]:
+                      - text: Opaque pagination cursor returned in a prior response's
+                      - code [ref=e269]: next_cursor
+                      - text: field. Pass this to fetch the next page of results with the same filter, sort, and field selection.
+                    - generic [ref=e270]:
+                      - generic [ref=e271]: "Example:"
+                      - paragraph [ref=e273]:
+                        - code [ref=e274]: "\"H4sIAJJG1mkC_xXMPQ7CMAwG0KtEmTvYiR0nXAWhyvlBHRARbTogxN0J01s-vY99nW1_r5sem70YSzEJErG_VwdSnfeMiVpSjhmbUmkanXqXa5rlqsUlTJApUPO1NrsYe_R9zNcVRZgDRhIAWAwhsA_Ct0lGH_pYSz-ffykR8PsDw2G2zooAAAA=\""
+                - generic [ref=e276]:
+                  - generic [ref=e279]:
+                    - link "Navigate to header" [ref=e280] [cursor=pointer]:
+                      - /url: "#body-limit"
+                      - img [ref=e282]
+                    - generic [ref=e285] [cursor=pointer]: limit
+                    - generic [ref=e286]:
+                      - generic [ref=e287]: integer
+                      - generic [ref=e288]: default:20
+                  - generic [ref=e289]:
+                    - paragraph [ref=e291]: Maximum number of job listings to return per page. Set to 0 when you only want aggregations.
+                    - generic [ref=e292]:
+                      - text: "Required range:"
+                      - code [ref=e293]: 0 <= x <= 1000
+                    - generic [ref=e294]:
+                      - generic [ref=e295]: "Example:"
+                      - paragraph [ref=e297]:
+                        - code [ref=e298]: "20"
+                - generic [ref=e300]:
+                  - generic [ref=e303]:
+                    - link "Navigate to header" [ref=e304] [cursor=pointer]:
+                      - /url: "#body-sorts"
+                      - img [ref=e306]
+                    - generic [ref=e309] [cursor=pointer]: sorts
+                    - generic [ref=e311]: object[]
+                  - generic [ref=e312]:
+                    - paragraph [ref=e314]: Sort specifications for ordering results. Sorts are applied in order.
+                    - group [ref=e320]:
+                      - generic "Show child attributes" [ref=e321] [cursor=pointer]:
+                        - img [ref=e322]
+                        - paragraph [ref=e324]: Show child attributes
+                    - generic [ref=e325]:
+                      - generic [ref=e326]: "Example:"
+                      - code [ref=e330]: "[ { \"column\": \"metadata.date_added\", \"order\": \"desc\" } ]"
+                - generic [ref=e332]:
+                  - generic [ref=e335]:
+                    - link "Navigate to header" [ref=e336] [cursor=pointer]:
+                      - /url: "#body-fields"
+                      - img [ref=e338]
+                    - generic [ref=e341] [cursor=pointer]: fields
+                    - generic [ref=e343]: string[]
+                  - generic [ref=e344]:
+                    - generic [ref=e345]:
+                      - paragraph [ref=e346]: Fields to return in each job listing. Use dot-notation for nested fields (e.g., "job_details.title", "company.basic_info.name"). If omitted, all available fields are returned.
+                      - paragraph [ref=e347]:
+                        - text: "Valid top-level groups:"
+                        - code [ref=e348]: crustdata_job_id
+                        - text: ","
+                        - code [ref=e349]: job_details
+                        - text: ","
+                        - code [ref=e350]: company
+                        - text: ","
+                        - code [ref=e351]: location
+                        - text: ","
+                        - code [ref=e352]: content
+                        - text: ","
+                        - code [ref=e353]: metadata
+                        - text: . Nested fields are supported (e.g.,
+                        - code [ref=e354]: company.basic_info
+                        - text: ","
+                        - code [ref=e355]: company.headcount
+                        - text: ","
+                        - code [ref=e356]: company.funding
+                        - text: ).
+                    - generic [ref=e357]:
+                      - generic [ref=e358]: "Example:"
+                      - code [ref=e362]: "[ \"job_details.title\", \"job_details.url\", \"company.basic_info.name\", \"location.raw\", \"metadata.date_added\" ]"
+                - generic [ref=e364]:
+                  - generic [ref=e367]:
+                    - link "Navigate to header" [ref=e368] [cursor=pointer]:
+                      - /url: "#body-aggregations"
+                      - img [ref=e370]
+                    - generic [ref=e373] [cursor=pointer]: aggregations
+                    - generic [ref=e375]: object[]
+                  - generic [ref=e376]:
+                    - paragraph [ref=e378]:
+                      - text: Aggregation queries to run alongside the search. Set
+                      - code [ref=e379]: "limit: 0"
+                      - text: if you want only aggregation results and no job rows.
+                    - group [ref=e385]:
+                      - generic "Show child attributes" [ref=e386] [cursor=pointer]:
+                        - img [ref=e387]
+                        - paragraph [ref=e389]: Show child attributes
+                    - generic [ref=e390]:
+                      - generic [ref=e391]: "Example:"
+                      - code [ref=e395]: "[ { \"type\": \"group_by\", \"column\": \"company.basic_info.company_id\", \"agg\": \"count\", \"size\": 5 } ]"
+          - generic [ref=e396]:
+            - generic [ref=e397]:
+              - generic [ref=e398]:
+                - heading "Response" [level=4] [ref=e399]
+                - generic [ref=e401]:
+                  - button "200" [ref=e403] [cursor=pointer]:
+                    - generic [ref=e404]:
+                      - generic [ref=e405]: "200"
+                      - img [ref=e406]
+                  - generic [ref=e408]:
+                    - button "application/json" [disabled]:
+                      - generic:
+                        - generic: application/json
+              - paragraph [ref=e411]: Jobs matching the search criteria with pagination cursor and total count
+            - generic [ref=e414]:
+              - paragraph [ref=e416]: Paginated response from the indexed job search endpoint.
+              - generic [ref=e418]:
+                - generic [ref=e420]:
+                  - generic [ref=e423]:
+                    - link "Navigate to header" [ref=e424] [cursor=pointer]:
+                      - /url: "#response-job-listings"
+                      - img [ref=e426]
+                    - generic [ref=e429] [cursor=pointer]: job_listings
+                    - generic [ref=e430]:
+                      - generic [ref=e431]: object[]
+                      - text: required
+                  - generic [ref=e432]:
+                    - paragraph [ref=e434]:
+                      - text: Job listings matching the search criteria for the current page. Empty when
+                      - code [ref=e435]: limit
+                      - text: is 0 or when an aggregation-only query is made.
+                    - group [ref=e441]:
+                      - generic "Show child attributes" [ref=e442] [cursor=pointer]:
+                        - img [ref=e443]
+                        - paragraph [ref=e445]: Show child attributes
+                    - generic [ref=e446]:
+                      - generic [ref=e447]: "Example:"
+                      - code [ref=e451]: "[]"
+                - generic [ref=e453]:
+                  - generic [ref=e456]:
+                    - link "Navigate to header" [ref=e457] [cursor=pointer]:
+                      - /url: "#response-next-cursor-one-of-0"
+                      - img [ref=e459]
+                    - generic [ref=e462] [cursor=pointer]: next_cursor
+                    - generic [ref=e464]: string | null
+                  - generic [ref=e465]:
+                    - paragraph [ref=e467]:
+                      - text: Opaque cursor for fetching the next page of results. Pass this value as
+                      - code [ref=e468]: cursor
+                      - text: in the next request.
+                      - code [ref=e469]: "null"
+                      - text: when there are no more pages.
+                    - generic [ref=e470]:
+                      - generic [ref=e471]: "Example:"
+                      - paragraph [ref=e473]:
+                        - code [ref=e474]: "\"H4sIAJJG1mkC_xXMPQ7CMAwG0KtEmTvYiR0nXAWhyvlBHRARbTogxN0J01s-vY99nW1_r5sem70YSzEJErG_VwdSnfeMiVpSjhmbUmkanXqXa5rlqsUlTJApUPO1NrsYe_R9zNcVRZgDRhIAWAwhsA_Ct0lGH_pYSz-ffykR8PsDw2G2zooAAAA=\""
+                - generic [ref=e476]:
+                  - generic [ref=e479]:
+                    - link "Navigate to header" [ref=e480] [cursor=pointer]:
+                      - /url: "#response-total-count-one-of-0"
+                      - img [ref=e482]
+                    - generic [ref=e485] [cursor=pointer]: total_count
+                    - generic [ref=e487]: integer | null
+                  - generic [ref=e488]:
+                    - paragraph [ref=e490]: Total number of job listings matching the query across all pages.
+                    - generic [ref=e491]:
+                      - generic [ref=e492]: "Example:"
+                      - paragraph [ref=e494]:
+                        - code [ref=e495]: "1676"
+                - generic [ref=e497]:
+                  - generic [ref=e500]:
+                    - link "Navigate to header" [ref=e501] [cursor=pointer]:
+                      - /url: "#response-aggregations"
+                      - img [ref=e503]
+                    - generic [ref=e506] [cursor=pointer]: aggregations
+                    - generic [ref=e508]: object[]
+                  - generic [ref=e509]:
+                    - paragraph [ref=e511]:
+                      - text: Aggregation results, present only when the request included an
+                      - code [ref=e512]: aggregations
+                      - text: array.
+                    - group [ref=e518]:
+                      - generic "Show child attributes" [ref=e519] [cursor=pointer]:
+                        - img [ref=e520]
+                        - paragraph [ref=e522]: Show child attributes
+                    - generic [ref=e523]:
+                      - generic [ref=e524]: "Example:"
+                      - code [ref=e528]: "[ { \"type\": \"count\", \"column\": null, \"value\": 4354217 } ]"
+      - generic [ref=e530]:
+        - paragraph [ref=e531]: Was this page helpful?
+        - generic [ref=e533]:
+          - button "Yes" [ref=e534] [cursor=pointer]:
+            - img [ref=e535]
+            - generic [ref=e537]: "Yes"
+          - button "No" [ref=e538] [cursor=pointer]:
+            - img [ref=e539]
+            - generic [ref=e541]: "No"
+      - generic [ref=e543]:
+        - textbox "Ask a question..." [ref=e544]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e545]:
+          - img [ref=e546]
+      - contentinfo [ref=e548]:
+        - generic [ref=e549]:
+          - link "x" [ref=e550] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e551]: x
+            - img [ref=e552]
+          - link "linkedin" [ref=e553] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e554]: linkedin
+            - img [ref=e555]

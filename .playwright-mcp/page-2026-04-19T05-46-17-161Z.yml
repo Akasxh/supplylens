@@ -1,0 +1,380 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Person Person Examples" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Person
+              - img [ref=e39]
+            - generic [ref=e41]: Person Examples
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - link "Products" [ref=e50] [cursor=pointer]:
+                - /url: /company-docs/quickstart
+              - img [ref=e51]
+            - link "Person" [ref=e54] [cursor=pointer]:
+              - /url: /person-docs/quickstart
+          - generic [ref=e55]:
+            - heading "Person Examples" [level=1] [ref=e56]
+            - generic [ref=e57]:
+              - button "Copy page" [ref=e58] [cursor=pointer]:
+                - generic [ref=e59]:
+                  - img [ref=e60]
+                  - generic [ref=e63]: Copy page
+              - button "More actions" [ref=e64] [cursor=pointer]:
+                - img [ref=e65]
+        - paragraph [ref=e68]: End-to-end Person API workflow examples with requests, responses, extraction steps, and failure handling.
+      - generic [ref=e69]:
+        - generic [ref=e70]: Use this page for complete workflow examples that chain multiple Person API calls together.
+        - generic [ref=e71]: "For single-endpoint requests and parameter details, use these pages:"
+        - list [ref=e72]:
+          - listitem [ref=e73]:
+            - link "Person Search" [ref=e74] [cursor=pointer]:
+              - /url: /person-docs/search
+            - text: — name lookup, title filters, exclusions, geographic filters, pagination, and preview mode.
+          - listitem [ref=e75]:
+            - link "Person Enrichment" [ref=e76] [cursor=pointer]:
+              - /url: /person-docs/enrichment
+            - text: — profile URL enrichment, business email lookup, batch enrichment, refresh flags, and field selection.
+        - separator [ref=e77]
+        - 'heading "Navigate to header Workflow 1: Autocomplete → Search → Enrich" [level=2] [ref=e78]':
+          - link "Navigate to header" [ref=e79] [cursor=pointer]:
+            - /url: "#workflow-1-autocomplete-→-search-→-enrich"
+            - img [ref=e81]
+          - generic [ref=e83] [cursor=pointer]: "Workflow 1: Autocomplete → Search → Enrich"
+        - generic [ref=e84]:
+          - strong [ref=e85]: "Goal:"
+          - text: Find VPs of Sales at mid-size software companies and get their full profiles.
+        - generic [ref=e86]:
+          - strong [ref=e87]: "Why this workflow:"
+          - text: You don’t know the exact title value the Search API expects. Autocomplete discovers it, Search finds matching people, and Enrich fills in the details.
+        - 'heading "Navigate to header Step 1: Discover valid title values" [level=3] [ref=e88]':
+          - link "Navigate to header" [ref=e89] [cursor=pointer]:
+            - /url: "#step-1-discover-valid-title-values"
+            - img [ref=e91]
+          - generic [ref=e93] [cursor=pointer]: "Step 1: Discover valid title values"
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - tablist [ref=e96]:
+              - tab "Request" [selected] [ref=e97] [cursor=pointer]:
+                - generic [ref=e98]: Request
+              - tab "Response" [ref=e100] [cursor=pointer]:
+                - generic [ref=e101]: Response
+            - generic [ref=e102]:
+              - button "Report incorrect code" [ref=e104] [cursor=pointer]:
+                - img [ref=e105]
+              - button "Copy the contents from the code block" [ref=e108] [cursor=pointer]:
+                - img [ref=e109]
+              - button "Ask AI" [ref=e113] [cursor=pointer]:
+                - img [ref=e114]
+          - tabpanel "Request" [ref=e118]:
+            - code [ref=e122]:
+              - generic [ref=e123]: curl --request POST \
+              - generic [ref=e124]: "--url https://api.crustdata.com/person/search/autocomplete \\"
+              - generic [ref=e125]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e126]: "--header 'content-type: application/json' \\"
+              - generic [ref=e127]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e128]: "--data '{\"field\": \"experience.employment_details.current.title\", \"query\": \"VP Sales\", \"limit\": 3}'"
+        - generic [ref=e129]:
+          - strong [ref=e130]: "Extract:"
+          - text: Take
+          - code [ref=e131]: suggestions[0].value
+          - text: →
+          - code [ref=e132]: "\"VP Sales\""
+          - text: . Use this exact string in your Search filter.
+        - generic [ref=e133]:
+          - strong [ref=e134]: "If empty:"
+          - text: Try a broader query (e.g.,
+          - code [ref=e135]: "\"VP\""
+          - text: instead of
+          - code [ref=e136]: "\"VP Sales\""
+          - text: ).
+        - 'heading "Navigate to header Step 2: Search for matching people" [level=3] [ref=e137]':
+          - link "Navigate to header" [ref=e138] [cursor=pointer]:
+            - /url: "#step-2-search-for-matching-people"
+            - img [ref=e140]
+          - generic [ref=e142] [cursor=pointer]: "Step 2: Search for matching people"
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - tablist [ref=e145]:
+              - tab "Request" [selected] [ref=e146] [cursor=pointer]:
+                - generic [ref=e147]: Request
+              - tab "Response" [ref=e149] [cursor=pointer]:
+                - generic [ref=e150]: Response
+            - generic [ref=e151]:
+              - button "Report incorrect code" [ref=e153] [cursor=pointer]:
+                - img [ref=e154]
+              - button "Copy the contents from the code block" [ref=e157] [cursor=pointer]:
+                - img [ref=e158]
+              - button "Ask AI" [ref=e162] [cursor=pointer]:
+                - img [ref=e163]
+          - tabpanel "Request" [ref=e167]:
+            - code [ref=e171]:
+              - generic [ref=e172]: curl --request POST \
+              - generic [ref=e173]: "--url https://api.crustdata.com/person/search \\"
+              - generic [ref=e174]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e175]: "--header 'content-type: application/json' \\"
+              - generic [ref=e176]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e177]: "--data '{"
+              - generic [ref=e178]: "\"filters\": {"
+              - generic [ref=e179]: "\"op\": \"and\","
+              - generic [ref=e180]: "\"conditions\": ["
+              - generic [ref=e181]: "{\"field\": \"experience.employment_details.current.title\", \"type\": \"in\", \"value\": [\"VP Sales\", \"VP of Sales\"]},"
+              - generic [ref=e182]: "{\"field\": \"experience.employment_details.current.company_headcount_range\", \"type\": \"in\", \"value\": [\"51-200\", \"201-500\"]}"
+              - generic [ref=e183]: "]"
+              - generic [ref=e184]: "},"
+              - generic [ref=e185]: "\"limit\": 3,"
+              - generic [ref=e186]: "\"fields\": [\"basic_profile.name\", \"experience.employment_details.current.title\", \"experience.employment_details.current.company_name\", \"social_handles.professional_network_identifier.profile_url\"]"
+              - generic [ref=e187]: "}'"
+        - generic [ref=e188]:
+          - strong [ref=e189]: "Extract:"
+          - text: Take
+          - code [ref=e190]: social_handles.professional_network_identifier.profile_url
+          - text: →
+          - code [ref=e191]: "\"https://www.linkedin.com/in/janesmith\""
+          - text: . Pass the profile URL to Enrich.
+        - generic [ref=e192]:
+          - strong [ref=e193]: "If empty:"
+          - text: Broaden filters or check values with
+          - link "Autocomplete" [ref=e194] [cursor=pointer]:
+            - /url: /person-docs/autocomplete
+          - text: .
+        - 'heading "Navigate to header Step 3: Enrich the top match" [level=3] [ref=e195]':
+          - link "Navigate to header" [ref=e196] [cursor=pointer]:
+            - /url: "#step-3-enrich-the-top-match"
+            - img [ref=e198]
+          - generic [ref=e200] [cursor=pointer]: "Step 3: Enrich the top match"
+        - generic [ref=e201]:
+          - generic [ref=e202]:
+            - tablist [ref=e203]:
+              - tab "Request" [selected] [ref=e204] [cursor=pointer]:
+                - generic [ref=e205]: Request
+            - generic [ref=e207]:
+              - button "Report incorrect code" [ref=e209] [cursor=pointer]:
+                - img [ref=e210]
+              - button "Copy the contents from the code block" [ref=e213] [cursor=pointer]:
+                - img [ref=e214]
+              - button "Ask AI" [ref=e218] [cursor=pointer]:
+                - img [ref=e219]
+          - tabpanel "Request" [ref=e223]:
+            - code [ref=e227]:
+              - generic [ref=e228]: curl --request POST \
+              - generic [ref=e229]: "--url https://api.crustdata.com/person/enrich \\"
+              - generic [ref=e230]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e231]: "--header 'content-type: application/json' \\"
+              - generic [ref=e232]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e233]: "--data '{\"professional_network_profile_urls\": [\"https://www.linkedin.com/in/janesmith\"]}'"
+        - generic [ref=e234]:
+          - strong [ref=e235]: "Result:"
+          - text: Full person profile with employment history, education, skills, contact info, and more.
+        - separator [ref=e236]
+        - 'heading "Navigate to header Workflow 2: Business email → Enrich" [level=2] [ref=e237]':
+          - link "Navigate to header" [ref=e238] [cursor=pointer]:
+            - /url: "#workflow-2-business-email-→-enrich"
+            - img [ref=e240]
+          - generic [ref=e242] [cursor=pointer]: "Workflow 2: Business email → Enrich"
+        - generic [ref=e243]:
+          - strong [ref=e244]: "Goal:"
+          - text: An inbound lead submits a business email. Enrich it directly to get the person’s full profile.
+        - 'heading "Navigate to header Step 1: Enrich the email" [level=3] [ref=e245]':
+          - link "Navigate to header" [ref=e246] [cursor=pointer]:
+            - /url: "#step-1-enrich-the-email"
+            - img [ref=e248]
+          - generic [ref=e250] [cursor=pointer]: "Step 1: Enrich the email"
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - tablist [ref=e253]:
+              - tab "Request" [selected] [ref=e254] [cursor=pointer]:
+                - generic [ref=e255]: Request
+              - tab "Response" [ref=e257] [cursor=pointer]:
+                - generic [ref=e258]: Response
+            - generic [ref=e259]:
+              - button "Report incorrect code" [ref=e261] [cursor=pointer]:
+                - img [ref=e262]
+              - button "Copy the contents from the code block" [ref=e265] [cursor=pointer]:
+                - img [ref=e266]
+              - button "Ask AI" [ref=e270] [cursor=pointer]:
+                - img [ref=e271]
+          - tabpanel "Request" [ref=e275]:
+            - code [ref=e279]:
+              - generic [ref=e280]: curl --request POST \
+              - generic [ref=e281]: "--url https://api.crustdata.com/person/enrich \\"
+              - generic [ref=e282]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e283]: "--header 'content-type: application/json' \\"
+              - generic [ref=e284]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e285]: "--data '{\"business_emails\": [\"abhilash@crustdata.com\"]}'"
+        - generic [ref=e286]:
+          - strong [ref=e287]: "Extract:"
+          - text: If
+          - code [ref=e288]: matches[0].confidence_score >= 0.8
+          - text: ", the person is confirmed and you already have the enrich response. Continue with any follow-up processing you need."
+        - generic [ref=e289]:
+          - strong [ref=e290]: "If no match:"
+          - code [ref=e291]: matches
+          - text: will be
+          - code [ref=e292]: "[]"
+          - text: . The email may not be in the database. Try a different identifier or check for typos.
+        - separator [ref=e293]
+        - heading "Navigate to header Error handling patterns" [level=2] [ref=e294]:
+          - link "Navigate to header" [ref=e295] [cursor=pointer]:
+            - /url: "#error-handling-patterns"
+            - img [ref=e297]
+          - generic [ref=e299] [cursor=pointer]: Error handling patterns
+        - heading "Navigate to header Invalid request (400)" [level=3] [ref=e300]:
+          - link "Navigate to header" [ref=e301] [cursor=pointer]:
+            - /url: "#invalid-request-400"
+            - img [ref=e303]
+          - generic [ref=e305] [cursor=pointer]: Invalid request (400)
+        - generic [ref=e306]:
+          - generic [ref=e307]:
+            - button "Report incorrect code" [ref=e309] [cursor=pointer]:
+              - img [ref=e310]
+            - button "Copy the contents from the code block" [ref=e313] [cursor=pointer]:
+              - img [ref=e314]
+            - button "Ask AI" [ref=e318] [cursor=pointer]:
+              - img [ref=e319]
+          - code [ref=e325]:
+            - generic [ref=e326]: "{"
+            - generic [ref=e327]: "\"error\": {"
+            - generic [ref=e328]: "\"type\": \"invalid_request\","
+            - generic [ref=e329]: "\"message\": \"Unsupported filter field: 'current_title'. Supported fields: ['basic_profile.name', 'basic_profile.headline', ...]\","
+            - generic [ref=e330]: "\"metadata\": []"
+            - generic [ref=e331]: "}"
+            - generic [ref=e332]: "}"
+        - generic [ref=e333]:
+          - strong [ref=e334]: "Action:"
+          - text: Fix the request. Do not retry
+          - code [ref=e335]: "400"
+          - text: errors.
+        - heading "Navigate to header Invalid API key (401)" [level=3] [ref=e336]:
+          - link "Navigate to header" [ref=e337] [cursor=pointer]:
+            - /url: "#invalid-api-key-401"
+            - img [ref=e339]
+          - generic [ref=e341] [cursor=pointer]: Invalid API key (401)
+        - generic [ref=e342]:
+          - generic [ref=e343]:
+            - button "Report incorrect code" [ref=e345] [cursor=pointer]:
+              - img [ref=e346]
+            - button "Copy the contents from the code block" [ref=e349] [cursor=pointer]:
+              - img [ref=e350]
+            - button "Ask AI" [ref=e354] [cursor=pointer]:
+              - img [ref=e355]
+          - code [ref=e361]:
+            - generic [ref=e362]: "{ \"message\": \"Invalid API key in request\" }"
+        - generic [ref=e363]:
+          - strong [ref=e364]: "Action:"
+          - text: Check your API key. The
+          - code [ref=e365]: "401"
+          - text: response uses a simpler shape.
+        - heading "Navigate to header No match (Enrich)" [level=3] [ref=e366]:
+          - link "Navigate to header" [ref=e367] [cursor=pointer]:
+            - /url: "#no-match-enrich"
+            - img [ref=e369]
+          - generic [ref=e371] [cursor=pointer]: No match (Enrich)
+        - generic [ref=e372]:
+          - generic [ref=e373]:
+            - button "Report incorrect code" [ref=e375] [cursor=pointer]:
+              - img [ref=e376]
+            - button "Copy the contents from the code block" [ref=e379] [cursor=pointer]:
+              - img [ref=e380]
+            - button "Ask AI" [ref=e384] [cursor=pointer]:
+              - img [ref=e385]
+          - code [ref=e391]:
+            - generic [ref=e392]: "["
+            - generic [ref=e393]: "{"
+            - generic [ref=e394]: "\"matched_on\": \"nonexistent@example.com\","
+            - generic [ref=e395]: "\"match_type\": \"business_email\","
+            - generic [ref=e396]: "\"matches\": []"
+            - generic [ref=e397]: "}"
+            - generic [ref=e398]: "]"
+        - generic [ref=e399]:
+          - strong [ref=e400]: "Action:"
+          - text: Try a different identifier or check for typos. Do not retry.
+        - heading "Navigate to header Retry decision table" [level=3] [ref=e401]:
+          - link "Navigate to header" [ref=e402] [cursor=pointer]:
+            - /url: "#retry-decision-table"
+            - img [ref=e404]
+          - generic [ref=e406] [cursor=pointer]: Retry decision table
+        - table [ref=e409]:
+          - rowgroup [ref=e410]:
+            - row "Status Retry? Action" [ref=e411]:
+              - columnheader "Status" [ref=e412]
+              - columnheader "Retry?" [ref=e413]
+              - columnheader "Action" [ref=e414]
+          - rowgroup [ref=e415]:
+            - row "400 No Fix the request" [ref=e416]:
+              - cell "400" [ref=e417]:
+                - code [ref=e418]: "400"
+              - cell "No" [ref=e419]
+              - cell "Fix the request" [ref=e420]
+            - row "401 No Check API key" [ref=e421]:
+              - cell "401" [ref=e422]:
+                - code [ref=e423]: "401"
+              - cell "No" [ref=e424]
+              - cell "Check API key" [ref=e425]
+            - row "403 No Check permissions or credits" [ref=e426]:
+              - cell "403" [ref=e427]:
+                - code [ref=e428]: "403"
+              - cell "No" [ref=e429]
+              - cell "Check permissions or credits" [ref=e430]
+            - row "404 No Profile not found" [ref=e431]:
+              - cell "404" [ref=e432]:
+                - code [ref=e433]: "404"
+              - cell "No" [ref=e434]
+              - cell "Profile not found" [ref=e435]
+            - row "500 Yes Exponential backoff (1s, 2s, 4s)" [ref=e436]:
+              - cell "500" [ref=e437]:
+                - code [ref=e438]: "500"
+              - cell "Yes" [ref=e439]
+              - cell "Exponential backoff (1s, 2s, 4s)" [ref=e440]
+      - generic [ref=e442]:
+        - paragraph [ref=e443]: Was this page helpful?
+        - generic [ref=e445]:
+          - button "Yes" [ref=e446] [cursor=pointer]:
+            - img [ref=e447]
+            - generic [ref=e449]: "Yes"
+          - button "No" [ref=e450] [cursor=pointer]:
+            - img [ref=e451]
+            - generic [ref=e453]: "No"
+      - generic [ref=e455]:
+        - textbox "Ask a question..." [ref=e456]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e457]:
+          - img [ref=e458]
+      - contentinfo [ref=e460]:
+        - generic [ref=e461]:
+          - link "x" [ref=e462] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e463]: x
+            - img [ref=e464]
+          - link "linkedin" [ref=e465] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e466]: linkedin
+            - img [ref=e467]

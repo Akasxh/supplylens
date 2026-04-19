@@ -1,0 +1,1368 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#content-area"
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - paragraph [ref=e11]:
+          - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+          - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+            - /url: mailto:support@crustdata.tech
+          - text: for feedback and clarifications.
+        - generic [ref=e14]:
+          - generic [ref=e16]:
+            - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e19]: Crustdata Docs home page
+              - img "light logo" [ref=e20]
+            - generic [ref=e21]:
+              - button "Open search" [ref=e22] [cursor=pointer]:
+                - generic [ref=e23]: Search...
+                - img [ref=e24]
+              - button [ref=e25] [cursor=pointer]:
+                - img [ref=e26]
+              - button "More actions" [ref=e29] [cursor=pointer]:
+                - img [ref=e30]
+          - button "Navigation Person Person Search" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]:
+              - generic [ref=e33]: Navigation
+              - img [ref=e34]
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - generic [ref=e38]: Person
+                - img [ref=e39]
+              - generic [ref=e41]: Person Search
+      - generic [ref=e45]:
+        - banner [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - link "Products" [ref=e50] [cursor=pointer]:
+                  - /url: /company-docs/quickstart
+                - img [ref=e51]
+              - link "Person" [ref=e54] [cursor=pointer]:
+                - /url: /person-docs/quickstart
+            - generic [ref=e55]:
+              - heading "Person Search" [level=1] [ref=e56]
+              - generic [ref=e57]:
+                - button "Copy page" [ref=e58] [cursor=pointer]:
+                  - generic [ref=e59]:
+                    - img [ref=e60]
+                    - generic [ref=e63]: Copy page
+                - button "More actions" [ref=e64] [cursor=pointer]:
+                  - img [ref=e65]
+          - paragraph [ref=e68]: Learn how to search for people using the Person Search API, from simple name lookups to advanced multi-filter queries.
+        - generic [ref=e69]:
+          - generic [ref=e70]: The Person Search API lets you find professionals by name, title, company, location, and more. This page walks you through the API step by step, starting with the simplest possible request and building up to advanced queries.
+          - generic [ref=e71]: "Every request goes to the same endpoint:"
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - button "Report incorrect code" [ref=e75] [cursor=pointer]:
+                - img [ref=e76]
+              - button "Copy the contents from the code block" [ref=e79] [cursor=pointer]:
+                - img [ref=e80]
+              - button "Ask AI" [ref=e84] [cursor=pointer]:
+                - img [ref=e85]
+            - code [ref=e91]:
+              - generic [ref=e92]: POST https://api.crustdata.com/person/search
+          - generic [ref=e93]:
+            - img "Note" [ref=e95]
+            - generic [ref=e98]:
+              - text: Replace
+              - code [ref=e99]: YOUR_API_KEY
+              - text: in each example with your actual API key. All requests require the
+              - code [ref=e100]: "x-api-version: 2025-11-01"
+              - text: header.
+          - generic [ref=e101]:
+            - img [ref=e103]
+            - generic [ref=e105]:
+              - strong [ref=e106]: "Pricing:"
+              - code [ref=e107]: 0.03 credits per result returned
+              - text: .
+          - separator [ref=e108]
+          - 'heading "Navigate to header Your first search: find a person by name" [level=2] [ref=e109]':
+            - link "Navigate to header" [ref=e110] [cursor=pointer]:
+              - /url: "#your-first-search-find-a-person-by-name"
+              - img [ref=e112]
+            - generic [ref=e114] [cursor=pointer]: "Your first search: find a person by name"
+          - generic [ref=e115]:
+            - text: The simplest search finds a person by their exact name. You pass a single filter with the
+            - code [ref=e116]: =
+            - text: operator.
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - tablist [ref=e119]:
+                - tab "Request" [selected] [ref=e120] [cursor=pointer]:
+                  - generic [ref=e121]: Request
+                - tab "Response" [ref=e123] [cursor=pointer]:
+                  - generic [ref=e124]: Response
+              - generic [ref=e125]:
+                - button "Report incorrect code" [ref=e127] [cursor=pointer]:
+                  - img [ref=e128]
+                - button "Copy the contents from the code block" [ref=e131] [cursor=pointer]:
+                  - img [ref=e132]
+                - button "Ask AI" [ref=e136] [cursor=pointer]:
+                  - img [ref=e137]
+            - tabpanel "Request" [ref=e141]:
+              - code [ref=e145]:
+                - generic [ref=e146]: curl --request POST \
+                - generic [ref=e147]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e148]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e149]: "--header 'content-type: application/json' \\"
+                - generic [ref=e150]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e151]: "--data '{"
+                - generic [ref=e152]: "\"filters\": {"
+                - generic [ref=e153]: "\"field\": \"basic_profile.name\","
+                - generic [ref=e154]: "\"type\": \"=\","
+                - generic [ref=e155]: "\"value\": \"Abhilash Chowdhary\""
+                - generic [ref=e156]: "},"
+                - generic [ref=e157]: "\"limit\": 1"
+                - generic [ref=e158]: "}'"
+          - generic [ref=e159]:
+            - img "Note" [ref=e161]
+            - generic [ref=e163]: Response trimmed for clarity.
+          - heading "Navigate to header Understanding the response" [level=3] [ref=e164]:
+            - link "Navigate to header" [ref=e165] [cursor=pointer]:
+              - /url: "#understanding-the-response"
+              - img [ref=e167]
+            - generic [ref=e169] [cursor=pointer]: Understanding the response
+          - generic [ref=e170]: "Every search response has three fields:"
+          - list [ref=e171]:
+            - listitem [ref=e172]:
+              - strong [ref=e173]:
+                - code [ref=e174]: profiles
+              - text: — an array of matching people. Each profile contains identity fields, education, profile handles, and contact availability flags for the fields you requested.
+            - listitem [ref=e175]:
+              - strong [ref=e176]:
+                - code [ref=e177]: total_count
+              - text: — how many people match your filters across the full database. Here, 8 people named “Abhilash Chowdhary” exist.
+            - listitem [ref=e178]:
+              - strong [ref=e179]:
+                - code [ref=e180]: next_cursor
+              - text: — a pagination token. Pass it in the next request to get the next page of results.
+              - code [ref=e181]: "null"
+              - text: means there are no more pages.
+          - separator [ref=e182]
+          - heading "Navigate to header Combine filters with and" [level=2] [ref=e183]:
+            - link "Navigate to header" [ref=e184] [cursor=pointer]:
+              - /url: "#combine-filters-with-and"
+              - img [ref=e186]
+            - generic [ref=e188] [cursor=pointer]:
+              - text: Combine filters with
+              - code [ref=e189]: and
+          - generic [ref=e190]:
+            - text: Real searches need more than one criterion. Wrap multiple conditions inside an
+            - code [ref=e191]: "op: \"and\""
+            - text: group to require all of them.
+          - generic [ref=e192]:
+            - text: This search finds Co-Founders located in San Francisco. The
+            - code [ref=e193]: (.)
+            - text: operator does a regex/contains match instead of an exact match.
+          - generic [ref=e194]:
+            - generic [ref=e195]:
+              - tablist [ref=e196]:
+                - tab "Request" [selected] [ref=e197] [cursor=pointer]:
+                  - generic [ref=e198]: Request
+                - tab "Response" [ref=e200] [cursor=pointer]:
+                  - generic [ref=e201]: Response
+              - generic [ref=e202]:
+                - button "Report incorrect code" [ref=e204] [cursor=pointer]:
+                  - img [ref=e205]
+                - button "Copy the contents from the code block" [ref=e208] [cursor=pointer]:
+                  - img [ref=e209]
+                - button "Ask AI" [ref=e213] [cursor=pointer]:
+                  - img [ref=e214]
+            - tabpanel "Request" [ref=e218]:
+              - code [ref=e222]:
+                - generic [ref=e223]: curl --request POST \
+                - generic [ref=e224]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e225]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e226]: "--header 'content-type: application/json' \\"
+                - generic [ref=e227]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e228]: "--data '{"
+                - generic [ref=e229]: "\"filters\": {"
+                - generic [ref=e230]: "\"op\": \"and\","
+                - generic [ref=e231]: "\"conditions\": ["
+                - generic [ref=e232]: "{"
+                - generic [ref=e233]: "\"field\": \"experience.employment_details.title\","
+                - generic [ref=e234]: "\"type\": \"(.)\","
+                - generic [ref=e235]: "\"value\": \"Co-Founder\""
+                - generic [ref=e236]: "},"
+                - generic [ref=e237]: "{"
+                - generic [ref=e238]: "\"field\": \"basic_profile.location.full_location\","
+                - generic [ref=e239]: "\"type\": \"(.)\","
+                - generic [ref=e240]: "\"value\": \"San Francisco\""
+                - generic [ref=e241]: "}"
+                - generic [ref=e242]: "]"
+                - generic [ref=e243]: "},"
+                - generic [ref=e244]: "\"limit\": 2"
+                - generic [ref=e245]: "}'"
+          - generic [ref=e246]:
+            - img "Note" [ref=e248]
+            - generic [ref=e250]: Response trimmed for clarity.
+          - generic [ref=e251]:
+            - text: "The key difference from the first example: instead of a single"
+            - code [ref=e252]: filters
+            - text: object, you now have a group with
+            - code [ref=e253]: "op: \"and\""
+            - text: and a
+            - code [ref=e254]: conditions
+            - text: array. Every condition must match for a profile to be included.
+          - separator [ref=e255]
+          - heading "Navigate to header Search by employer and title" [level=2] [ref=e256]:
+            - link "Navigate to header" [ref=e257] [cursor=pointer]:
+              - /url: "#search-by-employer-and-title"
+              - img [ref=e259]
+            - generic [ref=e261] [cursor=pointer]: Search by employer and title
+          - generic [ref=e262]: "This is the most common pattern for sales and recruiting: find people with a specific title at a specific company. This search finds VPs, Directors, and Heads of department at Retool."
+          - generic [ref=e263]:
+            - generic [ref=e264]:
+              - tablist [ref=e265]:
+                - tab "Request" [selected] [ref=e266] [cursor=pointer]:
+                  - generic [ref=e267]: Request
+                - tab "Response" [ref=e269] [cursor=pointer]:
+                  - generic [ref=e270]: Response
+              - generic [ref=e271]:
+                - button "Report incorrect code" [ref=e273] [cursor=pointer]:
+                  - img [ref=e274]
+                - button "Copy the contents from the code block" [ref=e277] [cursor=pointer]:
+                  - img [ref=e278]
+                - button "Ask AI" [ref=e282] [cursor=pointer]:
+                  - img [ref=e283]
+            - tabpanel "Request" [ref=e287]:
+              - code [ref=e291]:
+                - generic [ref=e292]: curl --request POST \
+                - generic [ref=e293]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e294]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e295]: "--header 'content-type: application/json' \\"
+                - generic [ref=e296]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e297]: "--data '{"
+                - generic [ref=e298]: "\"filters\": {"
+                - generic [ref=e299]: "\"op\": \"and\","
+                - generic [ref=e300]: "\"conditions\": ["
+                - generic [ref=e301]: "{"
+                - generic [ref=e302]: "\"field\": \"experience.employment_details.company_name\","
+                - generic [ref=e303]: "\"type\": \"in\","
+                - generic [ref=e304]: "\"value\": [\"Retool\"]"
+                - generic [ref=e305]: "},"
+                - generic [ref=e306]: "{"
+                - generic [ref=e307]: "\"field\": \"experience.employment_details.title\","
+                - generic [ref=e308]: "\"type\": \"(.)\","
+                - generic [ref=e309]: "\"value\": \"VP|Director|Head of\""
+                - generic [ref=e310]: "}"
+                - generic [ref=e311]: "]"
+                - generic [ref=e312]: "},"
+                - generic [ref=e313]: "\"limit\": 1"
+                - generic [ref=e314]: "}'"
+          - generic [ref=e315]:
+            - img "Note" [ref=e317]
+            - generic [ref=e319]: Response trimmed for clarity.
+          - heading "Navigate to header How the operators work" [level=3] [ref=e320]:
+            - link "Navigate to header" [ref=e321] [cursor=pointer]:
+              - /url: "#how-the-operators-work"
+              - img [ref=e323]
+            - generic [ref=e325] [cursor=pointer]: How the operators work
+          - generic [ref=e326]: "There are two different operators at play here:"
+          - list [ref=e327]:
+            - listitem [ref=e328]:
+              - strong [ref=e329]:
+                - code [ref=e330]: in
+              - text: "on"
+              - code [ref=e331]: experience.employment_details.company_name
+              - text: checks if the person has worked at any of the listed companies (current or past). Pass an array even for a single company. To search only current employers, use
+              - code [ref=e332]: experience.employment_details.current.company_name
+              - text: instead.
+            - listitem [ref=e333]:
+              - strong [ref=e334]:
+                - code [ref=e335]: (.)
+              - text: "on"
+              - code [ref=e336]: experience.employment_details.title
+              - text: does a regex match. The pipe
+              - code [ref=e337]: "|"
+              - text: means “or”, so
+              - code [ref=e338]: VP|Director|Head of
+              - text: matches any title containing “VP”, “Director”, or “Head of”. To search only current titles, use
+              - code [ref=e339]: experience.employment_details.current.title
+              - text: instead.
+          - generic [ref=e340]:
+            - text: The
+            - code [ref=e341]: experience.employment_details.company_name
+            - text: field includes
+            - strong [ref=e342]: all
+            - text: employers (current and past). If you see someone whose current role is at a different company, it means they previously worked at your target company.
+          - separator [ref=e343]
+          - heading "Navigate to header Exclude specific titles" [level=2] [ref=e344]:
+            - link "Navigate to header" [ref=e345] [cursor=pointer]:
+              - /url: "#exclude-specific-titles"
+              - img [ref=e347]
+            - generic [ref=e349] [cursor=pointer]: Exclude specific titles
+          - generic [ref=e350]:
+            - text: Sometimes you want everyone at a company
+            - emphasis [ref=e351]: except
+            - text: certain roles. Use the
+            - code [ref=e352]: not_in
+            - text: operator to exclude titles.
+          - generic [ref=e353]: This search finds people at OpenAI or Retool but excludes interns and students.
+          - generic [ref=e354]:
+            - generic [ref=e355]:
+              - tablist [ref=e356]:
+                - tab "Request" [selected] [ref=e357] [cursor=pointer]:
+                  - generic [ref=e358]: Request
+              - generic [ref=e360]:
+                - button "Report incorrect code" [ref=e362] [cursor=pointer]:
+                  - img [ref=e363]
+                - button "Copy the contents from the code block" [ref=e366] [cursor=pointer]:
+                  - img [ref=e367]
+                - button "Ask AI" [ref=e371] [cursor=pointer]:
+                  - img [ref=e372]
+            - tabpanel "Request" [ref=e376]:
+              - code [ref=e380]:
+                - generic [ref=e381]: curl --request POST \
+                - generic [ref=e382]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e383]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e384]: "--header 'content-type: application/json' \\"
+                - generic [ref=e385]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e386]: "--data '{"
+                - generic [ref=e387]: "\"filters\": {"
+                - generic [ref=e388]: "\"op\": \"and\","
+                - generic [ref=e389]: "\"conditions\": ["
+                - generic [ref=e390]: "{"
+                - generic [ref=e391]: "\"field\": \"experience.employment_details.company_name\","
+                - generic [ref=e392]: "\"type\": \"in\","
+                - generic [ref=e393]: "\"value\": [\"OpenAI\", \"Retool\"]"
+                - generic [ref=e394]: "},"
+                - generic [ref=e395]: "{"
+                - generic [ref=e396]: "\"field\": \"experience.employment_details.title\","
+                - generic [ref=e397]: "\"type\": \"not_in\","
+                - generic [ref=e398]: "\"value\": [\"Intern\", \"Student\"]"
+                - generic [ref=e399]: "}"
+                - generic [ref=e400]: "]"
+                - generic [ref=e401]: "},"
+                - generic [ref=e402]: "\"limit\": 2"
+                - generic [ref=e403]: "}'"
+          - generic [ref=e404]:
+            - text: The
+            - code [ref=e405]: not_in
+            - text: operator removes any profile where one of the listed values appears in their title history. This is useful for cleaning up results in recruiting or sales workflows.
+          - separator [ref=e406]
+          - heading "Navigate to header Search within a geographic radius" [level=2] [ref=e407]:
+            - link "Navigate to header" [ref=e408] [cursor=pointer]:
+              - /url: "#search-within-a-geographic-radius"
+              - img [ref=e410]
+            - generic [ref=e412] [cursor=pointer]: Search within a geographic radius
+          - generic [ref=e413]:
+            - text: The
+            - code [ref=e414]: geo_distance
+            - text: filter finds people within a specific distance of a city. This is powerful for territory-based sales or local recruiting.
+          - generic [ref=e415]: This search finds CTOs within 10 miles of San Francisco.
+          - generic [ref=e416]:
+            - generic [ref=e417]:
+              - tablist [ref=e418]:
+                - tab "Request" [selected] [ref=e419] [cursor=pointer]:
+                  - generic [ref=e420]: Request
+                - tab "Response" [ref=e422] [cursor=pointer]:
+                  - generic [ref=e423]: Response
+              - generic [ref=e424]:
+                - button "Report incorrect code" [ref=e426] [cursor=pointer]:
+                  - img [ref=e427]
+                - button "Copy the contents from the code block" [ref=e430] [cursor=pointer]:
+                  - img [ref=e431]
+                - button "Ask AI" [ref=e435] [cursor=pointer]:
+                  - img [ref=e436]
+            - tabpanel "Request" [ref=e440]:
+              - code [ref=e444]:
+                - generic [ref=e445]: curl --request POST \
+                - generic [ref=e446]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e447]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e448]: "--header 'content-type: application/json' \\"
+                - generic [ref=e449]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e450]: "--data '{"
+                - generic [ref=e451]: "\"filters\": {"
+                - generic [ref=e452]: "\"op\": \"and\","
+                - generic [ref=e453]: "\"conditions\": ["
+                - generic [ref=e454]: "{"
+                - generic [ref=e455]: "\"field\": \"professional_network.location.raw\","
+                - generic [ref=e456]: "\"type\": \"geo_distance\","
+                - generic [ref=e457]: "\"value\": {"
+                - generic [ref=e458]: "\"location\": \"San Francisco\","
+                - generic [ref=e459]: "\"distance\": 10,"
+                - generic [ref=e460]: "\"unit\": \"mi\""
+                - generic [ref=e461]: "}"
+                - generic [ref=e462]: "},"
+                - generic [ref=e463]: "{"
+                - generic [ref=e464]: "\"field\": \"experience.employment_details.current.title\","
+                - generic [ref=e465]: "\"type\": \"(.)\","
+                - generic [ref=e466]: "\"value\": \"CTO|Chief Technology\""
+                - generic [ref=e467]: "}"
+                - generic [ref=e468]: "]"
+                - generic [ref=e469]: "},"
+                - generic [ref=e470]: "\"limit\": 1"
+                - generic [ref=e471]: "}'"
+          - generic [ref=e472]:
+            - img "Note" [ref=e474]
+            - generic [ref=e476]: Response trimmed for clarity.
+          - heading "Navigate to header How geo_distance works" [level=3] [ref=e477]:
+            - link "Navigate to header" [ref=e478] [cursor=pointer]:
+              - /url: "#how-geo_distance-works"
+              - img [ref=e480]
+            - generic [ref=e482] [cursor=pointer]: How geo_distance works
+          - generic [ref=e483]:
+            - text: The
+            - code [ref=e484]: geo_distance
+            - text: filter uses the
+            - code [ref=e485]: professional_network.location.raw
+            - text: field. The
+            - code [ref=e486]: value
+            - text: "is an object with three fields:"
+          - table [ref=e489]:
+            - rowgroup [ref=e490]:
+              - row "Field Required Description" [ref=e491]:
+                - columnheader "Field" [ref=e492]
+                - columnheader "Required" [ref=e493]
+                - columnheader "Description" [ref=e494]
+            - rowgroup [ref=e495]:
+              - row "location Yes City name or region (e.g., “San Francisco”, “London”, “New York”)" [ref=e496]:
+                - cell "location" [ref=e497]:
+                  - code [ref=e498]: location
+                - cell "Yes" [ref=e499]
+                - cell "City name or region (e.g., “San Francisco”, “London”, “New York”)" [ref=e500]
+              - row "distance Yes Radius from the center point" [ref=e501]:
+                - cell "distance" [ref=e502]:
+                  - code [ref=e503]: distance
+                - cell "Yes" [ref=e504]
+                - cell "Radius from the center point" [ref=e505]
+              - 'row "unit No Distance unit: mi, km, m, ft. Defaults to km" [ref=e506]':
+                - cell "unit" [ref=e507]:
+                  - code [ref=e508]: unit
+                - cell "No" [ref=e509]
+                - 'cell "Distance unit: mi, km, m, ft. Defaults to km" [ref=e510]':
+                  - text: "Distance unit:"
+                  - code [ref=e511]: mi
+                  - text: ","
+                  - code [ref=e512]: km
+                  - text: ","
+                  - code [ref=e513]: m
+                  - text: ","
+                  - code [ref=e514]: ft
+                  - text: . Defaults to
+                  - code [ref=e515]: km
+          - separator [ref=e516]
+          - heading "Navigate to header Search by country" [level=2] [ref=e517]:
+            - link "Navigate to header" [ref=e518] [cursor=pointer]:
+              - /url: "#search-by-country"
+              - img [ref=e520]
+            - generic [ref=e522] [cursor=pointer]: Search by country
+          - generic [ref=e523]: For broader geographic targeting, filter by country directly.
+          - generic [ref=e524]:
+            - generic [ref=e525]:
+              - tablist [ref=e526]:
+                - tab "Request" [selected] [ref=e527] [cursor=pointer]:
+                  - generic [ref=e528]: Request
+              - generic [ref=e530]:
+                - button "Report incorrect code" [ref=e532] [cursor=pointer]:
+                  - img [ref=e533]
+                - button "Copy the contents from the code block" [ref=e536] [cursor=pointer]:
+                  - img [ref=e537]
+                - button "Ask AI" [ref=e541] [cursor=pointer]:
+                  - img [ref=e542]
+            - tabpanel "Request" [ref=e546]:
+              - code [ref=e550]:
+                - generic [ref=e551]: curl --request POST \
+                - generic [ref=e552]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e553]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e554]: "--header 'content-type: application/json' \\"
+                - generic [ref=e555]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e556]: "--data '{"
+                - generic [ref=e557]: "\"filters\": {"
+                - generic [ref=e558]: "\"field\": \"basic_profile.location.country\","
+                - generic [ref=e559]: "\"type\": \"=\","
+                - generic [ref=e560]: "\"value\": \"United States\""
+                - generic [ref=e561]: "},"
+                - generic [ref=e562]: "\"limit\": 2"
+                - generic [ref=e563]: "}'"
+          - generic [ref=e564]: This returns all people located in the United States. With 125M+ matching profiles, you will want to combine this with title or employer filters to narrow results.
+          - separator [ref=e565]
+          - heading "Navigate to header Paginate through results" [level=2] [ref=e566]:
+            - link "Navigate to header" [ref=e567] [cursor=pointer]:
+              - /url: "#paginate-through-results"
+              - img [ref=e569]
+            - generic [ref=e571] [cursor=pointer]: Paginate through results
+          - generic [ref=e572]:
+            - text: When your search matches more profiles than your
+            - code [ref=e573]: limit
+            - text: ", use cursor-based pagination to walk through all pages."
+          - generic [ref=e574]:
+            - strong [ref=e575]: "First page:"
+            - text: send your normal search request.
+          - generic [ref=e576]:
+            - generic [ref=e577]:
+              - tablist [ref=e578]:
+                - tab "First page" [selected] [ref=e579] [cursor=pointer]:
+                  - generic [ref=e580]: First page
+              - generic [ref=e582]:
+                - button "Report incorrect code" [ref=e584] [cursor=pointer]:
+                  - img [ref=e585]
+                - button "Copy the contents from the code block" [ref=e588] [cursor=pointer]:
+                  - img [ref=e589]
+                - button "Ask AI" [ref=e593] [cursor=pointer]:
+                  - img [ref=e594]
+            - tabpanel "First page" [ref=e598]:
+              - code [ref=e602]:
+                - generic [ref=e603]: curl --request POST \
+                - generic [ref=e604]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e605]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e606]: "--header 'content-type: application/json' \\"
+                - generic [ref=e607]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e608]: "--data '{"
+                - generic [ref=e609]: "\"filters\": {"
+                - generic [ref=e610]: "\"field\": \"experience.employment_details.company_name\","
+                - generic [ref=e611]: "\"type\": \"in\","
+                - generic [ref=e612]: "\"value\": [\"Retool\"]"
+                - generic [ref=e613]: "},"
+                - generic [ref=e614]: "\"limit\": 100"
+                - generic [ref=e615]: "}'"
+          - generic [ref=e616]:
+            - strong [ref=e617]: "Next page:"
+            - text: take the
+            - code [ref=e618]: next_cursor
+            - text: value from the response and pass it in your next request. Keep the same
+            - code [ref=e619]: filters
+            - text: and
+            - code [ref=e620]: limit
+            - text: .
+          - generic [ref=e621]:
+            - generic [ref=e622]:
+              - tablist [ref=e623]:
+                - tab "Next page" [selected] [ref=e624] [cursor=pointer]:
+                  - generic [ref=e625]: Next page
+              - generic [ref=e627]:
+                - button "Report incorrect code" [ref=e629] [cursor=pointer]:
+                  - img [ref=e630]
+                - button "Copy the contents from the code block" [ref=e633] [cursor=pointer]:
+                  - img [ref=e634]
+                - button "Ask AI" [ref=e638] [cursor=pointer]:
+                  - img [ref=e639]
+            - tabpanel "Next page" [ref=e643]:
+              - code [ref=e647]:
+                - generic [ref=e648]: curl --request POST \
+                - generic [ref=e649]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e650]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e651]: "--header 'content-type: application/json' \\"
+                - generic [ref=e652]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e653]: "--data '{"
+                - generic [ref=e654]: "\"filters\": {"
+                - generic [ref=e655]: "\"field\": \"experience.employment_details.company_name\","
+                - generic [ref=e656]: "\"type\": \"in\","
+                - generic [ref=e657]: "\"value\": [\"Retool\"]"
+                - generic [ref=e658]: "},"
+                - generic [ref=e659]: "\"limit\": 100,"
+                - generic [ref=e660]: "\"cursor\": \"PASTE_NEXT_CURSOR_VALUE_HERE\""
+                - generic [ref=e661]: "}'"
+          - generic [ref=e662]:
+            - text: Continue until
+            - code [ref=e663]: next_cursor
+            - text: is
+            - code [ref=e664]: "null"
+            - text: ", which means you have reached the last page."
+          - generic [ref=e665]:
+            - img "Warning" [ref=e667]
+            - generic [ref=e670]:
+              - text: Always include
+              - code [ref=e671]: sorts
+              - text: when paginating to ensure stable ordering across pages.
+          - separator [ref=e672]
+          - heading "Navigate to header Sort results" [level=2] [ref=e673]:
+            - link "Navigate to header" [ref=e674] [cursor=pointer]:
+              - /url: "#sort-results"
+              - img [ref=e676]
+            - generic [ref=e678] [cursor=pointer]: Sort results
+          - generic [ref=e679]:
+            - text: Use the
+            - code [ref=e680]: sorts
+            - text: parameter to order results by a specific field. This is important for stable pagination.
+          - generic [ref=e681]:
+            - generic [ref=e682]:
+              - tablist [ref=e683]:
+                - tab "Sort by connections (descending)" [selected] [ref=e684] [cursor=pointer]:
+                  - generic [ref=e685]: Sort by connections (descending)
+              - generic [ref=e687]:
+                - button "Report incorrect code" [ref=e689] [cursor=pointer]:
+                  - img [ref=e690]
+                - button "Copy the contents from the code block" [ref=e693] [cursor=pointer]:
+                  - img [ref=e694]
+                - button "Ask AI" [ref=e698] [cursor=pointer]:
+                  - img [ref=e699]
+            - tabpanel "Sort by connections (descending)" [ref=e703]:
+              - code [ref=e707]:
+                - generic [ref=e708]: curl --request POST \
+                - generic [ref=e709]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e710]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e711]: "--header 'content-type: application/json' \\"
+                - generic [ref=e712]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e713]: "--data '{"
+                - generic [ref=e714]: "\"filters\": {"
+                - generic [ref=e715]: "\"field\": \"experience.employment_details.current.title\","
+                - generic [ref=e716]: "\"type\": \"=\","
+                - generic [ref=e717]: "\"value\": \"CEO\""
+                - generic [ref=e718]: "},"
+                - generic [ref=e719]: "\"sorts\": [{\"field\": \"professional_network.connections\", \"order\": \"desc\"}],"
+                - generic [ref=e720]: "\"limit\": 5,"
+                - generic [ref=e721]: "\"fields\": [\"basic_profile.name\", \"professional_network.connections\"]"
+                - generic [ref=e722]: "}'"
+          - generic [ref=e723]:
+            - text: "Valid sortable fields include:"
+            - code [ref=e724]: crustdata_person_id
+            - text: ","
+            - code [ref=e725]: basic_profile.name
+            - text: ","
+            - code [ref=e726]: professional_network.connections
+            - text: ","
+            - code [ref=e727]: experience.employment_details.start_date
+            - text: ","
+            - code [ref=e728]: experience.employment_details.company_id
+            - text: ","
+            - code [ref=e729]: metadata.updated_at
+            - text: .
+          - separator [ref=e730]
+          - heading "Navigate to header Exclude specific people from results" [level=2] [ref=e731]:
+            - link "Navigate to header" [ref=e732] [cursor=pointer]:
+              - /url: "#exclude-specific-people-from-results"
+              - img [ref=e734]
+            - generic [ref=e736] [cursor=pointer]: Exclude specific people from results
+          - generic [ref=e737]:
+            - text: Use
+            - code [ref=e738]: post_processing
+            - text: to remove known profiles from results. This is useful when re-running searches and you want to skip people you have already contacted.
+          - generic [ref=e739]:
+            - generic [ref=e740]:
+              - tablist [ref=e741]:
+                - tab "Exclude specific people" [selected] [ref=e742] [cursor=pointer]:
+                  - generic [ref=e743]: Exclude specific people
+              - generic [ref=e745]:
+                - button "Report incorrect code" [ref=e747] [cursor=pointer]:
+                  - img [ref=e748]
+                - button "Copy the contents from the code block" [ref=e751] [cursor=pointer]:
+                  - img [ref=e752]
+                - button "Ask AI" [ref=e756] [cursor=pointer]:
+                  - img [ref=e757]
+            - tabpanel "Exclude specific people" [ref=e761]:
+              - code [ref=e765]:
+                - generic [ref=e766]: curl --request POST \
+                - generic [ref=e767]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e768]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e769]: "--header 'content-type: application/json' \\"
+                - generic [ref=e770]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e771]: "--data '{"
+                - generic [ref=e772]: "\"filters\": {"
+                - generic [ref=e773]: "\"field\": \"experience.employment_details.title\","
+                - generic [ref=e774]: "\"type\": \"(.)\","
+                - generic [ref=e775]: "\"value\": \"Founder\""
+                - generic [ref=e776]: "},"
+                - generic [ref=e777]: "\"limit\": 5,"
+                - generic [ref=e778]: "\"post_processing\": {"
+                - generic [ref=e779]: "\"exclude_names\": [\"Ali Kashani\"],"
+                - generic [ref=e780]: "\"exclude_profiles\": [\"https://www.linkedin.com/in/alikashani\"]"
+                - generic [ref=e781]: "}"
+                - generic [ref=e782]: "}'"
+          - generic [ref=e783]: You can exclude by name, by profile URL, or both.
+          - separator [ref=e784]
+          - heading "Navigate to header Preview mode" [level=2] [ref=e785]:
+            - link "Navigate to header" [ref=e786] [cursor=pointer]:
+              - /url: "#preview-mode"
+              - img [ref=e788]
+            - generic [ref=e790] [cursor=pointer]: Preview mode
+          - link [ref=e791] [cursor=pointer]:
+            - link [ref=e793]:
+              - /url: https://crustdata.com/demo
+              - img [ref=e795]
+              - img [ref=e799]
+              - generic [ref=e800]:
+                - heading [level=2] [ref=e801]: Preview mode
+                - generic [ref=e803]: Preview search is a premium feature. Book a demo to enable it for your account.
+          - generic [ref=e804]:
+            - text: If preview access is enabled for your account, use
+            - code [ref=e805]: "preview: true"
+            - text: to get lightweight results before running a full search. Preview responses keep the same top-level shape but may return fewer profile fields.
+          - generic [ref=e806]:
+            - img "Note" [ref=e808]
+            - generic [ref=e811]:
+              - strong [ref=e812]: "Current platform behavior:"
+              - text: if preview is not enabled for your account, the API returns
+              - code [ref=e813]: 400 invalid_request
+              - text: with the message
+              - code [ref=e814]: "error: PersonDB preview feature is not available for your account."
+          - generic [ref=e815]:
+            - generic [ref=e816]:
+              - tablist [ref=e817]:
+                - tab "Preview search" [selected] [ref=e818] [cursor=pointer]:
+                  - generic [ref=e819]: Preview search
+              - generic [ref=e821]:
+                - button "Report incorrect code" [ref=e823] [cursor=pointer]:
+                  - img [ref=e824]
+                - button "Copy the contents from the code block" [ref=e827] [cursor=pointer]:
+                  - img [ref=e828]
+                - button "Ask AI" [ref=e832] [cursor=pointer]:
+                  - img [ref=e833]
+            - tabpanel "Preview search" [ref=e837]:
+              - code [ref=e841]:
+                - generic [ref=e842]: curl --request POST \
+                - generic [ref=e843]: "--url https://api.crustdata.com/person/search \\"
+                - generic [ref=e844]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e845]: "--header 'content-type: application/json' \\"
+                - generic [ref=e846]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e847]: "--data '{"
+                - generic [ref=e848]: "\"filters\": {"
+                - generic [ref=e849]: "\"field\": \"experience.employment_details.title\","
+                - generic [ref=e850]: "\"type\": \"(.)\","
+                - generic [ref=e851]: "\"value\": \"Founder\""
+                - generic [ref=e852]: "},"
+                - generic [ref=e853]: "\"preview\": true,"
+                - generic [ref=e854]: "\"limit\": 2"
+                - generic [ref=e855]: "}'"
+          - separator [ref=e856]
+          - heading "Navigate to header Filter operator reference" [level=2] [ref=e857]:
+            - link "Navigate to header" [ref=e858] [cursor=pointer]:
+              - /url: "#filter-operator-reference"
+              - img [ref=e860]
+            - generic [ref=e862] [cursor=pointer]: Filter operator reference
+          - table [ref=e865]:
+            - rowgroup [ref=e866]:
+              - row "Operator Meaning Example use" [ref=e867]:
+                - columnheader "Operator" [ref=e868]
+                - columnheader "Meaning" [ref=e869]
+                - columnheader "Example use" [ref=e870]
+            - rowgroup [ref=e871]:
+              - row "= Exact match basic_profile.name = “David Hsu”" [ref=e872]:
+                - cell "=" [ref=e873]:
+                  - code [ref=e874]: =
+                - cell "Exact match" [ref=e875]
+                - cell "basic_profile.name = “David Hsu”" [ref=e876]:
+                  - code [ref=e877]: basic_profile.name
+                  - text: = “David Hsu”
+              - row "!= Not equal Exclude a specific country" [ref=e878]:
+                - cell "!=" [ref=e879]:
+                  - code [ref=e880]: "!="
+                - cell "Not equal" [ref=e881]
+                - cell "Exclude a specific country" [ref=e882]
+              - row "> / < Greater/less than Numeric comparisons" [ref=e883]:
+                - cell "> / <" [ref=e884]:
+                  - code [ref=e885]: ">"
+                  - text: /
+                  - code [ref=e886]: <
+                - cell "Greater/less than" [ref=e887]
+                - cell "Numeric comparisons" [ref=e888]
+              - row "in Value is in list experience.employment_details.company_name in [“Retool”, “OpenAI”]" [ref=e889]:
+                - cell "in" [ref=e890]:
+                  - code [ref=e891]: in
+                - cell "Value is in list" [ref=e892]
+                - cell "experience.employment_details.company_name in [“Retool”, “OpenAI”]" [ref=e893]:
+                  - code [ref=e894]: experience.employment_details.company_name
+                  - text: in [“Retool”, “OpenAI”]
+              - row "not_in Value is not in list Exclude titles like “Intern”" [ref=e895]:
+                - cell "not_in" [ref=e896]:
+                  - code [ref=e897]: not_in
+                - cell "Value is not in list" [ref=e898]
+                - cell "Exclude titles like “Intern”" [ref=e899]
+              - row "(.) Regex/contains match Title contains “VP|Director”" [ref=e900]:
+                - cell "(.)" [ref=e901]:
+                  - code [ref=e902]: (.)
+                - cell "Regex/contains match" [ref=e903]
+                - cell "Title contains “VP|Director”" [ref=e904]
+              - row "geo_distance Within radius of location People near San Francisco" [ref=e905]:
+                - cell "geo_distance" [ref=e906]:
+                  - code [ref=e907]: geo_distance
+                - cell "Within radius of location" [ref=e908]
+                - cell "People near San Francisco" [ref=e909]
+          - heading "Navigate to header Searchable fields" [level=2] [ref=e910]:
+            - link "Navigate to header" [ref=e911] [cursor=pointer]:
+              - /url: "#searchable-fields"
+              - img [ref=e913]
+            - generic [ref=e915] [cursor=pointer]: Searchable fields
+          - list [ref=e916]:
+            - listitem [ref=e917]:
+              - text: Some returned fields use a different filter path. For example, the returned
+              - code [ref=e918]: basic_profile.current_title
+              - text: is searched with
+              - code [ref=e919]: experience.employment_details.current.title
+              - text: .
+            - listitem [ref=e920]:
+              - text: Contact availability flags such as
+              - code [ref=e921]: contact.has_business_email
+              - text: are response-only convenience fields. For search filters, use
+              - code [ref=e922]: experience.employment_details.current.business_email_verified
+              - text: ","
+              - code [ref=e923]: experience.employment_details.past.business_email_verified
+              - text: ", or"
+              - code [ref=e924]: experience.employment_details.business_email_verified
+              - text: .
+            - listitem [ref=e925]:
+              - code [ref=e926]: social_handles.professional_network_identifier.profile_url
+              - text: is returned in search results but is rejected as a search filter. Use
+              - link "Person Enrich" [ref=e927] [cursor=pointer]:
+                - /url: /person-docs/enrichment
+              - text: for direct profile URL lookups.
+            - listitem [ref=e928]:
+              - text: Some searchable fields, such as
+              - code [ref=e929]: certifications.*
+              - text: and
+              - code [ref=e930]: honors.title
+              - text: ", may not appear in the response summary below."
+          - table [ref=e933]:
+            - rowgroup [ref=e934]:
+              - row "Field family Common searchable fields Best for" [ref=e935]:
+                - columnheader "Field family" [ref=e936]
+                - columnheader "Common searchable fields" [ref=e937]
+                - columnheader "Best for" [ref=e938]
+            - rowgroup [ref=e939]:
+              - row "Identity and bio basic_profile.name, basic_profile.first_name, basic_profile.last_name, basic_profile.headline, basic_profile.summary, basic_profile.languages Name, headline, and keyword lookups" [ref=e940]:
+                - cell "Identity and bio" [ref=e941]
+                - cell "basic_profile.name, basic_profile.first_name, basic_profile.last_name, basic_profile.headline, basic_profile.summary, basic_profile.languages" [ref=e942]:
+                  - code [ref=e943]: basic_profile.name
+                  - text: ","
+                  - code [ref=e944]: basic_profile.first_name
+                  - text: ","
+                  - code [ref=e945]: basic_profile.last_name
+                  - text: ","
+                  - code [ref=e946]: basic_profile.headline
+                  - text: ","
+                  - code [ref=e947]: basic_profile.summary
+                  - text: ","
+                  - code [ref=e948]: basic_profile.languages
+                - cell "Name, headline, and keyword lookups" [ref=e949]
+              - row "Location basic_profile.location.city, basic_profile.location.state, basic_profile.location.country, basic_profile.location.continent, basic_profile.location.full_location, professional_network.location.raw Geographic targeting and radius search" [ref=e950]:
+                - cell "Location" [ref=e951]
+                - cell "basic_profile.location.city, basic_profile.location.state, basic_profile.location.country, basic_profile.location.continent, basic_profile.location.full_location, professional_network.location.raw" [ref=e952]:
+                  - code [ref=e953]: basic_profile.location.city
+                  - text: ","
+                  - code [ref=e954]: basic_profile.location.state
+                  - text: ","
+                  - code [ref=e955]: basic_profile.location.country
+                  - text: ","
+                  - code [ref=e956]: basic_profile.location.continent
+                  - text: ","
+                  - code [ref=e957]: basic_profile.location.full_location
+                  - text: ","
+                  - code [ref=e958]: professional_network.location.raw
+                - cell "Geographic targeting and radius search" [ref=e959]
+              - row "Network metadata professional_network.connections, professional_network.open_to_cards, professional_network.metadata.last_scraped_source Network reach and status filters" [ref=e960]:
+                - cell "Network metadata" [ref=e961]
+                - cell "professional_network.connections, professional_network.open_to_cards, professional_network.metadata.last_scraped_source" [ref=e962]:
+                  - code [ref=e963]: professional_network.connections
+                  - text: ","
+                  - code [ref=e964]: professional_network.open_to_cards
+                  - text: ","
+                  - code [ref=e965]: professional_network.metadata.last_scraped_source
+                - cell "Network reach and status filters" [ref=e966]
+              - row "Skills skills.professional_network_skills Skill-based prospecting" [ref=e967]:
+                - cell "Skills" [ref=e968]
+                - cell "skills.professional_network_skills" [ref=e969]:
+                  - code [ref=e970]: skills.professional_network_skills
+                - cell "Skill-based prospecting" [ref=e971]
+              - row "Experience across all roles experience.employment_details.company_name, experience.employment_details.title, experience.employment_details.description, experience.employment_details.seniority_level, experience.employment_details.function_category, experience.employment_details.start_date, experience.employment_details.end_date, experience.employment_details.location Current + past role history" [ref=e972]:
+                - cell "Experience across all roles" [ref=e973]
+                - cell "experience.employment_details.company_name, experience.employment_details.title, experience.employment_details.description, experience.employment_details.seniority_level, experience.employment_details.function_category, experience.employment_details.start_date, experience.employment_details.end_date, experience.employment_details.location" [ref=e974]:
+                  - code [ref=e975]: experience.employment_details.company_name
+                  - text: ","
+                  - code [ref=e976]: experience.employment_details.title
+                  - text: ","
+                  - code [ref=e977]: experience.employment_details.description
+                  - text: ","
+                  - code [ref=e978]: experience.employment_details.seniority_level
+                  - text: ","
+                  - code [ref=e979]: experience.employment_details.function_category
+                  - text: ","
+                  - code [ref=e980]: experience.employment_details.start_date
+                  - text: ","
+                  - code [ref=e981]: experience.employment_details.end_date
+                  - text: ","
+                  - code [ref=e982]: experience.employment_details.location
+                - cell "Current + past role history" [ref=e983]
+              - row "Current role experience.employment_details.current.company_name, experience.employment_details.current.title, experience.employment_details.current.seniority_level, experience.employment_details.current.function_category, experience.employment_details.current.start_date, experience.employment_details.current.name, experience.employment_details.current.years_at_company_raw Current-title and current-company targeting" [ref=e984]:
+                - cell "Current role" [ref=e985]
+                - cell "experience.employment_details.current.company_name, experience.employment_details.current.title, experience.employment_details.current.seniority_level, experience.employment_details.current.function_category, experience.employment_details.current.start_date, experience.employment_details.current.name, experience.employment_details.current.years_at_company_raw" [ref=e986]:
+                  - code [ref=e987]: experience.employment_details.current.company_name
+                  - text: ","
+                  - code [ref=e988]: experience.employment_details.current.title
+                  - text: ","
+                  - code [ref=e989]: experience.employment_details.current.seniority_level
+                  - text: ","
+                  - code [ref=e990]: experience.employment_details.current.function_category
+                  - text: ","
+                  - code [ref=e991]: experience.employment_details.current.start_date
+                  - text: ","
+                  - code [ref=e992]: experience.employment_details.current.name
+                  - text: ","
+                  - code [ref=e993]: experience.employment_details.current.years_at_company_raw
+                - cell "Current-title and current-company targeting" [ref=e994]
+              - row "Past role experience.employment_details.past.company_name, experience.employment_details.past.title, experience.employment_details.past.seniority_level, experience.employment_details.past.function_category, experience.employment_details.past.start_date, experience.employment_details.past.name, experience.employment_details.past.years_at_company_raw Alumni and prior-role searches" [ref=e995]:
+                - cell "Past role" [ref=e996]
+                - cell "experience.employment_details.past.company_name, experience.employment_details.past.title, experience.employment_details.past.seniority_level, experience.employment_details.past.function_category, experience.employment_details.past.start_date, experience.employment_details.past.name, experience.employment_details.past.years_at_company_raw" [ref=e997]:
+                  - code [ref=e998]: experience.employment_details.past.company_name
+                  - text: ","
+                  - code [ref=e999]: experience.employment_details.past.title
+                  - text: ","
+                  - code [ref=e1000]: experience.employment_details.past.seniority_level
+                  - text: ","
+                  - code [ref=e1001]: experience.employment_details.past.function_category
+                  - text: ","
+                  - code [ref=e1002]: experience.employment_details.past.start_date
+                  - text: ","
+                  - code [ref=e1003]: experience.employment_details.past.name
+                  - text: ","
+                  - code [ref=e1004]: experience.employment_details.past.years_at_company_raw
+                - cell "Alumni and prior-role searches" [ref=e1005]
+              - row "Company context in experience experience.employment_details.company_website_domain, experience.employment_details.company_headcount_latest, experience.employment_details.company_headcount_range, experience.employment_details.company_industries, experience.employment_details.company_professional_network_industry, experience.employment_details.company_type, experience.employment_details.company_headquarters_country, experience.employment_details.company_hq_location Company-based segmentation" [ref=e1006]:
+                - cell "Company context in experience" [ref=e1007]
+                - cell "experience.employment_details.company_website_domain, experience.employment_details.company_headcount_latest, experience.employment_details.company_headcount_range, experience.employment_details.company_industries, experience.employment_details.company_professional_network_industry, experience.employment_details.company_type, experience.employment_details.company_headquarters_country, experience.employment_details.company_hq_location" [ref=e1008]:
+                  - code [ref=e1009]: experience.employment_details.company_website_domain
+                  - text: ","
+                  - code [ref=e1010]: experience.employment_details.company_headcount_latest
+                  - text: ","
+                  - code [ref=e1011]: experience.employment_details.company_headcount_range
+                  - text: ","
+                  - code [ref=e1012]: experience.employment_details.company_industries
+                  - text: ","
+                  - code [ref=e1013]: experience.employment_details.company_professional_network_industry
+                  - text: ","
+                  - code [ref=e1014]: experience.employment_details.company_type
+                  - text: ","
+                  - code [ref=e1015]: experience.employment_details.company_headquarters_country
+                  - text: ","
+                  - code [ref=e1016]: experience.employment_details.company_hq_location
+                - cell "Company-based segmentation" [ref=e1017]
+              - row "Education education.schools.school, education.schools.degree, education.schools.field_of_study School, degree, and field-of-study filters" [ref=e1018]:
+                - cell "Education" [ref=e1019]
+                - cell "education.schools.school, education.schools.degree, education.schools.field_of_study" [ref=e1020]:
+                  - code [ref=e1021]: education.schools.school
+                  - text: ","
+                  - code [ref=e1022]: education.schools.degree
+                  - text: ","
+                  - code [ref=e1023]: education.schools.field_of_study
+                - cell "School, degree, and field-of-study filters" [ref=e1024]
+              - row "Certifications and honors certifications.name, certifications.issuing_organization, certifications.issue_date, certifications.expiration_date, honors.title Credential and honors targeting" [ref=e1025]:
+                - cell "Certifications and honors" [ref=e1026]
+                - cell "certifications.name, certifications.issuing_organization, certifications.issue_date, certifications.expiration_date, honors.title" [ref=e1027]:
+                  - code [ref=e1028]: certifications.name
+                  - text: ","
+                  - code [ref=e1029]: certifications.issuing_organization
+                  - text: ","
+                  - code [ref=e1030]: certifications.issue_date
+                  - text: ","
+                  - code [ref=e1031]: certifications.expiration_date
+                  - text: ","
+                  - code [ref=e1032]: honors.title
+                - cell "Credential and honors targeting" [ref=e1033]
+              - row "Flags and recency recently_changed_jobs, years_of_experience_raw, metadata.updated_at Recency and experience filters" [ref=e1034]:
+                - cell "Flags and recency" [ref=e1035]
+                - cell "recently_changed_jobs, years_of_experience_raw, metadata.updated_at" [ref=e1036]:
+                  - code [ref=e1037]: recently_changed_jobs
+                  - text: ","
+                  - code [ref=e1038]: years_of_experience_raw
+                  - text: ","
+                  - code [ref=e1039]: metadata.updated_at
+                - cell "Recency and experience filters" [ref=e1040]
+          - heading "Navigate to header Response fields" [level=2] [ref=e1041]:
+            - link "Navigate to header" [ref=e1042] [cursor=pointer]:
+              - /url: "#response-fields"
+              - img [ref=e1044]
+            - generic [ref=e1046] [cursor=pointer]: Response fields
+          - generic [ref=e1047]:
+            - text: Each profile in the response can include these sections, depending on
+            - code [ref=e1048]: fields
+            - text: . This table summarizes returned sections only. It is not a complete filter reference.
+          - table [ref=e1051]:
+            - rowgroup [ref=e1052]:
+              - row "Section Key fields Description" [ref=e1053]:
+                - columnheader "Section" [ref=e1054]
+                - columnheader "Key fields" [ref=e1055]
+                - columnheader "Description" [ref=e1056]
+            - rowgroup [ref=e1057]:
+              - row "basic_profile name, headline, current_title, location, summary Identity and location" [ref=e1058]:
+                - cell "basic_profile" [ref=e1059]:
+                  - code [ref=e1060]: basic_profile
+                - cell "name, headline, current_title, location, summary" [ref=e1061]:
+                  - code [ref=e1062]: name
+                  - text: ","
+                  - code [ref=e1063]: headline
+                  - text: ","
+                  - code [ref=e1064]: current_title
+                  - text: ","
+                  - code [ref=e1065]: location
+                  - text: ","
+                  - code [ref=e1066]: summary
+                - cell "Identity and location" [ref=e1067]
+              - row "experience employment_details.current, employment_details.past Full work history" [ref=e1068]:
+                - cell "experience" [ref=e1069]:
+                  - code [ref=e1070]: experience
+                - cell "employment_details.current, employment_details.past" [ref=e1071]:
+                  - code [ref=e1072]: employment_details.current
+                  - text: ","
+                  - code [ref=e1073]: employment_details.past
+                - cell "Full work history" [ref=e1074]
+              - row "education schools Education background" [ref=e1075]:
+                - cell "education" [ref=e1076]:
+                  - code [ref=e1077]: education
+                - cell "schools" [ref=e1078]:
+                  - code [ref=e1079]: schools
+                - cell "Education background" [ref=e1080]
+              - row "skills professional_network_skills Listed skills" [ref=e1081]:
+                - cell "skills" [ref=e1082]:
+                  - code [ref=e1083]: skills
+                - cell "professional_network_skills" [ref=e1084]:
+                  - code [ref=e1085]: professional_network_skills
+                - cell "Listed skills" [ref=e1086]
+              - row "contact has_business_email, has_personal_email, has_phone_number Contact availability flags" [ref=e1087]:
+                - cell "contact" [ref=e1088]:
+                  - code [ref=e1089]: contact
+                - cell "has_business_email, has_personal_email, has_phone_number" [ref=e1090]:
+                  - code [ref=e1091]: has_business_email
+                  - text: ","
+                  - code [ref=e1092]: has_personal_email
+                  - text: ","
+                  - code [ref=e1093]: has_phone_number
+                - cell "Contact availability flags" [ref=e1094]
+              - row "social_handles professional_network_identifier.profile_url, dev_platform_identifier.profile_url, twitter_identifier.slug Available profile handles" [ref=e1095]:
+                - cell "social_handles" [ref=e1096]:
+                  - code [ref=e1097]: social_handles
+                - cell "professional_network_identifier.profile_url, dev_platform_identifier.profile_url, twitter_identifier.slug" [ref=e1098]:
+                  - code [ref=e1099]: professional_network_identifier.profile_url
+                  - text: ","
+                  - code [ref=e1100]: dev_platform_identifier.profile_url
+                  - text: ","
+                  - code [ref=e1101]: twitter_identifier.slug
+                - cell "Available profile handles" [ref=e1102]
+              - row "professional_network connections, profile_picture_permalink Network metadata" [ref=e1103]:
+                - cell "professional_network" [ref=e1104]:
+                  - code [ref=e1105]: professional_network
+                - cell "connections, profile_picture_permalink" [ref=e1106]:
+                  - code [ref=e1107]: connections
+                  - text: ","
+                  - code [ref=e1108]: profile_picture_permalink
+                - cell "Network metadata" [ref=e1109]
+          - separator [ref=e1110]
+          - heading "Navigate to header Request parameter reference" [level=2] [ref=e1111]:
+            - link "Navigate to header" [ref=e1112] [cursor=pointer]:
+              - /url: "#request-parameter-reference"
+              - img [ref=e1114]
+            - generic [ref=e1116] [cursor=pointer]: Request parameter reference
+          - table [ref=e1119]:
+            - rowgroup [ref=e1120]:
+              - row "Parameter Type Required Default Description" [ref=e1121]:
+                - columnheader "Parameter" [ref=e1122]
+                - columnheader "Type" [ref=e1123]
+                - columnheader "Required" [ref=e1124]
+                - columnheader "Default" [ref=e1125]
+                - columnheader "Description" [ref=e1126]
+            - rowgroup [ref=e1127]:
+              - row "filters object Yes — Filter condition or condition group. See operators above." [ref=e1128]:
+                - cell "filters" [ref=e1129]:
+                  - code [ref=e1130]: filters
+                - cell "object" [ref=e1131]
+                - cell "Yes" [ref=e1132]
+                - cell "—" [ref=e1133]
+                - cell "Filter condition or condition group. See operators above." [ref=e1134]:
+                  - text: Filter condition or condition group. See
+                  - link "operators" [ref=e1135] [cursor=pointer]:
+                    - /url: "#filter-operator-reference"
+                  - text: above.
+              - row "fields string[] No All Dot-path fields to return (e.g., [\"basic_profile.name\", \"experience.employment_details.current.title\"])." [ref=e1136]:
+                - cell "fields" [ref=e1137]:
+                  - code [ref=e1138]: fields
+                - cell "string[]" [ref=e1139]
+                - cell "No" [ref=e1140]
+                - cell "All" [ref=e1141]
+                - cell "Dot-path fields to return (e.g., [\"basic_profile.name\", \"experience.employment_details.current.title\"])." [ref=e1142]:
+                  - text: Dot-path fields to return (e.g.,
+                  - code [ref=e1143]: "[\"basic_profile.name\", \"experience.employment_details.current.title\"]"
+                  - text: ).
+              - 'row "sorts array No [] Sort specifications as an array of { field, order } objects. Use asc or desc for order. Required for stable pagination." [ref=e1144]':
+                - cell "sorts" [ref=e1145]:
+                  - code [ref=e1146]: sorts
+                - cell "array" [ref=e1147]
+                - cell "No" [ref=e1148]
+                - cell "[]" [ref=e1149]:
+                  - code [ref=e1150]: "[]"
+                - 'cell "Sort specifications as an array of { field, order } objects. Use asc or desc for order. Required for stable pagination." [ref=e1151]':
+                  - text: Sort specifications as an array of
+                  - code [ref=e1152]: "{ field, order }"
+                  - text: objects. Use
+                  - code [ref=e1153]: asc
+                  - text: or
+                  - code [ref=e1154]: desc
+                  - text: for
+                  - code [ref=e1155]: order
+                  - text: . Required for stable pagination.
+              - row "limit integer No 20 Max profiles per page (1–1000)." [ref=e1156]:
+                - cell "limit" [ref=e1157]:
+                  - code [ref=e1158]: limit
+                - cell "integer" [ref=e1159]
+                - cell "No" [ref=e1160]
+                - cell "20" [ref=e1161]
+                - cell "Max profiles per page (1–1000)." [ref=e1162]
+              - row "count integer No — Alias for limit." [ref=e1163]:
+                - cell "count" [ref=e1164]:
+                  - code [ref=e1165]: count
+                - cell "integer" [ref=e1166]
+                - cell "No" [ref=e1167]
+                - cell "—" [ref=e1168]
+                - cell "Alias for limit." [ref=e1169]:
+                  - text: Alias for
+                  - code [ref=e1170]: limit
+                  - text: .
+              - row "cursor string No null Pagination cursor from previous response’s next_cursor." [ref=e1171]:
+                - cell "cursor" [ref=e1172]:
+                  - code [ref=e1173]: cursor
+                - cell "string" [ref=e1174]
+                - cell "No" [ref=e1175]
+                - cell "null" [ref=e1176]:
+                  - code [ref=e1177]: "null"
+                - cell "Pagination cursor from previous response’s next_cursor." [ref=e1178]:
+                  - text: Pagination cursor from previous response’s
+                  - code [ref=e1179]: next_cursor
+                  - text: .
+              - row "post_processing object No — exclude_profiles (URL array) and exclude_names (name array)." [ref=e1180]:
+                - cell "post_processing" [ref=e1181]:
+                  - code [ref=e1182]: post_processing
+                - cell "object" [ref=e1183]
+                - cell "No" [ref=e1184]
+                - cell "—" [ref=e1185]
+                - cell "exclude_profiles (URL array) and exclude_names (name array)." [ref=e1186]:
+                  - code [ref=e1187]: exclude_profiles
+                  - text: (URL array) and
+                  - code [ref=e1188]: exclude_names
+                  - text: (name array).
+              - row "preview boolean No false Premium feature — return lightweight results (faster, lower cost)." [ref=e1189]:
+                - cell "preview" [ref=e1190]:
+                  - code [ref=e1191]: preview
+                - cell "boolean" [ref=e1192]
+                - cell "No" [ref=e1193]
+                - cell "false" [ref=e1194]:
+                  - code [ref=e1195]: "false"
+                - cell "Premium feature — return lightweight results (faster, lower cost)." [ref=e1196]
+              - 'row "return_query boolean No false Debug flag accepted by the API. Current platform behavior: the response does not include a top-level query field." [ref=e1197]':
+                - cell "return_query" [ref=e1198]:
+                  - code [ref=e1199]: return_query
+                - cell "boolean" [ref=e1200]
+                - cell "No" [ref=e1201]
+                - cell "false" [ref=e1202]:
+                  - code [ref=e1203]: "false"
+                - 'cell "Debug flag accepted by the API. Current platform behavior: the response does not include a top-level query field." [ref=e1204]':
+                  - text: Debug flag accepted by the API.
+                  - strong [ref=e1205]: "Current platform behavior:"
+                  - text: the response does not include a top-level
+                  - code [ref=e1206]: query
+                  - text: field.
+          - heading "Navigate to header Errors" [level=2] [ref=e1207]:
+            - link "Navigate to header" [ref=e1208] [cursor=pointer]:
+              - /url: "#errors"
+              - img [ref=e1210]
+            - generic [ref=e1212] [cursor=pointer]: Errors
+          - table [ref=e1215]:
+            - rowgroup [ref=e1216]:
+              - row "Status Meaning" [ref=e1217]:
+                - columnheader "Status" [ref=e1218]
+                - columnheader "Meaning" [ref=e1219]
+            - rowgroup [ref=e1220]:
+              - row "400 Invalid request — unsupported field, wrong operator, malformed filters, or preview not enabled for your account." [ref=e1221]:
+                - cell "400" [ref=e1222]:
+                  - code [ref=e1223]: "400"
+                - cell "Invalid request — unsupported field, wrong operator, malformed filters, or preview not enabled for your account." [ref=e1224]
+              - row "401 Invalid or missing API key." [ref=e1225]:
+                - cell "401" [ref=e1226]:
+                  - code [ref=e1227]: "401"
+                - cell "Invalid or missing API key." [ref=e1228]
+              - row "403 Permission denied or insufficient credits." [ref=e1229]:
+                - cell "403" [ref=e1230]:
+                  - code [ref=e1231]: "403"
+                - cell "Permission denied or insufficient credits." [ref=e1232]
+              - row "500 Internal server error. Retry with exponential backoff." [ref=e1233]:
+                - cell "500" [ref=e1234]:
+                  - code [ref=e1235]: "500"
+                - cell "Internal server error. Retry with exponential backoff." [ref=e1236]
+          - heading "Navigate to header No results" [level=3] [ref=e1237]:
+            - link "Navigate to header" [ref=e1238] [cursor=pointer]:
+              - /url: "#no-results"
+              - img [ref=e1240]
+            - generic [ref=e1242] [cursor=pointer]: No results
+          - generic [ref=e1243]:
+            - text: When no people match the filters, the API returns
+            - code [ref=e1244]: "200"
+            - text: with an empty
+            - code [ref=e1245]: profiles
+            - text: "array:"
+          - generic [ref=e1246]:
+            - generic [ref=e1247]:
+              - button "Report incorrect code" [ref=e1249] [cursor=pointer]:
+                - img [ref=e1250]
+              - button "Copy the contents from the code block" [ref=e1253] [cursor=pointer]:
+                - img [ref=e1254]
+              - button "Ask AI" [ref=e1258] [cursor=pointer]:
+                - img [ref=e1259]
+            - code [ref=e1265]:
+              - generic [ref=e1266]: "{"
+              - generic [ref=e1267]: "\"profiles\": [],"
+              - generic [ref=e1268]: "\"next_cursor\": null,"
+              - generic [ref=e1269]: "\"total_count\": 0"
+              - generic [ref=e1270]: "}"
+          - generic [ref=e1271]:
+            - strong [ref=e1272]: "Action:"
+            - text: Broaden filters or check field values with
+            - link "Autocomplete" [ref=e1273] [cursor=pointer]:
+              - /url: /person-docs/autocomplete
+            - text: .
+          - separator [ref=e1274]
+          - heading "Navigate to header API reference summary" [level=2] [ref=e1275]:
+            - link "Navigate to header" [ref=e1276] [cursor=pointer]:
+              - /url: "#api-reference-summary"
+              - img [ref=e1278]
+            - generic [ref=e1280] [cursor=pointer]: API reference summary
+          - table [ref=e1283]:
+            - rowgroup [ref=e1284]:
+              - row "Detail Value" [ref=e1285]:
+                - columnheader "Detail" [ref=e1286]
+                - columnheader "Value" [ref=e1287]
+            - rowgroup [ref=e1288]:
+              - row "Endpoint POST /person/search" [ref=e1289]:
+                - cell "Endpoint" [ref=e1290]:
+                  - strong [ref=e1291]: Endpoint
+                - cell "POST /person/search" [ref=e1292]:
+                  - code [ref=e1293]: POST /person/search
+              - 'row "Auth Bearer token + x-api-version: 2025-11-01" [ref=e1294]':
+                - cell "Auth" [ref=e1295]:
+                  - strong [ref=e1296]: Auth
+                - 'cell "Bearer token + x-api-version: 2025-11-01" [ref=e1297]':
+                  - text: Bearer token +
+                  - code [ref=e1298]: "x-api-version: 2025-11-01"
+              - 'row "Response { \"profiles\": [...], \"next_cursor\": \"...\", \"total_count\": N }" [ref=e1299]':
+                - cell "Response" [ref=e1300]:
+                  - strong [ref=e1301]: Response
+                - 'cell "{ \"profiles\": [...], \"next_cursor\": \"...\", \"total_count\": N }" [ref=e1302]':
+                  - code [ref=e1303]: "{ \"profiles\": [...], \"next_cursor\": \"...\", \"total_count\": N }"
+              - row "Pagination Cursor-based. Pass next_cursor as cursor. Stop when next_cursor is null." [ref=e1304]:
+                - cell "Pagination" [ref=e1305]:
+                  - strong [ref=e1306]: Pagination
+                - cell "Cursor-based. Pass next_cursor as cursor. Stop when next_cursor is null." [ref=e1307]:
+                  - text: Cursor-based. Pass
+                  - code [ref=e1308]: next_cursor
+                  - text: as
+                  - code [ref=e1309]: cursor
+                  - text: . Stop when
+                  - code [ref=e1310]: next_cursor
+                  - text: is
+                  - code [ref=e1311]: "null"
+                  - text: .
+              - row "Errors 400, 401, 403, 500" [ref=e1312]:
+                - cell "Errors" [ref=e1313]:
+                  - strong [ref=e1314]: Errors
+                - cell "400, 401, 403, 500" [ref=e1315]:
+                  - code [ref=e1316]: "400"
+                  - text: ","
+                  - code [ref=e1317]: "401"
+                  - text: ","
+                  - code [ref=e1318]: "403"
+                  - text: ","
+                  - code [ref=e1319]: "500"
+          - generic [ref=e1320]:
+            - text: See the
+            - link "full API reference" [ref=e1321] [cursor=pointer]:
+              - /url: /openapi-specs/2025-11-01/introduction
+            - text: for the complete OpenAPI schema.
+          - separator [ref=e1322]
+          - heading "Navigate to header What to do next" [level=2] [ref=e1323]:
+            - link "Navigate to header" [ref=e1324] [cursor=pointer]:
+              - /url: "#what-to-do-next"
+              - img [ref=e1326]
+            - generic [ref=e1328] [cursor=pointer]: What to do next
+          - list [ref=e1329]:
+            - listitem [ref=e1330]:
+              - strong [ref=e1331]: Enrich a profile
+              - text: — once you have a profile URL from search, use
+              - link "Person Enrich" [ref=e1332] [cursor=pointer]:
+                - /url: /person-docs/enrichment
+              - text: to get the full cached profile.
+            - listitem [ref=e1333]:
+              - strong [ref=e1334]: Discover filter values
+              - text: — use
+              - link "Person Autocomplete" [ref=e1335] [cursor=pointer]:
+                - /url: /person-docs/autocomplete
+              - text: to find exact indexed values for search filters.
+            - listitem [ref=e1336]:
+              - strong [ref=e1337]: See more examples
+              - text: — browse
+              - link "Person Examples" [ref=e1338] [cursor=pointer]:
+                - /url: /person-docs/examples
+              - text: for ready-to-copy workflow patterns.
+            - listitem [ref=e1339]:
+              - strong [ref=e1340]: Read the quickstart
+              - text: — see
+              - link "Person APIs" [ref=e1341] [cursor=pointer]:
+                - /url: /person-docs/quickstart
+              - text: for a high-level guide to the core person endpoints.
+            - listitem [ref=e1342]:
+              - strong [ref=e1343]: Check the API reference
+              - text: — see the
+              - link "OpenAPI spec" [ref=e1344] [cursor=pointer]:
+                - /url: /openapi-specs/2025-11-01/introduction
+              - text: for the full schema.
+        - generic [ref=e1346]:
+          - paragraph [ref=e1347]: Was this page helpful?
+          - generic [ref=e1349]:
+            - button "Yes" [ref=e1350] [cursor=pointer]:
+              - img [ref=e1351]
+              - generic [ref=e1353]: "Yes"
+            - button "No" [ref=e1354] [cursor=pointer]:
+              - img [ref=e1355]
+              - generic [ref=e1357]: "No"
+        - generic [ref=e1358]:
+          - link "Person APIs Previous" [ref=e1359] [cursor=pointer]:
+            - /url: /person-docs/quickstart
+            - generic [ref=e1360]:
+              - generic [ref=e1361]: Person APIs
+              - generic [ref=e1362]:
+                - img [ref=e1363]
+                - generic [ref=e1365]: Previous
+          - link "Person Enrichment Next" [ref=e1366] [cursor=pointer]:
+            - /url: /person-docs/enrichment
+            - generic [ref=e1367]:
+              - generic [ref=e1368]: Person Enrichment
+              - generic [ref=e1369]:
+                - img [ref=e1370]
+                - generic [ref=e1372]: Next
+        - generic [ref=e1374]:
+          - textbox "Ask a question..." [ref=e1375]
+          - generic: Ctrl+I
+          - button "Send message" [disabled] [ref=e1376]:
+            - img [ref=e1377]
+        - contentinfo [ref=e1379]:
+          - generic [ref=e1380]:
+            - link "x" [ref=e1381] [cursor=pointer]:
+              - /url: https://x.com/crustdata
+              - generic [ref=e1382]: x
+              - img [ref=e1383]
+            - link "linkedin" [ref=e1384] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/crustdata
+              - generic [ref=e1385]: linkedin
+              - img [ref=e1386]
+  - alert [ref=e1387]
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img
+            - generic: Assistant
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - generic:
+              - generic: Responses are generated using AI and may contain mistakes.
+        - generic [ref=e1388]:
+          - textbox [ref=e1390]:
+            - /placeholder: Ask a question...
+          - generic [ref=e1391]:
+            - button [ref=e1392] [cursor=pointer]:
+              - img [ref=e1393]
+            - button [disabled] [ref=e1395]:
+              - img [ref=e1396]

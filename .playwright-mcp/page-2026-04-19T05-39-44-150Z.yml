@@ -1,0 +1,710 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#content-area"
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - paragraph [ref=e11]:
+          - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+          - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+            - /url: mailto:support@crustdata.tech
+          - text: for feedback and clarifications.
+        - generic [ref=e14]:
+          - generic [ref=e16]:
+            - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e19]: Crustdata Docs home page
+              - img "light logo" [ref=e20]
+            - generic [ref=e21]:
+              - button "Open search" [ref=e22] [cursor=pointer]:
+                - generic [ref=e23]: Search...
+                - img [ref=e24]
+              - button [ref=e25] [cursor=pointer]:
+                - img [ref=e26]
+              - button "More actions" [ref=e29] [cursor=pointer]:
+                - img [ref=e30]
+          - button "Navigation Company Company APIs" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]:
+              - generic [ref=e33]: Navigation
+              - img [ref=e34]
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - generic [ref=e38]: Company
+                - img [ref=e39]
+              - generic [ref=e41]: Company APIs
+      - generic [ref=e45]:
+        - banner [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - link "Products" [ref=e50] [cursor=pointer]:
+                  - /url: /company-docs/quickstart
+                - img [ref=e51]
+              - link "Company" [ref=e54] [cursor=pointer]:
+                - /url: /company-docs/quickstart
+            - generic [ref=e55]:
+              - heading "Company APIs" [level=1] [ref=e56]
+              - generic [ref=e57]:
+                - button "Copy page" [ref=e58] [cursor=pointer]:
+                  - generic [ref=e59]:
+                    - img [ref=e60]
+                    - generic [ref=e63]: Copy page
+                - button "More actions" [ref=e64] [cursor=pointer]:
+                  - img [ref=e65]
+          - paragraph [ref=e633]: Find, enrich, and analyze company records with the Crustdata Company APIs.
+        - generic [ref=e69]:
+          - generic [ref=e634]: "The Company APIs help you answer practical business questions: Which companies match your target market? What does this company look like before outreach? What are the valid filter values for my search?"
+          - generic [ref=e635]: There are four core endpoints, each designed for a different step in your workflow.
+          - table [ref=e638]:
+            - rowgroup [ref=e639]:
+              - row "API What it does Best for" [ref=e640]:
+                - columnheader "API" [ref=e641]
+                - columnheader "What it does" [ref=e642]
+                - columnheader "Best for" [ref=e643]
+            - rowgroup [ref=e644]:
+              - row "Search Find companies matching structured filters Building lists, market scans, segmentation" [ref=e645]:
+                - cell "Search" [ref=e646]:
+                  - link "Search" [ref=e647] [cursor=pointer]:
+                    - /url: /company-docs/search
+                - cell "Find companies matching structured filters" [ref=e648]
+                - cell "Building lists, market scans, segmentation" [ref=e649]
+              - row "Autocomplete Discover valid field values for search filters Building filter dropdowns, validating filter inputs" [ref=e650]:
+                - cell "Autocomplete" [ref=e651]:
+                  - link "Autocomplete" [ref=e652] [cursor=pointer]:
+                    - /url: /company-docs/autocomplete
+                - cell "Discover valid field values for search filters" [ref=e653]
+                - cell "Building filter dropdowns, validating filter inputs" [ref=e654]
+              - row "Enrich Get a detailed company profile from a known identifier Research, scoring, personalization" [ref=e655]:
+                - cell "Enrich" [ref=e656]:
+                  - link "Enrich" [ref=e657] [cursor=pointer]:
+                    - /url: /company-docs/enrichment
+                - cell "Get a detailed company profile from a known identifier" [ref=e658]
+                - cell "Research, scoring, personalization" [ref=e659]
+              - row "Identify Resolve a company from partial info (name, domain, URL, ID) CRM deduplication, lead routing, entity resolution" [ref=e660]:
+                - cell "Identify" [ref=e661]:
+                  - link "Identify" [ref=e662] [cursor=pointer]:
+                    - /url: /company-docs/identify
+                - cell "Resolve a company from partial info (name, domain, URL, ID)" [ref=e663]
+                - cell "CRM deduplication, lead routing, entity resolution" [ref=e664]
+          - heading "Navigate to header At a glance" [level=2] [ref=e665]:
+            - link "Navigate to header" [ref=e666] [cursor=pointer]:
+              - /url: "#at-a-glance"
+              - img [ref=e668]
+            - generic [ref=e670] [cursor=pointer]: At a glance
+          - table [ref=e673]:
+            - rowgroup [ref=e674]:
+              - row "Search Autocomplete Enrich Identify" [ref=e675]:
+                - columnheader [ref=e676]
+                - columnheader "Search" [ref=e677]
+                - columnheader "Autocomplete" [ref=e678]
+                - columnheader "Enrich" [ref=e679]
+                - columnheader "Identify" [ref=e680]
+            - rowgroup [ref=e681]:
+              - row "Endpoint /company/search /company/search/autocomplete /company/enrich /company/identify" [ref=e682]:
+                - cell "Endpoint" [ref=e683]:
+                  - strong [ref=e684]: Endpoint
+                - cell "/company/search" [ref=e685]:
+                  - code [ref=e686]: /company/search
+                - cell "/company/search/autocomplete" [ref=e687]:
+                  - code [ref=e688]: /company/search/autocomplete
+                - cell "/company/enrich" [ref=e689]:
+                  - code [ref=e690]: /company/enrich
+                - cell "/company/identify" [ref=e691]:
+                  - code [ref=e692]: /company/identify
+              - row "Data source Crustdata indexed Crustdata indexed Crustdata indexed Crustdata indexed" [ref=e693]:
+                - cell "Data source" [ref=e694]:
+                  - strong [ref=e695]: Data source
+                - cell "Crustdata indexed" [ref=e696]
+                - cell "Crustdata indexed" [ref=e697]
+                - cell "Crustdata indexed" [ref=e698]
+                - cell "Crustdata indexed" [ref=e699]
+              - row "Purpose Find companies by filters Discover valid filter values Get full company profile Match partial info to a company" [ref=e700]:
+                - cell "Purpose" [ref=e701]:
+                  - strong [ref=e702]: Purpose
+                - cell "Find companies by filters" [ref=e703]
+                - cell "Discover valid filter values" [ref=e704]
+                - cell "Get full company profile" [ref=e705]
+                - cell "Match partial info to a company" [ref=e706]
+              - 'row "Filter syntax { \"field\": \"dotpath\", \"type\": \"op\", \"value\": ... } Optional filters param N/A N/A" [ref=e707]':
+                - cell "Filter syntax" [ref=e708]:
+                  - strong [ref=e709]: Filter syntax
+                - 'cell "{ \"field\": \"dotpath\", \"type\": \"op\", \"value\": ... }" [ref=e710]':
+                  - code [ref=e711]: "{ \"field\": \"dotpath\", \"type\": \"op\", \"value\": ... }"
+                - cell "Optional filters param" [ref=e712]:
+                  - text: Optional
+                  - code [ref=e713]: filters
+                  - text: param
+                - cell "N/A" [ref=e714]
+                - cell "N/A" [ref=e715]
+              - row "Pagination Cursor-based — — —" [ref=e716]:
+                - cell "Pagination" [ref=e717]:
+                  - strong [ref=e718]: Pagination
+                - cell "Cursor-based" [ref=e719]
+                - cell "—" [ref=e720]
+                - cell "—" [ref=e721]
+                - cell "—" [ref=e722]
+              - row "Field selection fields = dot-paths or sections — fields = dot-paths or sections fields = dot-paths or sections" [ref=e723]:
+                - cell "Field selection" [ref=e724]:
+                  - strong [ref=e725]: Field selection
+                - cell "fields = dot-paths or sections" [ref=e726]:
+                  - code [ref=e727]: fields
+                  - text: = dot-paths or sections
+                - cell "—" [ref=e728]
+                - cell "fields = dot-paths or sections" [ref=e729]:
+                  - code [ref=e730]: fields
+                  - text: = dot-paths or sections
+                - cell "fields = dot-paths or sections" [ref=e731]:
+                  - code [ref=e732]: fields
+                  - text: = dot-paths or sections
+              - row "Error codes 400, 401, 403, 500 400, 401, 500 400, 401, 403, 500 400, 401, 403, 500" [ref=e733]:
+                - cell "Error codes" [ref=e734]:
+                  - strong [ref=e735]: Error codes
+                - cell "400, 401, 403, 500" [ref=e736]:
+                  - code [ref=e737]: "400"
+                  - text: ","
+                  - code [ref=e738]: "401"
+                  - text: ","
+                  - code [ref=e739]: "403"
+                  - text: ","
+                  - code [ref=e740]: "500"
+                - cell "400, 401, 500" [ref=e741]:
+                  - code [ref=e742]: "400"
+                  - text: ","
+                  - code [ref=e743]: "401"
+                  - text: ","
+                  - code [ref=e744]: "500"
+                - cell "400, 401, 403, 500" [ref=e745]:
+                  - code [ref=e746]: "400"
+                  - text: ","
+                  - code [ref=e747]: "401"
+                  - text: ","
+                  - code [ref=e748]: "403"
+                  - text: ","
+                  - code [ref=e749]: "500"
+                - cell "400, 401, 403, 500" [ref=e750]:
+                  - code [ref=e751]: "400"
+                  - text: ","
+                  - code [ref=e752]: "401"
+                  - text: ","
+                  - code [ref=e753]: "403"
+                  - text: ","
+                  - code [ref=e754]: "500"
+          - separator [ref=e755]
+          - heading "Navigate to header Before you start" [level=2] [ref=e756]:
+            - link "Navigate to header" [ref=e757] [cursor=pointer]:
+              - /url: "#before-you-start"
+              - img [ref=e759]
+            - generic [ref=e761] [cursor=pointer]: Before you start
+          - generic [ref=e762]: "You need:"
+          - list [ref=e763]:
+            - listitem [ref=e764]: A Crustdata API key
+            - listitem [ref=e765]:
+              - text: A terminal with
+              - code [ref=e766]: curl
+              - text: (or any HTTP client)
+            - listitem [ref=e767]:
+              - text: "The required header:"
+              - code [ref=e768]: "x-api-version: 2025-11-01"
+          - generic [ref=e769]:
+            - text: All requests use
+            - strong [ref=e770]: Bearer token authentication
+            - text: "and require the API version header:"
+          - generic [ref=e771]:
+            - generic [ref=e772]:
+              - button "Report incorrect code" [ref=e774] [cursor=pointer]:
+                - img [ref=e775]
+              - button "Copy the contents from the code block" [ref=e778] [cursor=pointer]:
+                - img [ref=e779]
+              - button "Ask AI" [ref=e783] [cursor=pointer]:
+                - img [ref=e784]
+            - code [ref=e790]:
+              - generic [ref=e791]: "--header 'authorization: Bearer YOUR_API_KEY'"
+              - generic [ref=e792]: "--header 'x-api-version: 2025-11-01'"
+          - generic [ref=e793]:
+            - img "Note" [ref=e795]
+            - generic [ref=e797]:
+              - text: Replace
+              - code [ref=e798]: YOUR_API_KEY
+              - text: in each example with your actual API key.
+          - generic [ref=e799]:
+            - img "Note" [ref=e801]
+            - generic [ref=e804]:
+              - strong [ref=e805]: "Convention used in these docs:"
+              - text: Information labeled “OpenAPI contract” reflects the formal API specification. Information labeled “Current platform behavior” (such as rate limits, credit costs, and max page ranges) describes observed behavior that may change. See the
+              - link "API reference" [ref=e806] [cursor=pointer]:
+                - /url: /openapi-specs/2025-11-01/introduction
+              - text: for the formal OpenAPI spec.
+          - separator [ref=e807]
+          - 'heading "Navigate to header Quickstart: enrich a company from a domain" [level=2] [ref=e808]':
+            - link "Navigate to header" [ref=e809] [cursor=pointer]:
+              - /url: "#quickstart-enrich-a-company-from-a-domain"
+              - img [ref=e811]
+            - generic [ref=e813] [cursor=pointer]: "Quickstart: enrich a company from a domain"
+          - generic [ref=e814]: The fastest way to get started is to enrich a company from its website domain. This single request returns the full company profile.
+          - generic [ref=e815]:
+            - generic [ref=e816]:
+              - tablist [ref=e817]:
+                - tab "Request" [selected] [ref=e818] [cursor=pointer]:
+                  - generic [ref=e819]: Request
+                - tab "Response" [ref=e821] [cursor=pointer]:
+                  - generic [ref=e822]: Response
+              - generic [ref=e823]:
+                - button "Report incorrect code" [ref=e825] [cursor=pointer]:
+                  - img [ref=e826]
+                - button "Copy the contents from the code block" [ref=e829] [cursor=pointer]:
+                  - img [ref=e830]
+                - button "Ask AI" [ref=e834] [cursor=pointer]:
+                  - img [ref=e835]
+            - tabpanel "Request" [ref=e839]:
+              - code [ref=e843]:
+                - generic [ref=e844]: curl --request POST \
+                - generic [ref=e845]: "--url https://api.crustdata.com/company/enrich \\"
+                - generic [ref=e846]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e847]: "--header 'content-type: application/json' \\"
+                - generic [ref=e848]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e849]: "--data '{"
+                - generic [ref=e850]: "\"domains\": [\"retool.com\"]"
+                - generic [ref=e851]: "}'"
+          - generic [ref=e852]:
+            - img "Note" [ref=e854]
+            - generic [ref=e857]: Response trimmed for clarity. The full response includes headcount, funding, hiring, competitors, and more.
+          - generic [ref=e858]:
+            - text: The response is an object with a
+            - code [ref=e859]: results
+            - text: "array — one entry per identifier you submitted:"
+          - list [ref=e860]:
+            - listitem [ref=e861]:
+              - strong [ref=e862]:
+                - code [ref=e863]: matched_on
+              - text: — the input you sent (
+              - code [ref=e864]: retool.com
+              - text: ).
+            - listitem [ref=e865]:
+              - strong [ref=e866]:
+                - code [ref=e867]: match_type
+              - text: — which identifier type was used (
+              - code [ref=e868]: domain
+              - text: ","
+              - code [ref=e869]: name
+              - text: ","
+              - code [ref=e870]: crustdata_company_id
+              - text: ", or"
+              - code [ref=e871]: professional_network_profile_url
+              - text: ).
+            - listitem [ref=e872]:
+              - strong [ref=e873]:
+                - code [ref=e874]: confidence_score
+              - text: — how confident the match is (
+              - code [ref=e875]: "1.0"
+              - text: = exact match).
+            - listitem [ref=e876]:
+              - strong [ref=e877]:
+                - code [ref=e878]: company_data
+              - text: — the full company profile, including
+              - code [ref=e879]: basic_info
+              - text: ","
+              - code [ref=e880]: headcount
+              - text: ","
+              - code [ref=e881]: funding
+              - text: ","
+              - code [ref=e882]: locations
+              - text: ","
+              - code [ref=e883]: taxonomy
+              - text: ", and more."
+          - separator [ref=e884]
+          - heading "Navigate to header Which API should you start with?" [level=2] [ref=e885]:
+            - link "Navigate to header" [ref=e886] [cursor=pointer]:
+              - /url: "#which-api-should-you-start-with"
+              - img [ref=e888]
+            - generic [ref=e890] [cursor=pointer]: Which API should you start with?
+          - table [ref=e893]:
+            - rowgroup [ref=e894]:
+              - row "If you want to… Start with" [ref=e895]:
+                - columnheader "If you want to…" [ref=e896]
+                - columnheader "Start with" [ref=e897]
+            - rowgroup [ref=e898]:
+              - row "Build a target account list by geography, industry, or funding Search" [ref=e899]:
+                - cell "Build a target account list by geography, industry, or funding" [ref=e900]
+                - cell "Search" [ref=e901]:
+                  - link "Search" [ref=e902] [cursor=pointer]:
+                    - /url: /company-docs/search
+              - row "Discover valid filter values before building search queries Autocomplete" [ref=e903]:
+                - cell "Discover valid filter values before building search queries" [ref=e904]
+                - cell "Autocomplete" [ref=e905]:
+                  - link "Autocomplete" [ref=e906] [cursor=pointer]:
+                    - /url: /company-docs/autocomplete
+              - row "Get richer context for scoring, prioritization, or diligence Enrich" [ref=e907]:
+                - cell "Get richer context for scoring, prioritization, or diligence" [ref=e908]
+                - cell "Enrich" [ref=e909]:
+                  - link "Enrich" [ref=e910] [cursor=pointer]:
+                    - /url: /company-docs/enrichment
+          - heading "Navigate to header Common workflows" [level=2] [ref=e911]:
+            - link "Navigate to header" [ref=e912] [cursor=pointer]:
+              - /url: "#common-workflows"
+              - img [ref=e914]
+            - generic [ref=e916] [cursor=pointer]: Common workflows
+          - list [ref=e917]:
+            - listitem [ref=e918]:
+              - strong [ref=e919]: Discovery
+              - text: — Start with
+              - link "Autocomplete" [ref=e920] [cursor=pointer]:
+                - /url: /company-docs/autocomplete
+              - text: to find valid filter values, then
+              - link "Search" [ref=e921] [cursor=pointer]:
+                - /url: /company-docs/search
+              - text: to build your list, then
+              - link "Enrich" [ref=e922] [cursor=pointer]:
+                - /url: /company-docs/enrichment
+              - text: the top matches for full profiles.
+            - listitem [ref=e923]:
+              - strong [ref=e924]: Data cleanup
+              - text: — Use
+              - link "Enrich" [ref=e925] [cursor=pointer]:
+                - /url: /company-docs/enrichment
+              - text: with a domain to resolve ambiguous records from CRM imports.
+            - listitem [ref=e926]:
+              - strong [ref=e927]: Lead routing
+              - text: —
+              - link "Enrich" [ref=e928] [cursor=pointer]:
+                - /url: /company-docs/enrichment
+              - text: incoming domains to get a stable company ID and industry, then
+              - link "Search" [ref=e929] [cursor=pointer]:
+                - /url: /company-docs/search
+              - text: for similar companies.
+          - separator [ref=e930]
+          - heading "Navigate to header Error handling" [level=2] [ref=e931]:
+            - link "Navigate to header" [ref=e932] [cursor=pointer]:
+              - /url: "#error-handling"
+              - img [ref=e934]
+            - generic [ref=e936] [cursor=pointer]: Error handling
+          - generic [ref=e937]: "All Company API endpoints return structured errors. The exact status codes vary by endpoint:"
+          - table [ref=e940]:
+            - rowgroup [ref=e941]:
+              - row "Status Meaning Applies to" [ref=e942]:
+                - columnheader "Status" [ref=e943]
+                - columnheader "Meaning" [ref=e944]
+                - columnheader "Applies to" [ref=e945]
+            - rowgroup [ref=e946]:
+              - row "400 Invalid request (bad field, wrong operator, malformed filters) All endpoints" [ref=e947]:
+                - cell "400" [ref=e948]:
+                  - code [ref=e949]: "400"
+                - cell "Invalid request (bad field, wrong operator, malformed filters)" [ref=e950]
+                - cell "All endpoints" [ref=e951]
+              - row "401 Invalid or missing API key All endpoints" [ref=e952]:
+                - cell "401" [ref=e953]:
+                  - code [ref=e954]: "401"
+                - cell "Invalid or missing API key" [ref=e955]
+                - cell "All endpoints" [ref=e956]
+              - row "403 Permission denied or insufficient credits Search, Enrich, Identify" [ref=e957]:
+                - cell "403" [ref=e958]:
+                  - code [ref=e959]: "403"
+                - cell "Permission denied or insufficient credits" [ref=e960]
+                - cell "Search, Enrich, Identify" [ref=e961]
+              - row "500 Internal server error All endpoints" [ref=e962]:
+                - cell "500" [ref=e963]:
+                  - code [ref=e964]: "500"
+                - cell "Internal server error" [ref=e965]
+                - cell "All endpoints" [ref=e966]
+          - generic [ref=e967]: "Error response format:"
+          - generic [ref=e968]:
+            - generic [ref=e969]:
+              - button "Report incorrect code" [ref=e971] [cursor=pointer]:
+                - img [ref=e972]
+              - button "Copy the contents from the code block" [ref=e975] [cursor=pointer]:
+                - img [ref=e976]
+              - button "Ask AI" [ref=e980] [cursor=pointer]:
+                - img [ref=e981]
+            - code [ref=e987]:
+              - generic [ref=e988]: "{"
+              - generic [ref=e989]: "\"error\": {"
+              - generic [ref=e990]: "\"type\": \"invalid_request\","
+              - generic [ref=e991]: "\"message\": \"Unsupported columns in conditions: ['nonexistent_field']\","
+              - generic [ref=e992]: "\"metadata\": []"
+              - generic [ref=e993]: "}"
+              - generic [ref=e994]: "}"
+          - generic [ref=e995]:
+            - text: For
+            - code [ref=e996]: "401"
+            - text: ", the format is simpler:"
+            - code [ref=e997]: "{\"message\": \"Invalid API key in request\"}"
+            - text: .
+          - separator [ref=e998]
+          - heading "Navigate to header Terminology reference" [level=2] [ref=e999]:
+            - link "Navigate to header" [ref=e1000] [cursor=pointer]:
+              - /url: "#terminology-reference"
+              - img [ref=e1002]
+            - generic [ref=e1004] [cursor=pointer]: Terminology reference
+          - generic [ref=e1005]: "These are the most common terms used across the Company APIs:"
+          - table [ref=e1008]:
+            - rowgroup [ref=e1009]:
+              - row "You say API request field Used in" [ref=e1010]:
+                - columnheader "You say" [ref=e1011]
+                - columnheader "API request field" [ref=e1012]
+                - columnheader "Used in" [ref=e1013]
+            - rowgroup [ref=e1014]:
+              - row "Company domain domains Enrich, Identify" [ref=e1015]:
+                - cell "Company domain" [ref=e1016]
+                - cell "domains" [ref=e1017]:
+                  - code [ref=e1018]: domains
+                - cell "Enrich, Identify" [ref=e1019]
+              - row "Company name names Enrich, Identify" [ref=e1020]:
+                - cell "Company name" [ref=e1021]
+                - cell "names" [ref=e1022]:
+                  - code [ref=e1023]: names
+                - cell "Enrich, Identify" [ref=e1024]
+              - row "Company ID crustdata_company_ids Enrich, Identify" [ref=e1025]:
+                - cell "Company ID" [ref=e1026]
+                - cell "crustdata_company_ids" [ref=e1027]:
+                  - code [ref=e1028]: crustdata_company_ids
+                - cell "Enrich, Identify" [ref=e1029]
+              - 'row "HQ country locations.hq_country (ISO3: \"USA\", \"GBR\") Search" [ref=e1030]':
+                - cell "HQ country" [ref=e1031]
+                - 'cell "locations.hq_country (ISO3: \"USA\", \"GBR\")" [ref=e1032]':
+                  - code [ref=e1033]: locations.hq_country
+                  - text: "(ISO3:"
+                  - code [ref=e1034]: "\"USA\""
+                  - text: ","
+                  - code [ref=e1035]: "\"GBR\""
+                  - text: )
+                - cell "Search" [ref=e1036]
+              - row "Industry taxonomy.professional_network_industry or basic_info.industries Search" [ref=e1037]:
+                - cell "Industry" [ref=e1038]
+                - cell "taxonomy.professional_network_industry or basic_info.industries" [ref=e1039]:
+                  - code [ref=e1040]: taxonomy.professional_network_industry
+                  - text: or
+                  - code [ref=e1041]: basic_info.industries
+                - cell "Search" [ref=e1042]
+              - row "Employee count headcount.total Search" [ref=e1043]:
+                - cell "Employee count" [ref=e1044]
+                - cell "headcount.total" [ref=e1045]:
+                  - code [ref=e1046]: headcount.total
+                - cell "Search" [ref=e1047]
+              - row "Total funding funding.total_investment_usd Search" [ref=e1048]:
+                - cell "Total funding" [ref=e1049]
+                - cell "funding.total_investment_usd" [ref=e1050]:
+                  - code [ref=e1051]: funding.total_investment_usd
+                - cell "Search" [ref=e1052]
+          - generic [ref=e1053]:
+            - img "Note" [ref=e1055]
+            - generic [ref=e1058]:
+              - text: Search uses ISO3 country codes (
+              - code [ref=e1059]: "\"USA\""
+              - text: ","
+              - code [ref=e1060]: "\"GBR\""
+              - text: ). Use
+              - link "Autocomplete" [ref=e1061] [cursor=pointer]:
+                - /url: /company-docs/autocomplete
+              - text: to discover exact values for indexed Search filters.
+          - heading "Navigate to header Company ID fields" [level=3] [ref=e1062]:
+            - link "Navigate to header" [ref=e1063] [cursor=pointer]:
+              - /url: "#company-id-fields"
+              - img [ref=e1065]
+            - generic [ref=e1067] [cursor=pointer]: Company ID fields
+          - generic [ref=e1068]: "The company data model includes two ID fields:"
+          - table [ref=e1071]:
+            - rowgroup [ref=e1072]:
+              - row "Field Meaning When to use" [ref=e1073]:
+                - columnheader "Field" [ref=e1074]
+                - columnheader "Meaning" [ref=e1075]
+                - columnheader "When to use" [ref=e1076]
+            - rowgroup [ref=e1077]:
+              - row "crustdata_company_id Stable Crustdata company identifier. Appears at the top level of search results and inside company_data. Use this for Search → Enrich workflows. Pass it in crustdata_company_ids when calling Enrich." [ref=e1078]:
+                - cell "crustdata_company_id" [ref=e1079]:
+                  - code [ref=e1080]: crustdata_company_id
+                - cell "Stable Crustdata company identifier. Appears at the top level of search results and inside company_data." [ref=e1081]:
+                  - text: Stable Crustdata company identifier. Appears at the top level of search results and inside
+                  - code [ref=e1082]: company_data
+                  - text: .
+                - cell "Use this for Search → Enrich workflows. Pass it in crustdata_company_ids when calling Enrich." [ref=e1083]:
+                  - text: Use this for Search → Enrich workflows. Pass it in
+                  - code [ref=e1084]: crustdata_company_ids
+                  - text: when calling Enrich.
+              - row "basic_info.company_id Internal source company identifier. May match crustdata_company_id but is not guaranteed to. Generally, prefer crustdata_company_id for cross-API workflows." [ref=e1085]:
+                - cell "basic_info.company_id" [ref=e1086]:
+                  - code [ref=e1087]: basic_info.company_id
+                - cell "Internal source company identifier. May match crustdata_company_id but is not guaranteed to." [ref=e1088]:
+                  - text: Internal source company identifier. May match
+                  - code [ref=e1089]: crustdata_company_id
+                  - text: but is not guaranteed to.
+                - cell "Generally, prefer crustdata_company_id for cross-API workflows." [ref=e1090]:
+                  - text: Generally, prefer
+                  - code [ref=e1091]: crustdata_company_id
+                  - text: for cross-API workflows.
+          - separator [ref=e1092]
+          - heading "Navigate to header Common footguns" [level=2] [ref=e1093]:
+            - link "Navigate to header" [ref=e1094] [cursor=pointer]:
+              - /url: "#common-footguns"
+              - img [ref=e1096]
+            - generic [ref=e1098] [cursor=pointer]: Common footguns
+          - table [ref=e1101]:
+            - rowgroup [ref=e1102]:
+              - row "Mistake Fix" [ref=e1103]:
+                - columnheader "Mistake" [ref=e1104]
+                - columnheader "Fix" [ref=e1105]
+            - rowgroup [ref=e1106]:
+              - 'row "Using \"United States\" in Search Search uses ISO3 codes: \"USA\", \"GBR\". Use Autocomplete to discover exact values." [ref=e1107]':
+                - cell "Using \"United States\" in Search" [ref=e1108]:
+                  - text: Using
+                  - code [ref=e1109]: "\"United States\""
+                  - text: in Search
+                - 'cell "Search uses ISO3 codes: \"USA\", \"GBR\". Use Autocomplete to discover exact values." [ref=e1110]':
+                  - text: "Search uses ISO3 codes:"
+                  - code [ref=e1111]: "\"USA\""
+                  - text: ","
+                  - code [ref=e1112]: "\"GBR\""
+                  - text: . Use
+                  - link "Autocomplete" [ref=e1113] [cursor=pointer]:
+                    - /url: /company-docs/autocomplete
+                  - text: to discover exact values.
+              - row "Using >= or <= operators in Search Use => and =< instead." [ref=e1114]:
+                - cell "Using >= or <= operators in Search" [ref=e1115]:
+                  - text: Using
+                  - code [ref=e1116]: ">="
+                  - text: or
+                  - code [ref=e1117]: <=
+                  - text: operators in Search
+                - cell "Use => and =< instead." [ref=e1118]:
+                  - text: Use
+                  - code [ref=e1119]: =>
+                  - text: and
+                  - code [ref=e1120]: =<
+                  - text: instead.
+              - 'row "Mixing identifier types in Enrich Send one type per request: domains, names, crustdata_company_ids, or professional_network_profile_urls." [ref=e1121]':
+                - cell "Mixing identifier types in Enrich" [ref=e1122]
+                - 'cell "Send one type per request: domains, names, crustdata_company_ids, or professional_network_profile_urls." [ref=e1123]':
+                  - text: "Send one type per request:"
+                  - code [ref=e1124]: domains
+                  - text: ","
+                  - code [ref=e1125]: names
+                  - text: ","
+                  - code [ref=e1126]: crustdata_company_ids
+                  - text: ", or"
+                  - code [ref=e1127]: professional_network_profile_urls
+                  - text: .
+              - row "Confusing Search fields with Enrich fields Search fields are dot-path response fields (e.g., basic_info.name). Enrich fields are section groups (e.g., basic_info)." [ref=e1128]:
+                - cell "Confusing Search fields with Enrich fields" [ref=e1129]:
+                  - text: Confusing Search
+                  - code [ref=e1130]: fields
+                  - text: with Enrich
+                  - code [ref=e1131]: fields
+                - cell "Search fields are dot-path response fields (e.g., basic_info.name). Enrich fields are section groups (e.g., basic_info)." [ref=e1132]:
+                  - text: Search
+                  - code [ref=e1133]: fields
+                  - text: are dot-path response fields (e.g.,
+                  - code [ref=e1134]: basic_info.name
+                  - text: ). Enrich
+                  - code [ref=e1135]: fields
+                  - text: are section groups (e.g.,
+                  - code [ref=e1136]: basic_info
+                  - text: ).
+              - row "Omitting fields in Search Returns all fields per company — very large payloads. Always specify fields in production." [ref=e1137]:
+                - cell "Omitting fields in Search" [ref=e1138]:
+                  - text: Omitting
+                  - code [ref=e1139]: fields
+                  - text: in Search
+                - cell "Returns all fields per company — very large payloads. Always specify fields in production." [ref=e1140]:
+                  - text: Returns all fields per company — very large payloads. Always specify
+                  - code [ref=e1141]: fields
+                  - text: in production.
+          - heading "Navigate to header Shared guidance" [level=2] [ref=e1142]:
+            - link "Navigate to header" [ref=e1143] [cursor=pointer]:
+              - /url: "#shared-guidance"
+              - img [ref=e1145]
+            - generic [ref=e1147] [cursor=pointer]: Shared guidance
+          - generic [ref=e1148]:
+            - text: Use the endpoint pages for request/response details and no-match behavior. For pricing, see
+            - link "Pricing" [ref=e1149] [cursor=pointer]:
+              - /url: /general/pricing
+            - text: . For rate-limit guidance, see
+            - link "Rate limits" [ref=e1150] [cursor=pointer]:
+              - /url: /general/rate-limits
+            - text: .
+          - separator [ref=e1151]
+          - heading "Navigate to header Next steps" [level=2] [ref=e1152]:
+            - link "Navigate to header" [ref=e1153] [cursor=pointer]:
+              - /url: "#next-steps"
+              - img [ref=e1155]
+            - generic [ref=e1157] [cursor=pointer]: Next steps
+          - list [ref=e1158]:
+            - listitem [ref=e1159]:
+              - link "Company Search" [ref=e1160] [cursor=pointer]:
+                - /url: /company-docs/search
+              - text: — find companies by domain, industry, funding, headcount, and more.
+            - listitem [ref=e1161]:
+              - link "Company Autocomplete" [ref=e1162] [cursor=pointer]:
+                - /url: /company-docs/autocomplete
+              - text: — discover valid filter values before building queries.
+            - listitem [ref=e1163]:
+              - link "Company Enrich" [ref=e1164] [cursor=pointer]:
+                - /url: /company-docs/enrichment
+              - text: — get detailed profiles with headcount, funding, hiring, and competitors.
+            - listitem [ref=e1165]:
+              - link "Company Identify" [ref=e1166] [cursor=pointer]:
+                - /url: /company-docs/identify
+              - text: — resolve partial company info to a known entity.
+            - listitem [ref=e1167]:
+              - link "Company Examples" [ref=e1168] [cursor=pointer]:
+                - /url: /company-docs/examples
+              - text: — ready-to-copy patterns for common use cases.
+        - generic [ref=e606]:
+          - paragraph [ref=e607]: Was this page helpful?
+          - generic [ref=e609]:
+            - button "Yes" [ref=e610] [cursor=pointer]:
+              - img [ref=e611]
+              - generic [ref=e613]: "Yes"
+            - button "No" [ref=e614] [cursor=pointer]:
+              - img [ref=e615]
+              - generic [ref=e617]: "No"
+        - generic [ref=e1169]:
+          - link "Rate limits Previous" [ref=e1170] [cursor=pointer]:
+            - /url: /general/rate-limits
+            - generic [ref=e1171]:
+              - generic [ref=e1172]: Rate limits
+              - generic [ref=e1173]:
+                - img [ref=e1174]
+                - generic [ref=e1176]: Previous
+          - link "Company Search Next" [ref=e1177] [cursor=pointer]:
+            - /url: /company-docs/search
+            - generic [ref=e1178]:
+              - generic [ref=e1179]: Company Search
+              - generic [ref=e1180]:
+                - img [ref=e1181]
+                - generic [ref=e1183]: Next
+        - generic [ref=e619]:
+          - textbox "Ask a question..." [ref=e620]
+          - generic: Ctrl+I
+          - button "Send message" [disabled] [ref=e621]:
+            - img [ref=e622]
+        - contentinfo [ref=e624]:
+          - generic [ref=e625]:
+            - link "x" [ref=e626] [cursor=pointer]:
+              - /url: https://x.com/crustdata
+              - generic [ref=e627]: x
+              - img [ref=e628]
+            - link "linkedin" [ref=e629] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/crustdata
+              - generic [ref=e630]: linkedin
+              - img [ref=e631]
+  - alert [ref=e1184]
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img
+            - generic: Assistant
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - generic:
+              - generic: Responses are generated using AI and may contain mistakes.
+        - generic [ref=e1185]:
+          - textbox [ref=e1187]:
+            - /placeholder: Ask a question...
+          - generic [ref=e1188]:
+            - button [ref=e1189] [cursor=pointer]:
+              - img [ref=e1190]
+            - button [disabled] [ref=e1192]:
+              - img [ref=e1193]

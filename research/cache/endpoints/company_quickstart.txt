@@ -1,0 +1,34 @@
+URL: https://docs.crustdata.com/company-docs/quickstart
+
+Summary: Company APIs have four core endpoints (Search, Autocomplete, Enrich, Identify).
+
+At a glance:
+  Endpoint                         Purpose                               Filter syntax                                               Pagination  Field selection
+  /company/search                  Find companies by filters            { field: "dotpath", type: "op", value: ... }                Cursor      fields=dot-paths or sections
+  /company/search/autocomplete     Discover valid filter values         Optional filters param                                       -           -
+  /company/enrich                  Full profile from identifier         N/A                                                           -           fields
+  /company/identify                Match partial info                    N/A                                                           -           fields
+
+Error codes:
+  400 bad request (all), 401 invalid/missing key (all), 403 perm denied / insufficient credits (Search/Enrich/Identify),
+  500 internal (all).
+
+Terminology:
+  Company domain → domains (Enrich, Identify)
+  Company name → names (Enrich, Identify)
+  Company ID → crustdata_company_ids (Enrich, Identify)
+  HQ country → locations.hq_country (ISO3: "USA", "GBR") — Search
+  Industry → taxonomy.professional_network_industry or basic_info.industries — Search
+  Employee count → headcount.total — Search
+  Total funding → funding.total_investment_usd — Search
+
+Company ID fields:
+  crustdata_company_id: stable top-level identifier — prefer for cross-API flows
+  basic_info.company_id: internal source ID; may differ
+
+Footguns:
+  - Use ISO3 codes (USA, GBR) not full country names in Search
+  - Use => and =< (not >= and <=)
+  - One identifier type per Enrich request
+  - Search fields = dot-paths; Enrich fields = section groups
+  - Omitting fields in Search returns everything — huge payloads

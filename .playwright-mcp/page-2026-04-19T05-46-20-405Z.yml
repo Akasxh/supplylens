@@ -1,0 +1,251 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Company API Identify Companies" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Company API
+              - img [ref=e39]
+            - generic [ref=e41]: Identify Companies
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "Company API" [ref=e50] [cursor=pointer]:
+            - /url: /api-reference/company-apis/search-companies-with-indexed-fields-only
+          - generic [ref=e51]:
+            - heading "Identify Companies" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: Match a company by name, website domain, profile URL, or Crustdata company ID. Returns one or more matches ranked by confidence score. This endpoint is useful for entity resolution before enrichment.
+          - paragraph [ref=e65]:
+            - text: Current platform behavior returns a top-level array with one result per submitted identifier. Each match currently includes
+            - code [ref=e66]: company_data.crustdata_company_id
+            - text: and
+            - code [ref=e67]: company_data.basic_info
+            - text: .
+          - paragraph [ref=e68]: Exactly one identifier type must be provided per request.
+          - generic [ref=e69]:
+            - img "Note" [ref=e71]
+            - paragraph [ref=e74]:
+              - text: Default
+              - code [ref=e75]: rate-limit
+              - text: is 15 requests per minute. Send an email to
+              - link "gtm@crustdata.co" [ref=e76] [cursor=pointer]:
+                - /url: mailto:gtm@crustdata.co
+              - text: to discuss higher limits if needed for your use case.
+      - generic [ref=e77]:
+        - generic [ref=e78]:
+          - generic [ref=e80]:
+            - generic [ref=e81] [cursor=pointer]:
+              - generic [ref=e82]: POST
+              - generic [ref=e83]:
+                - generic [ref=e84]: https://api.crustdata.com
+                - generic [ref=e85]:
+                  - generic [ref=e86]: /
+                  - generic [ref=e87]: company
+                  - generic [ref=e88]: /
+                  - generic [ref=e89]: identify
+            - button "Try it" [ref=e90] [cursor=pointer]:
+              - generic [ref=e91]: Try it
+              - img [ref=e92]
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - generic [ref=e96]:
+                - button "cURL" [ref=e97] [cursor=pointer]:
+                  - generic [ref=e98]:
+                    - paragraph [ref=e99]: cURL
+                    - img [ref=e100]
+                - generic [ref=e102]:
+                  - button "identify_by_domain" [ref=e103] [cursor=pointer]:
+                    - generic [ref=e104]:
+                      - paragraph [ref=e105]: identify_by_domain
+                      - img [ref=e106]
+                  - generic [ref=e108]:
+                    - button "Copy the contents from the code block" [ref=e111] [cursor=pointer]:
+                      - img [ref=e112]
+                    - button "Ask AI" [ref=e116] [cursor=pointer]:
+                      - img [ref=e117]
+              - region "Code snippet" [ref=e120]:
+                - generic [ref=e123]: "curl --request POST \\ --url https://api.crustdata.com/company/identify \\ --header 'Authorization: Bearer <token>' \\ --header 'Content-Type: application/json' \\ --header 'x-api-version: <x-api-version>' \\ --data ' { \"domains\": [ \"serverobotics.com\" ] } '"
+            - generic [ref=e124]:
+              - generic [ref=e125]:
+                - button "200" [ref=e126] [cursor=pointer]:
+                  - generic [ref=e127]:
+                    - paragraph [ref=e128]: "200"
+                    - img [ref=e129]
+                - generic [ref=e131]:
+                  - button "identify_by_domain_response" [ref=e132] [cursor=pointer]:
+                    - generic [ref=e133]:
+                      - paragraph [ref=e134]: identify_by_domain_response
+                      - img [ref=e135]
+                  - generic [ref=e137]:
+                    - button "Copy the contents from the code block" [ref=e140] [cursor=pointer]:
+                      - img [ref=e141]
+                    - button "Ask AI" [ref=e145] [cursor=pointer]:
+                      - img [ref=e146]
+              - region "Code snippet" [ref=e149]:
+                - generic [ref=e152]: "{ \"results\": [ { \"matched_on\": \"serverobotics.com\", \"match_type\": \"domain\", \"matches\": [ { \"confidence_score\": 1, \"company_data\": { \"crustdata_company_id\": 628895, \"basic_info\": { \"crustdata_company_id\": 628895, \"name\": \"Serve Robotics\", \"primary_domain\": \"serverobotics.com\", \"all_domains\": [ \"serverobotics.com\" ], \"website\": \"https://www.serverobotics.com/\", \"professional_network_url\": \"https://www.linkedin.com/company/serverobotics\", \"professional_network_id\": \"72049930\", \"profile_name\": \"Serve Robotics\", \"logo_permalink\": \"https://crustdata-media.s3.us-east-2.amazonaws.com/company/9f84e252d0f9e35c95843303b33eda9313148adb54404d06947be750e9187db5.jpg\", \"description\": null, \"company_type\": null, \"year_founded\": null, \"employee_count_range\": \"51-200\", \"markets\": null, \"industries\": [ \"Technology, Information and Internet\", \"Technology, Information and Media\" ] } } } ] } ] }"
+        - generic [ref=e154]:
+          - generic [ref=e155]:
+            - heading "Authorizations" [level=4] [ref=e158]
+            - generic [ref=e160]:
+              - generic [ref=e163]:
+                - link "Navigate to header" [ref=e164] [cursor=pointer]:
+                  - /url: "#authorization-authorization"
+                  - img [ref=e166]
+                - generic [ref=e169] [cursor=pointer]: Authorization
+                - generic [ref=e170]:
+                  - generic [ref=e171]: string
+                  - generic [ref=e172]: header
+                  - text: required
+              - paragraph [ref=e175]: API key passed as a Bearer token in the Authorization header.
+          - generic [ref=e176]:
+            - heading "Headers" [level=4] [ref=e179]
+            - generic [ref=e181]:
+              - generic [ref=e184]:
+                - link "Navigate to header" [ref=e185] [cursor=pointer]:
+                  - /url: "#parameter-x-api-version"
+                  - img [ref=e187]
+                - generic [ref=e190] [cursor=pointer]: x-api-version
+                - generic [ref=e191]:
+                  - generic [ref=e192]: string
+                  - text: required
+              - generic [ref=e193]:
+                - paragraph [ref=e195]: API version to use. Must match a supported version (e.g., "2025-11-01").
+                - generic [ref=e196]:
+                  - generic [ref=e197]: "Example:"
+                  - paragraph [ref=e199]:
+                    - code [ref=e200]: "\"2025-11-01\""
+          - generic [ref=e201]:
+            - generic [ref=e202]:
+              - generic [ref=e203]:
+                - heading "Body" [level=4] [ref=e204]
+                - generic [ref=e206]: application/json
+              - paragraph [ref=e209]: Company identifier plus optional exact_match for domains. Provide exactly one of names, domains, crustdata_company_ids, or professional_network_profile_urls.
+            - generic [ref=e212]:
+              - paragraph [ref=e214]: Raw request parameters from query string
+              - generic [ref=e216]:
+                - generic [ref=e221]:
+                  - link "Navigate to header" [ref=e222] [cursor=pointer]:
+                    - /url: "#body-names-one-of-0"
+                    - img [ref=e224]
+                  - generic [ref=e227] [cursor=pointer]: names
+                  - generic [ref=e229]: string[] | null
+                - generic [ref=e234]:
+                  - link "Navigate to header" [ref=e235] [cursor=pointer]:
+                    - /url: "#body-domains-one-of-0"
+                    - img [ref=e237]
+                  - generic [ref=e240] [cursor=pointer]: domains
+                  - generic [ref=e242]: string[] | null
+                - generic [ref=e247]:
+                  - link "Navigate to header" [ref=e248] [cursor=pointer]:
+                    - /url: "#body-crustdata-company-ids-one-of-0"
+                    - img [ref=e250]
+                  - generic [ref=e253] [cursor=pointer]: crustdata_company_ids
+                  - generic [ref=e255]: integer[] | null
+                - generic [ref=e260]:
+                  - link "Navigate to header" [ref=e261] [cursor=pointer]:
+                    - /url: "#body-professional-network-profile-urls-one-of-0"
+                    - img [ref=e263]
+                  - generic [ref=e266] [cursor=pointer]: professional_network_profile_urls
+                  - generic [ref=e268]: string[] | null
+                - generic [ref=e270]:
+                  - generic [ref=e273]:
+                    - link "Navigate to header" [ref=e274] [cursor=pointer]:
+                      - /url: "#body-fields"
+                      - img [ref=e276]
+                    - generic [ref=e279] [cursor=pointer]: fields
+                    - generic [ref=e281]: string[]
+                  - paragraph [ref=e284]: "Fields to include in the response. Valid field groups for enrich: basic_info, revenue, headcount, funding, hiring, web_traffic, seo, competitors, employee_reviews, people, locations, taxonomy, followers, news, software_reviews, social_profiles, status. Not valid for enrich: roles, skills (search-only fields)."
+                - generic [ref=e286]:
+                  - generic [ref=e289]:
+                    - link "Navigate to header" [ref=e290] [cursor=pointer]:
+                      - /url: "#body-exact-match-one-of-0"
+                      - img [ref=e292]
+                    - generic [ref=e295] [cursor=pointer]: exact_match
+                    - generic [ref=e297]: boolean | null
+                  - paragraph [ref=e300]: Whether to use exact matching (null means auto-detect)
+          - generic [ref=e301]:
+            - generic [ref=e302]:
+              - generic [ref=e303]:
+                - heading "Response" [level=4] [ref=e304]
+                - generic [ref=e306]:
+                  - button "200" [ref=e308] [cursor=pointer]:
+                    - generic [ref=e309]:
+                      - generic [ref=e310]: "200"
+                      - img [ref=e311]
+                  - generic [ref=e313]:
+                    - button "application/json" [disabled]:
+                      - generic:
+                        - generic: application/json
+              - paragraph [ref=e316]: Identified company matches returned as a top-level array
+            - generic [ref=e319]:
+              - paragraph [ref=e321]:
+                - text: Response wrapper for /company/identify containing one entry per submitted identifier. Current platform behavior may return a top-level array; the
+                - code [ref=e322]: results
+                - text: wrapper represents the documented contract.
+              - generic [ref=e326]:
+                - generic [ref=e329]:
+                  - link "Navigate to header" [ref=e330] [cursor=pointer]:
+                    - /url: "#response-results"
+                    - img [ref=e332]
+                  - generic [ref=e335] [cursor=pointer]: results
+                  - generic [ref=e337]: object[]
+                - group [ref=e344]:
+                  - generic "Show child attributes" [ref=e345] [cursor=pointer]:
+                    - img [ref=e346]
+                    - paragraph [ref=e348]: Show child attributes
+      - generic [ref=e350]:
+        - paragraph [ref=e351]: Was this page helpful?
+        - generic [ref=e353]:
+          - button "Yes" [ref=e354] [cursor=pointer]:
+            - img [ref=e355]
+            - generic [ref=e357]: "Yes"
+          - button "No" [ref=e358] [cursor=pointer]:
+            - img [ref=e359]
+            - generic [ref=e361]: "No"
+      - generic [ref=e363]:
+        - textbox "Ask a question..." [ref=e364]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e365]:
+          - img [ref=e366]
+      - contentinfo [ref=e368]:
+        - generic [ref=e369]:
+          - link "x" [ref=e370] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e371]: x
+            - img [ref=e372]
+          - link "linkedin" [ref=e373] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e374]: linkedin
+            - img [ref=e375]

@@ -1,0 +1,604 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#content-area"
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - paragraph [ref=e11]:
+          - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+          - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+            - /url: mailto:support@crustdata.tech
+          - text: for feedback and clarifications.
+        - generic [ref=e14]:
+          - generic [ref=e16]:
+            - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e19]: Crustdata Docs home page
+              - img "light logo" [ref=e20]
+            - generic [ref=e21]:
+              - button "Open search" [ref=e22] [cursor=pointer]:
+                - generic [ref=e23]: Search...
+                - img [ref=e24]
+              - button [ref=e25] [cursor=pointer]:
+                - img [ref=e26]
+              - button "More actions" [ref=e29] [cursor=pointer]:
+                - img [ref=e30]
+          - button "Navigation Documentation Pricing" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]:
+              - generic [ref=e33]: Navigation
+              - img [ref=e34]
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - generic [ref=e38]: Documentation
+                - img [ref=e39]
+              - generic [ref=e41]: Pricing
+      - generic [ref=e45]:
+        - banner [ref=e46]:
+          - generic [ref=e47]:
+            - link "Documentation" [ref=e50] [cursor=pointer]:
+              - /url: /general/introduction
+            - generic [ref=e51]:
+              - heading "Pricing" [level=1] [ref=e52]
+              - generic [ref=e53]:
+                - button "Copy page" [ref=e54] [cursor=pointer]:
+                  - generic [ref=e55]:
+                    - img [ref=e56]
+                    - generic [ref=e59]: Copy page
+                - button "More actions" [ref=e60] [cursor=pointer]:
+                  - img [ref=e61]
+          - paragraph [ref=e64]: Learn how Crustdata credits work, what common endpoints cost, and how to estimate usage before you ship.
+        - generic [ref=e65]:
+          - generic [ref=e66]:
+            - img "Warning" [ref=e68]
+            - generic [ref=e71]: Pricing can change by plan, entitlement, and endpoint version. Confirm the current credit cost in your dashboard or with the Crustdata team before you plan production usage.
+          - generic [ref=e72]: Crustdata uses a credit model across its APIs. Use low-cost search endpoints to narrow your list, then enrich only the records you want to inspect in detail.
+          - generic [ref=e73]:
+            - link [ref=e74] [cursor=pointer]:
+              - link [ref=e76]:
+                - /url: /person-docs/search
+                - img [ref=e78]
+                - generic [ref=e79]:
+                  - heading [level=2] [ref=e80]: Search first
+                  - generic [ref=e82]: Use search endpoints for low-cost discovery, then enrich only the records you want to keep.
+            - link [ref=e83] [cursor=pointer]:
+              - link [ref=e85]:
+                - /url: /person-docs/enrichment
+                - img [ref=e87]
+                - generic [ref=e88]:
+                  - heading [level=2] [ref=e89]: Enrich selectively
+                  - generic [ref=e91]: Person enrich starts with a base profile and adds cost only when you ask for higher-value data.
+            - link [ref=e92] [cursor=pointer]:
+              - link [ref=e94]:
+                - /url: /general/rate-limits
+                - img [ref=e96]
+                - generic [ref=e97]:
+                  - heading [level=2] [ref=e98]: Plan for live endpoint usage
+                  - generic [ref=e100]: Web live endpoints are available on self-serve plans. Company and Person live endpoints remain plan-gated.
+          - generic [ref=e101]:
+            - text: Credits are currently valid for
+            - strong [ref=e102]: 6 months
+            - text: from the purchase date.
+          - heading "Navigate to header Self-serve endpoint pricing" [level=2] [ref=e103]:
+            - link "Navigate to header" [ref=e104] [cursor=pointer]:
+              - /url: "#self-serve-endpoint-pricing"
+              - img [ref=e106]
+            - generic [ref=e108] [cursor=pointer]: Self-serve endpoint pricing
+          - generic [ref=e109]:
+            - img [ref=e111]
+            - generic [ref=e113]: This page lists pricing for the endpoints currently documented in this docs site. It does not include unpublished or not-yet-documented routes.
+          - generic [ref=e114]: Use these tables to estimate common self-serve search, identify, and enrich costs.
+          - heading "Navigate to header Person endpoints" [level=3] [ref=e115]:
+            - link "Navigate to header" [ref=e116] [cursor=pointer]:
+              - /url: "#person-endpoints"
+              - img [ref=e118]
+            - generic [ref=e120] [cursor=pointer]: Person endpoints
+          - table [ref=e123]:
+            - rowgroup [ref=e124]:
+              - row "Endpoint Credit usage Notes" [ref=e125]:
+                - columnheader "Endpoint" [ref=e126]
+                - columnheader "Credit usage" [ref=e127]
+                - columnheader "Notes" [ref=e128]
+            - rowgroup [ref=e129]:
+              - row "/person/search 0.03 per result Best for low-cost discovery and filtering." [ref=e130]:
+                - cell "/person/search" [ref=e131]:
+                  - code [ref=e132]: /person/search
+                - cell "0.03 per result" [ref=e133]:
+                  - strong [ref=e134]: "0.03"
+                  - text: per result
+                - cell "Best for low-cost discovery and filtering." [ref=e135]
+              - row "/person/search/autocomplete Free Use for typeahead and filter builders." [ref=e136]:
+                - cell "/person/search/autocomplete" [ref=e137]:
+                  - code [ref=e138]: /person/search/autocomplete
+                - cell "Free" [ref=e139]:
+                  - strong [ref=e140]: Free
+                - cell "Use for typeahead and filter builders." [ref=e141]
+              - row "/person/enrich 1–7 per record Starts with a base profile and scales with requested data." [ref=e142]:
+                - cell "/person/enrich" [ref=e143]:
+                  - code [ref=e144]: /person/enrich
+                - cell "1–7 per record" [ref=e145]:
+                  - strong [ref=e146]: 1–7
+                  - text: per record
+                - cell "Starts with a base profile and scales with requested data." [ref=e147]
+          - heading "Navigate to header Company endpoints" [level=3] [ref=e148]:
+            - link "Navigate to header" [ref=e149] [cursor=pointer]:
+              - /url: "#company-endpoints"
+              - img [ref=e151]
+            - generic [ref=e153] [cursor=pointer]: Company endpoints
+          - table [ref=e156]:
+            - rowgroup [ref=e157]:
+              - row "Endpoint Credit usage Notes" [ref=e158]:
+                - columnheader "Endpoint" [ref=e159]
+                - columnheader "Credit usage" [ref=e160]
+                - columnheader "Notes" [ref=e161]
+            - rowgroup [ref=e162]:
+              - row "/company/search 0.03 per result Lightweight company discovery." [ref=e163]:
+                - cell "/company/search" [ref=e164]:
+                  - code [ref=e165]: /company/search
+                - cell "0.03 per result" [ref=e166]:
+                  - strong [ref=e167]: "0.03"
+                  - text: per result
+                - cell "Lightweight company discovery." [ref=e168]
+              - row "/company/search/autocomplete Free Useful for search UX and filter pickers." [ref=e169]:
+                - cell "/company/search/autocomplete" [ref=e170]:
+                  - code [ref=e171]: /company/search/autocomplete
+                - cell "Free" [ref=e172]:
+                  - strong [ref=e173]: Free
+                - cell "Useful for search UX and filter pickers." [ref=e174]
+              - row "/company/enrich 2 per record Flat-rate company enrichment." [ref=e175]:
+                - cell "/company/enrich" [ref=e176]:
+                  - code [ref=e177]: /company/enrich
+                - cell "2 per record" [ref=e178]:
+                  - strong [ref=e179]: "2"
+                  - text: per record
+                - cell "Flat-rate company enrichment." [ref=e180]
+              - row "/company/identify Free Resolve a company from a domain or other supported identifier." [ref=e181]:
+                - cell "/company/identify" [ref=e182]:
+                  - code [ref=e183]: /company/identify
+                - cell "Free" [ref=e184]:
+                  - strong [ref=e185]: Free
+                - cell "Resolve a company from a domain or other supported identifier." [ref=e186]
+          - heading "Navigate to header Job endpoints" [level=3] [ref=e187]:
+            - link "Navigate to header" [ref=e188] [cursor=pointer]:
+              - /url: "#job-endpoints"
+              - img [ref=e190]
+            - generic [ref=e192] [cursor=pointer]: Job endpoints
+          - table [ref=e195]:
+            - rowgroup [ref=e196]:
+              - row "Endpoint Credit usage Notes" [ref=e197]:
+                - columnheader "Endpoint" [ref=e198]
+                - columnheader "Credit usage" [ref=e199]
+                - columnheader "Notes" [ref=e200]
+            - rowgroup [ref=e201]:
+              - row "/job/search 0.03 per result Indexed job discovery, filtering, and hiring analysis." [ref=e202]:
+                - cell "/job/search" [ref=e203]:
+                  - code [ref=e204]: /job/search
+                - cell "0.03 per result" [ref=e205]:
+                  - strong [ref=e206]: "0.03"
+                  - text: per result
+                - cell "Indexed job discovery, filtering, and hiring analysis." [ref=e207]
+          - heading "Navigate to header Web endpoints" [level=3] [ref=e208]:
+            - link "Navigate to header" [ref=e209] [cursor=pointer]:
+              - /url: "#web-endpoints"
+              - img [ref=e211]
+            - generic [ref=e213] [cursor=pointer]: Web endpoints
+          - table [ref=e216]:
+            - rowgroup [ref=e217]:
+              - row "Endpoint Credit usage Notes" [ref=e218]:
+                - columnheader "Endpoint" [ref=e219]
+                - columnheader "Credit usage" [ref=e220]
+                - columnheader "Notes" [ref=e221]
+            - rowgroup [ref=e222]:
+              - row "/web/search/live 1 per query Web search. Available on self-serve and enterprise plans." [ref=e223]:
+                - cell "/web/search/live" [ref=e224]:
+                  - code [ref=e225]: /web/search/live
+                - cell "1 per query" [ref=e226]:
+                  - strong [ref=e227]: "1"
+                  - text: per query
+                - cell "Web search. Available on self-serve and enterprise plans." [ref=e228]
+              - row "/web/enrich/live 1 per page Web page fetch. Available on self-serve and enterprise plans." [ref=e229]:
+                - cell "/web/enrich/live" [ref=e230]:
+                  - code [ref=e231]: /web/enrich/live
+                - cell "1 per page" [ref=e232]:
+                  - strong [ref=e233]: "1"
+                  - text: per page
+                - cell "Web page fetch. Available on self-serve and enterprise plans." [ref=e234]
+          - heading "Navigate to header Person enrich pricing" [level=2] [ref=e235]:
+            - link "Navigate to header" [ref=e236] [cursor=pointer]:
+              - /url: "#person-enrich-pricing"
+              - img [ref=e238]
+            - generic [ref=e240] [cursor=pointer]: Person enrich pricing
+          - generic [ref=e241]: Person enrich uses additive pricing. You pay for the base profile first, then add credits only for the extra data you request.
+          - table [ref=e244]:
+            - rowgroup [ref=e245]:
+              - row "Data returned Additional credits What you get" [ref=e246]:
+                - columnheader "Data returned" [ref=e247]
+                - columnheader "Additional credits" [ref=e248]
+                - columnheader "What you get" [ref=e249]
+            - rowgroup [ref=e250]:
+              - row "Base profile 1 Core person identity, role, location, experience, education, certifications, skills, and social handles" [ref=e251]:
+                - cell "Base profile" [ref=e252]
+                - cell "1" [ref=e253]:
+                  - strong [ref=e254]: "1"
+                - cell "Core person identity, role, location, experience, education, certifications, skills, and social handles" [ref=e255]
+              - row "Personal email data +2 Personal email details" [ref=e256]:
+                - cell "Personal email data" [ref=e257]
+                - cell "+2" [ref=e258]:
+                  - strong [ref=e259]: "+2"
+                - cell "Personal email details" [ref=e260]
+              - row "Phone data +2 Direct phone numbers" [ref=e261]:
+                - cell "Phone data" [ref=e262]
+                - cell "+2" [ref=e263]:
+                  - strong [ref=e264]: "+2"
+                - cell "Direct phone numbers" [ref=e265]
+              - row "Business email data +1 Verified business email details" [ref=e266]:
+                - cell "Business email data" [ref=e267]
+                - cell "+1" [ref=e268]:
+                  - strong [ref=e269]: "+1"
+                - cell "Verified business email details" [ref=e270]
+              - row "Developer platform data +1 Developer platform profile, repos, orgs, and activity" [ref=e271]:
+                - cell "Developer platform data" [ref=e272]
+                - cell "+1" [ref=e273]:
+                  - strong [ref=e274]: "+1"
+                - cell "Developer platform profile, repos, orgs, and activity" [ref=e275]
+          - generic [ref=e276]:
+            - text: The maximum current cost for a single enriched person record is
+            - strong [ref=e277]: 7 credits
+            - text: .
+          - generic [ref=e278]:
+            - img "Note" [ref=e280]
+            - generic [ref=e283]:
+              - text: For person enrich, send a JSON body with either
+              - code [ref=e284]: professional_network_profile_urls
+              - text: or
+              - code [ref=e285]: business_emails
+              - text: ", based on the identifier you have."
+          - heading "Navigate to header Common credit patterns" [level=3] [ref=e286]:
+            - link "Navigate to header" [ref=e287] [cursor=pointer]:
+              - /url: "#common-credit-patterns"
+              - img [ref=e289]
+            - generic [ref=e291] [cursor=pointer]: Common credit patterns
+          - table [ref=e294]:
+            - rowgroup [ref=e295]:
+              - row "Use case Typical data requested Credits" [ref=e296]:
+                - columnheader "Use case" [ref=e297]
+                - columnheader "Typical data requested" [ref=e298]
+                - columnheader "Credits" [ref=e299]
+            - rowgroup [ref=e300]:
+              - row "Basic profile lookup Base profile only 1" [ref=e301]:
+                - cell "Basic profile lookup" [ref=e302]
+                - cell "Base profile only" [ref=e303]
+                - cell "1" [ref=e304]:
+                  - strong [ref=e305]: "1"
+              - row "Sales outreach Base profile + business email 2" [ref=e306]:
+                - cell "Sales outreach" [ref=e307]
+                - cell "Base profile + business email" [ref=e308]
+                - cell "2" [ref=e309]:
+                  - strong [ref=e310]: "2"
+              - row "Full outbound prospecting Base profile + business email + phone 4" [ref=e311]:
+                - cell "Full outbound prospecting" [ref=e312]
+                - cell "Base profile + business email + phone" [ref=e313]
+                - cell "4" [ref=e314]:
+                  - strong [ref=e315]: "4"
+              - row "Recruiting with personal contact data Base profile + personal email + phone 5" [ref=e316]:
+                - cell "Recruiting with personal contact data" [ref=e317]
+                - cell "Base profile + personal email + phone" [ref=e318]
+                - cell "5" [ref=e319]:
+                  - strong [ref=e320]: "5"
+              - row "Maximum person enrich payload Base profile + all add-ons 7" [ref=e321]:
+                - cell "Maximum person enrich payload" [ref=e322]
+                - cell "Base profile + all add-ons" [ref=e323]
+                - cell "7" [ref=e324]:
+                  - strong [ref=e325]: "7"
+          - heading "Navigate to header Person enrich request examples" [level=2] [ref=e326]:
+            - link "Navigate to header" [ref=e327] [cursor=pointer]:
+              - /url: "#person-enrich-request-examples"
+              - img [ref=e329]
+            - generic [ref=e331] [cursor=pointer]: Person enrich request examples
+          - generic [ref=e332]: Use these examples to enrich by LinkedIn URL, request specific fields, or reverse-lookup a person from a business email.
+          - generic [ref=e333]:
+            - generic [ref=e334]:
+              - tablist [ref=e335]:
+                - tab "Base profile request (1 credit)" [selected] [ref=e336] [cursor=pointer]:
+                  - generic [ref=e337]: Base profile request (1 credit)
+                - tab "Request specific fields" [ref=e339] [cursor=pointer]:
+                  - generic [ref=e340]: Request specific fields
+                - tab "Reverse lookup by business email" [ref=e341] [cursor=pointer]:
+                  - generic [ref=e342]: Reverse lookup by business email
+              - generic [ref=e343]:
+                - button "Report incorrect code" [ref=e345] [cursor=pointer]:
+                  - img [ref=e346]
+                - button "Copy the contents from the code block" [ref=e349] [cursor=pointer]:
+                  - img [ref=e350]
+                - button "Ask AI" [ref=e354] [cursor=pointer]:
+                  - img [ref=e355]
+            - tabpanel "Base profile request (1 credit)" [ref=e359]:
+              - code [ref=e363]:
+                - generic [ref=e364]: curl --request POST \
+                - generic [ref=e365]: "--url https://api.crustdata.com/person/enrich \\"
+                - generic [ref=e366]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e367]: "--header 'content-type: application/json' \\"
+                - generic [ref=e368]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e369]: "--data '{"
+                - generic [ref=e370]: "\"professional_network_profile_urls\": ["
+                - generic [ref=e371]: "\"https://www.linkedin.com/in/abhilashchowdhary\""
+                - generic [ref=e372]: "]"
+                - generic [ref=e373]: "}'"
+          - generic [ref=e374]:
+            - img "Note" [ref=e376]
+            - generic [ref=e379]:
+              - text: For full request patterns and field selection behavior, see
+              - link "Person enrichment" [ref=e380] [cursor=pointer]:
+                - /url: /person-docs/enrichment
+              - text: .
+          - heading "Navigate to header Enterprise-only and plan-gated live endpoint pricing" [level=2] [ref=e381]:
+            - link "Navigate to header" [ref=e382] [cursor=pointer]:
+              - /url: "#enterprise-only-and-plan-gated-live-endpoint-pricing"
+              - img [ref=e384]
+            - generic [ref=e386] [cursor=pointer]: Enterprise-only and plan-gated live endpoint pricing
+          - generic [ref=e387]: Company and Person live endpoints are plan-gated and can have custom quotas or contract pricing.
+          - generic [ref=e388]:
+            - img "Note" [ref=e390]
+            - generic [ref=e393]: Web Search and Web Fetch are available on self-serve plans. The live Company and Person endpoints below still require the right plan or enterprise access.
+          - heading "Navigate to header Live people, company, and job data" [level=3] [ref=e394]:
+            - link "Navigate to header" [ref=e395] [cursor=pointer]:
+              - /url: "#live-people-company-and-job-data"
+              - img [ref=e397]
+            - generic [ref=e399] [cursor=pointer]: Live people, company, and job data
+          - table [ref=e402]:
+            - rowgroup [ref=e403]:
+              - row "Endpoint Credit usage Notes" [ref=e404]:
+                - columnheader "Endpoint" [ref=e405]
+                - columnheader "Credit usage" [ref=e406]
+                - columnheader "Notes" [ref=e407]
+            - rowgroup [ref=e408]:
+              - row "/person/professional_network/search/live 2 per profile Fresh live people search." [ref=e409]:
+                - cell "/person/professional_network/search/live" [ref=e410]:
+                  - code [ref=e411]: /person/professional_network/search/live
+                - cell "2 per profile" [ref=e412]:
+                  - strong [ref=e413]: "2"
+                  - text: per profile
+                - cell "Fresh live people search." [ref=e414]
+              - row "/person/professional_network/enrich/live 7 per profile Fresh profile retrieval when cached enrich is not enough." [ref=e415]:
+                - cell "/person/professional_network/enrich/live" [ref=e416]:
+                  - code [ref=e417]: /person/professional_network/enrich/live
+                - cell "7 per profile" [ref=e418]:
+                  - strong [ref=e419]: "7"
+                  - text: per profile
+                - cell "Fresh profile retrieval when cached enrich is not enough." [ref=e420]
+              - row "/company/professional_network/search/live 2 per company Fresh live company search." [ref=e421]:
+                - cell "/company/professional_network/search/live" [ref=e422]:
+                  - code [ref=e423]: /company/professional_network/search/live
+                - cell "2 per company" [ref=e424]:
+                  - strong [ref=e425]: "2"
+                  - text: per company
+                - cell "Fresh live company search." [ref=e426]
+              - row "/job/professional_network/search/live 2 per result Fresh live job search for a single company." [ref=e427]:
+                - cell "/job/professional_network/search/live" [ref=e428]:
+                  - code [ref=e429]: /job/professional_network/search/live
+                - cell "2 per result" [ref=e430]:
+                  - strong [ref=e431]: "2"
+                  - text: per result
+                - cell "Fresh live job search for a single company." [ref=e432]
+          - heading "Navigate to header Shared live-search endpoints" [level=3] [ref=e433]:
+            - link "Navigate to header" [ref=e434] [cursor=pointer]:
+              - /url: "#shared-live-search-endpoints"
+              - img [ref=e436]
+            - generic [ref=e438] [cursor=pointer]: Shared live-search endpoints
+          - table [ref=e441]:
+            - rowgroup [ref=e442]:
+              - row "Endpoint Credit usage Notes" [ref=e443]:
+                - columnheader "Endpoint" [ref=e444]
+                - columnheader "Credit usage" [ref=e445]
+                - columnheader "Notes" [ref=e446]
+            - rowgroup [ref=e447]:
+              - row "/professional_network/search/autocomplete Free Shared live-search autocomplete when enabled for your account." [ref=e448]:
+                - cell "/professional_network/search/autocomplete" [ref=e449]:
+                  - code [ref=e450]: /professional_network/search/autocomplete
+                - cell "Free" [ref=e451]:
+                  - strong [ref=e452]: Free
+                - cell "Shared live-search autocomplete when enabled for your account." [ref=e453]
+          - heading "Navigate to header Free endpoints" [level=2] [ref=e454]:
+            - link "Navigate to header" [ref=e455] [cursor=pointer]:
+              - /url: "#free-endpoints"
+              - img [ref=e457]
+            - generic [ref=e459] [cursor=pointer]: Free endpoints
+          - generic [ref=e460]: "These endpoints do not currently consume credits:"
+          - list [ref=e461]:
+            - listitem [ref=e462]:
+              - code [ref=e463]: /person/search/autocomplete
+            - listitem [ref=e464]:
+              - code [ref=e465]: /company/search/autocomplete
+            - listitem [ref=e466]:
+              - code [ref=e467]: /company/identify
+            - listitem [ref=e468]:
+              - code [ref=e469]: /professional_network/search/autocomplete
+              - text: (when enabled for your enterprise plan)
+          - heading "Navigate to header Search vs enrich" [level=2] [ref=e470]:
+            - link "Navigate to header" [ref=e471] [cursor=pointer]:
+              - /url: "#search-vs-enrich"
+              - img [ref=e473]
+            - generic [ref=e475] [cursor=pointer]: Search vs enrich
+          - table [ref=e478]:
+            - rowgroup [ref=e479]:
+              - row "If you need to… Best endpoint type Why" [ref=e480]:
+                - columnheader "If you need to…" [ref=e481]
+                - columnheader "Best endpoint type" [ref=e482]
+                - columnheader "Why" [ref=e483]
+            - rowgroup [ref=e484]:
+              - row "Explore a large audience cheaply Search Search is priced for discovery and returns lightweight records." [ref=e485]:
+                - cell "Explore a large audience cheaply" [ref=e486]
+                - cell "Search" [ref=e487]
+                - cell "Search is priced for discovery and returns lightweight records." [ref=e488]
+              - row "Build full profiles or contact-ready records Enrich Enrich returns detailed person or company data." [ref=e489]:
+                - cell "Build full profiles or contact-ready records" [ref=e490]
+                - cell "Enrich" [ref=e491]
+                - cell "Enrich returns detailed person or company data." [ref=e492]
+              - row "Power typeahead or filter suggestions Autocomplete Autocomplete is free and designed for interactive search UIs." [ref=e493]:
+                - cell "Power typeahead or filter suggestions" [ref=e494]
+                - cell "Autocomplete" [ref=e495]
+                - cell "Autocomplete is free and designed for interactive search UIs." [ref=e496]
+          - heading "Navigate to header Estimate usage before you launch" [level=2] [ref=e497]:
+            - link "Navigate to header" [ref=e498] [cursor=pointer]:
+              - /url: "#estimate-usage-before-you-launch"
+              - img [ref=e500]
+            - generic [ref=e502] [cursor=pointer]: Estimate usage before you launch
+          - list [ref=e503]:
+            - listitem [ref=e504]:
+              - generic [ref=e507]:
+                - generic [ref=e508]: "1"
+                - link "Navigate to header" [ref=e510] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e512]
+              - generic [ref=e514]:
+                - paragraph [ref=e515]: List the endpoints your workflow will call
+                - generic [ref=e517]: Separate self-serve, enterprise live, and utility requests. They are not billed in the same way.
+            - listitem [ref=e518]:
+              - generic [ref=e521]:
+                - generic [ref=e522]: "2"
+                - link "Navigate to header" [ref=e524] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e526]
+              - generic [ref=e528]:
+                - paragraph [ref=e529]: Estimate returned records per request
+                - generic [ref=e531]: Search pricing depends on results returned, not only the number of calls.
+            - listitem [ref=e532]:
+              - generic [ref=e535]:
+                - generic [ref=e536]: "3"
+                - link "Navigate to header" [ref=e538] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e540]
+              - generic [ref=e542]:
+                - paragraph [ref=e543]: Account for optional data and live modes
+                - generic [ref=e545]: Contact data, developer platform data, and enterprise live workflows can raise per-record cost.
+            - listitem [ref=e546]:
+              - generic [ref=e549]:
+                - generic [ref=e550]: "4"
+                - link "Navigate to header" [ref=e552] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e554]
+              - generic [ref=e556]:
+                - paragraph [ref=e557]: Multiply by daily volume
+                - generic [ref=e559]: Model normal traffic first, then add weekly or monthly growth assumptions.
+            - listitem [ref=e560]:
+              - generic [ref=e563]:
+                - generic [ref=e564]: "5"
+                - link "Navigate to header" [ref=e566] [cursor=pointer]:
+                  - /url: "#"
+                  - img [ref=e568]
+              - generic [ref=e570]:
+                - paragraph [ref=e571]: Add a buffer for retries and spikes
+                - generic [ref=e573]: Keep headroom for queue bursts, replay jobs, and production debugging.
+          - heading "Navigate to header Rate limit considerations" [level=2] [ref=e574]:
+            - link "Navigate to header" [ref=e575] [cursor=pointer]:
+              - /url: "#rate-limit-considerations"
+              - img [ref=e577]
+            - generic [ref=e579] [cursor=pointer]: Rate limit considerations
+          - table [ref=e582]:
+            - rowgroup [ref=e583]:
+              - row "Endpoint set Typical rate limit" [ref=e584]:
+                - columnheader "Endpoint set" [ref=e585]
+                - columnheader "Typical rate limit" [ref=e586]
+            - rowgroup [ref=e587]:
+              - row "Endpoints listed on Rate limits 15 requests per minute" [ref=e588]:
+                - cell "Endpoints listed on Rate limits" [ref=e589]:
+                  - text: Endpoints listed on
+                  - link "Rate limits" [ref=e590] [cursor=pointer]:
+                    - /url: /general/rate-limits
+                - cell "15 requests per minute" [ref=e591]
+              - row "Other gated or unpublished endpoints May vary by plan" [ref=e592]:
+                - cell "Other gated or unpublished endpoints" [ref=e593]
+                - cell "May vary by plan" [ref=e594]
+          - generic [ref=e595]:
+            - text: For throughput planning, see
+            - link "Rate limits" [ref=e596] [cursor=pointer]:
+              - /url: /general/rate-limits
+            - text: .
+          - heading "Navigate to header Frequently asked questions" [level=2] [ref=e597]:
+            - link "Navigate to header" [ref=e598] [cursor=pointer]:
+              - /url: "#frequently-asked-questions"
+              - img [ref=e600]
+            - generic [ref=e602] [cursor=pointer]: Frequently asked questions
+          - generic [ref=e603]:
+            - group [ref=e604]:
+              - generic "How is search billed?" [ref=e605] [cursor=pointer]:
+                - img [ref=e607]
+                - paragraph [ref=e609]: How is search billed?
+            - group [ref=e610]:
+              - generic "How do I keep person enrich costs under control?" [ref=e611] [cursor=pointer]:
+                - img [ref=e613]
+                - paragraph [ref=e615]: How do I keep person enrich costs under control?
+            - group [ref=e616]:
+              - generic "What happens when I run out of credits?" [ref=e617] [cursor=pointer]:
+                - img [ref=e619]
+                - paragraph [ref=e621]: What happens when I run out of credits?
+            - group [ref=e622]:
+              - generic "Do unused credits expire?" [ref=e623] [cursor=pointer]:
+                - img [ref=e625]
+                - paragraph [ref=e627]: Do unused credits expire?
+            - group [ref=e628]:
+              - generic "Does live-search autocomplete cost credits?" [ref=e629] [cursor=pointer]:
+                - img [ref=e631]
+                - paragraph [ref=e633]: Does live-search autocomplete cost credits?
+          - generic [ref=e634]: For plan, quota, or enterprise pricing questions, contact Crustdata support through your account channel.
+        - generic [ref=e636]:
+          - paragraph [ref=e637]: Was this page helpful?
+          - generic [ref=e639]:
+            - button "Yes" [ref=e640] [cursor=pointer]:
+              - img [ref=e641]
+              - generic [ref=e643]: "Yes"
+            - button "No" [ref=e644] [cursor=pointer]:
+              - img [ref=e645]
+              - generic [ref=e647]: "No"
+        - generic [ref=e648]:
+          - link "Introduction Previous" [ref=e649] [cursor=pointer]:
+            - /url: /general/introduction
+            - generic [ref=e650]:
+              - generic [ref=e651]: Introduction
+              - generic [ref=e652]:
+                - img [ref=e653]
+                - generic [ref=e655]: Previous
+          - link "Rate limits Next" [ref=e656] [cursor=pointer]:
+            - /url: /general/rate-limits
+            - generic [ref=e657]:
+              - generic [ref=e658]: Rate limits
+              - generic [ref=e659]:
+                - img [ref=e660]
+                - generic [ref=e662]: Next
+        - generic [ref=e664]:
+          - textbox "Ask a question..." [ref=e665]
+          - generic: Ctrl+I
+          - button "Send message" [disabled] [ref=e666]:
+            - img [ref=e667]
+        - contentinfo [ref=e669]:
+          - generic [ref=e670]:
+            - link "x" [ref=e671] [cursor=pointer]:
+              - /url: https://x.com/crustdata
+              - generic [ref=e672]: x
+              - img [ref=e673]
+            - link "linkedin" [ref=e674] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/crustdata
+              - generic [ref=e675]: linkedin
+              - img [ref=e676]
+  - alert [ref=e677]
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img
+            - generic: Assistant
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - generic:
+              - generic: Responses are generated using AI and may contain mistakes.
+        - generic [ref=e678]:
+          - textbox [ref=e680]:
+            - /placeholder: Ask a question...
+          - generic [ref=e681]:
+            - button [ref=e682] [cursor=pointer]:
+              - img [ref=e683]
+            - button [disabled] [ref=e685]:
+              - img [ref=e686]

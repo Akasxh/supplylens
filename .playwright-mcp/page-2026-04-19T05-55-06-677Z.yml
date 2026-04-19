@@ -1,0 +1,52 @@
+- generic [ref=e2]:
+  - region "Skip to main content":
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - navigation "Main" [ref=e4]:
+    - generic [ref=e6]:
+      - button "Toggle navigation bar" [ref=e7] [cursor=pointer]:
+        - img [ref=e8]
+      - link "Crustdata API" [ref=e10] [cursor=pointer]:
+        - /url: /web/20250907201031/https://docs.crustdata.com/
+        - img "Crustdata API" [ref=e12]
+  - main [ref=e16]:
+    - generic [ref=e20]:
+      - article [ref=e21]:
+        - navigation "Breadcrumbs" [ref=e22]:
+          - list [ref=e23]:
+            - listitem [ref=e24]:
+              - link "Home page" [ref=e25] [cursor=pointer]:
+                - /url: /web/20250907201031/https://docs.crustdata.com/
+                - img [ref=e26]
+            - listitem [ref=e28]:
+              - generic [ref=e29]: Getting Started
+        - button "On this page" [ref=e31] [cursor=pointer]
+        - generic [ref=e32]:
+          - heading "Getting Started" [level=1] [ref=e34]
+          - paragraph [ref=e35]: The Crustdata API provides comprehensive, programmatic access to a vast array of firmographic data and growth metrics for companies worldwide. Drawing from over 16 diverse datasets, including headcount metrics, employer reviews, product reviews, social media metrics, web traffic analytics, App Store reviews, Play Store data, and news sources, our API offers a holistic view of company performance and market presence. This rich data ecosystem enables deep insights into company structures, industry positioning, social media impact, and growth trajectories.
+          - paragraph [ref=e36]: "To illustrate the breadth and structure of data available through the Crustdata API, consider the following mind map:"
+          - paragraph [ref=e37]: This comprehensive documentation outlines the various API endpoints available through the Crustdata API, detailing the request parameters and response schemas for each call. It serves as your guide to effectively integrate and leverage our extensive dataset in your applications.
+          - heading "Need Assistance?Direct link to Need Assistance?" [level=2] [ref=e38]:
+            - text: Need Assistance?
+            - link "Direct link to Need Assistance?" [ref=e39] [cursor=pointer]:
+              - /url: "#need-assistance"
+              - text: "#"
+          - paragraph [ref=e40]:
+            - text: "If you have any questions about the API, encounter any issues, or need further clarification on the documentation: Reach out to"
+            - link "abhilash@crustdata.com" [ref=e41] [cursor=pointer]:
+              - /url: https://web.archive.org/web/20250907201031/mailto:abhilash@crustdata.com
+            - text: .
+          - heading "Stay UpdatedDirect link to Stay Updated" [level=2] [ref=e42]:
+            - text: Stay Updated
+            - link "Direct link to Stay Updated" [ref=e43] [cursor=pointer]:
+              - /url: "#stay-updated"
+              - text: "#"
+          - paragraph [ref=e44]: "For the latest updates, feature releases, and API changes, please:"
+          - list [ref=e45]:
+            - listitem [ref=e46]: Check our Changelog regularly
+            - listitem [ref=e47]: Subscribe to our Developer Newsletter
+      - navigation "Docs pages" [ref=e48]:
+        - link "Next Company APIs »" [ref=e49] [cursor=pointer]:
+          - /url: /web/20250907201031/https://docs.crustdata.com/docs/discover/company-data-api
+          - generic [ref=e50]: Next
+          - generic [ref=e51]: Company APIs »

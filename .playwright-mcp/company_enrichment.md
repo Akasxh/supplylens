@@ -1,0 +1,368 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#content-area"
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - paragraph [ref=e11]:
+          - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+          - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+            - /url: mailto:support@crustdata.tech
+          - text: for feedback and clarifications.
+        - generic [ref=e14]:
+          - generic [ref=e16]:
+            - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e19]: Crustdata Docs home page
+              - img "light logo" [ref=e20]
+            - generic [ref=e21]:
+              - button "Open search" [ref=e22] [cursor=pointer]:
+                - generic [ref=e23]: Search...
+                - img [ref=e24]
+              - button [ref=e25] [cursor=pointer]:
+                - img [ref=e26]
+              - button "More actions" [ref=e29] [cursor=pointer]:
+                - img [ref=e30]
+          - button "Navigation Person API Enrich People" [ref=e31] [cursor=pointer]:
+            - generic [ref=e32]:
+              - generic [ref=e33]: Navigation
+              - img [ref=e34]
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - generic [ref=e38]: Person API
+                - img [ref=e39]
+              - generic [ref=e41]: Enrich People
+      - generic [ref=e45]:
+        - banner [ref=e46]:
+          - generic [ref=e47]:
+            - link "Person API" [ref=e50] [cursor=pointer]:
+              - /url: /api-reference/person-apis/search-people-using-filters-and-sorting
+            - generic [ref=e51]:
+              - heading "Enrich People" [level=1] [ref=e52]
+              - generic [ref=e53]:
+                - button "Copy page" [ref=e54] [cursor=pointer]:
+                  - generic [ref=e55]:
+                    - img [ref=e56]
+                    - generic [ref=e59]: Copy page
+                - button "More actions" [ref=e60] [cursor=pointer]:
+                  - img [ref=e61]
+          - generic [ref=e427]:
+            - paragraph [ref=e428]: Enrich person records using the Crustdata cached dataset. Provide either a profile URL or a business email to retrieve detailed person data including employment history, education, skills, contact information, and developer platform data when available. Exactly one identifier type must be provided per request. Supports batch enrichment of up to 25 profiles at once.
+            - generic [ref=e429]:
+              - img "Note" [ref=e431]
+              - paragraph [ref=e434]:
+                - text: Default
+                - code [ref=e435]: rate-limit
+                - text: is 15 requests per minute. Send an email to
+                - link "gtm@crustdata.co" [ref=e436] [cursor=pointer]:
+                  - /url: mailto:gtm@crustdata.co
+                - text: to discuss higher limits if needed for your use case.
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e76]:
+              - generic [ref=e77] [cursor=pointer]:
+                - generic [ref=e78]: POST
+                - generic [ref=e79]:
+                  - generic [ref=e80]: https://api.crustdata.com
+                  - generic [ref=e81]:
+                    - generic [ref=e82]: /
+                    - generic [ref=e83]: person
+                    - generic [ref=e84]: /
+                    - generic [ref=e85]: enrich
+              - button "Try it" [ref=e86] [cursor=pointer]:
+                - generic [ref=e87]: Try it
+                - img [ref=e88]
+            - generic [ref=e90]:
+              - generic [ref=e91]:
+                - generic [ref=e92]:
+                  - button "cURL" [ref=e93] [cursor=pointer]:
+                    - generic [ref=e94]:
+                      - paragraph [ref=e95]: cURL
+                      - img [ref=e96]
+                  - generic [ref=e98]:
+                    - button "enrich_by_profile_url" [ref=e99] [cursor=pointer]:
+                      - generic [ref=e100]:
+                        - paragraph [ref=e101]: enrich_by_profile_url
+                        - img [ref=e102]
+                    - generic [ref=e104]:
+                      - button "Copy the contents from the code block" [ref=e107] [cursor=pointer]:
+                        - img [ref=e108]
+                      - button "Ask AI" [ref=e112] [cursor=pointer]:
+                        - img [ref=e113]
+                - region "Code snippet" [ref=e116]:
+                  - code [ref=e439]:
+                    - generic [ref=e440]: curl --request POST \
+                    - generic [ref=e441]: "--url https://api.crustdata.com/person/enrich \\"
+                    - generic [ref=e442]: "--header 'Authorization: Bearer <token>' \\"
+                    - generic [ref=e443]: "--header 'Content-Type: application/json' \\"
+                    - generic [ref=e444]: "--header 'x-api-version: <x-api-version>' \\"
+                    - generic [ref=e445]: "--data '"
+                    - generic [ref=e446]: "{"
+                    - generic [ref=e447]: "\"professional_network_profile_urls\": ["
+                    - generic [ref=e448]: "\"https://www.linkedin.com/in/abhilashchowdhary\""
+                    - generic [ref=e449]: "]"
+                    - generic [ref=e450]: "}"
+                    - generic [ref=e451]: "'"
+              - generic [ref=e120]:
+                - generic [ref=e121]:
+                  - button "200" [ref=e122] [cursor=pointer]:
+                    - generic [ref=e123]:
+                      - paragraph [ref=e124]: "200"
+                      - img [ref=e125]
+                  - generic [ref=e127]:
+                    - button "enrich_by_profile_url_response" [ref=e128] [cursor=pointer]:
+                      - generic [ref=e129]:
+                        - paragraph [ref=e130]: enrich_by_profile_url_response
+                        - img [ref=e131]
+                    - generic [ref=e133]:
+                      - button "Copy the contents from the code block" [ref=e136] [cursor=pointer]:
+                        - img [ref=e137]
+                      - button "Ask AI" [ref=e141] [cursor=pointer]:
+                        - img [ref=e142]
+                - region "Code snippet" [ref=e145]:
+                  - code [ref=e454]:
+                    - generic [ref=e455]: "["
+                    - generic [ref=e456]: "{"
+                    - generic [ref=e457]: "\"matched_on\": \"https://www.linkedin.com/in/abhilashchowdhary\","
+                    - generic [ref=e458]: "\"match_type\": \"professional_network_profile_url\","
+                    - generic [ref=e459]: "\"matches\": ["
+                    - generic [ref=e460]: "{"
+                    - generic [ref=e461]: "\"confidence_score\": 1,"
+                    - generic [ref=e462]: "\"person_data\": {"
+                    - generic [ref=e463]: "\"basic_profile\": {"
+                    - generic [ref=e464]: "\"current_title\": \"Co-Founder & CEO\","
+                    - generic [ref=e465]: "\"headline\": \"Co-founder at Crustdata (YC F24)\","
+                    - generic [ref=e466]: "\"name\": \"Abhilash Chowdhary\","
+                    - generic [ref=e467]: "\"location\": {"
+                    - generic [ref=e468]: "\"raw\": \"San Francisco, California, United States\""
+                    - generic [ref=e469]: "}"
+                    - generic [ref=e470]: "}"
+                    - generic [ref=e471]: "}"
+                    - generic [ref=e472]: "}"
+                    - generic [ref=e473]: "]"
+                    - generic [ref=e474]: "}"
+                    - generic [ref=e475]: "]"
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - heading "Authorizations" [level=4] [ref=e154]
+              - generic [ref=e156]:
+                - generic [ref=e159]:
+                  - link "Navigate to header" [ref=e160] [cursor=pointer]:
+                    - /url: "#authorization-authorization"
+                    - img [ref=e162]
+                  - generic [ref=e165] [cursor=pointer]: Authorization
+                  - generic [ref=e166]:
+                    - generic [ref=e167]: string
+                    - generic [ref=e168]: header
+                    - text: required
+                - paragraph [ref=e171]: API key passed as a Bearer token in the Authorization header.
+            - generic [ref=e172]:
+              - heading "Headers" [level=4] [ref=e175]
+              - generic [ref=e177]:
+                - generic [ref=e180]:
+                  - link "Navigate to header" [ref=e181] [cursor=pointer]:
+                    - /url: "#parameter-x-api-version"
+                    - img [ref=e183]
+                  - generic [ref=e186] [cursor=pointer]: x-api-version
+                  - generic [ref=e187]:
+                    - generic [ref=e188]: string
+                    - text: required
+                - generic [ref=e189]:
+                  - paragraph [ref=e191]: API version to use. Must match a supported version (e.g., "2025-11-01").
+                  - generic [ref=e192]:
+                    - generic [ref=e193]: "Example:"
+                    - paragraph [ref=e195]:
+                      - code [ref=e196]: "\"2025-11-01\""
+            - generic [ref=e197]:
+              - generic [ref=e198]:
+                - generic [ref=e199]:
+                  - heading "Body" [level=4] [ref=e200]
+                  - generic [ref=e202]: application/json
+                - paragraph [ref=e205]: Person identifier (profile URL or business email) and optional field selection.
+              - generic [ref=e209]:
+                - generic [ref=e211]:
+                  - tablist "Tabs" [ref=e212]:
+                    - tab "Option 1" [selected] [ref=e213] [cursor=pointer]:
+                      - generic [ref=e214]: Option 1
+                    - tab "Option 2" [ref=e215] [cursor=pointer]:
+                      - generic [ref=e216]: Option 2
+                  - generic:
+                    - tabpanel "Option 1"
+                - paragraph [ref=e219]: Request body for /person/enrich and /person/professional_network/enrich/live. Submit exactly one identifier type per request — professional_network_profile_urls or business_emails.
+                - generic [ref=e220]:
+                  - generic [ref=e222]:
+                    - generic [ref=e225]:
+                      - link "Navigate to header" [ref=e226] [cursor=pointer]:
+                        - /url: "#body-one-of-0-professional-network-profile-urls"
+                        - img [ref=e228]
+                      - generic [ref=e231] [cursor=pointer]: professional_network_profile_urls
+                      - generic [ref=e232]:
+                        - generic [ref=e233]: string[]
+                        - text: required
+                    - paragraph [ref=e236]: Array of professional-network profile URLs (max 25).
+                  - generic [ref=e238]:
+                    - generic [ref=e241]:
+                      - link "Navigate to header" [ref=e242] [cursor=pointer]:
+                        - /url: "#body-one-of-0-business-emails"
+                        - img [ref=e244]
+                      - generic [ref=e247] [cursor=pointer]: business_emails
+                      - generic [ref=e249]: string[]
+                    - paragraph [ref=e252]: Business email of the person to lookup
+                  - generic [ref=e254]:
+                    - generic [ref=e257]:
+                      - link "Navigate to header" [ref=e258] [cursor=pointer]:
+                        - /url: "#body-one-of-0-fields"
+                        - img [ref=e260]
+                      - generic [ref=e263] [cursor=pointer]: fields
+                      - generic [ref=e265]: string[]
+                    - generic [ref=e266]:
+                      - paragraph [ref=e268]: "Fields to include in the response. Valid field groups for enrich: basic_profile, professional_network, skills, contact, social_handles, experience, education, certifications, honors, dev_platform_profiles. Use dot-notation for nested fields (e.g., \"basic_profile.name\", \"experience.employment_details\"). If omitted, all available fields are returned."
+                      - generic [ref=e269]:
+                        - generic [ref=e270]: "Example:"
+                        - code [ref=e274]: "[\"basic_profile\", \"experience\"]"
+                  - generic [ref=e276]:
+                    - generic [ref=e279]:
+                      - link "Navigate to header" [ref=e280] [cursor=pointer]:
+                        - /url: "#body-one-of-0-min-similarity-score-one-of-0"
+                        - img [ref=e282]
+                      - generic [ref=e285] [cursor=pointer]: min_similarity_score
+                      - generic [ref=e287]: number | null
+                    - generic [ref=e288]:
+                      - paragraph [ref=e290]: Minimum similarity score for email matching
+                      - generic [ref=e291]:
+                        - text: "Required range:"
+                        - code [ref=e292]: 0 <= x <= 1
+                  - generic [ref=e294]:
+                    - generic [ref=e297]:
+                      - link "Navigate to header" [ref=e298] [cursor=pointer]:
+                        - /url: "#body-one-of-0-preview"
+                        - img [ref=e300]
+                      - generic [ref=e303] [cursor=pointer]: preview
+                      - generic [ref=e304]:
+                        - generic [ref=e305]: boolean
+                        - generic [ref=e306]: default:false
+                    - paragraph [ref=e309]: Preview mode returns only basic profile fields and charges 0 credits. Cannot be combined with enrich_realtime.
+            - generic [ref=e310]:
+              - generic [ref=e311]:
+                - generic [ref=e312]:
+                  - heading "Response" [level=4] [ref=e313]
+                  - generic [ref=e315]:
+                    - button "200" [ref=e317] [cursor=pointer]:
+                      - generic [ref=e318]:
+                        - generic [ref=e319]: "200"
+                        - img [ref=e320]
+                    - generic [ref=e322]:
+                      - button "application/json" [disabled]:
+                        - generic:
+                          - generic: application/json
+                - paragraph [ref=e325]: Enriched person profiles
+              - generic [ref=e328]:
+                - generic [ref=e333]:
+                  - generic [ref=e335]:
+                    - generic [ref=e338]:
+                      - link "Navigate to header" [ref=e339] [cursor=pointer]:
+                        - /url: "#response-items-matched-on"
+                        - img [ref=e341]
+                      - generic [ref=e344] [cursor=pointer]: matched_on
+                      - generic [ref=e346]: string
+                    - paragraph [ref=e349]:
+                      - text: The specific input value (e.g., '
+                      - link "someone@company.com" [ref=e350] [cursor=pointer]:
+                        - /url: mailto:someone@company.com
+                      - text: "')"
+                  - generic [ref=e352]:
+                    - generic [ref=e355]:
+                      - link "Navigate to header" [ref=e356] [cursor=pointer]:
+                        - /url: "#response-items-match-type"
+                        - img [ref=e358]
+                      - generic [ref=e361] [cursor=pointer]: match_type
+                      - generic [ref=e363]: enum<string>
+                    - generic [ref=e365]:
+                      - text: "Available options:"
+                      - generic [ref=e366]:
+                        - code [ref=e367]: professional_network_profile_url
+                        - text: ","
+                      - code [ref=e369]: business_email
+                  - generic [ref=e371]:
+                    - generic [ref=e374]:
+                      - link "Navigate to header" [ref=e375] [cursor=pointer]:
+                        - /url: "#response-items-matches"
+                        - img [ref=e377]
+                      - generic [ref=e380] [cursor=pointer]: matches
+                      - generic [ref=e382]: object[]
+                    - group [ref=e389]:
+                      - generic "Show child attributes" [ref=e390] [cursor=pointer]:
+                        - img [ref=e391]
+                        - paragraph [ref=e393]: Show child attributes
+                - generic [ref=e394]:
+                  - generic [ref=e395]: "Example:"
+                  - code [ref=e399]:
+                    - text: "["
+                    - text: "{"
+                    - text: "\"matched_on\": \"https://www.linkedin.com/in/dvdhsu/\","
+                    - text: "\"match_type\": \"professional_network_profile_url\","
+                    - text: "\"matches\": []"
+                    - text: "}"
+                    - text: "]"
+        - generic [ref=e401]:
+          - paragraph [ref=e402]: Was this page helpful?
+          - generic [ref=e404]:
+            - button "Yes" [ref=e405] [cursor=pointer]:
+              - img [ref=e406]
+              - generic [ref=e408]: "Yes"
+            - button "No" [ref=e409] [cursor=pointer]:
+              - img [ref=e410]
+              - generic [ref=e412]: "No"
+        - generic [ref=e476]:
+          - link "Search People Previous" [ref=e477] [cursor=pointer]:
+            - /url: /api-reference/person-apis/search-people-using-filters-and-sorting
+            - generic [ref=e478]:
+              - generic [ref=e479]: Search People
+              - generic [ref=e480]:
+                - img [ref=e481]
+                - generic [ref=e483]: Previous
+          - link "Autocomplete Next" [ref=e484] [cursor=pointer]:
+            - /url: /api-reference/person-apis/get-autocomplete-suggestions-for-person-search-fields
+            - generic [ref=e485]:
+              - generic [ref=e486]: Autocomplete
+              - generic [ref=e487]:
+                - img [ref=e488]
+                - generic [ref=e490]: Next
+        - generic [ref=e414]:
+          - textbox "Ask a question..." [ref=e415]
+          - generic: Ctrl+I
+          - button "Send message" [disabled] [ref=e416]:
+            - img [ref=e417]
+        - contentinfo [ref=e419]:
+          - generic [ref=e420]:
+            - link "x" [ref=e421] [cursor=pointer]:
+              - /url: https://x.com/crustdata
+              - generic [ref=e422]: x
+              - img [ref=e423]
+            - link "linkedin" [ref=e424] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/crustdata
+              - generic [ref=e425]: linkedin
+              - img [ref=e426]
+  - alert [ref=e491]
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img
+            - generic: Assistant
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - generic:
+              - generic: Responses are generated using AI and may contain mistakes.
+        - generic [ref=e492]:
+          - textbox [ref=e494]:
+            - /placeholder: Ask a question...
+          - generic [ref=e495]:
+            - button [ref=e496] [cursor=pointer]:
+              - img [ref=e497]
+            - button [disabled] [ref=e499]:
+              - img [ref=e500]

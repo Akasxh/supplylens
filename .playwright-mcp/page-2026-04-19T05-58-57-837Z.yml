@@ -1,0 +1,402 @@
+- generic [ref=e3]:
+  - region "Skip to main content" [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - banner [ref=e6]:
+    - generic [ref=e7]:
+      - text: This is a sample of our Full API suite. To see our full offering including Watcher, advanced search, and more
+      - link "Request demo now" [ref=e8] [cursor=pointer]:
+        - /url: https://web.archive.org/web/20260113032816/https://crustdata.com/demo
+      - text: →
+    - button "Close" [ref=e9]:
+      - img [ref=e10]
+  - navigation "Main" [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - button "Toggle navigation bar" [ref=e16]:
+          - img [ref=e17]
+        - link "Crustdata APICrustdata API" [ref=e19] [cursor=pointer]:
+          - /url: /web/20260113032816/https://docs.crustdata.com/
+          - generic [ref=e20]:
+            - img "Crustdata API" [ref=e21]
+            - img "Crustdata API" [ref=e22]
+        - link "Documentation" [ref=e23] [cursor=pointer]:
+          - /url: /web/20260113032816/https://docs.crustdata.com/docs/intro
+        - link "API Reference" [ref=e24] [cursor=pointer]:
+          - /url: /web/20260113032816/https://docs.crustdata.com/api
+      - generic [ref=e25]:
+        - link "Login" [ref=e26] [cursor=pointer]:
+          - /url: https://web.archive.org/web/20260113032816/https://crustdata.com/screenerv2/query
+        - button "Request Demo" [ref=e28] [cursor=pointer]:
+          - link "Request Demo" [ref=e29]:
+            - /url: https://web.archive.org/web/20260113032816/https://crustdata.com/demo
+  - generic [ref=e31]:
+    - button "Scroll back to top" [ref=e32]
+    - generic [ref=e33]:
+      - complementary [ref=e34]:
+        - navigation "Docs sidebar" [ref=e37]:
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - link "Getting Started" [ref=e40] [cursor=pointer]:
+                - /url: /web/20260113032816/https://docs.crustdata.com/docs/intro
+            - listitem [ref=e41]:
+              - link "Enrichment APIs" [ref=e43] [cursor=pointer]:
+                - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/company-data-api
+              - list [ref=e44]:
+                - listitem [ref=e45]:
+                  - link "Company Data API" [ref=e46] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/company-data-api
+                - listitem [ref=e47]:
+                  - link "People Data API" [ref=e48] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/people-data-api
+            - listitem [ref=e49]:
+              - link "Search APIs" [ref=e51] [cursor=pointer]:
+                - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+              - list [ref=e52]:
+                - listitem [ref=e53]:
+                  - link "Real-time Company Search APIs" [ref=e55] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                  - list [ref=e56]:
+                    - listitem [ref=e57]:
+                      - link "via Filters" [ref=e58] [cursor=pointer]:
+                        - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                - listitem [ref=e59]:
+                  - link "Real-time People Search APIs" [ref=e61] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                  - list [ref=e62]:
+                    - listitem [ref=e63]:
+                      - link "via Filters" [ref=e64] [cursor=pointer]:
+                        - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                - listitem [ref=e65]:
+                  - link "How to Build Filters" [ref=e66] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/how-to-build-filters
+            - listitem [ref=e67]:
+              - link "Web APIs" [ref=e69] [cursor=pointer]:
+                - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/web-search-api
+              - list [ref=e70]:
+                - listitem [ref=e71]:
+                  - link "Web Search API" [ref=e72] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/web-search-api
+                - listitem [ref=e73]:
+                  - link "Web Fetch API" [ref=e74] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/web-fetch-api
+            - listitem [ref=e75]:
+              - link "Data Dictionary" [ref=e77] [cursor=pointer]:
+                - /url: /web/20260113032816/https://docs.crustdata.com/docs/dictionary/company
+              - list [ref=e78]:
+                - listitem [ref=e79]:
+                  - link "Company Data" [ref=e80] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/docs/dictionary/company
+                - listitem [ref=e81]:
+                  - link "People Data" [ref=e82] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/docs/dictionary/people
+      - main [ref=e83]:
+        - generic [ref=e85]:
+          - generic [ref=e87]:
+            - article [ref=e88]:
+              - navigation "Breadcrumbs" [ref=e89]:
+                - list [ref=e90]:
+                  - listitem [ref=e91]:
+                    - link "Home page" [ref=e92] [cursor=pointer]:
+                      - /url: /web/20260113032816/https://docs.crustdata.com/
+                      - img [ref=e93]
+                  - listitem [ref=e95]:
+                    - link "Web APIs" [ref=e96] [cursor=pointer]:
+                      - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/web-search-api
+                  - listitem [ref=e97]: Web Fetch API
+              - button "On this page" [ref=e99]
+              - generic [ref=e100]:
+                - heading "Web Fetch API" [level=1] [ref=e102]
+                - heading "🚀 Try Now Direct link to --try-now-" [level=3] [ref=e103]:
+                  - link "🚀 Try Now" [ref=e104] [cursor=pointer]:
+                    - /url: /web/20260113032816/https://docs.crustdata.com/api#tag/web-apis/POST/screener/web-fetch
+                  - link "Direct link to --try-now-":
+                    - /url: "#--try-now-"
+                - paragraph [ref=e105]: The Web Fetch API allows you to fetch the HTML content of webpages given their URLs. This endpoint retrieves the page title and full HTML content for up to 10 URLs in a single request.
+                - heading "Use CasesDirect link to Use Cases" [level=2] [ref=e106]:
+                  - text: Use Cases
+                  - link "Direct link to Use Cases":
+                    - /url: "#use-cases"
+                - list [ref=e107]:
+                  - listitem [ref=e108]:
+                    - strong [ref=e109]: Content Extraction
+                    - text: ": Retrieve webpage content for analysis and processing"
+                  - listitem [ref=e110]:
+                    - strong [ref=e111]: Web Scraping
+                    - text: ": Fetch HTML from multiple pages efficiently"
+                  - listitem [ref=e112]:
+                    - strong [ref=e113]: Data Collection
+                    - text: ": Gather webpage content for research and monitoring"
+                  - listitem [ref=e114]:
+                    - strong [ref=e115]: Content Monitoring
+                    - text: ": Track changes on specific webpages over time"
+                  - listitem [ref=e116]:
+                    - strong [ref=e117]: SEO Analysis
+                    - text: ": Extract page content and metadata for optimization"
+                - heading "EndpointDirect link to Endpoint" [level=2] [ref=e118]:
+                  - text: Endpoint
+                  - link "Direct link to Endpoint":
+                    - /url: "#endpoint"
+                - code [ref=e122]:
+                  - generic [ref=e123]: POST /screener/web-fetch
+                - heading "Request ParametersDirect link to Request Parameters" [level=2] [ref=e124]:
+                  - text: Request Parameters
+                  - link "Direct link to Request Parameters":
+                    - /url: "#request-parameters"
+                - table [ref=e125]:
+                  - rowgroup [ref=e126]:
+                    - row "Parameter Type Description Required Default" [ref=e127]:
+                      - columnheader "Parameter" [ref=e128]
+                      - columnheader "Type" [ref=e129]
+                      - columnheader "Description" [ref=e130]
+                      - columnheader "Required" [ref=e131]
+                      - columnheader "Default" [ref=e132]
+                  - rowgroup [ref=e133]:
+                    - row "urls array Array of URLs to fetch (max 10 URLs per request) Yes -" [ref=e134]:
+                      - cell "urls" [ref=e135]:
+                        - code [ref=e136]: urls
+                      - cell "array" [ref=e137]
+                      - cell "Array of URLs to fetch (max 10 URLs per request)" [ref=e138]
+                      - cell "Yes" [ref=e139]
+                      - cell "-" [ref=e140]
+                - heading "URL RequirementsDirect link to URL Requirements" [level=3] [ref=e141]:
+                  - text: URL Requirements
+                  - link "Direct link to URL Requirements":
+                    - /url: "#url-requirements"
+                - list [ref=e142]:
+                  - listitem [ref=e143]:
+                    - text: URLs must be properly formatted with protocol prefix (
+                    - code [ref=e144]: http://
+                    - text: or
+                    - code [ref=e145]: https://
+                    - text: )
+                  - listitem [ref=e146]: Maximum of 10 URLs per request
+                  - listitem [ref=e147]: Each URL should be a valid, accessible webpage
+                - heading "Example RequestsDirect link to Example Requests" [level=2] [ref=e148]:
+                  - text: Example Requests
+                  - link "Direct link to Example Requests":
+                    - /url: "#example-requests"
+                - group [ref=e149]:
+                  - generic "1. Fetch Single URL" [ref=e150]
+                - group [ref=e151]:
+                  - generic "2. Fetch Multiple URLs" [ref=e152]
+                - group [ref=e153]:
+                  - generic "3. Maximum Batch Fetch (10 URLs)" [ref=e154]
+                - heading "Example ResponsesDirect link to Example Responses" [level=2] [ref=e155]:
+                  - text: Example Responses
+                  - link "Direct link to Example Responses":
+                    - /url: "#example-responses"
+                - group [ref=e156]:
+                  - generic "Success Response" [ref=e157]
+                - group [ref=e158]:
+                  - generic "Partial Failure Response" [ref=e159]
+                - group [ref=e160]:
+                  - generic "Validation Error" [ref=e161]
+                - group [ref=e162]:
+                  - generic "Insufficient Credits" [ref=e163]
+                - group [ref=e164]:
+                  - generic "Service Error" [ref=e165]
+                - heading "Best PracticesDirect link to Best Practices" [level=2] [ref=e166]:
+                  - text: Best Practices
+                  - link "Direct link to Best Practices":
+                    - /url: "#best-practices"
+                - list [ref=e167]:
+                  - listitem [ref=e168]:
+                    - strong [ref=e169]: URL Validation
+                    - text: ": Always ensure URLs are properly formatted with"
+                    - code [ref=e170]: http://
+                    - text: or
+                    - code [ref=e171]: https://
+                    - text: prefixes
+                  - listitem [ref=e172]:
+                    - strong [ref=e173]: Batch Requests
+                    - text: ": Group URLs together (up to 10) to minimize API calls"
+                  - listitem [ref=e174]:
+                    - strong [ref=e175]: Error Handling
+                    - text: ": Check the"
+                    - code [ref=e176]: success
+                    - text: field for each URL in the response
+                  - listitem [ref=e177]:
+                    - strong [ref=e178]: Content Processing
+                    - text: ": Be prepared to handle various HTML structures and encodings"
+                  - listitem [ref=e179]:
+                    - strong [ref=e180]: Timeout Handling
+                    - text: ": Implement retry logic for timeouts on critical pages"
+                - heading "Content Processing TipsDirect link to Content Processing Tips" [level=2] [ref=e181]:
+                  - text: Content Processing Tips
+                  - link "Direct link to Content Processing Tips":
+                    - /url: "#content-processing-tips"
+                - heading "Extracting Text from HTMLDirect link to Extracting Text from HTML" [level=3] [ref=e182]:
+                  - text: Extracting Text from HTML
+                  - link "Direct link to Extracting Text from HTML":
+                    - /url: "#extracting-text-from-html"
+                - paragraph [ref=e183]:
+                  - text: The
+                  - code [ref=e184]: content
+                  - text: "field contains raw HTML. You may want to:"
+                - list [ref=e185]:
+                  - listitem [ref=e186]: Parse HTML using libraries (BeautifulSoup for Python, Cheerio for Node.js)
+                  - listitem [ref=e187]: Extract specific elements (headings, paragraphs, links)
+                  - listitem [ref=e188]: Remove scripts and styles for text-only content
+                  - listitem [ref=e189]: Handle special characters and encoding properly
+                - heading "Common Use CasesDirect link to Common Use Cases" [level=3] [ref=e190]:
+                  - text: Common Use Cases
+                  - link "Direct link to Common Use Cases":
+                    - /url: "#common-use-cases"
+                - list [ref=e191]:
+                  - listitem [ref=e192]:
+                    - strong [ref=e193]: Metadata Extraction
+                    - text: ": Parse"
+                    - code [ref=e194]: <meta>
+                    - text: tags for SEO data
+                  - listitem [ref=e195]:
+                    - strong [ref=e196]: Link Discovery
+                    - text: ": Extract all"
+                    - code [ref=e197]: <a>
+                    - text: tags for crawling
+                  - listitem [ref=e198]:
+                    - strong [ref=e199]: Content Analysis
+                    - text: ": Process text content for NLP tasks"
+                  - listitem [ref=e200]:
+                    - strong [ref=e201]: Change Detection
+                    - text: ": Compare content over time to detect updates"
+                - heading "FAQDirect link to FAQ" [level=2] [ref=e202]:
+                  - text: FAQ
+                  - link "Direct link to FAQ":
+                    - /url: "#faq"
+                - paragraph [ref=e203]:
+                  - strong [ref=e204]: "Q: What's the maximum number of URLs I can fetch in one request?"
+                  - text: "A: You can fetch up to 10 URLs per request."
+                - paragraph [ref=e205]:
+                  - strong [ref=e206]: "Q: How long does it take to fetch a page?"
+                  - text: "A: Most pages are fetched within 2-5 seconds. Complex pages with lots of JavaScript may take longer."
+                - paragraph [ref=e207]:
+                  - strong [ref=e208]: "Q: Do I need to include the protocol in URLs?"
+                  - text: "A: Yes, all URLs must start with"
+                  - code [ref=e209]: http://
+                  - text: or
+                  - code [ref=e210]: https://
+                  - text: .
+                - paragraph [ref=e211]:
+                  - strong [ref=e212]: "Q: What happens if one URL fails in a batch request?"
+                  - text: "A: The successful URLs will return their content, and failed URLs will have"
+                  - code [ref=e213]: "\"success\": false"
+                  - text: with an error message. You still pay credits for successful fetches.
+                - paragraph [ref=e214]:
+                  - strong [ref=e215]: "Q: Will I be charged for failed fetches?"
+                  - text: "A: This depends on the failure type. Network errors and invalid URLs typically don't consume credits, but rate limits and timeouts may."
+                - paragraph [ref=e216]:
+                  - strong [ref=e217]: "Q: Can I fetch content from password-protected pages?"
+                  - text: "A: No, this API fetches publicly accessible pages only. Authentication is not supported."
+                - paragraph [ref=e218]:
+                  - strong [ref=e219]: "Q: What's the maximum page size that can be fetched?"
+                  - text: "A: There are reasonable limits to prevent abuse, but typical webpages (up to several MB) should work fine."
+                - paragraph [ref=e220]:
+                  - strong [ref=e221]: "Q: How do I handle relative URLs in the fetched content?"
+                  - text: "A: You'll need to resolve relative URLs yourself using the base URL from the"
+                  - code [ref=e222]: url
+                  - text: field in the response.
+                - paragraph [ref=e223]:
+                  - strong [ref=e224]: "Q: Can I specify custom headers or user agents?"
+                  - text: "A: Custom headers are not currently supported. The API uses a standard user agent."
+                - heading "Related APIsDirect link to Related APIs" [level=2] [ref=e225]:
+                  - text: Related APIs
+                  - link "Direct link to Related APIs":
+                    - /url: "#related-apis"
+                - list [ref=e226]:
+                  - listitem [ref=e227]:
+                    - link "Web Search API" [ref=e228] [cursor=pointer]:
+                      - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/web-search-api
+                    - text: "- Search the web using our search engine"
+            - navigation "Docs pages" [ref=e229]:
+              - link "Previous Web Search API" [ref=e230] [cursor=pointer]:
+                - /url: /web/20260113032816/https://docs.crustdata.com/docs/discover/web-search-api
+                - generic [ref=e231]: Previous
+                - generic [ref=e232]: Web Search API
+              - link "Next Crustdata Data Dictionary (Company)" [ref=e233] [cursor=pointer]:
+                - /url: /web/20260113032816/https://docs.crustdata.com/docs/dictionary/company
+                - generic [ref=e234]: Next
+                - generic [ref=e235]: Crustdata Data Dictionary (Company)
+          - list [ref=e238]:
+            - listitem [ref=e239]:
+              - link "🚀 Try Now" [ref=e240] [cursor=pointer]:
+                - /url: "#--try-now-"
+            - listitem [ref=e241]:
+              - link "Use Cases" [ref=e242] [cursor=pointer]:
+                - /url: "#use-cases"
+            - listitem [ref=e243]:
+              - link "Endpoint" [ref=e244] [cursor=pointer]:
+                - /url: "#endpoint"
+            - listitem [ref=e245]:
+              - link "Request Parameters" [ref=e246] [cursor=pointer]:
+                - /url: "#request-parameters"
+              - list [ref=e247]:
+                - listitem [ref=e248]:
+                  - link "URL Requirements" [ref=e249] [cursor=pointer]:
+                    - /url: "#url-requirements"
+            - listitem [ref=e250]:
+              - link "Example Requests" [ref=e251] [cursor=pointer]:
+                - /url: "#example-requests"
+              - list [ref=e252]:
+                - listitem [ref=e253]:
+                  - link "1. Fetch content from a single webpage" [ref=e254] [cursor=pointer]:
+                    - /url: "#1-fetch-content-from-a-single-webpage"
+                - listitem [ref=e255]:
+                  - link "2. Fetch content from multiple webpages" [ref=e256] [cursor=pointer]:
+                    - /url: "#2-fetch-content-from-multiple-webpages"
+                - listitem [ref=e257]:
+                  - link "3. Fetch the maximum number of URLs in a single request" [ref=e258] [cursor=pointer]:
+                    - /url: "#3-fetch-the-maximum-number-of-urls-in-a-single-request"
+            - listitem [ref=e259]:
+              - link "Example Responses" [ref=e260] [cursor=pointer]:
+                - /url: "#example-responses"
+              - list [ref=e261]:
+                - listitem [ref=e262]:
+                  - link "Successful Response (200 OK)" [ref=e263] [cursor=pointer]:
+                    - /url: "#successful-response-200-ok"
+                - listitem [ref=e264]:
+                  - link "Response Fields" [ref=e265] [cursor=pointer]:
+                    - /url: "#response-fields"
+                - listitem [ref=e266]:
+                  - link "Multiple URLs Response" [ref=e267] [cursor=pointer]:
+                    - /url: "#multiple-urls-response"
+                - listitem [ref=e268]:
+                  - link "Partial Failure Response (200 OK)" [ref=e269] [cursor=pointer]:
+                    - /url: "#partial-failure-response-200-ok"
+                - listitem [ref=e270]:
+                  - link "Common Failure Reasons" [ref=e271] [cursor=pointer]:
+                    - /url: "#common-failure-reasons"
+                - listitem [ref=e272]:
+                  - link "Validation Error Response (400 Bad Request)" [ref=e273] [cursor=pointer]:
+                    - /url: "#validation-error-response-400-bad-request"
+                - listitem [ref=e274]:
+                  - link "Common Validation Errors" [ref=e275] [cursor=pointer]:
+                    - /url: "#common-validation-errors"
+                - listitem [ref=e276]:
+                  - link "Insufficient Credits (402 Payment Required)" [ref=e277] [cursor=pointer]:
+                    - /url: "#insufficient-credits-402-payment-required"
+                - listitem [ref=e278]:
+                  - link "Service Error Response (500 Internal Server Error)" [ref=e279] [cursor=pointer]:
+                    - /url: "#service-error-response-500-internal-server-error"
+                - listitem [ref=e280]:
+                  - link "Common Errors" [ref=e281] [cursor=pointer]:
+                    - /url: "#common-errors"
+            - listitem [ref=e282]:
+              - link "Best Practices" [ref=e283] [cursor=pointer]:
+                - /url: "#best-practices"
+            - listitem [ref=e284]:
+              - link "Content Processing Tips" [ref=e285] [cursor=pointer]:
+                - /url: "#content-processing-tips"
+              - list [ref=e286]:
+                - listitem [ref=e287]:
+                  - link "Extracting Text from HTML" [ref=e288] [cursor=pointer]:
+                    - /url: "#extracting-text-from-html"
+                - listitem [ref=e289]:
+                  - link "Common Use Cases" [ref=e290] [cursor=pointer]:
+                    - /url: "#common-use-cases"
+            - listitem [ref=e291]:
+              - link "FAQ" [ref=e292] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=e293]:
+              - link "Related APIs" [ref=e294] [cursor=pointer]:
+                - /url: "#related-apis"

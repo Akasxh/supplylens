@@ -1,0 +1,364 @@
+- generic [ref=e3]:
+  - region "Skip to main content" [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - banner [ref=e6]:
+    - generic [ref=e7]:
+      - text: This is a sample of our Full API suite. To see our full offering including Watcher, advanced search, and more
+      - link "Request demo now" [ref=e8] [cursor=pointer]:
+        - /url: https://web.archive.org/web/20260113013829/https://crustdata.com/demo
+      - text: →
+    - button "Close" [ref=e9]:
+      - img [ref=e10]
+  - navigation "Main" [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - button "Toggle navigation bar" [ref=e16]:
+          - img [ref=e17]
+        - link "Crustdata APICrustdata API" [ref=e19] [cursor=pointer]:
+          - /url: /web/20260113013829/https://docs.crustdata.com/
+          - generic [ref=e20]:
+            - img "Crustdata API" [ref=e21]
+            - img "Crustdata API" [ref=e22]
+        - link "Documentation" [ref=e23] [cursor=pointer]:
+          - /url: /web/20260113013829/https://docs.crustdata.com/docs/intro
+        - link "API Reference" [ref=e24] [cursor=pointer]:
+          - /url: /web/20260113013829/https://docs.crustdata.com/api
+      - generic [ref=e25]:
+        - link "Login" [ref=e26] [cursor=pointer]:
+          - /url: https://web.archive.org/web/20260113013829/https://crustdata.com/screenerv2/query
+        - button "Request Demo" [ref=e28] [cursor=pointer]:
+          - link "Request Demo" [ref=e29]:
+            - /url: https://web.archive.org/web/20260113013829/https://crustdata.com/demo
+  - generic [ref=e31]:
+    - button "Scroll back to top" [ref=e32]
+    - generic [ref=e33]:
+      - complementary [ref=e34]:
+        - navigation "Docs sidebar" [ref=e37]:
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - link "Getting Started" [ref=e40] [cursor=pointer]:
+                - /url: /web/20260113013829/https://docs.crustdata.com/docs/intro
+            - listitem [ref=e41]:
+              - link "Enrichment APIs" [ref=e43] [cursor=pointer]:
+                - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/company-data-api
+              - list [ref=e44]:
+                - listitem [ref=e45]:
+                  - link "Company Data API" [ref=e46] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/company-data-api
+                - listitem [ref=e47]:
+                  - link "People Data API" [ref=e48] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/people-data-api
+            - listitem [ref=e49]:
+              - link "Search APIs" [ref=e51] [cursor=pointer]:
+                - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+              - list [ref=e52]:
+                - listitem [ref=e53]:
+                  - link "Real-time Company Search APIs" [ref=e55] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                  - list [ref=e56]:
+                    - listitem [ref=e57]:
+                      - link "via Filters" [ref=e58] [cursor=pointer]:
+                        - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                - listitem [ref=e59]:
+                  - link "Real-time People Search APIs" [ref=e61] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                  - list [ref=e62]:
+                    - listitem [ref=e63]:
+                      - link "via Filters" [ref=e64] [cursor=pointer]:
+                        - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                - listitem [ref=e65]:
+                  - link "How to Build Filters" [ref=e66] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/how-to-build-filters
+            - listitem [ref=e67]:
+              - link "Web APIs" [ref=e69] [cursor=pointer]:
+                - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/web-search-api
+              - list [ref=e70]:
+                - listitem [ref=e71]:
+                  - link "Web Search API" [ref=e72] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/web-search-api
+                - listitem [ref=e73]:
+                  - link "Web Fetch API" [ref=e74] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/web-fetch-api
+            - listitem [ref=e75]:
+              - link "Data Dictionary" [ref=e77] [cursor=pointer]:
+                - /url: /web/20260113013829/https://docs.crustdata.com/docs/dictionary/company
+              - list [ref=e78]:
+                - listitem [ref=e79]:
+                  - link "Company Data" [ref=e80] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/docs/dictionary/company
+                - listitem [ref=e81]:
+                  - link "People Data" [ref=e82] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/docs/dictionary/people
+      - main [ref=e83]:
+        - generic [ref=e85]:
+          - generic [ref=e87]:
+            - article [ref=e88]:
+              - navigation "Breadcrumbs" [ref=e89]:
+                - list [ref=e90]:
+                  - listitem [ref=e91]:
+                    - link "Home page" [ref=e92] [cursor=pointer]:
+                      - /url: /web/20260113013829/https://docs.crustdata.com/
+                      - img [ref=e93]
+                  - listitem [ref=e95]: Enrichment APIs
+              - button "On this page" [ref=e97]
+              - generic [ref=e98]:
+                - heading "Company APIs" [level=1] [ref=e100]
+                - paragraph [ref=e101]: Crustdata empowers you to enrich your data with comprehensive information about companies from multiple sources.
+                - list [ref=e102]:
+                  - listitem [ref=e103]: Company Enrichment API
+                  - listitem [ref=e104]: "Company Discovery: Screening API"
+                - heading "Company Enrichment APIDirect link to Company Enrichment API" [level=2] [ref=e105]:
+                  - text: Company Enrichment API
+                  - link "Direct link to Company Enrichment API":
+                    - /url: "#company-enrichment-api"
+                - paragraph [ref=e106]: This endpoint enriches company data by retrieving detailed information about one or multiple companies using either their domain, name, or ID.
+                - heading "Key FeaturesDirect link to Key Features" [level=3] [ref=e107]:
+                  - text: Key Features
+                  - link "Direct link to Key Features":
+                    - /url: "#key-features"
+                - list [ref=e108]:
+                  - listitem [ref=e109]: Multi-company enrichment in one call
+                  - listitem [ref=e110]: Customize the response by specifying exactly which fields you want to retrieve
+                  - listitem [ref=e111]: Capability to enrich companies real-time if the company is not present in our database
+                  - listitem [ref=e112]: "Enriched information about organizations from our extensive dataset, for example: Headcount Metrics, Employer Reviews, Product Reviews, Web Traffic, News Articles, etc."
+                - heading "Using the fields ParameterDirect link to using-the-fields-parameter" [level=3] [ref=e113]:
+                  - text: Using the
+                  - code [ref=e114]: fields
+                  - text: Parameter
+                  - link "Direct link to using-the-fields-parameter":
+                    - /url: "#using-the-fields-parameter"
+                - paragraph [ref=e115]:
+                  - text: The
+                  - code [ref=e116]: fields
+                  - text: parameter allows you to customize the response by specifying exactly which fields you want to retrieve. This can help reduce payload size and improve performance.
+                - generic [ref=e117]:
+                  - generic [ref=e118]:
+                    - img [ref=e120]
+                    - text: tip
+                  - list [ref=e123]:
+                    - listitem [ref=e124]:
+                      - strong [ref=e125]: "Nested Fields:"
+                      - text: You can specify nested fields up to the levels defined in the response structure. Fields nested beyond the allowed levels or within lists (arrays) cannot be individually accessed.
+                    - listitem [ref=e126]:
+                      - strong [ref=e127]: "Default Fields:"
+                      - list [ref=e128]:
+                        - listitem [ref=e129]:
+                          - strong [ref=e130]: "Top-Level Non-Object Fields:"
+                          - text: If you do not specify the
+                          - code [ref=e131]: fields
+                          - text: parameter, the response will include all top-level non-object fields by default (e.g.,
+                          - code [ref=e132]: company_name
+                          - text: ","
+                          - code [ref=e133]: company_id
+                          - text: ).
+                        - listitem [ref=e134]:
+                          - strong [ref=e135]: "Object Fields:"
+                          - text: By default, the response
+                          - strong [ref=e136]: will not include
+                          - text: object fields like
+                          - code [ref=e137]: decision_makers
+                          - text: and
+                          - code [ref=e138]: founders.profiles
+                          - text: ", even if you have access to them. To include these fields, you must explicitly specify them using the"
+                          - code [ref=e139]: fields
+                          - text: parameter.
+                    - listitem [ref=e140]:
+                      - strong [ref=e141]: "User Permissions:"
+                      - text: Access to certain fields may be restricted based on your user permissions. If you request fields you do not have access to, the API will return an error indicating unauthorized access.
+                - heading "UsageDirect link to Usage" [level=3] [ref=e142]:
+                  - text: Usage
+                  - link "Direct link to Usage":
+                    - /url: "#usage"
+                - paragraph [ref=e143]:
+                  - text: You can try out this API
+                  - link "here" [ref=e144] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/api#tag/company-api/GET/screener/company
+                    - strong [ref=e145]: here
+                  - text: .
+                - heading "Company Enrichment with company_domainDirect link to company-enrichment-with-company_domain" [level=4] [ref=e146]:
+                  - text: Company Enrichment with
+                  - code [ref=e147]: company_domain
+                  - link "Direct link to company-enrichment-with-company_domain":
+                    - /url: "#company-enrichment-with-company_domain"
+                - paragraph [ref=e148]: Ideal for users who have one or more company website domains and need to fetch detailed profiles.
+                - code [ref=e152]:
+                  - generic [ref=e153]: "curl 'https://api.crustdata.com/screener/company?company_domain=hubspot.com,google.com' \\ --header 'Accept: application/json, text/plain, */*' \\ --header 'Accept-Language: en-US,en;q=0.9' \\ --header 'Authorization: Token $token'"
+                - heading "Company Enrichment with specific fieldsDirect link to Company Enrichment with specific fields" [level=4] [ref=e154]:
+                  - text: Company Enrichment with specific fields
+                  - link "Direct link to Company Enrichment with specific fields":
+                    - /url: "#company-enrichment-with-specific-fields"
+                - code [ref=e158]:
+                  - generic [ref=e159]: "curl 'https://api.crustdata.com/screener/company?company_domain=swiggy.com&fields=company_name,headcount.headcount' \\ --header 'Authorization: Token $token' \\ --header 'Accept: application/json"
+                - heading "Getting recently posted jobs and news articles for a companyDirect link to Getting recently posted jobs and news articles for a company" [level=4] [ref=e160]:
+                  - text: Getting recently posted jobs and news articles for a company
+                  - link "Direct link to Getting recently posted jobs and news articles for a company":
+                    - /url: "#getting-recently-posted-jobs-and-news-articles-for-a-company"
+                - code [ref=e164]:
+                  - generic [ref=e165]: "curl 'https://api.crustdata.com/screener/company?company_domain=hubspot.com&fields=job_openings,news_articles' \\ --header 'Authorization: Token $token' \\ --header 'Accept: application/json"
+                - heading "Realtime Company EnrichmentDirect link to Realtime Company Enrichment" [level=4] [ref=e166]:
+                  - text: Realtime Company Enrichment
+                  - link "Direct link to Realtime Company Enrichment":
+                    - /url: "#realtime-company-enrichment"
+                - paragraph [ref=e167]: If a company may not be tracked by Crustdata, but you want to enrich them within 10 minutes of the request, you can use this option.
+                - code [ref=e171]:
+                  - generic [ref=e172]: curl --location 'https://api.crustdata.com/screener/company?company_domain=hubspot.com&enrich_realtime=True' \
+                  - generic [ref=e173]: "--header 'Accept: application/json, text/plain, /' \\"
+                  - generic [ref=e174]: "--header 'Accept-Language: en-US,en;q=0.9' \\"
+                  - generic [ref=e175]: "--header 'Authorization: Token $token'"
+                - 'heading "Company Discovery: Screening APIDirect link to Company Discovery: Screening API" [level=2] [ref=e176]':
+                  - text: "Company Discovery: Screening API"
+                  - 'link "Direct link to Company Discovery: Screening API"':
+                    - /url: "#company-discovery-screening-api"
+                - paragraph [ref=e177]: The Company Discovery API allows you to screen and filter companies based on various growth and firmographic criteria.
+                - heading "Key FeaturesDirect link to Key Features" [level=3] [ref=e178]:
+                  - text: Key Features
+                  - link "Direct link to Key Features":
+                    - /url: "#key-features-1"
+                - list [ref=e179]:
+                  - listitem [ref=e180]: You can provide complex filters to discover companies.
+                  - listitem [ref=e181]: You can enrich these companies with the previous Enrichment API.
+                - heading "UsageDirect link to Usage" [level=3] [ref=e182]:
+                  - text: Usage
+                  - link "Direct link to Usage":
+                    - /url: "#usage-1"
+                - paragraph [ref=e183]:
+                  - text: Below are examples of queries you can execute through this API. Try it out
+                  - link "here" [ref=e184] [cursor=pointer]:
+                    - /url: /web/20260113013829/https://docs.crustdata.com/api#tag/company-api/POST/screener/screen/
+                    - strong [ref=e185]: here
+                  - text: .
+                - heading "Companies that have raised more than $5M in funding and have 50+ employees and majority of employees are in USADirect link to Companies that have raised more than $5M in funding and have 50+ employees and majority of employees are in USA" [level=4] [ref=e186]:
+                  - text: Companies that have raised more than $5M in funding and have 50+ employees and majority of employees are in USA
+                  - link "Direct link to Companies that have raised more than $5M in funding and have 50+ employees and majority of employees are in USA":
+                    - /url: "#companies-that-have-raised-more-than-5m-in-funding-and-have-50-employees-and-majority-of-employees-are-in-usa"
+                - paragraph [ref=e187]: "To get companies that meet the following criteria:"
+                - list [ref=e188]:
+                  - listitem [ref=e189]: Have raised > $5,000,000 in total funding AND
+                  - listitem [ref=e190]: Have headcount > 50 AND
+                  - listitem [ref=e191]: Have largest headcount country as USA
+                - paragraph [ref=e192]:
+                  - text: Crustdata's
+                  - code [ref=e193]: company_id
+                  - text: is a unique, unchanging numeric identifier for each company in our database. Use this request to retrieve information for companies with specific
+                  - code [ref=e194]: company_id
+                  - text: values.
+                - code [ref=e198]:
+                  - generic [ref=e199]: curl 'https://api.crustdata.com/screener/screen/' \
+                  - generic [ref=e200]: "-H 'Accept: application/json, text/plain, /' \\"
+                  - generic [ref=e201]: "-H 'Accept-Language: en-US,en;q=0.9' \\"
+                  - generic [ref=e202]: "-H 'Authorization: Token $auth_token' \\"
+                  - generic [ref=e203]: "-H 'Connection: keep-alive' \\"
+                  - generic [ref=e204]: "-H 'Content-Type: application/json' \\"
+                  - generic [ref=e205]: "-H 'Origin: https://crustdata.com' \\"
+                  - generic [ref=e206]: "--data-raw '{"
+                  - generic [ref=e207]: "\"filters\": {"
+                  - generic [ref=e208]: "\"op\": \"and\","
+                  - generic [ref=e209]: "\"conditions\": ["
+                  - generic [ref=e210]: "{"
+                  - generic [ref=e211]: "\"column\": \"total_investment_usd\","
+                  - generic [ref=e212]: "\"type\": \"=>\","
+                  - generic [ref=e213]: "\"value\": 5000000,"
+                  - generic [ref=e214]: "\"allow_null\": false"
+                  - generic [ref=e215]: "},"
+                  - generic [ref=e216]: "{"
+                  - generic [ref=e217]: "\"column\": \"headcount\","
+                  - generic [ref=e218]: "\"type\": \"=>\","
+                  - generic [ref=e219]: "\"value\": 50,"
+                  - generic [ref=e220]: "\"allow_null\": false"
+                  - generic [ref=e221]: "},"
+                  - generic [ref=e222]: "{"
+                  - generic [ref=e223]: "\"column\": \"largest_headcount_country\","
+                  - generic [ref=e224]: "\"type\": \"(.)\","
+                  - generic [ref=e225]: "\"value\": \"USA\","
+                  - generic [ref=e226]: "\"allow_null\": false"
+                  - generic [ref=e227]: "}"
+                  - generic [ref=e228]: "]"
+                  - generic [ref=e229]: "},"
+                  - generic [ref=e230]: "\"hidden_columns\": [],"
+                  - generic [ref=e231]: "\"offset\": 0,"
+                  - generic [ref=e232]: "\"count\": 100,"
+                  - generic [ref=e233]: "\"sorts\": []"
+                  - generic [ref=e234]: "}' \\"
+                  - generic [ref=e235]: "--compressed"
+                - heading "Companies with given website domains (exact match)Direct link to Companies with given website domains (exact match)" [level=4] [ref=e236]:
+                  - text: Companies with given website domains (exact match)
+                  - link "Direct link to Companies with given website domains (exact match)":
+                    - /url: "#companies-with-given-website-domains-exact-match"
+                - paragraph [ref=e237]:
+                  - text: This request retrieves metrics for companies whose
+                  - code [ref=e238]: company_website_domain
+                  - text: exactly matches any of the specified domains.
+                - code [ref=e242]:
+                  - generic [ref=e243]: curl 'https://api.crustdata.com/screener/screen/' \
+                  - generic [ref=e244]: "-H 'Authorization: Token $auth_token' \\"
+                  - generic [ref=e245]: "-H 'Content-Type: application/json' \\"
+                  - generic [ref=e246]: "--data-raw '{"
+                  - generic [ref=e247]: "\"filters\": {"
+                  - generic [ref=e248]: "\"op\": \"or\","
+                  - generic [ref=e249]: "\"conditions\": ["
+                  - generic [ref=e250]: "{\"column\": \"company_website_domain\", \"type\": \"=\", \"value\": \"kets-quantum.com\", \"allow_null\": false},"
+                  - generic [ref=e251]: "{\"column\": \"company_website_domain\", \"type\": \"=\", \"value\": \"kasada.io\", \"allow_null\": false},"
+                  - generic [ref=e252]: "{\"column\": \"company_website_domain\", \"type\": \"=\", \"value\": \"nisos.com\", \"allow_null\": false},"
+                  - generic [ref=e253]: "{\"column\": \"company_website_domain\", \"type\": \"=\", \"value\": \"nonamesecurity.com\", \"allow_null\": false},"
+                  - generic [ref=e254]: "{\"column\": \"company_website_domain\", \"type\": \"=\", \"value\": \"medigate.io\", \"allow_null\": false}"
+                  - generic [ref=e255]: "]"
+                  - generic [ref=e256]: "},"
+                  - generic [ref=e257]: "\"hidden_columns\": [],"
+                  - generic [ref=e258]: "\"offset\": 0,"
+                  - generic [ref=e259]: "\"count\": 100,"
+                  - generic [ref=e260]: "\"sorts\": []"
+                  - generic [ref=e261]: "}' \\"
+                  - generic [ref=e262]: "--compressed"
+                - heading "Companies with 31 to 50% of their employees skilled in \"quality assurance\"Direct link to Companies with 31 to 50% of their employees skilled in \"quality assurance\"" [level=4] [ref=e263]:
+                  - text: Companies with 31 to 50% of their employees skilled in "quality assurance"
+                  - link "Direct link to Companies with 31 to 50% of their employees skilled in \"quality assurance\"":
+                    - /url: "#companies-with-31-to-50-of-their-employees-skilled-in-quality-assurance"
+                - code [ref=e267]:
+                  - generic [ref=e268]: curl 'https://api.crustdata.com/screener/screen/' \
+                  - generic [ref=e269]: "-H 'Content-Type: application/json' \\"
+                  - generic [ref=e270]: "-H 'Authorization: Token $token' \\"
+                  - generic [ref=e271]: "--data-raw '{"
+                  - generic [ref=e272]: "\"filters\":{"
+                  - generic [ref=e273]: "\"op\":\"and\","
+                  - generic [ref=e274]: "\"conditions\":["
+                  - generic [ref=e275]: "{\"column\": \"employee_skills_31_to_50_pct\", \"type\":\"(.)\", \"value\":\"quality assurance\", \"allow_null\":false}"
+                  - generic [ref=e276]: "]"
+                  - generic [ref=e277]: "},\"offset\":0,\"count\":150}' \\"
+                  - generic [ref=e278]: "--compressed"
+            - navigation "Docs pages" [ref=e279]:
+              - link "Previous Getting Started" [ref=e280] [cursor=pointer]:
+                - /url: /web/20260113013829/https://docs.crustdata.com/docs/intro
+                - generic [ref=e281]: Previous
+                - generic [ref=e282]: Getting Started
+              - link "Next Company Data API" [ref=e283] [cursor=pointer]:
+                - /url: /web/20260113013829/https://docs.crustdata.com/docs/discover/company-data-api
+                - generic [ref=e284]: Next
+                - generic [ref=e285]: Company Data API
+          - list [ref=e288]:
+            - listitem [ref=e289]:
+              - link "Company Enrichment API" [ref=e290] [cursor=pointer]:
+                - /url: "#company-enrichment-api"
+              - list [ref=e291]:
+                - listitem [ref=e292]:
+                  - link "Key Features" [ref=e293] [cursor=pointer]:
+                    - /url: "#key-features"
+                - listitem [ref=e294]:
+                  - link "Using the fields Parameter" [ref=e295] [cursor=pointer]:
+                    - /url: "#using-the-fields-parameter"
+                    - text: Using the
+                    - code [ref=e296]: fields
+                    - text: Parameter
+                - listitem [ref=e297]:
+                  - link "Usage" [ref=e298] [cursor=pointer]:
+                    - /url: "#usage"
+            - listitem [ref=e299]:
+              - 'link "Company Discovery: Screening API" [ref=e300] [cursor=pointer]':
+                - /url: "#company-discovery-screening-api"
+              - list [ref=e301]:
+                - listitem [ref=e302]:
+                  - link "Key Features" [ref=e303] [cursor=pointer]:
+                    - /url: "#key-features-1"
+                - listitem [ref=e304]:
+                  - link "Usage" [ref=e305] [cursor=pointer]:
+                    - /url: "#usage-1"

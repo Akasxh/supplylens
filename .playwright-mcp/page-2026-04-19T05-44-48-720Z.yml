@@ -1,0 +1,308 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Company API Search Companies" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Company API
+              - img [ref=e39]
+            - generic [ref=e41]: Search Companies
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "Company API" [ref=e50] [cursor=pointer]:
+            - /url: /api-reference/company-apis/search-companies-with-indexed-fields-only
+          - generic [ref=e51]:
+            - heading "Search Companies" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: Search the Crustdata company database using filter conditions. Supports complex AND/OR filter logic, cursor-based pagination, sorting, and field selection. Only indexed fields are searchable; use /company/enrich for non-indexed fields like news, people, or web_traffic.
+          - generic [ref=e65]:
+            - img "Note" [ref=e67]
+            - paragraph [ref=e70]:
+              - text: Default
+              - code [ref=e71]: rate-limit
+              - text: is 15 requests per minute. Send an email to
+              - link "gtm@crustdata.co" [ref=e72] [cursor=pointer]:
+                - /url: mailto:gtm@crustdata.co
+              - text: to discuss higher limits if needed for your use case.
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e76]:
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: POST
+              - generic [ref=e79]:
+                - generic [ref=e80]: https://api.crustdata.com
+                - generic [ref=e81]:
+                  - generic [ref=e82]: /
+                  - generic [ref=e83]: company
+                  - generic [ref=e84]: /
+                  - generic [ref=e85]: search
+            - button "Try it" [ref=e86] [cursor=pointer]:
+              - generic [ref=e87]: Try it
+              - img [ref=e88]
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - generic [ref=e92]:
+                - button "cURL" [ref=e93] [cursor=pointer]:
+                  - generic [ref=e94]:
+                    - paragraph [ref=e95]: cURL
+                    - img [ref=e96]
+                - generic [ref=e98]:
+                  - button "search_by_domain" [ref=e99] [cursor=pointer]:
+                    - generic [ref=e100]:
+                      - paragraph [ref=e101]: search_by_domain
+                      - img [ref=e102]
+                  - generic [ref=e104]:
+                    - button "Copy the contents from the code block" [ref=e107] [cursor=pointer]:
+                      - img [ref=e108]
+                    - button "Ask AI" [ref=e112] [cursor=pointer]:
+                      - img [ref=e113]
+              - region "Code snippet" [ref=e116]:
+                - generic [ref=e119]: "curl --request POST \\ --url https://api.crustdata.com/company/search \\ --header 'Authorization: Bearer <token>' \\ --header 'Content-Type: application/json' \\ --header 'x-api-version: <x-api-version>' \\ --data ' { \"filters\": { \"field\": \"basic_info.primary_domain\", \"type\": \"=\", \"value\": \"hubspot.com\" }, \"fields\": [ \"basic_info\", \"headcount\", \"funding\" ], \"limit\": 1 } '"
+            - generic [ref=e120]:
+              - generic [ref=e121]:
+                - button "200" [ref=e122] [cursor=pointer]:
+                  - generic [ref=e123]:
+                    - paragraph [ref=e124]: "200"
+                    - img [ref=e125]
+                - generic [ref=e127]:
+                  - button "search_by_domain_response" [ref=e128] [cursor=pointer]:
+                    - generic [ref=e129]:
+                      - paragraph [ref=e130]: search_by_domain_response
+                      - img [ref=e131]
+                  - generic [ref=e133]:
+                    - button "Copy the contents from the code block" [ref=e136] [cursor=pointer]:
+                      - img [ref=e137]
+                    - button "Ask AI" [ref=e141] [cursor=pointer]:
+                      - img [ref=e142]
+              - region "Code snippet" [ref=e145]:
+                - generic [ref=e148]: "{ \"companies\": [ { \"basic_info\": { \"name\": \"HubSpot\", \"primary_domain\": \"hubspot.com\", \"website\": \"https://hubspot.com\", \"professional_network_url\": \"https://www.linkedin.com/company/hubspot\", \"professional_network_id\": \"68529\", \"company_type\": \"Public Company\", \"year_founded\": \"2006\", \"employee_count_range\": \"5001-10000\", \"markets\": [ \"NYSE\" ], \"industries\": [ \"Software Development\", \"Technology, Information and Internet\" ] }, \"headcount\": { \"total\": 11965 }, \"funding\": { \"total_investment_usd\": 130000000, \"last_round_amount_usd\": 100000000, \"last_fundraise_date\": \"2021-10-13\", \"last_round_type\": \"\", \"investors\": [] } } ], \"next_cursor\": \"H4sIAJj5zGkC_xXMMQ7CMAxA0...\", \"total_count\": 264 }"
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - heading "Authorizations" [level=4] [ref=e154]
+            - generic [ref=e156]:
+              - generic [ref=e159]:
+                - link "Navigate to header" [ref=e160] [cursor=pointer]:
+                  - /url: "#authorization-authorization"
+                  - img [ref=e162]
+                - generic [ref=e165] [cursor=pointer]: Authorization
+                - generic [ref=e166]:
+                  - generic [ref=e167]: string
+                  - generic [ref=e168]: header
+                  - text: required
+              - paragraph [ref=e171]: API key passed as a Bearer token in the Authorization header.
+          - generic [ref=e172]:
+            - heading "Headers" [level=4] [ref=e175]
+            - generic [ref=e177]:
+              - generic [ref=e180]:
+                - link "Navigate to header" [ref=e181] [cursor=pointer]:
+                  - /url: "#parameter-x-api-version"
+                  - img [ref=e183]
+                - generic [ref=e186] [cursor=pointer]: x-api-version
+                - generic [ref=e187]:
+                  - generic [ref=e188]: string
+                  - text: required
+              - generic [ref=e189]:
+                - paragraph [ref=e191]: API version to use. Must match a supported version (e.g., "2025-11-01").
+                - generic [ref=e192]:
+                  - generic [ref=e193]: "Example:"
+                  - paragraph [ref=e195]:
+                    - code [ref=e196]: "\"2025-11-01\""
+          - generic [ref=e197]:
+            - generic [ref=e198]:
+              - generic [ref=e199]:
+                - heading "Body" [level=4] [ref=e200]
+                - generic [ref=e202]: application/json
+              - paragraph [ref=e205]: Search filters, pagination, sorting, and field selection
+            - generic [ref=e208]:
+              - paragraph [ref=e210]: Request body for searching the company database using indexed fields.
+              - generic [ref=e212]:
+                - generic [ref=e214]:
+                  - generic [ref=e217]:
+                    - link "Navigate to header" [ref=e218] [cursor=pointer]:
+                      - /url: "#body-filters"
+                      - img [ref=e220]
+                    - generic [ref=e223] [cursor=pointer]: filters
+                    - generic [ref=e225]: object
+                  - generic [ref=e226]:
+                    - paragraph [ref=e228]:
+                      - text: Search filters. Use a single
+                      - code [ref=e229]: SearchCondition
+                      - text: or an and/or
+                      - code [ref=e230]: SearchConditionGroup
+                      - text: .
+                    - generic [ref=e231]:
+                      - generic [ref=e233]:
+                        - tablist "Tabs" [ref=e234]:
+                          - tab "Option 1" [selected] [ref=e235] [cursor=pointer]:
+                            - generic [ref=e236]: Option 1
+                          - tab "Option 2" [ref=e237] [cursor=pointer]:
+                            - generic [ref=e238]: Option 2
+                        - generic:
+                          - tabpanel "Option 1"
+                      - group [ref=e240]:
+                        - generic "Show child attributes" [ref=e241] [cursor=pointer]:
+                          - img [ref=e242]
+                          - paragraph [ref=e244]: Show child attributes
+                      - generic [ref=e245]:
+                        - generic [ref=e246]: "Example:"
+                        - code [ref=e250]: "{ \"field\": \"basic_info.primary_domain\", \"type\": \"=\", \"value\": \"hubspot.com\" }"
+                - generic [ref=e252]:
+                  - generic [ref=e255]:
+                    - link "Navigate to header" [ref=e256] [cursor=pointer]:
+                      - /url: "#body-cursor"
+                      - img [ref=e258]
+                    - generic [ref=e261] [cursor=pointer]: cursor
+                    - generic [ref=e263]: string
+                  - generic [ref=e264]:
+                    - paragraph [ref=e266]:
+                      - text: Pagination cursor from a previous response's
+                      - code [ref=e267]: next_cursor
+                      - text: . Omit on the first page.
+                    - generic [ref=e268]:
+                      - generic [ref=e269]: "Example:"
+                      - paragraph [ref=e271]:
+                        - code [ref=e272]: "\"H4sIAJj5zGkC_xXMMQ7CMAxA0...\""
+                - generic [ref=e274]:
+                  - generic [ref=e277]:
+                    - link "Navigate to header" [ref=e278] [cursor=pointer]:
+                      - /url: "#body-limit"
+                      - img [ref=e280]
+                    - generic [ref=e283] [cursor=pointer]: limit
+                    - generic [ref=e284]:
+                      - generic [ref=e285]: integer
+                      - generic [ref=e286]: default:20
+                  - generic [ref=e288]:
+                    - text: "Required range:"
+                    - code [ref=e289]: 1 <= x <= 1000
+                - generic [ref=e291]:
+                  - generic [ref=e294]:
+                    - link "Navigate to header" [ref=e295] [cursor=pointer]:
+                      - /url: "#body-sorts"
+                      - img [ref=e297]
+                    - generic [ref=e300] [cursor=pointer]: sorts
+                    - generic [ref=e302]: object[]
+                  - generic [ref=e303]:
+                    - paragraph [ref=e305]: Sort directives applied to matched companies in order.
+                    - group [ref=e311]:
+                      - generic "Show child attributes" [ref=e312] [cursor=pointer]:
+                        - img [ref=e313]
+                        - paragraph [ref=e315]: Show child attributes
+                    - generic [ref=e316]:
+                      - generic [ref=e317]: "Example:"
+                      - code [ref=e321]: "[ { \"column\": \"headcount.total\", \"order\": \"desc\" } ]"
+                - generic [ref=e323]:
+                  - generic [ref=e326]:
+                    - link "Navigate to header" [ref=e327] [cursor=pointer]:
+                      - /url: "#body-fields"
+                      - img [ref=e329]
+                    - generic [ref=e332] [cursor=pointer]: fields
+                    - generic [ref=e334]: string[]
+                  - generic [ref=e335]:
+                    - paragraph [ref=e337]: "Fields to return in the response. Use dot-notation for nested fields (e.g., \"basic_info.name\", \"headcount.total\"). Only requested fields appear in the response. Valid top-level groups for search: basic_info, revenue, headcount, funding, hiring, seo, competitors, locations, taxonomy, followers, social_profiles, software_reviews, roles, skills, metadata, updated_at, indexed_at, crustdata_company_id. Fields not in the search index (e.g., news, people, web_traffic, employee_reviews) return empty responses for search — use enrich for those."
+                    - generic [ref=e338]:
+                      - generic [ref=e339]: "Example:"
+                      - code [ref=e343]: "[\"basic_info\", \"headcount\", \"funding\"]"
+          - generic [ref=e344]:
+            - generic [ref=e345]:
+              - generic [ref=e346]:
+                - heading "Response" [level=4] [ref=e347]
+                - generic [ref=e349]:
+                  - button "200" [ref=e351] [cursor=pointer]:
+                    - generic [ref=e352]:
+                      - generic [ref=e353]: "200"
+                      - img [ref=e354]
+                  - generic [ref=e356]:
+                    - button "application/json" [disabled]:
+                      - generic:
+                        - generic: application/json
+              - paragraph [ref=e359]: Companies matching the search criteria
+            - generic [ref=e362]:
+              - paragraph [ref=e364]: Paginated response from the /company/search endpoint.
+              - generic [ref=e366]:
+                - generic [ref=e368]:
+                  - generic [ref=e371]:
+                    - link "Navigate to header" [ref=e372] [cursor=pointer]:
+                      - /url: "#response-companies"
+                      - img [ref=e374]
+                    - generic [ref=e377] [cursor=pointer]: companies
+                    - generic [ref=e378]:
+                      - generic [ref=e379]: object[]
+                      - text: required
+                  - group [ref=e386]:
+                    - generic "Show child attributes" [ref=e387] [cursor=pointer]:
+                      - img [ref=e388]
+                      - paragraph [ref=e390]: Show child attributes
+                - generic [ref=e395]:
+                  - link "Navigate to header" [ref=e396] [cursor=pointer]:
+                    - /url: "#response-next-cursor-one-of-0"
+                    - img [ref=e398]
+                  - generic [ref=e401] [cursor=pointer]: next_cursor
+                  - generic [ref=e403]: string | null
+                - generic [ref=e408]:
+                  - link "Navigate to header" [ref=e409] [cursor=pointer]:
+                    - /url: "#response-total-count-one-of-0"
+                    - img [ref=e411]
+                  - generic [ref=e414] [cursor=pointer]: total_count
+                  - generic [ref=e416]: integer | null
+                - generic [ref=e421]:
+                  - link "Navigate to header" [ref=e422] [cursor=pointer]:
+                    - /url: "#response-query"
+                    - img [ref=e424]
+                  - generic [ref=e427] [cursor=pointer]: query
+                  - generic [ref=e429]: object
+      - generic [ref=e431]:
+        - paragraph [ref=e432]: Was this page helpful?
+        - generic [ref=e434]:
+          - button "Yes" [ref=e435] [cursor=pointer]:
+            - img [ref=e436]
+            - generic [ref=e438]: "Yes"
+          - button "No" [ref=e439] [cursor=pointer]:
+            - img [ref=e440]
+            - generic [ref=e442]: "No"
+      - generic [ref=e444]:
+        - textbox "Ask a question..." [ref=e445]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e446]:
+          - img [ref=e447]
+      - contentinfo [ref=e449]:
+        - generic [ref=e450]:
+          - link "x" [ref=e451] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e452]: x
+            - img [ref=e453]
+          - link "linkedin" [ref=e454] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e455]: linkedin
+            - img [ref=e456]

@@ -1,0 +1,339 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e11]:
+            - paragraph [ref=e13]: APIs
+            - paragraph [ref=e17]: Watcher
+          - generic [ref=e18]:
+            - 'heading "Watcher API: Get realtime alerts on leads, accounts & companies" [level=1] [ref=e21]':
+              - text: "Watcher API: Get realtime alerts on leads,"
+              - text: accounts & companies
+            - paragraph [ref=e23]: The Watcher API allows you to “subscribe” to live updates about people or companies based on your own criteria. Set watches, get notified via webhooks, and always act on fresh data.
+        - link "Get a Demo" [ref=e27] [cursor=pointer]:
+          - /url: ../demo
+          - heading "Get a Demo" [level=5] [ref=e30]
+      - generic [ref=e38]:
+        - paragraph [ref=e40]: Our customers
+        - generic [ref=e41]:
+          - list [ref=e44]:
+            - listitem [ref=e45]
+            - listitem [ref=e48]
+            - listitem [ref=e51]
+            - listitem [ref=e54]
+            - listitem [ref=e57]
+            - listitem [ref=e60]
+            - listitem [ref=e63]
+            - listitem [ref=e66]
+            - listitem [ref=e69]
+          - list [ref=e74]:
+            - listitem [ref=e75]
+            - listitem [ref=e78]
+            - listitem [ref=e81]
+            - listitem [ref=e84]
+            - listitem [ref=e87]
+            - listitem [ref=e90]
+            - listitem [ref=e93]
+            - listitem [ref=e96]
+            - listitem [ref=e99]
+    - generic [ref=e103]:
+      - heading "Popular use cases" [level=2] [ref=e106]
+      - generic [ref=e108]:
+        - heading "Sales" [level=3] [ref=e111]
+        - paragraph [ref=e113]: Update Prospect Lists to ensure prospect details are up to date for more accurate targeting.
+        - paragraph [ref=e115]: Instant notifications that can act as triggers for quicker and relevant outreach.
+      - generic [ref=e127]:
+        - heading "Recruiting" [level=3] [ref=e130]
+        - paragraph [ref=e132]: Keep candidate databases up to date.
+        - paragraph [ref=e134]: Be the first to reach out to a potential candidate by monitoring for changes that can be used as triggers for outreach.
+        - paragraph [ref=e136]: Track specific signals that can be used as triggers for outreach to get more leads.
+      - generic [ref=e138]:
+        - heading "Investment" [level=3] [ref=e141]
+        - paragraph [ref=e143]: Monitor founders you are interested in to know their activities in realtime.
+        - paragraph [ref=e145]: Monitor portfolio companies to get realtime view of their performance and identify any risk or growth indicators.
+      - generic [ref=e157]:
+        - heading "Customer success" [level=3] [ref=e160]
+        - paragraph [ref=e162]: Monitor your champions and get live notifications when they shift companies, departments or get a promotion.
+      - generic [ref=e164]:
+        - heading "CRMs, products and internal platforms" [level=3] [ref=e167]
+        - paragraph [ref=e169]: Keep your database updated with live auto updates ensuring you always have the most accurate and comprehensive data.
+      - link "Book a demo" [ref=e178] [cursor=pointer]:
+        - /url: ../demo
+        - heading "Book a demo" [level=5] [ref=e181]
+      - generic [ref=e184] [cursor=pointer]:
+        - generic [ref=e185]:
+          - heading "Types of Watchers you can use" [level=3] [ref=e187]
+          - paragraph [ref=e189]: Track for specific events that happen across all companies and people.
+        - generic [ref=e190]:
+          - heading "Event Watcher" [level=6] [ref=e197]
+          - heading "Company Watcher" [level=6] [ref=e204]
+          - heading "People Watcher" [level=6] [ref=e211]
+        - generic [ref=e213]:
+          - generic [ref=e217]:
+            - paragraph [ref=e219]: Job posting with keyword & location
+            - paragraph [ref=e221]: Tracks job postings that contain certain keywords in the title or description and are posted in a specific location
+          - generic [ref=e225]:
+            - paragraph [ref=e227]: New funding announcement
+            - paragraph [ref=e229]: Tracks new funding announcements for companies
+          - generic [ref=e233]:
+            - paragraph [ref=e235]: LinkedIn post with keywords
+            - paragraph [ref=e237]: Tracks LinkedIn posts that contain specified keywords
+          - generic [ref=e241]:
+            - paragraph [ref=e243]: Company headcount increased
+            - paragraph [ref=e245]: Tracks when a company's headcount increases by a specified percentage over one year
+          - generic [ref=e249]:
+            - paragraph [ref=e251]:
+              - text: Someone starts
+              - text: a new job
+            - paragraph [ref=e253]: Tracks when a person starts a new job or position
+          - generic [ref=e257]:
+            - paragraph [ref=e259]: Job posting by location
+            - paragraph [ref=e261]: Tracks job postings that contain certain keywords in the title or description and are posted in a specific location
+          - generic [ref=e265]:
+            - paragraph [ref=e267]: Company department headcount in range
+            - paragraph [ref=e269]: Tracks headcount of a specific department of company
+          - generic [ref=e273]:
+            - paragraph [ref=e275]: First person hired in company department
+            - paragraph [ref=e277]: Tracks companies where first person in hired in X department
+          - generic [ref=e281]:
+            - paragraph [ref=e283]: First person hired internationally
+            - paragraph [ref=e285]: Tracks companies where first person in hired internationally
+          - generic [ref=e289]:
+            - paragraph [ref=e291]: Employee location in two countries
+            - paragraph [ref=e293]: Tracks companies where employee job location in two countries
+          - generic [ref=e297]:
+            - paragraph [ref=e299]: Company headcount growth over baseline
+            - paragraph [ref=e301]: Tracks companies where headcount growth over baseline
+    - generic [ref=e302]:
+      - heading "See our Watcher APIs in action" [level=2] [ref=e305]:
+        - generic [ref=e306]: See our Watcher APIs in action
+      - link "Book a demo" [ref=e310] [cursor=pointer]:
+        - /url: ../demo
+        - heading "Book a demo" [level=5] [ref=e313]
+    - generic [ref=e317]:
+      - button "What is the Watcher API and what does it do?" [ref=e319] [cursor=pointer]:
+        - generic [ref=e320]: What is the Watcher API and what does it do?
+        - img [ref=e322]
+      - button "What 8+ types of updates can I track with the Watcher API?" [ref=e325] [cursor=pointer]:
+        - generic [ref=e326]: What 8+ types of updates can I track with the Watcher API?
+        - img [ref=e328]
+      - button "What are the 3 different types of watchers available?" [ref=e331] [cursor=pointer]:
+        - generic [ref=e332]: What are the 3 different types of watchers available?
+        - img [ref=e334]
+      - button "How are Watcher alerts delivered to my system?" [ref=e337] [cursor=pointer]:
+        - generic [ref=e338]: How are Watcher alerts delivered to my system?
+        - img [ref=e340]
+      - button "How often are watches checked and updated?" [ref=e343] [cursor=pointer]:
+        - generic [ref=e344]: How often are watches checked and updated?
+        - img [ref=e346]
+      - button "View all (13 more)" [ref=e348] [cursor=pointer]
+    - generic [ref=e349]:
+      - heading "How does Crustdata compare to others?" [level=2] [ref=e352]:
+        - generic [ref=e353]: How does Crustdata compare to others?
+      - table [ref=e357]:
+        - rowgroup [ref=e358]:
+          - row "Feature Crustdata Coresignal PDL Zoominfo" [ref=e359]:
+            - columnheader "Feature" [ref=e360]:
+              - generic [ref=e361]: Feature
+            - columnheader "Crustdata" [ref=e362]:
+              - generic [ref=e363]: Crustdata
+            - columnheader "Coresignal" [ref=e364]:
+              - generic [ref=e365]: Coresignal
+            - columnheader "PDL" [ref=e366]:
+              - generic [ref=e367]: PDL
+            - columnheader "Zoominfo" [ref=e368]:
+              - generic [ref=e369]: Zoominfo
+        - rowgroup [ref=e370]:
+          - row "Webhook support ✅ Yes (for job changes & custom events) ✅ Yes (only for job changes) ❌ No ✅ Yes (enterprise only)" [ref=e371]:
+            - cell "Webhook support" [ref=e372]
+            - cell "✅ Yes (for job changes & custom events)" [ref=e373]
+            - cell "✅ Yes (only for job changes)" [ref=e374]
+            - cell "❌ No" [ref=e375]
+            - cell "✅ Yes (enterprise only)" [ref=e376]
+          - row "Realtime updates ✅ Yes Weekly N/A Unspecified" [ref=e377]:
+            - cell "Realtime updates" [ref=e378]
+            - cell "✅ Yes" [ref=e379]
+            - cell "Weekly" [ref=e380]
+            - cell "N/A" [ref=e381]
+            - cell "Unspecified" [ref=e382]
+    - generic [ref=e385]:
+      - generic [ref=e387]:
+        - generic [ref=e388]:
+          - generic [ref=e389]:
+            - paragraph [ref=e391]: Company
+            - paragraph [ref=e393]:
+              - link "About Us" [ref=e394] [cursor=pointer]:
+                - /url: ../about
+            - paragraph [ref=e396]:
+              - link "Contact Us" [ref=e397] [cursor=pointer]:
+                - /url: ../demo
+            - paragraph [ref=e399]:
+              - link "Pricing" [ref=e400] [cursor=pointer]:
+                - /url: ../pricing
+            - paragraph [ref=e402]:
+              - link "Careers" [ref=e403] [cursor=pointer]:
+                - /url: ../careers
+          - generic [ref=e404]:
+            - paragraph [ref=e406]: Resources
+            - paragraph [ref=e408]:
+              - link "Documentation" [ref=e409] [cursor=pointer]:
+                - /url: https://docs.crustdata.com
+            - paragraph [ref=e411]:
+              - link "Blog" [ref=e412] [cursor=pointer]:
+                - /url: ../blog
+            - paragraph [ref=e414]:
+              - link "Case Studies" [ref=e415] [cursor=pointer]:
+                - /url: ../case-studies
+        - generic [ref=e416]:
+          - paragraph [ref=e418]: Products
+          - paragraph [ref=e420]:
+            - link "Company Enrichment API" [ref=e421] [cursor=pointer]:
+              - /url: ./company-enrichment
+          - paragraph [ref=e423]:
+            - link "Company Search API" [ref=e424] [cursor=pointer]:
+              - /url: ./company-discovery
+          - paragraph [ref=e426]:
+            - link "People Enrichment API" [ref=e427] [cursor=pointer]:
+              - /url: ./people-enrichment
+          - paragraph [ref=e429]:
+            - link "People Search API" [ref=e430] [cursor=pointer]:
+              - /url: ./people-discovery
+          - paragraph [ref=e432]:
+            - link "Jobs API" [ref=e433] [cursor=pointer]:
+              - /url: ./job-listing
+          - paragraph [ref=e435]:
+            - link "Posts API" [ref=e436] [cursor=pointer]:
+              - /url: ./posts
+          - paragraph [ref=e438]:
+            - link "Watcher API" [ref=e439] [cursor=pointer]:
+              - /url: ./watcher
+          - paragraph [ref=e441]:
+            - link "Company Dataset" [ref=e442] [cursor=pointer]:
+              - /url: ../datasets/company-data
+          - paragraph [ref=e444]:
+            - link "People Dataset" [ref=e445] [cursor=pointer]:
+              - /url: ../datasets/people-data
+        - generic [ref=e446]:
+          - paragraph [ref=e448]: Popular Use Cases
+          - paragraph [ref=e450]:
+            - link "Power your AI SDR" [ref=e451] [cursor=pointer]:
+              - /url: ../solutions/ai-sdr
+          - paragraph [ref=e453]:
+            - link "Internal Sales Tools" [ref=e454] [cursor=pointer]:
+              - /url: ../solutions/build-internal-sales-tools
+          - paragraph [ref=e456]:
+            - link "Venture Capital" [ref=e457] [cursor=pointer]:
+              - /url: ../solutions/venture-capital
+          - paragraph [ref=e459]:
+            - link "Power your Recruiting Platform" [ref=e460] [cursor=pointer]:
+              - /url: ../solutions/recruiting
+          - paragraph [ref=e462]:
+            - link "Power your Deal Sourcing Platform" [ref=e463] [cursor=pointer]:
+              - /url: ../solutions/growth-equity--old
+          - paragraph [ref=e465]:
+            - link "Track Champions" [ref=e466] [cursor=pointer]:
+              - /url: ../solutions/customer-success
+          - paragraph [ref=e468]:
+            - link "Build Prospect Lists" [ref=e469] [cursor=pointer]:
+              - /url: ./company-discovery
+          - paragraph [ref=e471]:
+            - link "Build Candidate Lists" [ref=e472] [cursor=pointer]:
+              - /url: ./people-discovery
+          - paragraph [ref=e474]:
+            - link "Enrich Leads" [ref=e475] [cursor=pointer]:
+              - /url: ./people-enrichment
+          - paragraph [ref=e477]:
+            - link "Monitor Companies For Signals" [ref=e478] [cursor=pointer]:
+              - /url: ../webhook
+          - paragraph [ref=e480]:
+            - link "Build Internal Sales Tools" [ref=e481] [cursor=pointer]:
+              - /url: ../
+        - generic [ref=e482]:
+          - paragraph [ref=e484]: Competitor Comparisons
+          - paragraph [ref=e486]:
+            - link "Coresignal alternative" [ref=e487] [cursor=pointer]:
+              - /url: ../vs/coresignal-alternative
+          - paragraph [ref=e489]:
+            - link "PeopleDataLabs alternative" [ref=e490] [cursor=pointer]:
+              - /url: ../vs/peopledatalabs-alternative
+          - paragraph [ref=e492]:
+            - link "MixRank alternative" [ref=e493] [cursor=pointer]:
+              - /url: ../vs/mixrank-alternative
+          - paragraph [ref=e495]:
+            - link "Proxycurl alternative" [ref=e496] [cursor=pointer]:
+              - /url: ../vs/proxycurl-alternative
+          - paragraph [ref=e498]:
+            - link "Clay alternative" [ref=e499] [cursor=pointer]:
+              - /url: ../vs/clay-alternative-crustdata
+          - paragraph [ref=e501]:
+            - link "Clado alternative" [ref=e502] [cursor=pointer]:
+              - /url: ../vs/clado-alternative-crustdata
+          - paragraph [ref=e504]:
+            - link "Bright Data alternative" [ref=e505] [cursor=pointer]:
+              - /url: ../vs/bright-data-alternative
+          - paragraph [ref=e507]:
+            - link "Clearbit alternative" [ref=e508] [cursor=pointer]:
+              - /url: ../vs/clearbit-alternative
+          - paragraph [ref=e510]:
+            - link "Scrapin.io alternative" [ref=e511] [cursor=pointer]:
+              - /url: ../vs/scrapin-io-alternative
+          - paragraph [ref=e513]:
+            - link "ZoomInfo alternative" [ref=e514] [cursor=pointer]:
+              - /url: ../vs/zoominfo-alternative
+          - paragraph [ref=e516]:
+            - link "Enrich Layer alternative" [ref=e517] [cursor=pointer]:
+              - /url: ../vs/enrich-layer-alternative
+          - paragraph [ref=e519]:
+            - link "SerpApi alternative" [ref=e520] [cursor=pointer]:
+              - /url: ../vs/serpapi-alternative
+      - generic [ref=e521]:
+        - paragraph [ref=e523]:
+          - link "info@crustdata.com" [ref=e524] [cursor=pointer]:
+            - /url: mailto:info@crustdata.com
+        - generic [ref=e525]:
+          - paragraph [ref=e527]:
+            - link "Terms & Conditions" [ref=e528] [cursor=pointer]:
+              - /url: ../terms
+          - paragraph [ref=e530]: "|"
+          - paragraph [ref=e532]:
+            - link "Privacy Policy" [ref=e533] [cursor=pointer]:
+              - /url: ../privacy
+        - generic [ref=e534]:
+          - paragraph [ref=e535]: 95 Third Street, 2nd Floor, San Francisco,
+          - paragraph [ref=e536]: California 94103, United States of America
+        - paragraph [ref=e538]: © 2025 CrustData Inc.
+        - generic [ref=e539]:
+          - link [ref=e540] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata/
+            - img [ref=e542]
+          - link [ref=e544] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - img [ref=e546]
+    - generic [ref=e550]:
+      - generic [ref=e553]:
+        - generic [ref=e554]:
+          - generic [ref=e555]:
+            - paragraph [ref=e559]:
+              - strong [ref=e560]: NEW
+            - paragraph [ref=e562]:
+              - strong [ref=e563]: Crustdata now works inside Claude
+          - paragraph [ref=e565]:
+            - strong [ref=e566]: Give Claude real-time people and company data with MCP.
+        - link "Talk to founders" [ref=e569] [cursor=pointer]:
+          - /url: ../demo
+          - paragraph [ref=e572]: Talk to founders
+      - generic [ref=e578]:
+        - link [ref=e579] [cursor=pointer]:
+          - /url: ../
+          - img [ref=e582]
+        - generic [ref=e584]:
+          - link "Book Demo" [ref=e586] [cursor=pointer]:
+            - /url: ../demo
+            - paragraph [ref=e589]: Book Demo
+          - img [ref=e594] [cursor=pointer]
+  - img [ref=e596]
+  - img [ref=e598]
+  - img [ref=e600]
+  - img [ref=e608]
+  - img [ref=e610]

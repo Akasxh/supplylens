@@ -1,0 +1,357 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e11]:
+            - paragraph [ref=e13]: APIs
+            - paragraph [ref=e17]: Posts
+          - generic [ref=e18]:
+            - 'heading "Social Post API: Find Real-Time Posts From People and Companies" [level=1] [ref=e21]'
+            - paragraph [ref=e23]: Our Social Post API helps you understand prospects, candidates, and founders better by pulling their social media posts and activity data in real time.
+        - link "Get a Demo" [ref=e27] [cursor=pointer]:
+          - /url: ../demo
+          - heading "Get a Demo" [level=5] [ref=e30]
+      - generic [ref=e38]:
+        - paragraph [ref=e40]: Our customers
+        - generic [ref=e41]:
+          - list [ref=e44]:
+            - listitem [ref=e45]
+            - listitem [ref=e48]
+            - listitem [ref=e51]
+            - listitem [ref=e54]
+            - listitem [ref=e57]
+            - listitem [ref=e60]
+            - listitem [ref=e63]
+            - listitem [ref=e66]
+            - listitem [ref=e69]
+            - listitem [ref=e72]
+            - listitem [ref=e75]
+            - listitem [ref=e78]
+            - listitem [ref=e81]
+            - listitem [ref=e84]
+            - listitem [ref=e87]
+            - listitem [ref=e90]
+            - listitem [ref=e93]
+            - listitem [ref=e96]
+            - listitem [ref=e99]
+            - listitem [ref=e102]
+            - listitem [ref=e105]
+            - listitem [ref=e108]
+            - listitem [ref=e111]
+            - listitem [ref=e114]
+            - listitem [ref=e117]
+            - listitem [ref=e120]
+            - listitem [ref=e123]
+            - listitem [ref=e126]
+            - listitem [ref=e129]
+            - listitem [ref=e132]
+            - listitem [ref=e135]
+            - listitem [ref=e138]
+            - listitem [ref=e141]
+            - listitem [ref=e144]
+            - listitem [ref=e147]
+            - listitem [ref=e150]
+          - list [ref=e155]:
+            - listitem [ref=e156]
+            - listitem [ref=e159]
+            - listitem [ref=e162]
+            - listitem [ref=e165]
+            - listitem [ref=e168]
+            - listitem [ref=e171]
+            - listitem [ref=e174]
+            - listitem [ref=e177]
+            - listitem [ref=e180]
+            - listitem [ref=e183]
+            - listitem [ref=e186]
+            - listitem [ref=e189]
+            - listitem [ref=e192]
+            - listitem [ref=e195]
+            - listitem [ref=e198]
+            - listitem [ref=e201]
+            - listitem [ref=e204]
+            - listitem [ref=e207]
+            - listitem [ref=e210]
+            - listitem [ref=e213]
+            - listitem [ref=e216]
+            - listitem [ref=e219]
+            - listitem [ref=e222]
+            - listitem [ref=e225]
+            - listitem [ref=e228]
+            - listitem [ref=e231]
+            - listitem [ref=e234]
+            - listitem [ref=e237]
+            - listitem [ref=e240]
+            - listitem [ref=e243]
+            - listitem [ref=e246]
+            - listitem [ref=e249]
+            - listitem [ref=e252]
+            - listitem [ref=e255]
+            - listitem [ref=e258]
+            - listitem [ref=e261]
+    - generic [ref=e265]:
+      - generic [ref=e267]:
+        - heading "Get posts from any person or company" [level=4] [ref=e270]
+        - paragraph [ref=e272]: Access recent posts published by a specific person or company. This is useful for tracking thought leadership, product announcements, hiring updates or any other company updates a founder posts.
+      - generic [ref=e284]:
+        - heading "Get posts by keyword" [level=4] [ref=e287]
+        - paragraph [ref=e289]:
+          - text: Track public posts that mention a specific keyword or phrase. Use this to monitor competitor launches, hiring signals or a candidate leaving a job
+          - strong [ref=e290]: .
+    - generic [ref=e291] [cursor=pointer]:
+      - heading "Datapoints returned by the Social Post API" [level=2] [ref=e295]
+      - generic [ref=e296]:
+        - generic [ref=e297]:
+          - generic [ref=e301]:
+            - paragraph [ref=e304]: Company overview
+            - paragraph [ref=e306]: Content text
+            - paragraph [ref=e308]: Name of poster
+            - paragraph [ref=e310]: Hyperlinks
+          - generic [ref=e314]:
+            - paragraph [ref=e317]: Employee data
+            - paragraph [ref=e319]: Total likes
+            - paragraph [ref=e321]: Total comments
+            - paragraph [ref=e323]: Total shares
+        - generic [ref=e330]:
+          - paragraph [ref=e333]: Performance & growth
+          - paragraph [ref=e335]: Name
+          - paragraph [ref=e337]: Current job title
+          - paragraph [ref=e339]: Current company
+          - paragraph [ref=e341]: Employment history
+          - paragraph [ref=e343]: Start and end dates of past jobs
+          - paragraph [ref=e345]: Job description and locations
+          - paragraph [ref=e347]: Educational institutions
+          - paragraph [ref=e349]: Degrees
+          - paragraph [ref=e351]: Start and end dates of education
+          - paragraph [ref=e353]: Contact information
+    - generic [ref=e354]:
+      - heading "Popular use cases" [level=3] [ref=e356]
+      - generic [ref=e358]:
+        - heading "Track what your prospects are posting online" [level=3] [ref=e361]:
+          - text: Track what your prospects
+          - text: are posting online
+        - paragraph [ref=e363]:
+          - text: Use this to personalize outreach or understand the current focus of your prospects by pulling posts made by decision makers at target companies
+          - strong [ref=e364]: .
+      - generic [ref=e376]:
+        - heading "Spot founder announcements or hiring updates" [level=3] [ref=e379]:
+          - text: Spot founder announcements
+          - text: or hiring updates
+        - paragraph [ref=e381]: Find posts where startup founders talk about team expansion, fundraising, or product milestones. This is useful for investors, recruiters, and sales teams.
+      - generic [ref=e383]:
+        - heading "Build live feeds of hiring related posts" [level=3] [ref=e386]:
+          - text: Build live feeds of hiring
+          - text: related posts
+        - paragraph [ref=e388]: Power job boards or recruitment alerts with real-time posts that mention open roles.
+      - generic [ref=e400]:
+        - heading "Enrich candidate profiles with social activity" [level=4] [ref=e403]:
+          - text: Enrich candidate profiles
+          - text: with social activity
+        - paragraph [ref=e405]:
+          - text: Understand a candidate deeper by accessing their posts to find topics they care about and get a better picture of their interests and potential fit
+          - strong [ref=e406]: .
+    - generic [ref=e407]:
+      - heading "Get access to people’s social posts and activity data" [level=2] [ref=e410]:
+        - generic [ref=e411]:
+          - text: Get access to people’s social
+          - text: posts and activity data
+      - link "Book a demo" [ref=e415] [cursor=pointer]:
+        - /url: ../demo
+        - heading "Book a demo" [level=5] [ref=e418]
+    - generic [ref=e422]:
+      - button "What is the Posts API and what can it be used for?" [ref=e424] [cursor=pointer]:
+        - generic [ref=e425]: What is the Posts API and what can it be used for?
+        - img [ref=e427]
+      - button "What 10+ data points are available with each social media post?" [ref=e430] [cursor=pointer]:
+        - generic [ref=e431]: What 10+ data points are available with each social media post?
+        - img [ref=e433]
+      - button "How fresh is Crustdata's post data (update frequency)?" [ref=e436] [cursor=pointer]:
+        - generic [ref=e437]: How fresh is Crustdata's post data (update frequency)?
+        - img [ref=e439]
+      - button "Can I get social posts from specific people or companies?" [ref=e442] [cursor=pointer]:
+        - generic [ref=e443]: Can I get social posts from specific people or companies?
+        - img [ref=e445]
+      - button "Can I search for posts by keywords?" [ref=e448] [cursor=pointer]:
+        - generic [ref=e449]: Can I search for posts by keywords?
+        - img [ref=e451]
+      - button "View all (9 more)" [ref=e453] [cursor=pointer]
+    - generic [ref=e456]:
+      - generic [ref=e458]:
+        - generic [ref=e459]:
+          - generic [ref=e460]:
+            - paragraph [ref=e462]: Company
+            - paragraph [ref=e464]:
+              - link "About Us" [ref=e465] [cursor=pointer]:
+                - /url: ../about
+            - paragraph [ref=e467]:
+              - link "Contact Us" [ref=e468] [cursor=pointer]:
+                - /url: ../demo
+            - paragraph [ref=e470]:
+              - link "Pricing" [ref=e471] [cursor=pointer]:
+                - /url: ../pricing
+            - paragraph [ref=e473]:
+              - link "Careers" [ref=e474] [cursor=pointer]:
+                - /url: ../careers
+          - generic [ref=e475]:
+            - paragraph [ref=e477]: Resources
+            - paragraph [ref=e479]:
+              - link "Documentation" [ref=e480] [cursor=pointer]:
+                - /url: https://docs.crustdata.com
+            - paragraph [ref=e482]:
+              - link "Blog" [ref=e483] [cursor=pointer]:
+                - /url: ../blog
+            - paragraph [ref=e485]:
+              - link "Case Studies" [ref=e486] [cursor=pointer]:
+                - /url: ../case-studies
+        - generic [ref=e487]:
+          - paragraph [ref=e489]: Products
+          - paragraph [ref=e491]:
+            - link "Company Enrichment API" [ref=e492] [cursor=pointer]:
+              - /url: ./company-enrichment
+          - paragraph [ref=e494]:
+            - link "Company Search API" [ref=e495] [cursor=pointer]:
+              - /url: ./company-discovery
+          - paragraph [ref=e497]:
+            - link "People Enrichment API" [ref=e498] [cursor=pointer]:
+              - /url: ./people-enrichment
+          - paragraph [ref=e500]:
+            - link "People Search API" [ref=e501] [cursor=pointer]:
+              - /url: ./people-discovery
+          - paragraph [ref=e503]:
+            - link "Jobs API" [ref=e504] [cursor=pointer]:
+              - /url: ./job-listing
+          - paragraph [ref=e506]:
+            - link "Posts API" [ref=e507] [cursor=pointer]:
+              - /url: ./posts
+          - paragraph [ref=e509]:
+            - link "Watcher API" [ref=e510] [cursor=pointer]:
+              - /url: ./watcher
+          - paragraph [ref=e512]:
+            - link "Company Dataset" [ref=e513] [cursor=pointer]:
+              - /url: ../datasets/company-data
+          - paragraph [ref=e515]:
+            - link "People Dataset" [ref=e516] [cursor=pointer]:
+              - /url: ../datasets/people-data
+        - generic [ref=e517]:
+          - paragraph [ref=e519]: Popular Use Cases
+          - paragraph [ref=e521]:
+            - link "Power your AI SDR" [ref=e522] [cursor=pointer]:
+              - /url: ../solutions/ai-sdr
+          - paragraph [ref=e524]:
+            - link "Internal Sales Tools" [ref=e525] [cursor=pointer]:
+              - /url: ../solutions/build-internal-sales-tools
+          - paragraph [ref=e527]:
+            - link "Venture Capital" [ref=e528] [cursor=pointer]:
+              - /url: ../solutions/venture-capital
+          - paragraph [ref=e530]:
+            - link "Power your Recruiting Platform" [ref=e531] [cursor=pointer]:
+              - /url: ../solutions/recruiting
+          - paragraph [ref=e533]:
+            - link "Power your Deal Sourcing Platform" [ref=e534] [cursor=pointer]:
+              - /url: ../solutions/growth-equity--old
+          - paragraph [ref=e536]:
+            - link "Track Champions" [ref=e537] [cursor=pointer]:
+              - /url: ../solutions/customer-success
+          - paragraph [ref=e539]:
+            - link "Build Prospect Lists" [ref=e540] [cursor=pointer]:
+              - /url: ./company-discovery
+          - paragraph [ref=e542]:
+            - link "Build Candidate Lists" [ref=e543] [cursor=pointer]:
+              - /url: ./people-discovery
+          - paragraph [ref=e545]:
+            - link "Enrich Leads" [ref=e546] [cursor=pointer]:
+              - /url: ./people-enrichment
+          - paragraph [ref=e548]:
+            - link "Monitor Companies For Signals" [ref=e549] [cursor=pointer]:
+              - /url: ../webhook
+          - paragraph [ref=e551]:
+            - link "Build Internal Sales Tools" [ref=e552] [cursor=pointer]:
+              - /url: ../
+        - generic [ref=e553]:
+          - paragraph [ref=e555]: Competitor Comparisons
+          - paragraph [ref=e557]:
+            - link "Coresignal alternative" [ref=e558] [cursor=pointer]:
+              - /url: ../vs/coresignal-alternative
+          - paragraph [ref=e560]:
+            - link "PeopleDataLabs alternative" [ref=e561] [cursor=pointer]:
+              - /url: ../vs/peopledatalabs-alternative
+          - paragraph [ref=e563]:
+            - link "MixRank alternative" [ref=e564] [cursor=pointer]:
+              - /url: ../vs/mixrank-alternative
+          - paragraph [ref=e566]:
+            - link "Proxycurl alternative" [ref=e567] [cursor=pointer]:
+              - /url: ../vs/proxycurl-alternative
+          - paragraph [ref=e569]:
+            - link "Clay alternative" [ref=e570] [cursor=pointer]:
+              - /url: ../vs/clay-alternative-crustdata
+          - paragraph [ref=e572]:
+            - link "Clado alternative" [ref=e573] [cursor=pointer]:
+              - /url: ../vs/clado-alternative-crustdata
+          - paragraph [ref=e575]:
+            - link "Bright Data alternative" [ref=e576] [cursor=pointer]:
+              - /url: ../vs/bright-data-alternative
+          - paragraph [ref=e578]:
+            - link "Clearbit alternative" [ref=e579] [cursor=pointer]:
+              - /url: ../vs/clearbit-alternative
+          - paragraph [ref=e581]:
+            - link "Scrapin.io alternative" [ref=e582] [cursor=pointer]:
+              - /url: ../vs/scrapin-io-alternative
+          - paragraph [ref=e584]:
+            - link "ZoomInfo alternative" [ref=e585] [cursor=pointer]:
+              - /url: ../vs/zoominfo-alternative
+          - paragraph [ref=e587]:
+            - link "Enrich Layer alternative" [ref=e588] [cursor=pointer]:
+              - /url: ../vs/enrich-layer-alternative
+          - paragraph [ref=e590]:
+            - link "SerpApi alternative" [ref=e591] [cursor=pointer]:
+              - /url: ../vs/serpapi-alternative
+      - generic [ref=e592]:
+        - paragraph [ref=e594]:
+          - link "info@crustdata.com" [ref=e595] [cursor=pointer]:
+            - /url: mailto:info@crustdata.com
+        - generic [ref=e596]:
+          - paragraph [ref=e598]:
+            - link "Terms & Conditions" [ref=e599] [cursor=pointer]:
+              - /url: ../terms
+          - paragraph [ref=e601]: "|"
+          - paragraph [ref=e603]:
+            - link "Privacy Policy" [ref=e604] [cursor=pointer]:
+              - /url: ../privacy
+        - generic [ref=e605]:
+          - paragraph [ref=e606]: 95 Third Street, 2nd Floor, San Francisco,
+          - paragraph [ref=e607]: California 94103, United States of America
+        - paragraph [ref=e609]: © 2025 CrustData Inc.
+        - generic [ref=e610]:
+          - link [ref=e611] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata/
+            - img [ref=e613]
+          - link [ref=e615] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - img [ref=e617]
+    - generic [ref=e621]:
+      - generic [ref=e624]:
+        - generic [ref=e625]:
+          - generic [ref=e626]:
+            - paragraph [ref=e630]:
+              - strong [ref=e631]: NEW
+            - paragraph [ref=e633]:
+              - strong [ref=e634]: Crustdata now works inside Claude
+          - paragraph [ref=e636]:
+            - strong [ref=e637]: Give Claude real-time people and company data with MCP.
+        - link "Talk to founders" [ref=e640] [cursor=pointer]:
+          - /url: ../demo
+          - paragraph [ref=e643]: Talk to founders
+      - generic [ref=e649]:
+        - link [ref=e650] [cursor=pointer]:
+          - /url: ../
+          - img [ref=e653]
+        - generic [ref=e655]:
+          - link "Book Demo" [ref=e657] [cursor=pointer]:
+            - /url: ../demo
+            - paragraph [ref=e660]: Book Demo
+          - img [ref=e665] [cursor=pointer]
+  - img [ref=e667]
+  - img [ref=e669]
+  - img [ref=e671]
+  - img [ref=e679]
+  - img [ref=e681]

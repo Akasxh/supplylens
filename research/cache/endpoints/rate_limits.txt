@@ -1,0 +1,29 @@
+URL: https://docs.crustdata.com/general/rate-limits
+Title: Rate limits
+
+Exact per-endpoint limits can change by plan and endpoint version. Verify active limits in your dashboard.
+Default rate-limit is 15 requests per minute. Email gtm@crustdata.co for higher.
+
+Default rate limits table (all 15 req/min):
+  /person/search/autocomplete
+  /person/professional_network/enrich/live
+  /person/professional_network/search/live
+  /job/professional_network/search/live
+  /job/search
+  /web/search/live
+  /web/enrich/live
+  /dev_platform/enrich
+  /employee_review/enrich
+  /social_post/professional_network/enrich/live
+  /social_post/professional_network/search/live
+  /professional_network/search/autocomplete
+
+Implementation guidance:
+  - Spread traffic across the minute; avoid burst-sending
+  - Retry with exponential backoff + jitter
+  - Bounded request queues, circuit breakers on non-critical flows
+  - Monitor for sustained 429s
+  - Centralize throttling in one shared HTTP client
+  - Endpoint-specific concurrency/QPS controls
+  - Prioritize business-critical requests
+  - Cache stable results

@@ -1,0 +1,291 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Web API Fetch" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Web API
+              - img [ref=e39]
+            - generic [ref=e41]: Fetch
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "Web API" [ref=e50] [cursor=pointer]:
+            - /url: /api-reference/web-apis/web-search
+          - generic [ref=e51]:
+            - heading "Fetch" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: Fetch the HTML content of webpages given their URLs. Retrieves the page title and full HTML content for up to 10 URLs in a single request. Use this for content extraction, web content retrieval, data collection, content monitoring, and SEO analysis.
+          - generic [ref=e65]:
+            - img "Note" [ref=e67]
+            - paragraph [ref=e70]:
+              - text: Default
+              - code [ref=e71]: rate-limit
+              - text: is 15 requests per minute. Send an email to
+              - link "gtm@crustdata.co" [ref=e72] [cursor=pointer]:
+                - /url: mailto:gtm@crustdata.co
+              - text: to discuss higher limits if needed for your use case.
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e76]:
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: POST
+              - generic [ref=e79]:
+                - generic [ref=e80]: https://api.crustdata.com
+                - generic [ref=e81]:
+                  - generic [ref=e82]: /
+                  - generic [ref=e83]: web
+                  - generic [ref=e84]: /
+                  - generic [ref=e85]: enrich
+                  - generic [ref=e86]: /
+                  - generic [ref=e87]: live
+            - button "Try it" [ref=e88] [cursor=pointer]:
+              - generic [ref=e89]: Try it
+              - img [ref=e90]
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - button "cURL" [ref=e95] [cursor=pointer]:
+                  - generic [ref=e96]:
+                    - paragraph [ref=e97]: cURL
+                    - img [ref=e98]
+                - generic [ref=e100]:
+                  - button "single_url" [ref=e101] [cursor=pointer]:
+                    - generic [ref=e102]:
+                      - paragraph [ref=e103]: single_url
+                      - img [ref=e104]
+                  - generic [ref=e106]:
+                    - button "Copy the contents from the code block" [ref=e109] [cursor=pointer]:
+                      - img [ref=e110]
+                    - button "Ask AI" [ref=e114] [cursor=pointer]:
+                      - img [ref=e115]
+              - region "Code snippet" [ref=e118]:
+                - generic [ref=e121]: "curl --request POST \\ --url https://api.crustdata.com/web/enrich/live \\ --header 'Authorization: Bearer <token>' \\ --header 'Content-Type: application/json' \\ --header 'x-api-version: <x-api-version>' \\ --data ' { \"urls\": [ \"https://example.com\" ] } '"
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - button "200" [ref=e124] [cursor=pointer]:
+                  - generic [ref=e125]:
+                    - paragraph [ref=e126]: "200"
+                    - img [ref=e127]
+                - generic [ref=e129]:
+                  - button "single_url_success" [ref=e130] [cursor=pointer]:
+                    - generic [ref=e131]:
+                      - paragraph [ref=e132]: single_url_success
+                      - img [ref=e133]
+                  - generic [ref=e135]:
+                    - button "Copy the contents from the code block" [ref=e138] [cursor=pointer]:
+                      - img [ref=e139]
+                    - button "Ask AI" [ref=e143] [cursor=pointer]:
+                      - img [ref=e144]
+              - region "Code snippet" [ref=e147]:
+                - generic [ref=e150]: "[ { \"success\": true, \"url\": \"https://example.com\", \"timestamp\": 1775193366, \"title\": \"Example Domain\", \"content\": \"<html lang=\\\"en\\\"><head><title>Example Domain</title><meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1\\\"><style>body{background:#eee;width:60vw;margin:15vh auto;font-family:system-ui,sans-serif}h1{font-size:1.5em}div{opacity:0.8}a:link,a:visited{color:#348}</style></head><body><div><h1>Example Domain</h1><p>This domain is for use in documentation examples without needing permission. Avoid use in operations.</p><p><a href=\\\"https://iana.org/domains/example\\\">Learn more</a></p></div>\\n</body></html>\" } ]"
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - heading "Authorizations" [level=4] [ref=e156]
+            - generic [ref=e158]:
+              - generic [ref=e161]:
+                - link "Navigate to header" [ref=e162] [cursor=pointer]:
+                  - /url: "#authorization-authorization"
+                  - img [ref=e164]
+                - generic [ref=e167] [cursor=pointer]: Authorization
+                - generic [ref=e168]:
+                  - generic [ref=e169]: string
+                  - generic [ref=e170]: header
+                  - text: required
+              - paragraph [ref=e173]:
+                - text: Bearer token authentication. Pass your API key as
+                - code [ref=e174]: "Authorization: Bearer <your_api_key>"
+                - text: .
+          - generic [ref=e175]:
+            - heading "Headers" [level=4] [ref=e178]
+            - generic [ref=e180]:
+              - generic [ref=e183]:
+                - link "Navigate to header" [ref=e184] [cursor=pointer]:
+                  - /url: "#parameter-x-api-version"
+                  - img [ref=e186]
+                - generic [ref=e189] [cursor=pointer]: x-api-version
+                - generic [ref=e190]:
+                  - generic [ref=e191]: enum<string>
+                  - text: required
+              - generic [ref=e192]:
+                - paragraph [ref=e194]: API version to use for request routing and response shape.
+                - generic [ref=e195]:
+                  - text: "Available options:"
+                  - code [ref=e197]: 2025-11-01
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - generic [ref=e200]:
+                - heading "Body" [level=4] [ref=e201]
+                - generic [ref=e203]: application/json
+              - paragraph [ref=e206]: List of URLs to fetch and optional settings.
+            - generic [ref=e209]:
+              - paragraph [ref=e211]: Request body for fetching webpage content.
+              - generic [ref=e213]:
+                - generic [ref=e215]:
+                  - generic [ref=e218]:
+                    - link "Navigate to header" [ref=e219] [cursor=pointer]:
+                      - /url: "#body-urls"
+                      - img [ref=e221]
+                    - generic [ref=e224] [cursor=pointer]: urls
+                    - generic [ref=e225]:
+                      - generic [ref=e226]: string[]
+                      - text: required
+                  - generic [ref=e227]:
+                    - paragraph [ref=e229]: List of URLs to fetch web content for. Each URL must include the protocol prefix (http:// or https://). Maximum of 10 URLs per request.
+                    - generic [ref=e230]:
+                      - text: "Required array length:"
+                      - code [ref=e231]: 1 - 10
+                      - text: elements
+                    - generic [ref=e234]:
+                      - paragraph [ref=e236]: A fully-qualified URL to fetch.
+                      - generic [ref=e237]:
+                        - text: "Maximum string length:"
+                        - code [ref=e238]: "2000"
+                    - generic [ref=e239]:
+                      - generic [ref=e240]: "Example:"
+                      - code [ref=e244]: "[\"https://example.com\"]"
+                - generic [ref=e246]:
+                  - generic [ref=e249]:
+                    - link "Navigate to header" [ref=e250] [cursor=pointer]:
+                      - /url: "#body-human-mode"
+                      - img [ref=e252]
+                    - generic [ref=e255] [cursor=pointer]: human_mode
+                    - generic [ref=e256]:
+                      - generic [ref=e257]: boolean
+                      - generic [ref=e258]: default:false
+                  - generic [ref=e259]:
+                    - paragraph [ref=e261]: Whether to attempt bypassing Cloudflare protection when fetching pages behind Cloudflare.
+                    - generic [ref=e262]:
+                      - generic [ref=e263]: "Example:"
+                      - paragraph [ref=e265]:
+                        - code [ref=e266]: "false"
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - generic [ref=e269]:
+                - heading "Response" [level=4] [ref=e270]
+                - generic [ref=e272]:
+                  - button "200" [ref=e274] [cursor=pointer]:
+                    - generic [ref=e275]:
+                      - generic [ref=e276]: "200"
+                      - img [ref=e277]
+                  - generic [ref=e279]:
+                    - button "application/json" [disabled]:
+                      - generic:
+                        - generic: application/json
+              - paragraph [ref=e282]: Array of fetch results, one per URL. Each result includes a success flag. Failed URLs have null fields.
+            - generic [ref=e290]:
+              - generic [ref=e292]:
+                - generic [ref=e295]:
+                  - link "Navigate to header" [ref=e296] [cursor=pointer]:
+                    - /url: "#response-items-success"
+                    - img [ref=e298]
+                  - generic [ref=e301] [cursor=pointer]: success
+                  - generic [ref=e303]: boolean
+                - generic [ref=e304]:
+                  - paragraph [ref=e306]: Whether the content was fetched successfully for this URL.
+                  - generic [ref=e307]:
+                    - generic [ref=e308]: "Example:"
+                    - paragraph [ref=e310]:
+                      - code [ref=e311]: "true"
+              - generic [ref=e313]:
+                - generic [ref=e316]:
+                  - link "Navigate to header" [ref=e317] [cursor=pointer]:
+                    - /url: "#response-items-url-one-of-0"
+                    - img [ref=e319]
+                  - generic [ref=e322] [cursor=pointer]: url
+                  - generic [ref=e324]: string | null
+                - generic [ref=e325]:
+                  - paragraph [ref=e327]: The URL that was fetched. Null if the fetch failed.
+                  - generic [ref=e328]:
+                    - generic [ref=e329]: "Example:"
+                    - paragraph [ref=e331]:
+                      - code [ref=e332]: "\"https://example.com\""
+              - generic [ref=e334]:
+                - generic [ref=e337]:
+                  - link "Navigate to header" [ref=e338] [cursor=pointer]:
+                    - /url: "#response-items-timestamp-one-of-0"
+                    - img [ref=e340]
+                  - generic [ref=e343] [cursor=pointer]: timestamp
+                  - generic [ref=e345]: integer | null
+                - generic [ref=e346]:
+                  - paragraph [ref=e348]: Unix timestamp (seconds) of when the content was fetched. Null if the fetch failed.
+                  - generic [ref=e349]:
+                    - generic [ref=e350]: "Example:"
+                    - paragraph [ref=e352]:
+                      - code [ref=e353]: "1775193366"
+              - generic [ref=e355]:
+                - generic [ref=e358]:
+                  - link "Navigate to header" [ref=e359] [cursor=pointer]:
+                    - /url: "#response-items-title-one-of-0"
+                    - img [ref=e361]
+                  - generic [ref=e364] [cursor=pointer]: title
+                  - generic [ref=e366]: string | null
+                - generic [ref=e367]:
+                  - paragraph [ref=e369]: The title of the fetched webpage from the HTML title tag. Null if the fetch failed.
+                  - generic [ref=e370]:
+                    - generic [ref=e371]: "Example:"
+                    - paragraph [ref=e373]:
+                      - code [ref=e374]: "\"Example Domain\""
+              - generic [ref=e376]:
+                - generic [ref=e379]:
+                  - link "Navigate to header" [ref=e380] [cursor=pointer]:
+                    - /url: "#response-items-content-one-of-0"
+                    - img [ref=e382]
+                  - generic [ref=e385] [cursor=pointer]: content
+                  - generic [ref=e387]: string | null
+                - paragraph [ref=e390]: The full HTML content of the fetched webpage. Null if the fetch failed.
+      - generic [ref=e392]:
+        - paragraph [ref=e393]: Was this page helpful?
+        - generic [ref=e395]:
+          - button "Yes" [ref=e396] [cursor=pointer]:
+            - img [ref=e397]
+            - generic [ref=e399]: "Yes"
+          - button "No" [ref=e400] [cursor=pointer]:
+            - img [ref=e401]
+            - generic [ref=e403]: "No"
+      - generic [ref=e405]:
+        - textbox "Ask a question..." [ref=e406]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e407]:
+          - img [ref=e408]
+      - contentinfo [ref=e410]:
+        - generic [ref=e411]:
+          - link "x" [ref=e412] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e413]: x
+            - img [ref=e414]
+          - link "linkedin" [ref=e415] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e416]: linkedin
+            - img [ref=e417]

@@ -1,0 +1,976 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Person Person Enrichment" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Person
+              - img [ref=e39]
+            - generic [ref=e41]: Person Enrichment
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - link "Products" [ref=e50] [cursor=pointer]:
+                - /url: /company-docs/quickstart
+              - img [ref=e51]
+            - link "Person" [ref=e54] [cursor=pointer]:
+              - /url: /person-docs/quickstart
+          - generic [ref=e55]:
+            - heading "Person Enrichment" [level=1] [ref=e56]
+            - generic [ref=e57]:
+              - button "Copy page" [ref=e58] [cursor=pointer]:
+                - generic [ref=e59]:
+                  - img [ref=e60]
+                  - generic [ref=e63]: Copy page
+              - button "More actions" [ref=e64] [cursor=pointer]:
+                - img [ref=e65]
+        - paragraph [ref=e68]: Learn how to enrich person profiles using profile URLs or business emails, from single lookups to batch enrichment.
+      - generic [ref=e69]:
+        - generic [ref=e70]: The Person Enrich API takes an identifier you already have — a profile URL or a business email — and returns a rich person profile. This page walks you through the API step by step, starting with the simplest possible request and building up to common enrichment patterns.
+        - generic [ref=e71]: "Every request goes to the same endpoint:"
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - button "Report incorrect code" [ref=e75] [cursor=pointer]:
+              - img [ref=e76]
+            - button "Copy the contents from the code block" [ref=e79] [cursor=pointer]:
+              - img [ref=e80]
+            - button "Ask AI" [ref=e84] [cursor=pointer]:
+              - img [ref=e85]
+          - code [ref=e91]:
+            - generic [ref=e92]: POST https://api.crustdata.com/person/enrich
+        - generic [ref=e93]:
+          - img "Note" [ref=e95]
+          - generic [ref=e98]:
+            - text: Replace
+            - code [ref=e99]: YOUR_API_KEY
+            - text: in each example with your actual API key. All requests require the
+            - code [ref=e100]: "x-api-version: 2025-11-01"
+            - text: header.
+        - generic [ref=e101]:
+          - img [ref=e103]
+          - generic [ref=e105]:
+            - strong [ref=e106]: "Pricing:"
+            - text: Base profile is
+            - code [ref=e107]: 1 credit
+            - text: . Add
+            - code [ref=e108]: "+2"
+            - text: for personal email,
+            - code [ref=e109]: "+2"
+            - text: for phone,
+            - code [ref=e110]: "+1"
+            - text: for business email, and
+            - code [ref=e111]: "+1"
+            - text: "for developer platform data. Maximum:"
+            - code [ref=e112]: 7 credits per profile
+            - text: .
+        - separator [ref=e113]
+        - 'heading "Navigate to header Your first enrichment: look up a profile" [level=2] [ref=e114]':
+          - link "Navigate to header" [ref=e115] [cursor=pointer]:
+            - /url: "#your-first-enrichment-look-up-a-profile"
+            - img [ref=e117]
+          - generic [ref=e119] [cursor=pointer]: "Your first enrichment: look up a profile"
+        - generic [ref=e120]:
+          - text: The simplest enrichment takes a single profile URL and returns the person’s cached profile. Pass the URL in the
+          - code [ref=e121]: professional_network_profile_urls
+          - text: array.
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - tablist [ref=e124]:
+              - tab "Request" [selected] [ref=e125] [cursor=pointer]:
+                - generic [ref=e126]: Request
+              - tab "Response" [ref=e128] [cursor=pointer]:
+                - generic [ref=e129]: Response
+            - generic [ref=e130]:
+              - button "Report incorrect code" [ref=e132] [cursor=pointer]:
+                - img [ref=e133]
+              - button "Copy the contents from the code block" [ref=e136] [cursor=pointer]:
+                - img [ref=e137]
+              - button "Ask AI" [ref=e141] [cursor=pointer]:
+                - img [ref=e142]
+          - tabpanel "Request" [ref=e146]:
+            - code [ref=e150]:
+              - generic [ref=e151]: curl --request POST \
+              - generic [ref=e152]: "--url https://api.crustdata.com/person/enrich \\"
+              - generic [ref=e153]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e154]: "--header 'content-type: application/json' \\"
+              - generic [ref=e155]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e156]: "--data '{"
+              - generic [ref=e157]: "\"professional_network_profile_urls\": ["
+              - generic [ref=e158]: "\"https://www.linkedin.com/in/abhilashchowdhary/\""
+              - generic [ref=e159]: "]"
+              - generic [ref=e160]: "}'"
+        - generic [ref=e161]:
+          - img "Note" [ref=e163]
+          - generic [ref=e166]: Response trimmed for clarity. The full response can include employment history, education, skills, contact data, and developer platform profiles when available.
+        - heading "Navigate to header Understanding the response" [level=3] [ref=e167]:
+          - link "Navigate to header" [ref=e168] [cursor=pointer]:
+            - /url: "#understanding-the-response"
+            - img [ref=e170]
+          - generic [ref=e172] [cursor=pointer]: Understanding the response
+        - generic [ref=e173]:
+          - text: The Enrich API returns an
+          - strong [ref=e174]: array
+          - text: "— one entry per identifier you submitted. Each entry has three fields:"
+        - list [ref=e175]:
+          - listitem [ref=e176]:
+            - strong [ref=e177]:
+              - code [ref=e178]: matched_on
+            - text: — the identifier you submitted (a profile URL or email).
+          - listitem [ref=e179]:
+            - strong [ref=e180]:
+              - code [ref=e181]: match_type
+            - text: — either
+            - code [ref=e182]: professional_network_profile_url
+            - text: or
+            - code [ref=e183]: business_email
+            - text: ", telling you which identifier type was used."
+          - listitem [ref=e184]:
+            - strong [ref=e185]:
+              - code [ref=e186]: matches
+            - text: — an array of candidate profiles. Each match includes a
+            - code [ref=e187]: confidence_score
+            - text: (0 to 1) and the full
+            - code [ref=e188]: person_data
+            - text: object.
+        - generic [ref=e189]:
+          - text: For profile URL lookups, you will typically get exactly one match with a
+          - code [ref=e190]: confidence_score
+          - text: of
+          - code [ref=e191]: "1.0"
+          - text: ", because the URL is a direct identifier."
+        - heading "Navigate to header What is inside person_data?" [level=3] [ref=e192]:
+          - link "Navigate to header" [ref=e193] [cursor=pointer]:
+            - /url: "#what-is-inside-person_data"
+            - img [ref=e195]
+          - generic [ref=e197] [cursor=pointer]:
+            - text: What is inside
+            - code [ref=e198]: person_data
+            - text: "?"
+        - generic [ref=e199]:
+          - text: The
+          - code [ref=e200]: person_data
+          - text: "object contains several sections:"
+        - table [ref=e203]:
+          - rowgroup [ref=e204]:
+            - row "Section Key fields Description" [ref=e205]:
+              - columnheader "Section" [ref=e206]
+              - columnheader "Key fields" [ref=e207]
+              - columnheader "Description" [ref=e208]
+          - rowgroup [ref=e209]:
+            - row "basic_profile name, headline, current_title, summary, location, languages Core identity and role information" [ref=e210]:
+              - cell "basic_profile" [ref=e211]:
+                - code [ref=e212]: basic_profile
+              - cell "name, headline, current_title, summary, location, languages" [ref=e213]:
+                - code [ref=e214]: name
+                - text: ","
+                - code [ref=e215]: headline
+                - text: ","
+                - code [ref=e216]: current_title
+                - text: ","
+                - code [ref=e217]: summary
+                - text: ","
+                - code [ref=e218]: location
+                - text: ","
+                - code [ref=e219]: languages
+              - cell "Core identity and role information" [ref=e220]
+            - row "professional_network connections, followers, open_to_cards, profile_picture_permalink Profile-level network metadata when available" [ref=e221]:
+              - cell "professional_network" [ref=e222]:
+                - code [ref=e223]: professional_network
+              - cell "connections, followers, open_to_cards, profile_picture_permalink" [ref=e224]:
+                - code [ref=e225]: connections
+                - text: ","
+                - code [ref=e226]: followers
+                - text: ","
+                - code [ref=e227]: open_to_cards
+                - text: ","
+                - code [ref=e228]: profile_picture_permalink
+              - cell "Profile-level network metadata when available" [ref=e229]
+            - row "social_handles available social identifiers such as twitter_identifier.slug Available social and profile identifiers" [ref=e230]:
+              - cell "social_handles" [ref=e231]:
+                - code [ref=e232]: social_handles
+              - cell "available social identifiers such as twitter_identifier.slug" [ref=e233]:
+                - text: available social identifiers such as
+                - code [ref=e234]: twitter_identifier.slug
+              - cell "Available social and profile identifiers" [ref=e235]
+            - row "experience employment_details.current, employment_details.past Full work history when available" [ref=e236]:
+              - cell "experience" [ref=e237]:
+                - code [ref=e238]: experience
+              - cell "employment_details.current, employment_details.past" [ref=e239]:
+                - code [ref=e240]: employment_details.current
+                - text: ","
+                - code [ref=e241]: employment_details.past
+              - cell "Full work history when available" [ref=e242]
+            - row "education schools Education background when available" [ref=e243]:
+              - cell "education" [ref=e244]:
+                - code [ref=e245]: education
+              - cell "schools" [ref=e246]:
+                - code [ref=e247]: schools
+              - cell "Education background when available" [ref=e248]
+            - row "skills professional_network_skills Listed professional skills when available" [ref=e249]:
+              - cell "skills" [ref=e250]:
+                - code [ref=e251]: skills
+              - cell "professional_network_skills" [ref=e252]:
+                - code [ref=e253]: professional_network_skills
+              - cell "Listed professional skills when available" [ref=e254]
+            - row "contact business_emails, personal_emails, phone_numbers, websites Contact data such as websites, phones, or email records" [ref=e255]:
+              - cell "contact" [ref=e256]:
+                - code [ref=e257]: contact
+              - cell "business_emails, personal_emails, phone_numbers, websites" [ref=e258]:
+                - code [ref=e259]: business_emails
+                - text: ","
+                - code [ref=e260]: personal_emails
+                - text: ","
+                - code [ref=e261]: phone_numbers
+                - text: ","
+                - code [ref=e262]: websites
+              - cell "Contact data such as websites, phones, or email records" [ref=e263]
+            - row "dev_platform_profiles developer platform profile objects Developer platform profiles and activity when available" [ref=e264]:
+              - cell "dev_platform_profiles" [ref=e265]:
+                - code [ref=e266]: dev_platform_profiles
+              - cell "developer platform profile objects" [ref=e267]
+              - cell "Developer platform profiles and activity when available" [ref=e268]
+        - separator [ref=e269]
+        - 'heading "Navigate to header Reverse lookup: find a person from a business email" [level=2] [ref=e270]':
+          - link "Navigate to header" [ref=e271] [cursor=pointer]:
+            - /url: "#reverse-lookup-find-a-person-from-a-business-email"
+            - img [ref=e273]
+          - generic [ref=e275] [cursor=pointer]: "Reverse lookup: find a person from a business email"
+        - generic [ref=e276]:
+          - text: You do not always have a profile URL. If you have a business email, use
+          - code [ref=e277]: business_emails
+          - text: to reverse-lookup the person behind the address.
+        - generic [ref=e278]:
+          - generic [ref=e279]:
+            - tablist [ref=e280]:
+              - tab "Request" [selected] [ref=e281] [cursor=pointer]:
+                - generic [ref=e282]: Request
+              - tab "Response" [ref=e284] [cursor=pointer]:
+                - generic [ref=e285]: Response
+            - generic [ref=e286]:
+              - button "Report incorrect code" [ref=e288] [cursor=pointer]:
+                - img [ref=e289]
+              - button "Copy the contents from the code block" [ref=e292] [cursor=pointer]:
+                - img [ref=e293]
+              - button "Ask AI" [ref=e297] [cursor=pointer]:
+                - img [ref=e298]
+          - tabpanel "Request" [ref=e302]:
+            - code [ref=e306]:
+              - generic [ref=e307]: curl --request POST \
+              - generic [ref=e308]: "--url https://api.crustdata.com/person/enrich \\"
+              - generic [ref=e309]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e310]: "--header 'content-type: application/json' \\"
+              - generic [ref=e311]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e312]: "--data '{"
+              - generic [ref=e313]: "\"business_emails\": [\"abhilash@crustdata.com\"],"
+              - generic [ref=e314]: "\"min_similarity_score\": 0.8"
+              - generic [ref=e315]: "}'"
+        - generic [ref=e316]:
+          - img "Note" [ref=e318]
+          - generic [ref=e320]: Response trimmed for clarity.
+        - heading "Navigate to header How email reverse lookup works" [level=3] [ref=e321]:
+          - link "Navigate to header" [ref=e322] [cursor=pointer]:
+            - /url: "#how-email-reverse-lookup-works"
+            - img [ref=e324]
+          - generic [ref=e326] [cursor=pointer]: How email reverse lookup works
+        - generic [ref=e327]:
+          - text: When you submit a business email, the API resolves it to a public person profile. The response structure is identical to a profile URL lookup, but
+          - code [ref=e328]: match_type
+          - text: is
+          - code [ref=e329]: business_email
+          - text: and
+          - code [ref=e330]: matched_on
+          - text: shows the email you submitted.
+        - generic [ref=e331]:
+          - text: The
+          - code [ref=e332]: min_similarity_score
+          - text: parameter controls how strict the matching is. A value of
+          - code [ref=e333]: "0.8"
+          - text: means the API only returns matches where it is at least 80% confident the email belongs to the person. Higher values give fewer but more reliable results.
+        - table [ref=e336]:
+          - rowgroup [ref=e337]:
+            - row "min_similarity_score When to use" [ref=e338]:
+              - columnheader "min_similarity_score" [ref=e339]:
+                - code [ref=e340]: min_similarity_score
+              - columnheader "When to use" [ref=e341]
+          - rowgroup [ref=e342]:
+            - row "0.9 – 1.0 High-confidence workflows (CRM enrichment, automated pipelines)" [ref=e343]:
+              - cell "0.9 – 1.0" [ref=e344]:
+                - code [ref=e345]: "0.9"
+                - text: –
+                - code [ref=e346]: "1.0"
+              - cell "High-confidence workflows (CRM enrichment, automated pipelines)" [ref=e347]
+            - row "0.7 – 0.8 Balanced accuracy for most use cases" [ref=e348]:
+              - cell "0.7 – 0.8" [ref=e349]:
+                - code [ref=e350]: "0.7"
+                - text: –
+                - code [ref=e351]: "0.8"
+              - cell "Balanced accuracy for most use cases" [ref=e352]
+            - row "0.5 – 0.6 Exploratory lookups where you will manually verify" [ref=e353]:
+              - cell "0.5 – 0.6" [ref=e354]:
+                - code [ref=e355]: "0.5"
+                - text: –
+                - code [ref=e356]: "0.6"
+              - cell "Exploratory lookups where you will manually verify" [ref=e357]
+            - row "Not set Returns all matches regardless of confidence" [ref=e358]:
+              - cell "Not set" [ref=e359]
+              - cell "Returns all matches regardless of confidence" [ref=e360]
+        - separator [ref=e361]
+        - heading "Navigate to header Handle no-match results" [level=2] [ref=e362]:
+          - link "Navigate to header" [ref=e363] [cursor=pointer]:
+            - /url: "#handle-no-match-results"
+            - img [ref=e365]
+          - generic [ref=e367] [cursor=pointer]: Handle no-match results
+        - generic [ref=e368]:
+          - text: Not every identifier will resolve to a person. When there is no match, the
+          - code [ref=e369]: matches
+          - text: array is empty.
+        - generic [ref=e370]:
+          - generic [ref=e371]:
+            - tablist [ref=e372]:
+              - tab "Request" [selected] [ref=e373] [cursor=pointer]:
+                - generic [ref=e374]: Request
+              - tab "Response" [ref=e376] [cursor=pointer]:
+                - generic [ref=e377]: Response
+            - generic [ref=e378]:
+              - button "Report incorrect code" [ref=e380] [cursor=pointer]:
+                - img [ref=e381]
+              - button "Copy the contents from the code block" [ref=e384] [cursor=pointer]:
+                - img [ref=e385]
+              - button "Ask AI" [ref=e389] [cursor=pointer]:
+                - img [ref=e390]
+          - tabpanel "Request" [ref=e394]:
+            - code [ref=e398]:
+              - generic [ref=e399]: curl --request POST \
+              - generic [ref=e400]: "--url https://api.crustdata.com/person/enrich \\"
+              - generic [ref=e401]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e402]: "--header 'content-type: application/json' \\"
+              - generic [ref=e403]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e404]: "--data '{"
+              - generic [ref=e405]: "\"business_emails\": [\"nonexistent@unknowndomain.com\"],"
+              - generic [ref=e406]: "\"min_similarity_score\": 0.8"
+              - generic [ref=e407]: "}'"
+        - generic [ref=e408]:
+          - text: You still get a response entry for the identifier —
+          - code [ref=e409]: matched_on
+          - text: tells you which input had no match. This makes it easy to track which lookups succeeded and which need a different approach.
+        - separator [ref=e410]
+        - 'heading "Navigate to header Batch enrichment: look up multiple people at once" [level=2] [ref=e411]':
+          - link "Navigate to header" [ref=e412] [cursor=pointer]:
+            - /url: "#batch-enrichment-look-up-multiple-people-at-once"
+            - img [ref=e414]
+          - generic [ref=e416] [cursor=pointer]: "Batch enrichment: look up multiple people at once"
+        - generic [ref=e417]:
+          - text: You can enrich up to
+          - strong [ref=e418]: 25 identifiers
+          - text: in a single request. The response returns one entry per identifier, in the same order you submitted them.
+        - generic [ref=e419]:
+          - generic [ref=e420]:
+            - tablist [ref=e421]:
+              - tab "Request" [selected] [ref=e422] [cursor=pointer]:
+                - generic [ref=e423]: Request
+              - tab "Response" [ref=e425] [cursor=pointer]:
+                - generic [ref=e426]: Response
+            - generic [ref=e427]:
+              - button "Report incorrect code" [ref=e429] [cursor=pointer]:
+                - img [ref=e430]
+              - button "Copy the contents from the code block" [ref=e433] [cursor=pointer]:
+                - img [ref=e434]
+              - button "Ask AI" [ref=e438] [cursor=pointer]:
+                - img [ref=e439]
+          - tabpanel "Request" [ref=e443]:
+            - code [ref=e447]:
+              - generic [ref=e448]: curl --request POST \
+              - generic [ref=e449]: "--url https://api.crustdata.com/person/enrich \\"
+              - generic [ref=e450]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e451]: "--header 'content-type: application/json' \\"
+              - generic [ref=e452]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e453]: "--data '{"
+              - generic [ref=e454]: "\"professional_network_profile_urls\": ["
+              - generic [ref=e455]: "\"https://www.linkedin.com/in/dvdhsu/\","
+              - generic [ref=e456]: "\"https://www.linkedin.com/in/abhilashchowdhary/\""
+              - generic [ref=e457]: "]"
+              - generic [ref=e458]: "}'"
+        - generic [ref=e459]:
+          - img "Note" [ref=e461]
+          - generic [ref=e463]: Response trimmed for clarity.
+        - heading "Navigate to header Batch enrichment tips" [level=3] [ref=e464]:
+          - link "Navigate to header" [ref=e465] [cursor=pointer]:
+            - /url: "#batch-enrichment-tips"
+            - img [ref=e467]
+          - generic [ref=e469] [cursor=pointer]: Batch enrichment tips
+        - list [ref=e470]:
+          - listitem [ref=e471]:
+            - text: The maximum batch size is
+            - strong [ref=e472]: 25 identifiers
+            - text: per request.
+          - listitem [ref=e473]:
+            - text: You must use
+            - strong [ref=e474]: one identifier type
+            - text: per request — either all profile URLs or all emails, not a mix.
+          - listitem [ref=e475]: Each entry in the response corresponds to the input at the same position, so you can match results back to your input list by index.
+          - listitem [ref=e476]:
+            - text: If some identifiers fail to match, their
+            - code [ref=e477]: matches
+            - text: array will be empty, but the request still succeeds for the others.
+        - separator [ref=e478]
+        - heading "Navigate to header Need fresh data from the web?" [level=2] [ref=e479]:
+          - link "Navigate to header" [ref=e480] [cursor=pointer]:
+            - /url: "#need-fresh-data-from-the-web"
+            - img [ref=e482]
+          - generic [ref=e484] [cursor=pointer]: Need fresh data from the web?
+        - generic [ref=e485]:
+          - text: If the cached enrich response is missing a recent update or you need real-time retrieval from the web, use
+          - link "Person Live Enrich" [ref=e486] [cursor=pointer]:
+            - /url: /person-docs/live-enrich
+          - text: . That endpoint is designed for fresh profile retrieval when cached enrich is not enough.
+        - separator [ref=e487]
+        - heading "Navigate to header Advanced refresh flags" [level=2] [ref=e488]:
+          - link "Navigate to header" [ref=e489] [cursor=pointer]:
+            - /url: "#advanced-refresh-flags"
+            - img [ref=e491]
+          - generic [ref=e493] [cursor=pointer]: Advanced refresh flags
+        - generic [ref=e494]:
+          - text: The API currently accepts two advanced refresh flags on
+          - code [ref=e495]: /person/enrich
+          - text: ":"
+        - table [ref=e498]:
+          - rowgroup [ref=e499]:
+            - row "Flag Type What it does" [ref=e500]:
+              - columnheader "Flag" [ref=e501]
+              - columnheader "Type" [ref=e502]
+              - columnheader "What it does" [ref=e503]
+          - rowgroup [ref=e504]:
+            - row "force_fetch boolean Request a fresh fetch path when supported." [ref=e505]:
+              - cell "force_fetch" [ref=e506]:
+                - code [ref=e507]: force_fetch
+              - cell "boolean" [ref=e508]
+              - cell "Request a fresh fetch path when supported." [ref=e509]
+            - row "enrich_realtime boolean Request realtime enrich behavior when supported." [ref=e510]:
+              - cell "enrich_realtime" [ref=e511]:
+                - code [ref=e512]: enrich_realtime
+              - cell "boolean" [ref=e513]
+              - cell "Request realtime enrich behavior when supported." [ref=e514]
+        - generic [ref=e515]:
+          - img "Note" [ref=e517]
+          - generic [ref=e520]:
+            - strong [ref=e521]: "Current platform behavior:"
+            - text: both flags are accepted on
+            - code [ref=e522]: /person/enrich
+            - text: and return the standard enrich response envelope. Their exact effect can vary by cache state and account access, so confirm the behavior you need before relying on either flag in production.
+        - generic [ref=e523]:
+          - generic [ref=e524]:
+            - generic "Advanced refresh example" [ref=e526]
+            - generic [ref=e527]:
+              - button "Report incorrect code" [ref=e529] [cursor=pointer]:
+                - img [ref=e530]
+              - button "Copy the contents from the code block" [ref=e533] [cursor=pointer]:
+                - img [ref=e534]
+              - button "Ask AI" [ref=e538] [cursor=pointer]:
+                - img [ref=e539]
+          - code [ref=e545]:
+            - generic [ref=e546]: curl --request POST \
+            - generic [ref=e547]: "--url https://api.crustdata.com/person/enrich \\"
+            - generic [ref=e548]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+            - generic [ref=e549]: "--header 'content-type: application/json' \\"
+            - generic [ref=e550]: "--header 'x-api-version: 2025-11-01' \\"
+            - generic [ref=e551]: "--data '{"
+            - generic [ref=e552]: "\"professional_network_profile_urls\": ["
+            - generic [ref=e553]: "\"https://www.linkedin.com/in/abhilashchowdhary/\""
+            - generic [ref=e554]: "],"
+            - generic [ref=e555]: "\"force_fetch\": true"
+            - generic [ref=e556]: "}'"
+        - separator [ref=e557]
+        - heading "Navigate to header Request specific fields" [level=2] [ref=e558]:
+          - link "Navigate to header" [ref=e559] [cursor=pointer]:
+            - /url: "#request-specific-fields"
+            - img [ref=e561]
+          - generic [ref=e563] [cursor=pointer]: Request specific fields
+        - generic [ref=e564]:
+          - text: By default, the API returns all available data. If you only need specific information, use the
+          - code [ref=e565]: fields
+          - text: parameter to request just what you need.
+        - generic [ref=e566]:
+          - generic [ref=e567]:
+            - generic "Request specific fields" [ref=e569]
+            - generic [ref=e570]:
+              - button "Report incorrect code" [ref=e572] [cursor=pointer]:
+                - img [ref=e573]
+              - button "Copy the contents from the code block" [ref=e576] [cursor=pointer]:
+                - img [ref=e577]
+              - button "Ask AI" [ref=e581] [cursor=pointer]:
+                - img [ref=e582]
+          - code [ref=e588]:
+            - generic [ref=e589]: curl --request POST \
+            - generic [ref=e590]: "--url https://api.crustdata.com/person/enrich \\"
+            - generic [ref=e591]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+            - generic [ref=e592]: "--header 'content-type: application/json' \\"
+            - generic [ref=e593]: "--header 'x-api-version: 2025-11-01' \\"
+            - generic [ref=e594]: "--data '{"
+            - generic [ref=e595]: "\"professional_network_profile_urls\": ["
+            - generic [ref=e596]: "\"https://www.linkedin.com/in/dvdhsu/\""
+            - generic [ref=e597]: "],"
+            - generic [ref=e598]: "\"fields\": ["
+            - generic [ref=e599]: "\"basic_profile.summary\","
+            - generic [ref=e600]: "\"contact\","
+            - generic [ref=e601]: "\"dev_platform_profiles\""
+            - generic [ref=e602]: "]"
+            - generic [ref=e603]: "}'"
+        - heading "Navigate to header Popular fields for contact and developer workflows" [level=3] [ref=e604]:
+          - link "Navigate to header" [ref=e605] [cursor=pointer]:
+            - /url: "#popular-fields-for-contact-and-developer-workflows"
+            - img [ref=e607]
+          - generic [ref=e609] [cursor=pointer]: Popular fields for contact and developer workflows
+        - table [ref=e612]:
+          - rowgroup [ref=e613]:
+            - row "Field path What it returns" [ref=e614]:
+              - columnheader "Field path" [ref=e615]
+              - columnheader "What it returns" [ref=e616]
+          - rowgroup [ref=e617]:
+            - row "basic_profile.summary The person’s summary or about text" [ref=e618]:
+              - cell "basic_profile.summary" [ref=e619]:
+                - code [ref=e620]: basic_profile.summary
+              - cell "The person’s summary or about text" [ref=e621]
+            - row "contact Contact section with email records, phone numbers, and websites when available" [ref=e622]:
+              - cell "contact" [ref=e623]:
+                - code [ref=e624]: contact
+              - cell "Contact section with email records, phone numbers, and websites when available" [ref=e625]
+            - row "contact.business_emails Business email records when available" [ref=e626]:
+              - cell "contact.business_emails" [ref=e627]:
+                - code [ref=e628]: contact.business_emails
+              - cell "Business email records when available" [ref=e629]
+            - row "contact.personal_emails Personal email records when available" [ref=e630]:
+              - cell "contact.personal_emails" [ref=e631]:
+                - code [ref=e632]: contact.personal_emails
+              - cell "Personal email records when available" [ref=e633]
+            - row "contact.phone_numbers Phone numbers when available" [ref=e634]:
+              - cell "contact.phone_numbers" [ref=e635]:
+                - code [ref=e636]: contact.phone_numbers
+              - cell "Phone numbers when available" [ref=e637]
+            - row "contact.websites Personal or company-linked websites" [ref=e638]:
+              - cell "contact.websites" [ref=e639]:
+                - code [ref=e640]: contact.websites
+              - cell "Personal or company-linked websites" [ref=e641]
+            - row "dev_platform_profiles Developer platform profiles when available" [ref=e642]:
+              - cell "dev_platform_profiles" [ref=e643]:
+                - code [ref=e644]: dev_platform_profiles
+              - cell "Developer platform profiles when available" [ref=e645]
+            - row "social_handles.dev_platform_identifier.profile_url Canonical developer platform profile URL when available" [ref=e646]:
+              - cell "social_handles.dev_platform_identifier.profile_url" [ref=e647]:
+                - code [ref=e648]: social_handles.dev_platform_identifier.profile_url
+              - cell "Canonical developer platform profile URL when available" [ref=e649]
+            - row "experience.employment_details.current.company_name The person’s current company name" [ref=e650]:
+              - cell "experience.employment_details.current.company_name" [ref=e651]:
+                - code [ref=e652]: experience.employment_details.current.company_name
+              - cell "The person’s current company name" [ref=e653]
+        - generic [ref=e654]:
+          - img "Tip" [ref=e656]
+          - generic [ref=e659]:
+            - text: Use
+            - code [ref=e660]: contact
+            - text: when you want contact-ready records and
+            - code [ref=e661]: dev_platform_profiles
+            - text: when you want developer platform context in the same enrich response.
+        - separator [ref=e662]
+        - heading "Navigate to header Choosing between profile URL and email enrichment" [level=2] [ref=e663]:
+          - link "Navigate to header" [ref=e664] [cursor=pointer]:
+            - /url: "#choosing-between-profile-url-and-email-enrichment"
+            - img [ref=e666]
+          - generic [ref=e668] [cursor=pointer]: Choosing between profile URL and email enrichment
+        - generic [ref=e669]:
+          - text: Both paths return the same
+          - code [ref=e670]: person_data
+          - text: shape, but they work differently.
+        - table [ref=e673]:
+          - rowgroup [ref=e674]:
+            - row "Profile URL Business email" [ref=e675]:
+              - columnheader [ref=e676]
+              - columnheader "Profile URL" [ref=e677]
+              - columnheader "Business email" [ref=e678]
+          - rowgroup [ref=e679]:
+            - row "Identifier professional_network_profile_urls business_emails" [ref=e680]:
+              - cell "Identifier" [ref=e681]:
+                - strong [ref=e682]: Identifier
+              - cell "professional_network_profile_urls" [ref=e683]:
+                - code [ref=e684]: professional_network_profile_urls
+              - cell "business_emails" [ref=e685]:
+                - code [ref=e686]: business_emails
+            - row "Match type Direct lookup — the URL uniquely identifies a profile Reverse lookup — the API infers which profile owns the email" [ref=e687]:
+              - cell "Match type" [ref=e688]:
+                - strong [ref=e689]: Match type
+              - cell "Direct lookup — the URL uniquely identifies a profile" [ref=e690]
+              - cell "Reverse lookup — the API infers which profile owns the email" [ref=e691]
+            - row "Confidence Always 1.0 (exact match) Varies. Use min_similarity_score to control the threshold" [ref=e692]:
+              - cell "Confidence" [ref=e693]:
+                - strong [ref=e694]: Confidence
+              - cell "Always 1.0 (exact match)" [ref=e695]:
+                - text: Always
+                - code [ref=e696]: "1.0"
+                - text: (exact match)
+              - cell "Varies. Use min_similarity_score to control the threshold" [ref=e697]:
+                - text: Varies. Use
+                - code [ref=e698]: min_similarity_score
+                - text: to control the threshold
+            - row "Best for When you already have the profile URL When you only have an email" [ref=e699]:
+              - cell "Best for" [ref=e700]:
+                - strong [ref=e701]: Best for
+              - cell "When you already have the profile URL" [ref=e702]
+              - cell "When you only have an email" [ref=e703]
+            - row "Batch limit Up to 25 URLs per request Up to 25 emails per request" [ref=e704]:
+              - cell "Batch limit" [ref=e705]:
+                - strong [ref=e706]: Batch limit
+              - cell "Up to 25 URLs per request" [ref=e707]
+              - cell "Up to 25 emails per request" [ref=e708]
+        - separator [ref=e709]
+        - 'heading "Navigate to header Common workflow: Search then Enrich" [level=2] [ref=e710]':
+          - link "Navigate to header" [ref=e711] [cursor=pointer]:
+            - /url: "#common-workflow-search-then-enrich"
+            - img [ref=e713]
+          - generic [ref=e715] [cursor=pointer]: "Common workflow: Search then Enrich"
+        - generic [ref=e716]:
+          - text: The most powerful pattern combines
+          - link "Person Search" [ref=e717] [cursor=pointer]:
+            - /url: /person-docs/search
+          - text: with Person Enrich. Search finds people matching your criteria; Enrich gets the full profile for each match.
+        - generic [ref=e718]:
+          - strong [ref=e719]: "Step 1:"
+          - text: Search for decision-makers at a target company.
+        - generic [ref=e720]:
+          - generic [ref=e721]:
+            - button "Report incorrect code" [ref=e723] [cursor=pointer]:
+              - img [ref=e724]
+            - button "Copy the contents from the code block" [ref=e727] [cursor=pointer]:
+              - img [ref=e728]
+            - button "Ask AI" [ref=e732] [cursor=pointer]:
+              - img [ref=e733]
+          - code [ref=e739]:
+            - generic [ref=e740]: curl --request POST \
+            - generic [ref=e741]: "--url https://api.crustdata.com/person/search \\"
+            - generic [ref=e742]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+            - generic [ref=e743]: "--header 'content-type: application/json' \\"
+            - generic [ref=e744]: "--header 'x-api-version: 2025-11-01' \\"
+            - generic [ref=e745]: "--data '{"
+            - generic [ref=e746]: "\"filters\": {"
+            - generic [ref=e747]: "\"op\": \"and\","
+            - generic [ref=e748]: "\"conditions\": ["
+            - generic [ref=e749]: "{"
+            - generic [ref=e750]: "\"field\": \"experience.employment_details.current.company_name\","
+            - generic [ref=e751]: "\"type\": \"in\","
+            - generic [ref=e752]: "\"value\": [\"Retool\"]"
+            - generic [ref=e753]: "},"
+            - generic [ref=e754]: "{"
+            - generic [ref=e755]: "\"field\": \"experience.employment_details.current.title\","
+            - generic [ref=e756]: "\"type\": \"(.)\","
+            - generic [ref=e757]: "\"value\": \"VP|Director|Head of\""
+            - generic [ref=e758]: "}"
+            - generic [ref=e759]: "]"
+            - generic [ref=e760]: "},"
+            - generic [ref=e761]: "\"limit\": 5"
+            - generic [ref=e762]: "}'"
+        - generic [ref=e763]:
+          - strong [ref=e764]: "Step 2:"
+          - text: Take the profile URLs from the search results and enrich them for full profiles.
+        - generic [ref=e765]:
+          - generic [ref=e766]:
+            - button "Report incorrect code" [ref=e768] [cursor=pointer]:
+              - img [ref=e769]
+            - button "Copy the contents from the code block" [ref=e772] [cursor=pointer]:
+              - img [ref=e773]
+            - button "Ask AI" [ref=e777] [cursor=pointer]:
+              - img [ref=e778]
+          - code [ref=e784]:
+            - generic [ref=e785]: curl --request POST \
+            - generic [ref=e786]: "--url https://api.crustdata.com/person/enrich \\"
+            - generic [ref=e787]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+            - generic [ref=e788]: "--header 'content-type: application/json' \\"
+            - generic [ref=e789]: "--header 'x-api-version: 2025-11-01' \\"
+            - generic [ref=e790]: "--data '{"
+            - generic [ref=e791]: "\"professional_network_profile_urls\": ["
+            - generic [ref=e792]: "\"https://www.linkedin.com/in/dvdhsu/\","
+            - generic [ref=e793]: "\"https://www.linkedin.com/in/abhilashchowdhary/\""
+            - generic [ref=e794]: "]"
+            - generic [ref=e795]: "}'"
+        - generic [ref=e796]: This two-step pattern is the foundation for most sales, recruiting, and research workflows. Search narrows the universe; Enrich fills in the details.
+        - separator [ref=e797]
+        - heading "Navigate to header Request parameter reference" [level=2] [ref=e798]:
+          - link "Navigate to header" [ref=e799] [cursor=pointer]:
+            - /url: "#request-parameter-reference"
+            - img [ref=e801]
+          - generic [ref=e803] [cursor=pointer]: Request parameter reference
+        - table [ref=e806]:
+          - rowgroup [ref=e807]:
+            - row "Parameter Type Required Default Description" [ref=e808]:
+              - columnheader "Parameter" [ref=e809]
+              - columnheader "Type" [ref=e810]
+              - columnheader "Required" [ref=e811]
+              - columnheader "Default" [ref=e812]
+              - columnheader "Description" [ref=e813]
+          - rowgroup [ref=e814]:
+            - row "professional_network_profile_urls string[] One of professional_network_profile_urls or business_emails — Profile URLs to enrich. Max 25." [ref=e815]:
+              - cell "professional_network_profile_urls" [ref=e816]:
+                - code [ref=e817]: professional_network_profile_urls
+              - cell "string[]" [ref=e818]
+              - cell "One of professional_network_profile_urls or business_emails" [ref=e819]:
+                - text: One of
+                - code [ref=e820]: professional_network_profile_urls
+                - text: or
+                - code [ref=e821]: business_emails
+              - cell "—" [ref=e822]
+              - cell "Profile URLs to enrich. Max 25." [ref=e823]
+            - row "business_emails string[] One of professional_network_profile_urls or business_emails — Business emails for reverse lookup. Max 25." [ref=e824]:
+              - cell "business_emails" [ref=e825]:
+                - code [ref=e826]: business_emails
+              - cell "string[]" [ref=e827]
+              - cell "One of professional_network_profile_urls or business_emails" [ref=e828]:
+                - text: One of
+                - code [ref=e829]: professional_network_profile_urls
+                - text: or
+                - code [ref=e830]: business_emails
+              - cell "—" [ref=e831]
+              - cell "Business emails for reverse lookup. Max 25." [ref=e832]
+            - row "fields string[] No All fields Specific field paths or section groups to return." [ref=e833]:
+              - cell "fields" [ref=e834]:
+                - code [ref=e835]: fields
+              - cell "string[]" [ref=e836]
+              - cell "No" [ref=e837]
+              - cell "All fields" [ref=e838]
+              - cell "Specific field paths or section groups to return." [ref=e839]
+            - row "min_similarity_score number (0–1) No None Minimum confidence threshold for email reverse lookup matches." [ref=e840]:
+              - cell "min_similarity_score" [ref=e841]:
+                - code [ref=e842]: min_similarity_score
+              - cell "number (0–1)" [ref=e843]
+              - cell "No" [ref=e844]
+              - cell "None" [ref=e845]
+              - cell "Minimum confidence threshold for email reverse lookup matches." [ref=e846]
+            - row "force_fetch boolean No false Advanced flag accepted by the API to request a fresh fetch path when supported." [ref=e847]:
+              - cell "force_fetch" [ref=e848]:
+                - code [ref=e849]: force_fetch
+              - cell "boolean" [ref=e850]
+              - cell "No" [ref=e851]
+              - cell "false" [ref=e852]:
+                - code [ref=e853]: "false"
+              - cell "Advanced flag accepted by the API to request a fresh fetch path when supported." [ref=e854]
+            - row "enrich_realtime boolean No false Advanced flag accepted by the API to request realtime enrich behavior when supported." [ref=e855]:
+              - cell "enrich_realtime" [ref=e856]:
+                - code [ref=e857]: enrich_realtime
+              - cell "boolean" [ref=e858]
+              - cell "No" [ref=e859]
+              - cell "false" [ref=e860]:
+                - code [ref=e861]: "false"
+              - cell "Advanced flag accepted by the API to request realtime enrich behavior when supported." [ref=e862]
+        - heading "Navigate to header Response fields reference" [level=2] [ref=e863]:
+          - link "Navigate to header" [ref=e864] [cursor=pointer]:
+            - /url: "#response-fields-reference"
+            - img [ref=e866]
+          - generic [ref=e868] [cursor=pointer]: Response fields reference
+        - generic [ref=e869]: "Each item in the response array contains:"
+        - table [ref=e872]:
+          - rowgroup [ref=e873]:
+            - row "Field Type Description" [ref=e874]:
+              - columnheader "Field" [ref=e875]
+              - columnheader "Type" [ref=e876]
+              - columnheader "Description" [ref=e877]
+          - rowgroup [ref=e878]:
+            - row "matched_on string The input identifier (profile URL or email)" [ref=e879]:
+              - cell "matched_on" [ref=e880]:
+                - code [ref=e881]: matched_on
+              - cell "string" [ref=e882]
+              - cell "The input identifier (profile URL or email)" [ref=e883]
+            - row "match_type string professional_network_profile_url or business_email" [ref=e884]:
+              - cell "match_type" [ref=e885]:
+                - code [ref=e886]: match_type
+              - cell "string" [ref=e887]
+              - cell "professional_network_profile_url or business_email" [ref=e888]:
+                - code [ref=e889]: professional_network_profile_url
+                - text: or
+                - code [ref=e890]: business_email
+            - row "matches array Array of candidate matches (may be empty for no-match)" [ref=e891]:
+              - cell "matches" [ref=e892]:
+                - code [ref=e893]: matches
+              - cell "array" [ref=e894]
+              - cell "Array of candidate matches (may be empty for no-match)" [ref=e895]
+            - row "matches[].confidence_score number 0 to 1. How confident the match is. 1.0 = exact match." [ref=e896]:
+              - cell "matches[].confidence_score" [ref=e897]:
+                - code [ref=e898]: matches[].confidence_score
+              - cell "number" [ref=e899]
+              - cell "0 to 1. How confident the match is. 1.0 = exact match." [ref=e900]:
+                - text: 0 to 1. How confident the match is.
+                - code [ref=e901]: "1.0"
+                - text: = exact match.
+            - row "matches[].person_data object Full enriched profile (see table below)" [ref=e902]:
+              - cell "matches[].person_data" [ref=e903]:
+                - code [ref=e904]: matches[].person_data
+              - cell "object" [ref=e905]
+              - cell "Full enriched profile (see table below)" [ref=e906]
+        - heading "Navigate to header Person data sections" [level=3] [ref=e907]:
+          - link "Navigate to header" [ref=e908] [cursor=pointer]:
+            - /url: "#person-data-sections"
+            - img [ref=e910]
+          - generic [ref=e912] [cursor=pointer]: Person data sections
+        - table [ref=e915]:
+          - rowgroup [ref=e916]:
+            - row "Section Key fields Description" [ref=e917]:
+              - columnheader "Section" [ref=e918]
+              - columnheader "Key fields" [ref=e919]
+              - columnheader "Description" [ref=e920]
+          - rowgroup [ref=e921]:
+            - row "basic_profile name, headline, current_title, summary, location, languages, last_updated Core identity and role" [ref=e922]:
+              - cell "basic_profile" [ref=e923]:
+                - code [ref=e924]: basic_profile
+              - cell "name, headline, current_title, summary, location, languages, last_updated" [ref=e925]:
+                - code [ref=e926]: name
+                - text: ","
+                - code [ref=e927]: headline
+                - text: ","
+                - code [ref=e928]: current_title
+                - text: ","
+                - code [ref=e929]: summary
+                - text: ","
+                - code [ref=e930]: location
+                - text: ","
+                - code [ref=e931]: languages
+                - text: ","
+                - code [ref=e932]: last_updated
+              - cell "Core identity and role" [ref=e933]
+            - row "professional_network profile_picture_permalink, connections, followers, open_to_cards Profile metadata when available" [ref=e934]:
+              - cell "professional_network" [ref=e935]:
+                - code [ref=e936]: professional_network
+              - cell "profile_picture_permalink, connections, followers, open_to_cards" [ref=e937]:
+                - code [ref=e938]: profile_picture_permalink
+                - text: ","
+                - code [ref=e939]: connections
+                - text: ","
+                - code [ref=e940]: followers
+                - text: ","
+                - code [ref=e941]: open_to_cards
+              - cell "Profile metadata when available" [ref=e942]
+            - row "social_handles available social identifiers such as twitter_identifier.slug Available social identifiers" [ref=e943]:
+              - cell "social_handles" [ref=e944]:
+                - code [ref=e945]: social_handles
+              - cell "available social identifiers such as twitter_identifier.slug" [ref=e946]:
+                - text: available social identifiers such as
+                - code [ref=e947]: twitter_identifier.slug
+              - cell "Available social identifiers" [ref=e948]
+            - row "experience employment_details.current[], employment_details.past[] Full employment history" [ref=e949]:
+              - cell "experience" [ref=e950]:
+                - code [ref=e951]: experience
+              - cell "employment_details.current[], employment_details.past[]" [ref=e952]:
+                - code [ref=e953]: employment_details.current[]
+                - text: ","
+                - code [ref=e954]: employment_details.past[]
+              - cell "Full employment history" [ref=e955]
+            - row "education schools[] Education background" [ref=e956]:
+              - cell "education" [ref=e957]:
+                - code [ref=e958]: education
+              - cell "schools[]" [ref=e959]:
+                - code [ref=e960]: schools[]
+              - cell "Education background" [ref=e961]
+            - row "skills professional_network_skills[] Professional skills" [ref=e962]:
+              - cell "skills" [ref=e963]:
+                - code [ref=e964]: skills
+              - cell "professional_network_skills[]" [ref=e965]:
+                - code [ref=e966]: professional_network_skills[]
+              - cell "Professional skills" [ref=e967]
+            - row "contact business_emails[], personal_emails[], phone_numbers[], websites[] Contact data when available" [ref=e968]:
+              - cell "contact" [ref=e969]:
+                - code [ref=e970]: contact
+              - cell "business_emails[], personal_emails[], phone_numbers[], websites[]" [ref=e971]:
+                - code [ref=e972]: business_emails[]
+                - text: ","
+                - code [ref=e973]: personal_emails[]
+                - text: ","
+                - code [ref=e974]: phone_numbers[]
+                - text: ","
+                - code [ref=e975]: websites[]
+              - cell "Contact data when available" [ref=e976]
+            - row "dev_platform_profiles developer platform profile objects Developer platform data when available" [ref=e977]:
+              - cell "dev_platform_profiles" [ref=e978]:
+                - code [ref=e979]: dev_platform_profiles
+              - cell "developer platform profile objects" [ref=e980]
+              - cell "Developer platform data when available" [ref=e981]
+        - separator [ref=e982]
+        - heading "Navigate to header What to do next" [level=2] [ref=e983]:
+          - link "Navigate to header" [ref=e984] [cursor=pointer]:
+            - /url: "#what-to-do-next"
+            - img [ref=e986]
+          - generic [ref=e988] [cursor=pointer]: What to do next
+        - list [ref=e989]:
+          - listitem [ref=e990]:
+            - strong [ref=e991]: Search first, then enrich
+            - text: — use
+            - link "Person Search" [ref=e992] [cursor=pointer]:
+              - /url: /person-docs/search
+            - text: to find people by name, title, company, or location, then enrich the results.
+          - listitem [ref=e993]:
+            - strong [ref=e994]: Fetch fresh data from the web
+            - text: — use
+            - link "Person Live Enrich" [ref=e995] [cursor=pointer]:
+              - /url: /person-docs/live-enrich
+            - text: when cached enrich is not enough.
+          - listitem [ref=e996]:
+            - strong [ref=e997]: See more examples
+            - text: — browse
+            - link "person examples" [ref=e998] [cursor=pointer]:
+              - /url: /person-docs/examples
+            - text: for ready-to-copy patterns.
+          - listitem [ref=e999]:
+            - strong [ref=e1000]: Read the overview
+            - text: — see
+            - link "Person APIs" [ref=e1001] [cursor=pointer]:
+              - /url: /person-docs/quickstart
+            - text: for a high-level guide to choosing between search and enrich.
+          - listitem [ref=e1002]:
+            - strong [ref=e1003]: Check the API reference
+            - text: — see the
+            - link "OpenAPI spec" [ref=e1004] [cursor=pointer]:
+              - /url: /openapi-specs/2025-11-01/introduction
+            - text: for the full schema.
+      - generic [ref=e1006]:
+        - paragraph [ref=e1007]: Was this page helpful?
+        - generic [ref=e1009]:
+          - button "Yes" [ref=e1010] [cursor=pointer]:
+            - img [ref=e1011]
+            - generic [ref=e1013]: "Yes"
+          - button "No" [ref=e1014] [cursor=pointer]:
+            - img [ref=e1015]
+            - generic [ref=e1017]: "No"
+      - generic [ref=e1019]:
+        - textbox "Ask a question..." [ref=e1020]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e1021]:
+          - img [ref=e1022]
+      - contentinfo [ref=e1024]:
+        - generic [ref=e1025]:
+          - link "x" [ref=e1026] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e1027]: x
+            - img [ref=e1028]
+          - link "linkedin" [ref=e1029] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e1030]: linkedin
+            - img [ref=e1031]

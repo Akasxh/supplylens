@@ -1,0 +1,641 @@
+- generic [ref=e3]:
+  - region "Skip to main content" [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - banner [ref=e6]:
+    - generic [ref=e7]:
+      - text: This is a sample of our Full API suite. To see our full offering including Watcher, advanced search, and more
+      - link "Request demo now" [ref=e8] [cursor=pointer]:
+        - /url: https://web.archive.org/web/20260113030857/https://crustdata.com/demo
+      - text: →
+    - button "Close" [ref=e9]:
+      - img [ref=e10]
+  - navigation "Main" [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - button "Toggle navigation bar" [ref=e16]:
+          - img [ref=e17]
+        - link "Crustdata APICrustdata API" [ref=e19] [cursor=pointer]:
+          - /url: /web/20260113030857/https://docs.crustdata.com/
+          - generic [ref=e20]:
+            - img "Crustdata API" [ref=e21]
+            - img "Crustdata API" [ref=e22]
+        - link "Documentation" [ref=e23] [cursor=pointer]:
+          - /url: /web/20260113030857/https://docs.crustdata.com/docs/intro
+        - link "API Reference" [ref=e24] [cursor=pointer]:
+          - /url: /web/20260113030857/https://docs.crustdata.com/api
+      - generic [ref=e25]:
+        - link "Login" [ref=e26] [cursor=pointer]:
+          - /url: https://web.archive.org/web/20260113030857/https://crustdata.com/screenerv2/query
+        - button "Request Demo" [ref=e28] [cursor=pointer]:
+          - link "Request Demo" [ref=e29]:
+            - /url: https://web.archive.org/web/20260113030857/https://crustdata.com/demo
+  - generic [ref=e31]:
+    - button "Scroll back to top" [ref=e32]
+    - generic [ref=e33]:
+      - complementary [ref=e34]:
+        - navigation "Docs sidebar" [ref=e37]:
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - link "Getting Started" [ref=e40] [cursor=pointer]:
+                - /url: /web/20260113030857/https://docs.crustdata.com/docs/intro
+            - listitem [ref=e41]:
+              - link "Enrichment APIs" [ref=e43] [cursor=pointer]:
+                - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/company-data-api
+              - list [ref=e44]:
+                - listitem [ref=e45]:
+                  - link "Company Data API" [ref=e46] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/company-data-api
+                - listitem [ref=e47]:
+                  - link "People Data API" [ref=e48] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/people-data-api
+            - listitem [ref=e49]:
+              - link "Search APIs" [ref=e51] [cursor=pointer]:
+                - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+              - list [ref=e52]:
+                - listitem [ref=e53]:
+                  - link "Real-time Company Search APIs" [ref=e55] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                  - list [ref=e56]:
+                    - listitem [ref=e57]:
+                      - link "via Filters" [ref=e58] [cursor=pointer]:
+                        - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                - listitem [ref=e59]:
+                  - link "Real-time People Search APIs" [ref=e61] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                  - list [ref=e62]:
+                    - listitem [ref=e63]:
+                      - link "via Filters" [ref=e64] [cursor=pointer]:
+                        - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                - listitem [ref=e65]:
+                  - link "How to Build Filters" [ref=e66] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/how-to-build-filters
+            - listitem [ref=e67]:
+              - link "Web APIs" [ref=e69] [cursor=pointer]:
+                - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/web-search-api
+              - list [ref=e70]:
+                - listitem [ref=e71]:
+                  - link "Web Search API" [ref=e72] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/web-search-api
+                - listitem [ref=e73]:
+                  - link "Web Fetch API" [ref=e74] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/web-fetch-api
+            - listitem [ref=e75]:
+              - link "Data Dictionary" [ref=e77] [cursor=pointer]:
+                - /url: /web/20260113030857/https://docs.crustdata.com/docs/dictionary/company
+              - list [ref=e78]:
+                - listitem [ref=e79]:
+                  - link "Company Data" [ref=e80] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/docs/dictionary/company
+                - listitem [ref=e81]:
+                  - link "People Data" [ref=e82] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/docs/dictionary/people
+      - main [ref=e83]:
+        - generic [ref=e85]:
+          - generic [ref=e87]:
+            - article [ref=e88]:
+              - navigation "Breadcrumbs" [ref=e89]:
+                - list [ref=e90]:
+                  - listitem [ref=e91]:
+                    - link "Home page" [ref=e92] [cursor=pointer]:
+                      - /url: /web/20260113030857/https://docs.crustdata.com/
+                      - img [ref=e93]
+                  - listitem [ref=e95]: Web APIs
+              - button "On this page" [ref=e97]
+              - generic [ref=e98]:
+                - heading "Web Search API" [level=1] [ref=e100]
+                - heading "🚀 Try Now Direct link to --try-now-" [level=3] [ref=e101]:
+                  - link "🚀 Try Now" [ref=e102] [cursor=pointer]:
+                    - /url: /web/20260113030857/https://docs.crustdata.com/api#tag/web-apis/POST/screener/web-search
+                  - link "Direct link to --try-now-":
+                    - /url: "#--try-now-"
+                - paragraph [ref=e103]: The Web Search API allows you to perform web searches using our SERP (Search Engine Results Page) API. This endpoint returns search results including titles, URLs, snippets, and position information.
+                - heading "Use CasesDirect link to Use Cases" [level=2] [ref=e104]:
+                  - text: Use Cases
+                  - link "Direct link to Use Cases":
+                    - /url: "#use-cases"
+                - list [ref=e105]:
+                  - listitem [ref=e106]:
+                    - strong [ref=e107]: Competitive Intelligence
+                    - text: ": Search for mentions of competitors or industry terms"
+                  - listitem [ref=e108]:
+                    - strong [ref=e109]: Market Research
+                    - text: ": Find companies, products, or services in specific domains"
+                  - listitem [ref=e110]:
+                    - strong [ref=e111]: Lead Generation
+                    - text: ": Discover potential customers based on search queries"
+                  - listitem [ref=e112]:
+                    - strong [ref=e113]: Content Discovery
+                    - text: ": Find relevant web content for your research"
+                - heading "EndpointDirect link to Endpoint" [level=2] [ref=e114]:
+                  - text: Endpoint
+                  - link "Direct link to Endpoint":
+                    - /url: "#endpoint"
+                - code [ref=e118]:
+                  - generic [ref=e119]: POST /screener/web-search
+                - heading "Request ParametersDirect link to Request Parameters" [level=2] [ref=e120]:
+                  - text: Request Parameters
+                  - link "Direct link to Request Parameters":
+                    - /url: "#request-parameters"
+                - table [ref=e121]:
+                  - rowgroup [ref=e122]:
+                    - row "Parameter Type Description Required Default" [ref=e123]:
+                      - columnheader "Parameter" [ref=e124]
+                      - columnheader "Type" [ref=e125]
+                      - columnheader "Description" [ref=e126]
+                      - columnheader "Required" [ref=e127]
+                      - columnheader "Default" [ref=e128]
+                  - rowgroup [ref=e129]:
+                    - row "query string The search query text (max 1000 characters) Yes -" [ref=e130]:
+                      - cell "query" [ref=e131]:
+                        - code [ref=e132]: query
+                      - cell "string" [ref=e133]
+                      - cell "The search query text (max 1000 characters)" [ref=e134]
+                      - cell "Yes" [ref=e135]
+                      - cell "-" [ref=e136]
+                    - 'row "geolocation string ISO 3166-1 alpha-2 country code for geolocation. Valid values: US, CA, MX, BR, AR, CL, CO, PE, VE, GB, DE, FR, IT, ES, PT, NL, BE, CH, AT, PL, SE, NO, DK, FI, IE, RU, UA, CZ, GR, TR, RO, HU, JP, CN, KR, IN, ID, TH, VN, MY, SG, PH, TW, HK, SA, AE, IL, EG, AU, NZ, ZA, NG, KE No -" [ref=e137]':
+                      - cell "geolocation" [ref=e138]:
+                        - code [ref=e139]: geolocation
+                      - cell "string" [ref=e140]
+                      - 'cell "ISO 3166-1 alpha-2 country code for geolocation. Valid values: US, CA, MX, BR, AR, CL, CO, PE, VE, GB, DE, FR, IT, ES, PT, NL, BE, CH, AT, PL, SE, NO, DK, FI, IE, RU, UA, CZ, GR, TR, RO, HU, JP, CN, KR, IN, ID, TH, VN, MY, SG, PH, TW, HK, SA, AE, IL, EG, AU, NZ, ZA, NG, KE" [ref=e141]'
+                      - cell "No" [ref=e142]
+                      - cell "-" [ref=e143]
+                    - 'row "sources array List of search sources to query (valid values: ''news'', ''web'', ''scholar-articles'', ''scholar-articles-enriched'', ''scholar-author'') No All sources" [ref=e144]':
+                      - cell "sources" [ref=e145]:
+                        - code [ref=e146]: sources
+                      - cell "array" [ref=e147]
+                      - 'cell "List of search sources to query (valid values: ''news'', ''web'', ''scholar-articles'', ''scholar-articles-enriched'', ''scholar-author'')" [ref=e148]'
+                      - cell "No" [ref=e149]
+                      - cell "All sources" [ref=e150]
+                    - row "site string Restrict search results to a specific site domain (e.g., 'example.com') No -" [ref=e151]:
+                      - cell "site" [ref=e152]:
+                        - code [ref=e153]: site
+                      - cell "string" [ref=e154]
+                      - cell "Restrict search results to a specific site domain (e.g., 'example.com')" [ref=e155]
+                      - cell "No" [ref=e156]
+                      - cell "-" [ref=e157]
+                    - row "startDate integer Unix timestamp for the start date of search results. Must be less than endDate if both are provided. No -" [ref=e158]:
+                      - cell "startDate" [ref=e159]:
+                        - code [ref=e160]: startDate
+                      - cell "integer" [ref=e161]
+                      - cell "Unix timestamp for the start date of search results. Must be less than endDate if both are provided." [ref=e162]:
+                        - text: Unix timestamp for the start date of search results. Must be less than
+                        - code [ref=e163]: endDate
+                        - text: if both are provided.
+                      - cell "No" [ref=e164]
+                      - cell "-" [ref=e165]
+                    - row "endDate integer Unix timestamp for the end date of search results. Must be greater than startDate if both are provided. No -" [ref=e166]:
+                      - cell "endDate" [ref=e167]:
+                        - code [ref=e168]: endDate
+                      - cell "integer" [ref=e169]
+                      - cell "Unix timestamp for the end date of search results. Must be greater than startDate if both are provided." [ref=e170]:
+                        - text: Unix timestamp for the end date of search results. Must be greater than
+                        - code [ref=e171]: startDate
+                        - text: if both are provided.
+                      - cell "No" [ref=e172]
+                      - cell "-" [ref=e173]
+                    - row "fetch_content boolean When set to true, fetches the webpage content for all URLs returned by the search. Add as a query parameter (e.g., /screener/web-search?fetch_content=true) No false" [ref=e174]:
+                      - cell "fetch_content" [ref=e175]:
+                        - code [ref=e176]: fetch_content
+                      - cell "boolean" [ref=e177]
+                      - cell "When set to true, fetches the webpage content for all URLs returned by the search. Add as a query parameter (e.g., /screener/web-search?fetch_content=true)" [ref=e178]:
+                        - text: When set to true, fetches the webpage content for all URLs returned by the search. Add as a query parameter (e.g.,
+                        - code [ref=e179]: /screener/web-search?fetch_content=true
+                        - text: )
+                      - cell "No" [ref=e180]
+                      - cell "false" [ref=e181]
+                - heading "Example RequestsDirect link to Example Requests" [level=2] [ref=e182]:
+                  - text: Example Requests
+                  - link "Direct link to Example Requests":
+                    - /url: "#example-requests"
+                - group [ref=e183]:
+                  - generic "1. Basic Search" [ref=e184]
+                - group [ref=e185]:
+                  - generic "2. Search with Geolocation" [ref=e186]
+                - group [ref=e187]:
+                  - generic "3. Company Search" [ref=e188]
+                - group [ref=e189]:
+                  - generic "4. Search News Sources Only" [ref=e190]
+                - group [ref=e191]:
+                  - generic "5. Search Multiple Sources" [ref=e192]
+                - group [ref=e193]:
+                  - generic "6. Search with Date Filtering" [ref=e194]
+                - group [ref=e195]:
+                  - generic "7. Search with Content Fetching" [ref=e196]
+                - group [ref=e197]:
+                  - generic "8. Search for GitHub Profiles" [ref=e198]
+                - group [ref=e199]:
+                  - generic "9. Search Scholar Articles" [ref=e200]
+                - group [ref=e201]:
+                  - generic "10. Search Scholar Authors" [ref=e202]
+                - heading "Example ResponsesDirect link to Example Responses" [level=2] [ref=e203]:
+                  - text: Example Responses
+                  - link "Direct link to Example Responses":
+                    - /url: "#example-responses"
+                - group [ref=e204]:
+                  - generic "Success Response" [ref=e205]
+                - group [ref=e206]:
+                  - generic "Success Response with Content Fetching" [ref=e207]
+                - group [ref=e208]:
+                  - generic "Validation Error" [ref=e209]
+                - group [ref=e210]:
+                  - generic "Insufficient Credits" [ref=e211]
+                - group [ref=e212]:
+                  - generic "Service Error" [ref=e213]
+                - heading "Rate LimitsDirect link to Rate Limits" [level=2] [ref=e214]:
+                  - text: Rate Limits
+                  - link "Direct link to Rate Limits":
+                    - /url: "#rate-limits"
+                - list [ref=e215]:
+                  - listitem [ref=e216]:
+                    - strong [ref=e217]: Rate limit
+                    - text: ": 15 requests per minute"
+                  - listitem [ref=e218]: This endpoint is subject to the standard credit-based rate limiting
+                  - listitem [ref=e219]:
+                    - strong [ref=e220]: Free tier
+                    - text: ": 5 total credits"
+                  - listitem [ref=e221]:
+                    - strong [ref=e222]: Professional tier
+                    - text: ": 50 credits/month"
+                  - listitem [ref=e223]:
+                    - strong [ref=e224]: Enterprise tier
+                    - text: ": Unlimited credits"
+                - heading "Best PracticesDirect link to Best Practices" [level=2] [ref=e225]:
+                  - text: Best Practices
+                  - link "Direct link to Best Practices":
+                    - /url: "#best-practices"
+                - list [ref=e226]:
+                  - listitem [ref=e227]:
+                    - strong [ref=e228]: Query Optimization
+                    - text: ": Keep queries concise and specific for better results"
+                  - listitem [ref=e229]:
+                    - strong [ref=e230]: Error Handling
+                    - text: ": Implement retry logic for temporary service errors"
+                  - listitem [ref=e231]:
+                    - strong [ref=e232]: Geolocation
+                    - text: ": Use appropriate geolocation codes for region-specific results"
+                  - listitem [ref=e233]:
+                    - strong [ref=e234]: Result Processing
+                    - text: ": Parse the"
+                    - code [ref=e235]: results
+                    - text: array to extract relevant information
+                  - listitem [ref=e236]:
+                    - strong [ref=e237]: Credit Management
+                    - text: ": Monitor your credit usage to avoid service interruptions"
+                - heading "Geolocation Country CodesDirect link to Geolocation Country Codes" [level=2] [ref=e238]:
+                  - text: Geolocation Country Codes
+                  - link "Direct link to Geolocation Country Codes":
+                    - /url: "#geolocation-country-codes"
+                - paragraph [ref=e239]:
+                  - text: Valid ISO 3166-1 alpha-2 country codes for the
+                  - code [ref=e240]: geolocation
+                  - text: "parameter:"
+                - paragraph [ref=e241]:
+                  - strong [ref=e242]: "Americas:"
+                - list [ref=e243]:
+                  - listitem [ref=e244]:
+                    - code [ref=e245]: US
+                    - text: "- United States"
+                  - listitem [ref=e246]:
+                    - code [ref=e247]: CA
+                    - text: "- Canada"
+                  - listitem [ref=e248]:
+                    - code [ref=e249]: MX
+                    - text: "- Mexico"
+                  - listitem [ref=e250]:
+                    - code [ref=e251]: BR
+                    - text: "- Brazil"
+                  - listitem [ref=e252]:
+                    - code [ref=e253]: AR
+                    - text: "- Argentina"
+                  - listitem [ref=e254]:
+                    - code [ref=e255]: CL
+                    - text: "- Chile"
+                  - listitem [ref=e256]:
+                    - code [ref=e257]: CO
+                    - text: "- Colombia"
+                  - listitem [ref=e258]:
+                    - code [ref=e259]: PE
+                    - text: "- Peru"
+                  - listitem [ref=e260]:
+                    - code [ref=e261]: VE
+                    - text: "- Venezuela"
+                - paragraph [ref=e262]:
+                  - strong [ref=e263]: "Europe:"
+                - list [ref=e264]:
+                  - listitem [ref=e265]:
+                    - code [ref=e266]: GB
+                    - text: "- United Kingdom"
+                  - listitem [ref=e267]:
+                    - code [ref=e268]: DE
+                    - text: "- Germany"
+                  - listitem [ref=e269]:
+                    - code [ref=e270]: FR
+                    - text: "- France"
+                  - listitem [ref=e271]:
+                    - code [ref=e272]: IT
+                    - text: "- Italy"
+                  - listitem [ref=e273]:
+                    - code [ref=e274]: ES
+                    - text: "- Spain"
+                  - listitem [ref=e275]:
+                    - code [ref=e276]: PT
+                    - text: "- Portugal"
+                  - listitem [ref=e277]:
+                    - code [ref=e278]: NL
+                    - text: "- Netherlands"
+                  - listitem [ref=e279]:
+                    - code [ref=e280]: BE
+                    - text: "- Belgium"
+                  - listitem [ref=e281]:
+                    - code [ref=e282]: CH
+                    - text: "- Switzerland"
+                  - listitem [ref=e283]:
+                    - code [ref=e284]: AT
+                    - text: "- Austria"
+                  - listitem [ref=e285]:
+                    - code [ref=e286]: PL
+                    - text: "- Poland"
+                  - listitem [ref=e287]:
+                    - code [ref=e288]: SE
+                    - text: "- Sweden"
+                  - listitem [ref=e289]:
+                    - code [ref=e290]: "NO"
+                    - text: "- Norway"
+                  - listitem [ref=e291]:
+                    - code [ref=e292]: DK
+                    - text: "- Denmark"
+                  - listitem [ref=e293]:
+                    - code [ref=e294]: FI
+                    - text: "- Finland"
+                  - listitem [ref=e295]:
+                    - code [ref=e296]: IE
+                    - text: "- Ireland"
+                  - listitem [ref=e297]:
+                    - code [ref=e298]: RU
+                    - text: "- Russia"
+                  - listitem [ref=e299]:
+                    - code [ref=e300]: UA
+                    - text: "- Ukraine"
+                  - listitem [ref=e301]:
+                    - code [ref=e302]: CZ
+                    - text: "- Czech Republic"
+                  - listitem [ref=e303]:
+                    - code [ref=e304]: GR
+                    - text: "- Greece"
+                  - listitem [ref=e305]:
+                    - code [ref=e306]: TR
+                    - text: "- Turkey"
+                  - listitem [ref=e307]:
+                    - code [ref=e308]: RO
+                    - text: "- Romania"
+                  - listitem [ref=e309]:
+                    - code [ref=e310]: HU
+                    - text: "- Hungary"
+                - paragraph [ref=e311]:
+                  - strong [ref=e312]: "Asia-Pacific:"
+                - list [ref=e313]:
+                  - listitem [ref=e314]:
+                    - code [ref=e315]: JP
+                    - text: "- Japan"
+                  - listitem [ref=e316]:
+                    - code [ref=e317]: CN
+                    - text: "- China"
+                  - listitem [ref=e318]:
+                    - code [ref=e319]: KR
+                    - text: "- South Korea"
+                  - listitem [ref=e320]:
+                    - code [ref=e321]: IN
+                    - text: "- India"
+                  - listitem [ref=e322]:
+                    - code [ref=e323]: ID
+                    - text: "- Indonesia"
+                  - listitem [ref=e324]:
+                    - code [ref=e325]: TH
+                    - text: "- Thailand"
+                  - listitem [ref=e326]:
+                    - code [ref=e327]: VN
+                    - text: "- Vietnam"
+                  - listitem [ref=e328]:
+                    - code [ref=e329]: MY
+                    - text: "- Malaysia"
+                  - listitem [ref=e330]:
+                    - code [ref=e331]: SG
+                    - text: "- Singapore"
+                  - listitem [ref=e332]:
+                    - code [ref=e333]: PH
+                    - text: "- Philippines"
+                  - listitem [ref=e334]:
+                    - code [ref=e335]: TW
+                    - text: "- Taiwan"
+                  - listitem [ref=e336]:
+                    - code [ref=e337]: HK
+                    - text: "- Hong Kong"
+                - paragraph [ref=e338]:
+                  - strong [ref=e339]: "Middle East:"
+                - list [ref=e340]:
+                  - listitem [ref=e341]:
+                    - code [ref=e342]: SA
+                    - text: "- Saudi Arabia"
+                  - listitem [ref=e343]:
+                    - code [ref=e344]: AE
+                    - text: "- United Arab Emirates"
+                  - listitem [ref=e345]:
+                    - code [ref=e346]: IL
+                    - text: "- Israel"
+                  - listitem [ref=e347]:
+                    - code [ref=e348]: EG
+                    - text: "- Egypt"
+                - paragraph [ref=e349]:
+                  - strong [ref=e350]: "Oceania:"
+                - list [ref=e351]:
+                  - listitem [ref=e352]:
+                    - code [ref=e353]: AU
+                    - text: "- Australia"
+                  - listitem [ref=e354]:
+                    - code [ref=e355]: NZ
+                    - text: "- New Zealand"
+                - paragraph [ref=e356]:
+                  - strong [ref=e357]: "Africa:"
+                - list [ref=e358]:
+                  - listitem [ref=e359]:
+                    - code [ref=e360]: ZA
+                    - text: "- South Africa"
+                  - listitem [ref=e361]:
+                    - code [ref=e362]: NG
+                    - text: "- Nigeria"
+                  - listitem [ref=e363]:
+                    - code [ref=e364]: KE
+                    - text: "- Kenya"
+                - heading "FAQDirect link to FAQ" [level=2] [ref=e365]:
+                  - text: FAQ
+                  - link "Direct link to FAQ":
+                    - /url: "#faq"
+                - paragraph [ref=e366]:
+                  - strong [ref=e367]: "Q: What's the maximum number of results returned?"
+                  - text: "A: The number of results varies based on the query and what's available. Typically, you'll receive 5-15 results per search."
+                - paragraph [ref=e368]:
+                  - strong [ref=e369]: "Q: Can I paginate through results?"
+                  - text: "A: Currently, pagination is not supported. Each search returns a single page of results."
+                - paragraph [ref=e370]:
+                  - strong [ref=e371]: "Q: How long does a search take?"
+                  - text: "A: Most searches complete within 2-5 seconds. When using"
+                  - code [ref=e372]: fetch_content=true
+                  - text: ", the request may take longer as it needs to fetch the content of each URL."
+                - paragraph [ref=e373]:
+                  - strong [ref=e374]: "Q: What happens if the search service is down?"
+                  - text: "A: You'll receive a 500 error with an appropriate error message. Your credits will not be deducted for failed requests."
+                - paragraph [ref=e375]:
+                  - strong [ref=e376]: "Q: Can I search for specific file types or domains?"
+                  - text: "A: Yes, you can either use the"
+                  - code [ref=e377]: site
+                  - text: parameter to restrict results to a specific domain, or use standard search operators in your query (e.g.,
+                  - code [ref=e378]: "\"site:github.com\""
+                  - text: or
+                  - code [ref=e379]: "\"filetype:pdf\""
+                  - text: ).
+                - paragraph [ref=e380]:
+                  - strong [ref=e381]: "Q: How do I filter results by date?"
+                  - text: "A: Use the"
+                  - code [ref=e382]: startDate
+                  - text: and
+                  - code [ref=e383]: endDate
+                  - text: parameters with Unix timestamps. Both parameters are optional, but if both are provided,
+                  - code [ref=e384]: startDate
+                  - text: must be less than
+                  - code [ref=e385]: endDate
+                  - text: .
+                - paragraph [ref=e386]:
+                  - strong [ref=e387]: "Q: What date format should I use?"
+                  - text: "A: Use Unix timestamps (seconds since epoch). For example, October 7, 2024 would be"
+                  - code [ref=e388]: "1728259200"
+                  - text: .
+                - paragraph [ref=e389]:
+                  - strong [ref=e390]:
+                    - text: "Q: What does the"
+                    - code [ref=e391]: fetch_content
+                    - text: parameter do?
+                  - text: "A: When set to"
+                  - code [ref=e392]: "true"
+                  - text: ", the API will automatically fetch the full HTML content of each webpage returned in the search results. This is useful if you need to analyze or extract information from the pages without making separate requests. The fetched content is returned in the"
+                  - code [ref=e393]: contents
+                  - text: array in the response.
+                - paragraph [ref=e394]:
+                  - strong [ref=e395]:
+                    - text: "Q: Does using"
+                    - code [ref=e396]: fetch_content=true
+                    - text: consume additional credits?
+                  - text: "A: No, the credit cost remains"
+                  - strong [ref=e397]: 1 credit per search query
+                  - text: regardless of whether content fetching is enabled.
+                - heading "Related APIsDirect link to Related APIs" [level=2] [ref=e398]:
+                  - text: Related APIs
+                  - link "Direct link to Related APIs":
+                    - /url: "#related-apis"
+                - list [ref=e399]:
+                  - listitem [ref=e400]:
+                    - link "Web Fetch API" [ref=e401] [cursor=pointer]:
+                      - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/web-fetch-api
+                    - text: "- Fetch content of any website"
+            - navigation "Docs pages" [ref=e402]:
+              - link "Previous How to Build Filters" [ref=e403] [cursor=pointer]:
+                - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/how-to-build-filters
+                - generic [ref=e404]: Previous
+                - generic [ref=e405]: How to Build Filters
+              - link "Next Web Search API" [ref=e406] [cursor=pointer]:
+                - /url: /web/20260113030857/https://docs.crustdata.com/docs/discover/web-search-api
+                - generic [ref=e407]: Next
+                - generic [ref=e408]: Web Search API
+          - list [ref=e411]:
+            - listitem [ref=e412]:
+              - link "🚀 Try Now" [ref=e413] [cursor=pointer]:
+                - /url: "#--try-now-"
+            - listitem [ref=e414]:
+              - link "Use Cases" [ref=e415] [cursor=pointer]:
+                - /url: "#use-cases"
+            - listitem [ref=e416]:
+              - link "Endpoint" [ref=e417] [cursor=pointer]:
+                - /url: "#endpoint"
+            - listitem [ref=e418]:
+              - link "Request Parameters" [ref=e419] [cursor=pointer]:
+                - /url: "#request-parameters"
+            - listitem [ref=e420]:
+              - link "Example Requests" [ref=e421] [cursor=pointer]:
+                - /url: "#example-requests"
+              - list [ref=e422]:
+                - listitem [ref=e423]:
+                  - link "1. Perform a basic web search" [ref=e424] [cursor=pointer]:
+                    - /url: "#1-perform-a-basic-web-search"
+                - listitem [ref=e425]:
+                  - link "2. Search with specific geolocation" [ref=e426] [cursor=pointer]:
+                    - /url: "#2-search-with-specific-geolocation"
+                - listitem [ref=e427]:
+                  - link "3. Search for a specific company" [ref=e428] [cursor=pointer]:
+                    - /url: "#3-search-for-a-specific-company"
+                - listitem [ref=e429]:
+                  - link "4. Search only news sources" [ref=e430] [cursor=pointer]:
+                    - /url: "#4-search-only-news-sources"
+                - listitem [ref=e431]:
+                  - link "5. Search both news and web sources" [ref=e432] [cursor=pointer]:
+                    - /url: "#5-search-both-news-and-web-sources"
+                - listitem [ref=e433]:
+                  - link "6. Search with date range and site restriction" [ref=e434] [cursor=pointer]:
+                    - /url: "#6-search-with-date-range-and-site-restriction"
+                - listitem [ref=e435]:
+                  - link "7. Search with automatic content fetching for all results" [ref=e436] [cursor=pointer]:
+                    - /url: "#7-search-with-automatic-content-fetching-for-all-results"
+                - listitem [ref=e437]:
+                  - link "8. Search for GitHub profiles using site restriction" [ref=e438] [cursor=pointer]:
+                    - /url: "#8-search-for-github-profiles-using-site-restriction"
+                - listitem [ref=e439]:
+                  - link "9. Search Scholar Articles" [ref=e440] [cursor=pointer]:
+                    - /url: "#9-search-scholar-articles"
+                - listitem [ref=e441]:
+                  - link "10. Search Scholar Authors" [ref=e442] [cursor=pointer]:
+                    - /url: "#10-search-scholar-authors"
+            - listitem [ref=e443]:
+              - link "Example Responses" [ref=e444] [cursor=pointer]:
+                - /url: "#example-responses"
+              - list [ref=e445]:
+                - listitem [ref=e446]:
+                  - link "Successful Response (200 OK)" [ref=e447] [cursor=pointer]:
+                    - /url: "#successful-response-200-ok"
+                - listitem [ref=e448]:
+                  - link "Response Fields" [ref=e449] [cursor=pointer]:
+                    - /url: "#response-fields"
+                - listitem [ref=e450]:
+                  - link "Successful Response with fetch_content=true (200 OK)" [ref=e451] [cursor=pointer]:
+                    - /url: "#successful-response-with-fetch_contenttrue-200-ok"
+                    - text: Successful Response with
+                    - code [ref=e452]: fetch_content=true
+                    - text: (200 OK)
+                - listitem [ref=e453]:
+                  - link "Validation Error Response (400 Bad Request)" [ref=e454] [cursor=pointer]:
+                    - /url: "#validation-error-response-400-bad-request"
+                - listitem [ref=e455]:
+                  - link "Common Validation Errors" [ref=e456] [cursor=pointer]:
+                    - /url: "#common-validation-errors"
+                - listitem [ref=e457]:
+                  - link "Insufficient Credits (402 Payment Required)" [ref=e458] [cursor=pointer]:
+                    - /url: "#insufficient-credits-402-payment-required"
+                - listitem [ref=e459]:
+                  - link "Service Error Response (500 Internal Server Error)" [ref=e460] [cursor=pointer]:
+                    - /url: "#service-error-response-500-internal-server-error"
+                - listitem [ref=e461]:
+                  - link "Common Errors" [ref=e462] [cursor=pointer]:
+                    - /url: "#common-errors"
+            - listitem [ref=e463]:
+              - link "Rate Limits" [ref=e464] [cursor=pointer]:
+                - /url: "#rate-limits"
+            - listitem [ref=e465]:
+              - link "Best Practices" [ref=e466] [cursor=pointer]:
+                - /url: "#best-practices"
+            - listitem [ref=e467]:
+              - link "Geolocation Country Codes" [ref=e468] [cursor=pointer]:
+                - /url: "#geolocation-country-codes"
+            - listitem [ref=e469]:
+              - link "FAQ" [ref=e470] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=e471]:
+              - link "Related APIs" [ref=e472] [cursor=pointer]:
+                - /url: "#related-apis"

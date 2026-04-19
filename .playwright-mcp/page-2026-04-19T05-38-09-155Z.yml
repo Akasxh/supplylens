@@ -1,0 +1,426 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation API Reference API Introduction" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: API Reference
+              - img [ref=e39]
+            - generic [ref=e41]: API Introduction
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "API Reference" [ref=e50] [cursor=pointer]:
+            - /url: /openapi-specs/2025-11-01/introduction
+          - generic [ref=e51]:
+            - heading "API Introduction" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - paragraph [ref=e64]: Learn the base URL, headers, authentication, versioning, and response patterns used across the Crustdata API.
+      - generic [ref=e65]:
+        - generic [ref=e66]: Use this page to send your first request and understand the shared conventions across the Company, Person, and Web APIs.
+        - heading "Navigate to header Base URL" [level=2] [ref=e67]:
+          - link "Navigate to header" [ref=e68] [cursor=pointer]:
+            - /url: "#base-url"
+            - img [ref=e70]
+          - generic [ref=e72] [cursor=pointer]: Base URL
+        - generic [ref=e73]: "All API requests are made to:"
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - button "Report incorrect code" [ref=e77] [cursor=pointer]:
+              - img [ref=e78]
+            - button "Copy the contents from the code block" [ref=e81] [cursor=pointer]:
+              - img [ref=e82]
+            - button "Ask AI" [ref=e86] [cursor=pointer]:
+              - img [ref=e87]
+          - code [ref=e93]:
+            - generic [ref=e94]: https://api.crustdata.com
+        - heading "Navigate to header Authentication" [level=2] [ref=e95]:
+          - link "Navigate to header" [ref=e96] [cursor=pointer]:
+            - /url: "#authentication"
+            - img [ref=e98]
+          - generic [ref=e100] [cursor=pointer]: Authentication
+        - generic [ref=e101]:
+          - text: Every request must include a Bearer token in the
+          - code [ref=e102]: authorization
+          - text: header.
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - button "Report incorrect code" [ref=e106] [cursor=pointer]:
+              - img [ref=e107]
+            - button "Copy the contents from the code block" [ref=e110] [cursor=pointer]:
+              - img [ref=e111]
+            - button "Ask AI" [ref=e115] [cursor=pointer]:
+              - img [ref=e116]
+          - code [ref=e122]:
+            - generic [ref=e123]: "--header 'authorization: Bearer YOUR_API_KEY'"
+        - generic [ref=e124]:
+          - text: You can get your API key from the
+          - link "Crustdata dashboard" [ref=e125] [cursor=pointer]:
+            - /url: https://crustdata.com
+          - text: .
+        - generic [ref=e126]:
+          - img "Warning" [ref=e128]
+          - generic [ref=e131]: Keep your API key secret. Do not expose it in client-side code or public repositories.
+        - generic [ref=e132]:
+          - img "Note" [ref=e134]
+          - generic [ref=e137]:
+            - text: Endpoint availability can vary by plan. Some live Company and Person endpoints are enterprise-only. Review
+            - link "Pricing" [ref=e138] [cursor=pointer]:
+              - /url: /general/pricing
+            - text: before you build a production workflow.
+        - heading "Navigate to header API versioning" [level=2] [ref=e139]:
+          - link "Navigate to header" [ref=e140] [cursor=pointer]:
+            - /url: "#api-versioning"
+            - img [ref=e142]
+          - generic [ref=e144] [cursor=pointer]: API versioning
+        - generic [ref=e145]:
+          - text: Include the
+          - code [ref=e146]: x-api-version
+          - text: header in every request. The current version is
+          - code [ref=e147]: 2025-11-01
+          - text: .
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - button "Report incorrect code" [ref=e151] [cursor=pointer]:
+              - img [ref=e152]
+            - button "Copy the contents from the code block" [ref=e155] [cursor=pointer]:
+              - img [ref=e156]
+            - button "Ask AI" [ref=e160] [cursor=pointer]:
+              - img [ref=e161]
+          - code [ref=e167]:
+            - generic [ref=e168]: "--header 'x-api-version: 2025-11-01'"
+        - generic [ref=e169]: Requests without a version header can default to the latest version, which may introduce breaking changes. Always pin to a specific version.
+        - heading "Navigate to header Request format" [level=2] [ref=e170]:
+          - link "Navigate to header" [ref=e171] [cursor=pointer]:
+            - /url: "#request-format"
+            - img [ref=e173]
+          - generic [ref=e175] [cursor=pointer]: Request format
+        - generic [ref=e176]:
+          - text: All endpoints accept JSON request bodies with
+          - code [ref=e177]: "content-type: application/json"
+          - text: .
+        - generic [ref=e178]:
+          - generic [ref=e179]:
+            - button "Report incorrect code" [ref=e181] [cursor=pointer]:
+              - img [ref=e182]
+            - button "Copy the contents from the code block" [ref=e185] [cursor=pointer]:
+              - img [ref=e186]
+            - button "Ask AI" [ref=e190] [cursor=pointer]:
+              - img [ref=e191]
+          - code [ref=e197]:
+            - generic [ref=e198]: curl --request POST \
+            - generic [ref=e199]: "--url https://api.crustdata.com/company/identify \\"
+            - generic [ref=e200]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+            - generic [ref=e201]: "--header 'content-type: application/json' \\"
+            - generic [ref=e202]: "--header 'x-api-version: 2025-11-01' \\"
+            - generic [ref=e203]: "--data '{\"domains\": [\"retool.com\"]}'"
+        - heading "Navigate to header Response format" [level=2] [ref=e204]:
+          - link "Navigate to header" [ref=e205] [cursor=pointer]:
+            - /url: "#response-format"
+            - img [ref=e207]
+          - generic [ref=e209] [cursor=pointer]: Response format
+        - generic [ref=e210]:
+          - text: All responses return JSON. Successful requests typically return
+          - code [ref=e211]: "200"
+          - text: with the endpoint-specific payload in the response body.
+        - heading "Navigate to header Error responses" [level=2] [ref=e212]:
+          - link "Navigate to header" [ref=e213] [cursor=pointer]:
+            - /url: "#error-responses"
+            - img [ref=e215]
+          - generic [ref=e217] [cursor=pointer]: Error responses
+        - generic [ref=e218]:
+          - text: Error responses return JSON with an
+          - code [ref=e219]: error
+          - text: field and a details field explaining the issue.
+        - generic [ref=e220]:
+          - img "Note" [ref=e222]
+          - generic [ref=e225]:
+            - text: Most APIs use
+            - code [ref=e226]: description
+            - text: for the details field. The Person API uses
+            - code [ref=e227]: reason
+            - text: instead.
+        - generic [ref=e228]:
+          - generic [ref=e229]:
+            - button "Report incorrect code" [ref=e231] [cursor=pointer]:
+              - img [ref=e232]
+            - button "Copy the contents from the code block" [ref=e235] [cursor=pointer]:
+              - img [ref=e236]
+            - button "Ask AI" [ref=e240] [cursor=pointer]:
+              - img [ref=e241]
+          - code [ref=e247]:
+            - generic [ref=e248]: "{"
+            - generic [ref=e249]: "\"error\": \"Invalid Request\","
+            - generic [ref=e250]: "\"description\": \"Exactly one identifier must be provided.\""
+            - generic [ref=e251]: "}"
+        - generic [ref=e252]:
+          - generic [ref=e253]:
+            - generic "Person API" [ref=e255]
+            - generic [ref=e256]:
+              - button "Report incorrect code" [ref=e258] [cursor=pointer]:
+                - img [ref=e259]
+              - button "Copy the contents from the code block" [ref=e262] [cursor=pointer]:
+                - img [ref=e263]
+              - button "Ask AI" [ref=e267] [cursor=pointer]:
+                - img [ref=e268]
+          - code [ref=e274]:
+            - generic [ref=e275]: "{"
+            - generic [ref=e276]: "\"error\": \"Invalid Request\","
+            - generic [ref=e277]: "\"reason\": \"Input should be a valid dictionary\""
+            - generic [ref=e278]: "}"
+        - heading "Navigate to header HTTP status codes" [level=3] [ref=e279]:
+          - link "Navigate to header" [ref=e280] [cursor=pointer]:
+            - /url: "#http-status-codes"
+            - img [ref=e282]
+          - generic [ref=e284] [cursor=pointer]: HTTP status codes
+        - table [ref=e287]:
+          - rowgroup [ref=e288]:
+            - row "Status code Meaning Description" [ref=e289]:
+              - columnheader "Status code" [ref=e290]
+              - columnheader "Meaning" [ref=e291]
+              - columnheader "Description" [ref=e292]
+          - rowgroup [ref=e293]:
+            - row "200 Success Request completed successfully." [ref=e294]:
+              - cell "200" [ref=e295]:
+                - code [ref=e296]: "200"
+              - cell "Success" [ref=e297]
+              - cell "Request completed successfully." [ref=e298]
+            - row "400 Bad Request Invalid request parameters or malformed input." [ref=e299]:
+              - cell "400" [ref=e300]:
+                - code [ref=e301]: "400"
+              - cell "Bad Request" [ref=e302]
+              - cell "Invalid request parameters or malformed input." [ref=e303]
+            - row "401 Unauthorized Missing or invalid API key." [ref=e304]:
+              - cell "401" [ref=e305]:
+                - code [ref=e306]: "401"
+              - cell "Unauthorized" [ref=e307]
+              - cell "Missing or invalid API key." [ref=e308]
+            - row "403 Forbidden API key does not have access to this endpoint." [ref=e309]:
+              - cell "403" [ref=e310]:
+                - code [ref=e311]: "403"
+              - cell "Forbidden" [ref=e312]
+              - cell "API key does not have access to this endpoint." [ref=e313]
+            - row "404 Not Found Requested resource not found." [ref=e314]:
+              - cell "404" [ref=e315]:
+                - code [ref=e316]: "404"
+              - cell "Not Found" [ref=e317]
+              - cell "Requested resource not found." [ref=e318]
+            - row "500 Internal Server Error Unexpected server-side failure. Try again later." [ref=e319]:
+              - cell "500" [ref=e320]:
+                - code [ref=e321]: "500"
+              - cell "Internal Server Error" [ref=e322]
+              - cell "Unexpected server-side failure. Try again later." [ref=e323]
+        - heading "Navigate to header Error response examples" [level=3] [ref=e324]:
+          - link "Navigate to header" [ref=e325] [cursor=pointer]:
+            - /url: "#error-response-examples"
+            - img [ref=e327]
+          - generic [ref=e329] [cursor=pointer]: Error response examples
+        - generic [ref=e330]:
+          - group [ref=e331]:
+            - generic "400 — Bad Request" [ref=e332] [cursor=pointer]:
+              - img [ref=e334]
+              - paragraph [ref=e336]: 400 — Bad Request
+          - group [ref=e337]:
+            - generic "401 — Unauthorized" [ref=e338] [cursor=pointer]:
+              - img [ref=e340]
+              - paragraph [ref=e342]: 401 — Unauthorized
+          - group [ref=e343]:
+            - generic "403 — Forbidden" [ref=e344] [cursor=pointer]:
+              - img [ref=e346]
+              - paragraph [ref=e348]: 403 — Forbidden
+          - group [ref=e349]:
+            - generic "404 — Not Found" [ref=e350] [cursor=pointer]:
+              - img [ref=e352]
+              - paragraph [ref=e354]: 404 — Not Found
+          - group [ref=e355]:
+            - generic "500 — Internal Server Error" [ref=e356] [cursor=pointer]:
+              - img [ref=e358]
+              - paragraph [ref=e360]: 500 — Internal Server Error
+        - heading "Navigate to header Rate limits" [level=2] [ref=e361]:
+          - link "Navigate to header" [ref=e362] [cursor=pointer]:
+            - /url: "#rate-limits"
+            - img [ref=e364]
+          - generic [ref=e366] [cursor=pointer]: Rate limits
+        - generic [ref=e367]:
+          - text: API requests are rate-limited per API key. See
+          - link "Rate limits" [ref=e368] [cursor=pointer]:
+            - /url: /general/rate-limits
+          - text: for details on limits and best practices.
+        - heading "Navigate to header Endpoints" [level=2] [ref=e369]:
+          - link "Navigate to header" [ref=e370] [cursor=pointer]:
+            - /url: "#endpoints"
+            - img [ref=e372]
+          - generic [ref=e374] [cursor=pointer]: Endpoints
+        - generic [ref=e375]: This reference currently documents 12 endpoints across three product areas.
+        - generic [ref=e376]:
+          - img "Note" [ref=e378]
+          - generic [ref=e381]: Company and Person live endpoints are plan-specific. Use the Company, Person, and Web guide pages for workflow examples and endpoint-specific behavior.
+        - heading "Navigate to header Company API" [level=3] [ref=e382]:
+          - link "Navigate to header" [ref=e383] [cursor=pointer]:
+            - /url: "#company-api"
+            - img [ref=e385]
+          - generic [ref=e387] [cursor=pointer]: Company API
+        - table [ref=e390]:
+          - rowgroup [ref=e391]:
+            - row "Method Path Description" [ref=e392]:
+              - columnheader "Method" [ref=e393]
+              - columnheader "Path" [ref=e394]
+              - columnheader "Description" [ref=e395]
+          - rowgroup [ref=e396]:
+            - row "POST /company/search Search companies with filters" [ref=e397]:
+              - cell "POST" [ref=e398]
+              - cell "/company/search" [ref=e399]:
+                - code [ref=e400]: /company/search
+              - cell "Search companies with filters" [ref=e401]
+            - row "POST /company/identify Resolve a domain, URL, or name to a company" [ref=e402]:
+              - cell "POST" [ref=e403]
+              - cell "/company/identify" [ref=e404]:
+                - code [ref=e405]: /company/identify
+              - cell "Resolve a domain, URL, or name to a company" [ref=e406]
+            - row "POST /company/enrich Get a full company profile" [ref=e407]:
+              - cell "POST" [ref=e408]
+              - cell "/company/enrich" [ref=e409]:
+                - code [ref=e410]: /company/enrich
+              - cell "Get a full company profile" [ref=e411]
+            - row "POST /company/search/autocomplete Autocomplete company search fields" [ref=e412]:
+              - cell "POST" [ref=e413]
+              - cell "/company/search/autocomplete" [ref=e414]:
+                - code [ref=e415]: /company/search/autocomplete
+              - cell "Autocomplete company search fields" [ref=e416]
+            - row "POST /company/professional_network/search/live Search companies in real time" [ref=e417]:
+              - cell "POST" [ref=e418]
+              - cell "/company/professional_network/search/live" [ref=e419]:
+                - code [ref=e420]: /company/professional_network/search/live
+              - cell "Search companies in real time" [ref=e421]
+        - heading "Navigate to header Person API" [level=3] [ref=e422]:
+          - link "Navigate to header" [ref=e423] [cursor=pointer]:
+            - /url: "#person-api"
+            - img [ref=e425]
+          - generic [ref=e427] [cursor=pointer]: Person API
+        - table [ref=e430]:
+          - rowgroup [ref=e431]:
+            - row "Method Path Description" [ref=e432]:
+              - columnheader "Method" [ref=e433]
+              - columnheader "Path" [ref=e434]
+              - columnheader "Description" [ref=e435]
+          - rowgroup [ref=e436]:
+            - row "POST /person/search Search people using filters and sorting" [ref=e437]:
+              - cell "POST" [ref=e438]
+              - cell "/person/search" [ref=e439]:
+                - code [ref=e440]: /person/search
+              - cell "Search people using filters and sorting" [ref=e441]
+            - row "POST /person/enrich Enrich person profiles from the cached dataset" [ref=e442]:
+              - cell "POST" [ref=e443]
+              - cell "/person/enrich" [ref=e444]:
+                - code [ref=e445]: /person/enrich
+              - cell "Enrich person profiles from the cached dataset" [ref=e446]
+            - row "POST /person/professional_network/enrich/live Fetch fresh profile data from the web" [ref=e447]:
+              - cell "POST" [ref=e448]
+              - cell "/person/professional_network/enrich/live" [ref=e449]:
+                - code [ref=e450]: /person/professional_network/enrich/live
+              - cell "Fetch fresh profile data from the web" [ref=e451]
+            - row "POST /person/professional_network/search/live Search people in real time" [ref=e452]:
+              - cell "POST" [ref=e453]
+              - cell "/person/professional_network/search/live" [ref=e454]:
+                - code [ref=e455]: /person/professional_network/search/live
+              - cell "Search people in real time" [ref=e456]
+            - row "POST /person/search/autocomplete Get field value suggestions for building search filters" [ref=e457]:
+              - cell "POST" [ref=e458]
+              - cell "/person/search/autocomplete" [ref=e459]:
+                - code [ref=e460]: /person/search/autocomplete
+              - cell "Get field value suggestions for building search filters" [ref=e461]
+        - heading "Navigate to header Web API" [level=3] [ref=e462]:
+          - link "Navigate to header" [ref=e463] [cursor=pointer]:
+            - /url: "#web-api"
+            - img [ref=e465]
+          - generic [ref=e467] [cursor=pointer]: Web API
+        - table [ref=e470]:
+          - rowgroup [ref=e471]:
+            - row "Method Path Description" [ref=e472]:
+              - columnheader "Method" [ref=e473]
+              - columnheader "Path" [ref=e474]
+              - columnheader "Description" [ref=e475]
+          - rowgroup [ref=e476]:
+            - row "POST /web/search/live Perform web search" [ref=e477]:
+              - cell "POST" [ref=e478]
+              - cell "/web/search/live" [ref=e479]:
+                - code [ref=e480]: /web/search/live
+              - cell "Perform web search" [ref=e481]
+            - row "POST /web/enrich/live Fetch web content" [ref=e482]:
+              - cell "POST" [ref=e483]
+              - cell "/web/enrich/live" [ref=e484]:
+                - code [ref=e485]: /web/enrich/live
+              - cell "Fetch web content" [ref=e486]
+        - generic [ref=e487]:
+          - link "Company API Search, identify, enrich, and autocomplete company data." [ref=e488] [cursor=pointer]:
+            - generic [ref=e489]:
+              - img [ref=e491]
+              - generic [ref=e492]:
+                - heading "Company API" [level=2] [ref=e493]
+                - generic [ref=e495]: Search, identify, enrich, and autocomplete company data.
+          - link "Person API Search, enrich, and autocomplete people data." [ref=e496] [cursor=pointer]:
+            - generic [ref=e497]:
+              - img [ref=e499]
+              - generic [ref=e500]:
+                - heading "Person API" [level=2] [ref=e501]
+                - generic [ref=e503]: Search, enrich, and autocomplete people data.
+          - link "Web API Search the web and fetch page content." [ref=e504] [cursor=pointer]:
+            - generic [ref=e505]:
+              - img [ref=e507]
+              - generic [ref=e508]:
+                - heading "Web API" [level=2] [ref=e509]
+                - generic [ref=e511]: Search the web and fetch page content.
+      - generic [ref=e513]:
+        - paragraph [ref=e514]: Was this page helpful?
+        - generic [ref=e516]:
+          - button "Yes" [ref=e517] [cursor=pointer]:
+            - img [ref=e518]
+            - generic [ref=e520]: "Yes"
+          - button "No" [ref=e521] [cursor=pointer]:
+            - img [ref=e522]
+            - generic [ref=e524]: "No"
+      - generic [ref=e526]:
+        - textbox "Ask a question..." [ref=e527]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e528]:
+          - img [ref=e529]
+      - contentinfo [ref=e531]:
+        - generic [ref=e532]:
+          - link "x" [ref=e533] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e534]: x
+            - img [ref=e535]
+          - link "linkedin" [ref=e536] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e537]: linkedin
+            - img [ref=e538]

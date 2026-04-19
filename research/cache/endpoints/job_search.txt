@@ -1,0 +1,50 @@
+URL: https://docs.crustdata.com/api-reference/job-apis/search-the-indexed-job-dataset
+Title: Search Jobs
+
+Description: Search Crustdata job dataset using filter conditions. Each result includes the job's details (title, category, URL, openings), the hiring company's core firmographics (basic info, headcount, followers, revenue, funding, competitors), the job location, full job description text, and metadata timestamps.
+- Supports complex AND/OR filter logic, cursor-based pagination, sorting, field selection, and aggregations (count and group_by).
+- Only indexed fields are filterable and sortable.
+
+Rate limit: Default 15 requests per minute.
+
+Method: POST
+URL: https://api.crustdata.com/job/search
+
+Auth: Bearer token (required)
+Headers: x-api-version (required, e.g., "2025-11-01")
+
+Body (application/json):
+  filters: object — SearchCondition or and/or group
+    Example: { field: "company.basic_info.company_id", type: "=", value: 631394 }
+    Common fields:
+      company.basic_info.company_id, company.basic_info.name, company.basic_info.primary_domain,
+      job_details.title, job_details.url, job_details.category, job_details.openings,
+      location.country, location.state, location.city, location.raw,
+      metadata.date_added, metadata.updated_at
+    Any indexed field from the job schema.
+  cursor: string — opaque pagination cursor
+  limit: integer, default 20, range 0..1000 (0 = aggregations only)
+  sorts: array
+    sorts.column: string
+    sorts.order: asc|desc
+    Example: [{ column: "metadata.date_added", order: "desc" }]
+  fields: string[] — dot-notation. Top-level groups: crustdata_job_id, job_details, company, location,
+    content, metadata. Nested ok (company.basic_info, company.headcount, company.funding, etc).
+  aggregations: array
+    type: "count" | "group_by"
+    column: string
+    agg: "count"
+    size: integer
+    Example: [{ type: "group_by", column: "company.basic_info.company_id", agg: "count", size: 5 }]
+
+Response (200):
+  job_listings: array
+    - crustdata_job_id, job_details {title, url, category, openings, description, ...},
+      company { basic_info, headcount, followers, revenue, funding, competitors, ... },
+      location { country, state, city, raw },
+      content (full job description text),
+      metadata { date_added, updated_at }
+  next_cursor: string | null
+  total_count: integer | null
+  aggregations: array (present only when request included aggregations)
+    - type, column, value

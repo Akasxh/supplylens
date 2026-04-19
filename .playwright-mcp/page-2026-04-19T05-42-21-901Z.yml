@@ -1,0 +1,748 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#content-area"
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - paragraph [ref=e11]:
+          - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+          - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+            - /url: mailto:support@crustdata.tech
+          - text: for feedback and clarifications.
+        - generic [ref=e14]:
+          - generic [ref=e16]:
+            - generic [ref=e17]:
+              - link "Crustdata Docs home page light logo":
+                - /url: /
+                - generic [ref=e18] [cursor=pointer]: Crustdata Docs home page
+                - img "light logo"
+            - generic [ref=e19]:
+              - button "Open search" [ref=e20] [cursor=pointer]:
+                - generic [ref=e21]: Search...
+                - img [ref=e22]
+              - button [ref=e23] [cursor=pointer]:
+                - img [ref=e24]
+              - button "More actions" [ref=e27] [cursor=pointer]:
+                - img [ref=e28]
+          - button "Navigation Person Person APIs" [ref=e29] [cursor=pointer]:
+            - generic [ref=e30]:
+              - generic [ref=e31]: Navigation
+              - img [ref=e32]
+            - generic [ref=e34]:
+              - generic [ref=e35]:
+                - generic [ref=e36]: Person
+                - img [ref=e37]
+              - generic [ref=e39]: Person APIs
+      - generic [ref=e43]:
+        - banner [ref=e44]:
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]:
+                - link "Products" [ref=e48] [cursor=pointer]:
+                  - /url: /company-docs/quickstart
+                - img [ref=e49]
+              - link "Person" [ref=e52] [cursor=pointer]:
+                - /url: /person-docs/quickstart
+            - generic [ref=e53]:
+              - heading "Person APIs" [level=1] [ref=e54]
+              - generic [ref=e55]:
+                - button "Copy page" [ref=e56] [cursor=pointer]:
+                  - generic [ref=e57]:
+                    - img [ref=e58]
+                    - generic [ref=e61]: Copy page
+                - button "More actions" [ref=e62] [cursor=pointer]:
+                  - img [ref=e63]
+          - paragraph [ref=e66]: Find, enrich, and analyze people with the Crustdata Person APIs.
+        - generic [ref=e67]:
+          - generic [ref=e68]: "The Person APIs help you answer practical questions about people: Who are the decision-makers at a target company? What does this person’s professional background look like? Can I find people by name, title, location, or employer? Can I enrich a person from a profile URL or business email?"
+          - generic [ref=e69]: Start with the indexed endpoints for most workflows, then use the live endpoints when you need fresh results from the web.
+          - table [ref=e72]:
+            - rowgroup [ref=e73]:
+              - row "API What it does Best for" [ref=e74]:
+                - columnheader "API" [ref=e75]
+                - columnheader "What it does" [ref=e76]
+                - columnheader "Best for" [ref=e77]
+            - rowgroup [ref=e78]:
+              - row "Search Find people matching structured filters Prospecting, talent sourcing, market mapping" [ref=e79]:
+                - cell "Search" [ref=e80]:
+                  - link "Search" [ref=e81] [cursor=pointer]:
+                    - /url: /person-docs/search
+                - cell "Find people matching structured filters" [ref=e82]
+                - cell "Prospecting, talent sourcing, market mapping" [ref=e83]
+              - row "Enrich Get a detailed profile from a profile URL or email Outreach prep, due diligence, profile building" [ref=e84]:
+                - cell "Enrich" [ref=e85]:
+                  - link "Enrich" [ref=e86] [cursor=pointer]:
+                    - /url: /person-docs/enrichment
+                - cell "Get a detailed profile from a profile URL or email" [ref=e87]
+                - cell "Outreach prep, due diligence, profile building" [ref=e88]
+              - row "Autocomplete Discover valid field values for search filters Building filter dropdowns, validating filter inputs" [ref=e89]:
+                - cell "Autocomplete" [ref=e90]:
+                  - link "Autocomplete" [ref=e91] [cursor=pointer]:
+                    - /url: /person-docs/autocomplete
+                - cell "Discover valid field values for search filters" [ref=e92]
+                - cell "Building filter dropdowns, validating filter inputs" [ref=e93]
+          - heading "Navigate to header Enterprise live endpoints" [level=3] [ref=e94]:
+            - link "Navigate to header" [ref=e95] [cursor=pointer]:
+              - /url: "#enterprise-live-endpoints"
+              - img [ref=e97]
+            - generic [ref=e99] [cursor=pointer]: Enterprise live endpoints
+          - table [ref=e102]:
+            - rowgroup [ref=e103]:
+              - row "API What it does Access" [ref=e104]:
+                - columnheader "API" [ref=e105]
+                - columnheader "What it does" [ref=e106]
+                - columnheader "Access" [ref=e107]
+            - rowgroup [ref=e108]:
+              - row "Live Search 🔒 Search people in real time from the web Book a demo" [ref=e109]:
+                - cell "Live Search 🔒" [ref=e110]:
+                  - link "Live Search 🔒" [ref=e111] [cursor=pointer]:
+                    - /url: https://crustdata.com/demo
+                - cell "Search people in real time from the web" [ref=e112]
+                - cell "Book a demo" [ref=e113]
+              - row "Live Enrich 🔒 Fetch a fresh person profile from the web Book a demo" [ref=e114]:
+                - cell "Live Enrich 🔒" [ref=e115]:
+                  - link "Live Enrich 🔒" [ref=e116] [cursor=pointer]:
+                    - /url: https://crustdata.com/demo
+                - cell "Fetch a fresh person profile from the web" [ref=e117]
+                - cell "Book a demo" [ref=e118]
+          - heading "Navigate to header At a glance" [level=2] [ref=e119]:
+            - link "Navigate to header" [ref=e120] [cursor=pointer]:
+              - /url: "#at-a-glance"
+              - img [ref=e122]
+            - generic [ref=e124] [cursor=pointer]: At a glance
+          - table [ref=e127]:
+            - rowgroup [ref=e128]:
+              - row "Search Autocomplete Enrich" [ref=e129]:
+                - columnheader [ref=e130]
+                - columnheader "Search" [ref=e131]
+                - columnheader "Autocomplete" [ref=e132]
+                - columnheader "Enrich" [ref=e133]
+            - rowgroup [ref=e134]:
+              - row "Endpoint /person/search /person/search/autocomplete /person/enrich" [ref=e135]:
+                - cell "Endpoint" [ref=e136]:
+                  - strong [ref=e137]: Endpoint
+                - cell "/person/search" [ref=e138]:
+                  - code [ref=e139]: /person/search
+                - cell "/person/search/autocomplete" [ref=e140]:
+                  - code [ref=e141]: /person/search/autocomplete
+                - cell "/person/enrich" [ref=e142]:
+                  - code [ref=e143]: /person/enrich
+              - row "Data source Crustdata indexed Crustdata indexed Crustdata indexed" [ref=e144]:
+                - cell "Data source" [ref=e145]:
+                  - strong [ref=e146]: Data source
+                - cell "Crustdata indexed" [ref=e147]
+                - cell "Crustdata indexed" [ref=e148]
+                - cell "Crustdata indexed" [ref=e149]
+              - row "Purpose Find people by filters Discover valid filter values Get full person profile" [ref=e150]:
+                - cell "Purpose" [ref=e151]:
+                  - strong [ref=e152]: Purpose
+                - cell "Find people by filters" [ref=e153]
+                - cell "Discover valid filter values" [ref=e154]
+                - cell "Get full person profile" [ref=e155]
+              - 'row "Filter syntax { \"field\": \"dotpath\", \"type\": \"op\", \"value\": ... } Optional filters param N/A" [ref=e156]':
+                - cell "Filter syntax" [ref=e157]:
+                  - strong [ref=e158]: Filter syntax
+                - 'cell "{ \"field\": \"dotpath\", \"type\": \"op\", \"value\": ... }" [ref=e159]':
+                  - code [ref=e160]: "{ \"field\": \"dotpath\", \"type\": \"op\", \"value\": ... }"
+                - cell "Optional filters param" [ref=e161]:
+                  - text: Optional
+                  - code [ref=e162]: filters
+                  - text: param
+                - cell "N/A" [ref=e163]
+              - row "Pagination Cursor-based — —" [ref=e164]:
+                - cell "Pagination" [ref=e165]:
+                  - strong [ref=e166]: Pagination
+                - cell "Cursor-based" [ref=e167]
+                - cell "—" [ref=e168]
+                - cell "—" [ref=e169]
+              - row "Field selection fields = dot-paths — fields = dot-paths or section groups" [ref=e170]:
+                - cell "Field selection" [ref=e171]:
+                  - strong [ref=e172]: Field selection
+                - cell "fields = dot-paths" [ref=e173]:
+                  - code [ref=e174]: fields
+                  - text: = dot-paths
+                - cell "—" [ref=e175]
+                - cell "fields = dot-paths or section groups" [ref=e176]:
+                  - code [ref=e177]: fields
+                  - text: = dot-paths or section groups
+              - row "Error codes 400, 401, 403, 500 400, 401, 500 400, 401, 403, 404, 500" [ref=e178]:
+                - cell "Error codes" [ref=e179]:
+                  - strong [ref=e180]: Error codes
+                - cell "400, 401, 403, 500" [ref=e181]:
+                  - code [ref=e182]: "400"
+                  - text: ","
+                  - code [ref=e183]: "401"
+                  - text: ","
+                  - code [ref=e184]: "403"
+                  - text: ","
+                  - code [ref=e185]: "500"
+                - cell "400, 401, 500" [ref=e186]:
+                  - code [ref=e187]: "400"
+                  - text: ","
+                  - code [ref=e188]: "401"
+                  - text: ","
+                  - code [ref=e189]: "500"
+                - cell "400, 401, 403, 404, 500" [ref=e190]:
+                  - code [ref=e191]: "400"
+                  - text: ","
+                  - code [ref=e192]: "401"
+                  - text: ","
+                  - code [ref=e193]: "403"
+                  - text: ","
+                  - code [ref=e194]: "404"
+                  - text: ","
+                  - code [ref=e195]: "500"
+          - separator [ref=e196]
+          - heading "Navigate to header Before you start" [level=2] [ref=e197]:
+            - link "Navigate to header" [ref=e198] [cursor=pointer]:
+              - /url: "#before-you-start"
+              - img [ref=e200]
+            - generic [ref=e202] [cursor=pointer]: Before you start
+          - generic [ref=e203]: "You need:"
+          - list [ref=e204]:
+            - listitem [ref=e205]: A Crustdata API key
+            - listitem [ref=e206]:
+              - text: A terminal with
+              - code [ref=e207]: curl
+              - text: (or any HTTP client)
+            - listitem [ref=e208]:
+              - text: "The required header:"
+              - code [ref=e209]: "x-api-version: 2025-11-01"
+          - generic [ref=e210]:
+            - text: All requests use
+            - strong [ref=e211]: Bearer token authentication
+            - text: "and require the API version header:"
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - button "Report incorrect code" [ref=e215] [cursor=pointer]:
+                - img [ref=e216]
+              - button "Copy the contents from the code block" [ref=e219] [cursor=pointer]:
+                - img [ref=e220]
+              - button "Ask AI" [ref=e224] [cursor=pointer]:
+                - img [ref=e225]
+            - code [ref=e231]:
+              - generic [ref=e232]: "--header 'authorization: Bearer YOUR_API_KEY'"
+              - generic [ref=e233]: "--header 'x-api-version: 2025-11-01'"
+          - generic [ref=e234]:
+            - img "Note" [ref=e236]
+            - generic [ref=e238]:
+              - text: Replace
+              - code [ref=e239]: YOUR_API_KEY
+              - text: in each example with your actual API key.
+          - generic [ref=e240]:
+            - img "Note" [ref=e242]
+            - generic [ref=e245]:
+              - strong [ref=e246]: "Convention used in these docs:"
+              - text: Information labeled “OpenAPI contract” reflects the formal API specification. Information labeled “Current platform behavior” (such as rate limits, credit costs, and max page ranges) describes observed behavior that may change. See the
+              - link "API reference" [ref=e247] [cursor=pointer]:
+                - /url: /openapi-specs/2025-11-01/introduction
+              - text: for the formal OpenAPI spec.
+          - separator [ref=e248]
+          - 'heading "Navigate to header Quickstart: enrich a person from a profile URL" [level=2] [ref=e249]':
+            - link "Navigate to header" [ref=e250] [cursor=pointer]:
+              - /url: "#quickstart-enrich-a-person-from-a-profile-url"
+              - img [ref=e252]
+            - generic [ref=e254] [cursor=pointer]: "Quickstart: enrich a person from a profile URL"
+          - generic [ref=e255]: The fastest way to get started is to enrich a person from their profile URL. This single request returns the full person profile from the Crustdata cache.
+          - generic [ref=e256]:
+            - generic [ref=e257]:
+              - tablist [ref=e258]:
+                - tab "Request" [selected] [ref=e259] [cursor=pointer]:
+                  - generic [ref=e260]: Request
+                - tab "Response" [ref=e262] [cursor=pointer]:
+                  - generic [ref=e263]: Response
+              - generic [ref=e264]:
+                - button "Report incorrect code" [ref=e266] [cursor=pointer]:
+                  - img [ref=e267]
+                - button "Copy the contents from the code block" [ref=e270] [cursor=pointer]:
+                  - img [ref=e271]
+                - button "Ask AI" [ref=e275] [cursor=pointer]:
+                  - img [ref=e276]
+            - tabpanel "Request" [ref=e280]:
+              - code [ref=e284]:
+                - generic [ref=e285]: curl --request POST \
+                - generic [ref=e286]: "--url https://api.crustdata.com/person/enrich \\"
+                - generic [ref=e287]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+                - generic [ref=e288]: "--header 'content-type: application/json' \\"
+                - generic [ref=e289]: "--header 'x-api-version: 2025-11-01' \\"
+                - generic [ref=e290]: "--data '{"
+                - generic [ref=e291]: "\"professional_network_profile_urls\": ["
+                - generic [ref=e292]: "\"https://www.linkedin.com/in/abhilashchowdhary\""
+                - generic [ref=e293]: "]"
+                - generic [ref=e294]: "}'"
+          - generic [ref=e295]:
+            - img "Note" [ref=e297]
+            - generic [ref=e300]: Response trimmed for clarity. The full response can include employment history, education, skills, contact data, and developer platform profiles.
+          - generic [ref=e301]: "The response is an array — one entry per identifier you submitted:"
+          - list [ref=e302]:
+            - listitem [ref=e303]:
+              - strong [ref=e304]:
+                - code [ref=e305]: matched_on
+              - text: — the input you sent (for example,
+              - code [ref=e306]: https://www.linkedin.com/in/abhilashchowdhary
+              - text: ).
+            - listitem [ref=e307]:
+              - strong [ref=e308]:
+                - code [ref=e309]: match_type
+              - text: — which identifier type was used (
+              - code [ref=e310]: professional_network_profile_url
+              - text: or
+              - code [ref=e311]: business_email
+              - text: ).
+            - listitem [ref=e312]:
+              - strong [ref=e313]:
+                - code [ref=e314]: confidence_score
+              - text: — how confident the match is (
+              - code [ref=e315]: "1.0"
+              - text: = exact match).
+            - listitem [ref=e316]:
+              - strong [ref=e317]:
+                - code [ref=e318]: person_data
+              - text: — the full person profile, including
+              - code [ref=e319]: basic_profile
+              - text: ","
+              - code [ref=e320]: experience
+              - text: ","
+              - code [ref=e321]: education
+              - text: ","
+              - code [ref=e322]: skills
+              - text: ","
+              - code [ref=e323]: contact
+              - text: ","
+              - code [ref=e324]: social_handles
+              - text: ", and more."
+          - separator [ref=e325]
+          - heading "Navigate to header Which API should you start with?" [level=2] [ref=e326]:
+            - link "Navigate to header" [ref=e327] [cursor=pointer]:
+              - /url: "#which-api-should-you-start-with"
+              - img [ref=e329]
+            - generic [ref=e331] [cursor=pointer]: Which API should you start with?
+          - table [ref=e334]:
+            - rowgroup [ref=e335]:
+              - row "If you want to… Start with" [ref=e336]:
+                - columnheader "If you want to…" [ref=e337]
+                - columnheader "Start with" [ref=e338]
+            - rowgroup [ref=e339]:
+              - row "Find people by name, title, company, or location Search" [ref=e340]:
+                - cell "Find people by name, title, company, or location" [ref=e341]
+                - cell "Search" [ref=e342]:
+                  - link "Search" [ref=e343] [cursor=pointer]:
+                    - /url: /person-docs/search
+              - row "Get full profile details for a known profile URL Enrich" [ref=e344]:
+                - cell "Get full profile details for a known profile URL" [ref=e345]
+                - cell "Enrich" [ref=e346]:
+                  - link "Enrich" [ref=e347] [cursor=pointer]:
+                    - /url: /person-docs/enrichment
+              - row "Reverse-lookup a person from a business email Enrich" [ref=e348]:
+                - cell "Reverse-lookup a person from a business email" [ref=e349]
+                - cell "Enrich" [ref=e350]:
+                  - link "Enrich" [ref=e351] [cursor=pointer]:
+                    - /url: /person-docs/enrichment
+              - row "Discover valid filter values before building search queries Autocomplete" [ref=e352]:
+                - cell "Discover valid filter values before building search queries" [ref=e353]
+                - cell "Autocomplete" [ref=e354]:
+                  - link "Autocomplete" [ref=e355] [cursor=pointer]:
+                    - /url: /person-docs/autocomplete
+              - row "Build a list of decision-makers at target companies Search" [ref=e356]:
+                - cell "Build a list of decision-makers at target companies" [ref=e357]
+                - cell "Search" [ref=e358]:
+                  - link "Search" [ref=e359] [cursor=pointer]:
+                    - /url: /person-docs/search
+              - row "Search people in real time from the web Live Search 🔒" [ref=e360]:
+                - cell "Search people in real time from the web" [ref=e361]
+                - cell "Live Search 🔒" [ref=e362]:
+                  - link "Live Search 🔒" [ref=e363] [cursor=pointer]:
+                    - /url: https://crustdata.com/demo
+              - row "Fetch fresh profile data from the web Live Enrich 🔒" [ref=e364]:
+                - cell "Fetch fresh profile data from the web" [ref=e365]
+                - cell "Live Enrich 🔒" [ref=e366]:
+                  - link "Live Enrich 🔒" [ref=e367] [cursor=pointer]:
+                    - /url: https://crustdata.com/demo
+          - heading "Navigate to header Common workflows" [level=2] [ref=e368]:
+            - link "Navigate to header" [ref=e369] [cursor=pointer]:
+              - /url: "#common-workflows"
+              - img [ref=e371]
+            - generic [ref=e373] [cursor=pointer]: Common workflows
+          - list [ref=e374]:
+            - listitem [ref=e375]:
+              - strong [ref=e376]: Discovery
+              - text: — Start with
+              - link "Autocomplete" [ref=e377] [cursor=pointer]:
+                - /url: /person-docs/autocomplete
+              - text: to find valid filter values (e.g., title variations), then
+              - link "Search" [ref=e378] [cursor=pointer]:
+                - /url: /person-docs/search
+              - text: to build your list, then
+              - link "Enrich" [ref=e379] [cursor=pointer]:
+                - /url: /person-docs/enrichment
+              - text: the top matches for full profiles.
+            - listitem [ref=e380]:
+              - strong [ref=e381]: Data cleanup
+              - text: — Use
+              - link "Enrich" [ref=e382] [cursor=pointer]:
+                - /url: /person-docs/enrichment
+              - text: with
+              - code [ref=e383]: business_emails
+              - text: to resolve person profiles and fill in missing professional context from CRM imports.
+            - listitem [ref=e384]:
+              - strong [ref=e385]: Lead routing
+              - text: —
+              - link "Enrich" [ref=e386] [cursor=pointer]:
+                - /url: /person-docs/enrichment
+              - text: incoming profile URLs to get a stable person profile, then
+              - link "Search" [ref=e387] [cursor=pointer]:
+                - /url: /person-docs/search
+              - text: for similar people at the same company or with the same title.
+          - separator [ref=e388]
+          - heading "Navigate to header Error handling" [level=2] [ref=e389]:
+            - link "Navigate to header" [ref=e390] [cursor=pointer]:
+              - /url: "#error-handling"
+              - img [ref=e392]
+            - generic [ref=e394] [cursor=pointer]: Error handling
+          - generic [ref=e395]: "All Person API endpoints return structured errors. The exact status codes vary by endpoint:"
+          - table [ref=e398]:
+            - rowgroup [ref=e399]:
+              - row "Status Meaning Applies to" [ref=e400]:
+                - columnheader "Status" [ref=e401]
+                - columnheader "Meaning" [ref=e402]
+                - columnheader "Applies to" [ref=e403]
+            - rowgroup [ref=e404]:
+              - row "400 Invalid request (bad field, wrong operator, malformed filters) All endpoints" [ref=e405]:
+                - cell "400" [ref=e406]:
+                  - code [ref=e407]: "400"
+                - cell "Invalid request (bad field, wrong operator, malformed filters)" [ref=e408]
+                - cell "All endpoints" [ref=e409]
+              - row "401 Invalid or missing API key All endpoints" [ref=e410]:
+                - cell "401" [ref=e411]:
+                  - code [ref=e412]: "401"
+                - cell "Invalid or missing API key" [ref=e413]
+                - cell "All endpoints" [ref=e414]
+              - row "403 Permission denied or insufficient credits Search, Enrich" [ref=e415]:
+                - cell "403" [ref=e416]:
+                  - code [ref=e417]: "403"
+                - cell "Permission denied or insufficient credits" [ref=e418]
+                - cell "Search, Enrich" [ref=e419]
+              - row "404 No data found (per spec) Enrich" [ref=e420]:
+                - cell "404" [ref=e421]:
+                  - code [ref=e422]: "404"
+                - cell "No data found (per spec)" [ref=e423]
+                - cell "Enrich" [ref=e424]
+              - row "500 Internal server error All endpoints" [ref=e425]:
+                - cell "500" [ref=e426]:
+                  - code [ref=e427]: "500"
+                - cell "Internal server error" [ref=e428]
+                - cell "All endpoints" [ref=e429]
+          - generic [ref=e430]: "Error response format:"
+          - generic [ref=e431]:
+            - generic [ref=e432]:
+              - button "Report incorrect code" [ref=e434] [cursor=pointer]:
+                - img [ref=e435]
+              - button "Copy the contents from the code block" [ref=e438] [cursor=pointer]:
+                - img [ref=e439]
+              - button "Ask AI" [ref=e443] [cursor=pointer]:
+                - img [ref=e444]
+            - code [ref=e450]:
+              - generic [ref=e451]: "{"
+              - generic [ref=e452]: "\"error\": {"
+              - generic [ref=e453]: "\"type\": \"invalid_request\","
+              - generic [ref=e454]: "\"message\": \"Unsupported filter field: 'current_title'. Supported fields: ['basic_profile.name', 'basic_profile.headline', ...]\","
+              - generic [ref=e455]: "\"metadata\": []"
+              - generic [ref=e456]: "}"
+              - generic [ref=e457]: "}"
+          - generic [ref=e458]:
+            - text: For
+            - code [ref=e459]: "401"
+            - text: ", the format is simpler:"
+            - code [ref=e460]: "{\"message\": \"Invalid API key in request\"}"
+            - text: .
+          - heading "Navigate to header No-match behavior" [level=3] [ref=e461]:
+            - link "Navigate to header" [ref=e462] [cursor=pointer]:
+              - /url: "#no-match-behavior"
+              - img [ref=e464]
+            - generic [ref=e466] [cursor=pointer]: No-match behavior
+          - table [ref=e469]:
+            - rowgroup [ref=e470]:
+              - row "Endpoint No matches found Action" [ref=e471]:
+                - columnheader "Endpoint" [ref=e472]
+                - columnheader "No matches found" [ref=e473]
+                - columnheader "Action" [ref=e474]
+            - rowgroup [ref=e475]:
+              - 'row "Search 200 with empty profiles: [] Broaden filters or check with Autocomplete" [ref=e476]':
+                - cell "Search" [ref=e477]
+                - 'cell "200 with empty profiles: []" [ref=e478]':
+                  - code [ref=e479]: "200"
+                  - text: with empty
+                  - code [ref=e480]: "profiles: []"
+                - cell "Broaden filters or check with Autocomplete" [ref=e481]
+              - 'row "Enrich 200 with empty matches: [] Try a different identifier type" [ref=e482]':
+                - cell "Enrich" [ref=e483]
+                - 'cell "200 with empty matches: []" [ref=e484]':
+                  - code [ref=e485]: "200"
+                  - text: with empty
+                  - code [ref=e486]: "matches: []"
+                - cell "Try a different identifier type" [ref=e487]
+              - 'row "Autocomplete 200 with empty suggestions: [] Try a broader query" [ref=e488]':
+                - cell "Autocomplete" [ref=e489]
+                - 'cell "200 with empty suggestions: []" [ref=e490]':
+                  - code [ref=e491]: "200"
+                  - text: with empty
+                  - code [ref=e492]: "suggestions: []"
+                - cell "Try a broader query" [ref=e493]
+          - generic [ref=e494]:
+            - img "Note" [ref=e496]
+            - generic [ref=e499]:
+              - text: The OpenAPI spec defines
+              - code [ref=e500]: "404"
+              - text: for Enrich, but current behavior typically returns
+              - code [ref=e501]: "200"
+              - text: with empty
+              - code [ref=e502]: matches
+              - text: . Handle both.
+          - heading "Navigate to header Retry guidance" [level=3] [ref=e503]:
+            - link "Navigate to header" [ref=e504] [cursor=pointer]:
+              - /url: "#retry-guidance"
+              - img [ref=e506]
+            - generic [ref=e508] [cursor=pointer]: Retry guidance
+          - table [ref=e511]:
+            - rowgroup [ref=e512]:
+              - row "Status Retry? Action" [ref=e513]:
+                - columnheader "Status" [ref=e514]
+                - columnheader "Retry?" [ref=e515]
+                - columnheader "Action" [ref=e516]
+            - rowgroup [ref=e517]:
+              - row "400 No Fix the request" [ref=e518]:
+                - cell "400" [ref=e519]:
+                  - code [ref=e520]: "400"
+                - cell "No" [ref=e521]
+                - cell "Fix the request" [ref=e522]
+              - row "401 No Check API key" [ref=e523]:
+                - cell "401" [ref=e524]:
+                  - code [ref=e525]: "401"
+                - cell "No" [ref=e526]
+                - cell "Check API key" [ref=e527]
+              - row "403 No Check permissions/credits" [ref=e528]:
+                - cell "403" [ref=e529]:
+                  - code [ref=e530]: "403"
+                - cell "No" [ref=e531]
+                - cell "Check permissions/credits" [ref=e532]
+              - row "404 No Try different identifier" [ref=e533]:
+                - cell "404" [ref=e534]:
+                  - code [ref=e535]: "404"
+                - cell "No" [ref=e536]
+                - cell "Try different identifier" [ref=e537]
+              - row "500 Yes Exponential backoff (1s, 2s, 4s)" [ref=e538]:
+                - cell "500" [ref=e539]:
+                  - code [ref=e540]: "500"
+                - cell "Yes" [ref=e541]
+                - cell "Exponential backoff (1s, 2s, 4s)" [ref=e542]
+          - separator [ref=e543]
+          - heading "Navigate to header Terminology reference" [level=2] [ref=e544]:
+            - link "Navigate to header" [ref=e545] [cursor=pointer]:
+              - /url: "#terminology-reference"
+              - img [ref=e547]
+            - generic [ref=e549] [cursor=pointer]: Terminology reference
+          - generic [ref=e550]: "These are the most common terms used across the Person APIs:"
+          - table [ref=e553]:
+            - rowgroup [ref=e554]:
+              - row "You say API request field Used in" [ref=e555]:
+                - columnheader "You say" [ref=e556]
+                - columnheader "API request field" [ref=e557]
+                - columnheader "Used in" [ref=e558]
+            - rowgroup [ref=e559]:
+              - row "Profile URL professional_network_profile_urls Enrich" [ref=e560]:
+                - cell "Profile URL" [ref=e561]
+                - cell "professional_network_profile_urls" [ref=e562]:
+                  - code [ref=e563]: professional_network_profile_urls
+                - cell "Enrich" [ref=e564]
+              - row "Business email business_emails Enrich" [ref=e565]:
+                - cell "Business email" [ref=e566]
+                - cell "business_emails" [ref=e567]:
+                  - code [ref=e568]: business_emails
+                - cell "Enrich" [ref=e569]
+              - row "Person name basic_profile.name (filter field) Search, Autocomplete" [ref=e570]:
+                - cell "Person name" [ref=e571]
+                - cell "basic_profile.name (filter field)" [ref=e572]:
+                  - code [ref=e573]: basic_profile.name
+                  - text: (filter field)
+                - cell "Search, Autocomplete" [ref=e574]
+              - row "Job title experience.employment_details.current.title (filter field) Search, Autocomplete" [ref=e575]:
+                - cell "Job title" [ref=e576]
+                - cell "experience.employment_details.current.title (filter field)" [ref=e577]:
+                  - code [ref=e578]: experience.employment_details.current.title
+                  - text: (filter field)
+                - cell "Search, Autocomplete" [ref=e579]
+              - row "Current company experience.employment_details.current.company_name (filter field) Search, Autocomplete" [ref=e580]:
+                - cell "Current company" [ref=e581]
+                - cell "experience.employment_details.current.company_name (filter field)" [ref=e582]:
+                  - code [ref=e583]: experience.employment_details.current.company_name
+                  - text: (filter field)
+                - cell "Search, Autocomplete" [ref=e584]
+              - row "Headline basic_profile.headline (filter field) Search, Autocomplete" [ref=e585]:
+                - cell "Headline" [ref=e586]
+                - cell "basic_profile.headline (filter field)" [ref=e587]:
+                  - code [ref=e588]: basic_profile.headline
+                  - text: (filter field)
+                - cell "Search, Autocomplete" [ref=e589]
+              - row "Location basic_profile.location (filter field) Search" [ref=e590]:
+                - cell "Location" [ref=e591]
+                - cell "basic_profile.location (filter field)" [ref=e592]:
+                  - code [ref=e593]: basic_profile.location
+                  - text: (filter field)
+                - cell "Search" [ref=e594]
+          - generic [ref=e595]:
+            - img "Note" [ref=e597]
+            - generic [ref=e600]:
+              - text: Search uses dot-path field names like
+              - code [ref=e601]: experience.employment_details.current.title
+              - text: . Use Autocomplete to discover exact values for indexed Search filters before you build queries.
+          - separator [ref=e602]
+          - heading "Navigate to header Common footguns" [level=2] [ref=e603]:
+            - link "Navigate to header" [ref=e604] [cursor=pointer]:
+              - /url: "#common-footguns"
+              - img [ref=e606]
+            - generic [ref=e608] [cursor=pointer]: Common footguns
+          - table [ref=e611]:
+            - rowgroup [ref=e612]:
+              - row "Mistake Fix" [ref=e613]:
+                - columnheader "Mistake" [ref=e614]
+                - columnheader "Fix" [ref=e615]
+            - rowgroup [ref=e616]:
+              - 'row "Using column in Search filters The correct key is field (e.g., \"field\": \"basic_profile.name\")." [ref=e617]':
+                - cell "Using column in Search filters" [ref=e618]:
+                  - text: Using
+                  - code [ref=e619]: column
+                  - text: in Search filters
+                - 'cell "The correct key is field (e.g., \"field\": \"basic_profile.name\")." [ref=e620]':
+                  - text: The correct key is
+                  - code [ref=e621]: field
+                  - text: (e.g.,
+                  - code [ref=e622]: "\"field\": \"basic_profile.name\""
+                  - text: ).
+              - 'row "Mixing identifier types in Enrich Send one type per request: either professional_network_profile_urls or business_emails." [ref=e623]':
+                - cell "Mixing identifier types in Enrich" [ref=e624]
+                - 'cell "Send one type per request: either professional_network_profile_urls or business_emails." [ref=e625]':
+                  - text: "Send one type per request: either"
+                  - code [ref=e626]: professional_network_profile_urls
+                  - text: or
+                  - code [ref=e627]: business_emails
+                  - text: .
+              - 'row "Using current_title as a filter field in Search Use the full dot-path: experience.employment_details.current.title." [ref=e628]':
+                - cell "Using current_title as a filter field in Search" [ref=e629]:
+                  - text: Using
+                  - code [ref=e630]: current_title
+                  - text: as a filter field in Search
+                - 'cell "Use the full dot-path: experience.employment_details.current.title." [ref=e631]':
+                  - text: "Use the full dot-path:"
+                  - code [ref=e632]: experience.employment_details.current.title
+                  - text: .
+              - row "Omitting fields in Search Returns all fields per person — very large payloads. Always specify fields in production." [ref=e633]:
+                - cell "Omitting fields in Search" [ref=e634]:
+                  - text: Omitting
+                  - code [ref=e635]: fields
+                  - text: in Search
+                - cell "Returns all fields per person — very large payloads. Always specify fields in production." [ref=e636]:
+                  - text: Returns all fields per person — very large payloads. Always specify
+                  - code [ref=e637]: fields
+                  - text: in production.
+              - 'row "Expecting results wrapper in Enrich response Enrich returns a top-level array, not { \"results\": [...] }." [ref=e638]':
+                - cell "Expecting results wrapper in Enrich response" [ref=e639]:
+                  - text: Expecting
+                  - code [ref=e640]: results
+                  - text: wrapper in Enrich response
+                - 'cell "Enrich returns a top-level array, not { \"results\": [...] }." [ref=e641]':
+                  - text: Enrich returns a top-level array, not
+                  - code [ref=e642]: "{ \"results\": [...] }"
+                  - text: .
+          - separator [ref=e643]
+          - heading "Navigate to header Next steps" [level=2] [ref=e644]:
+            - link "Navigate to header" [ref=e645] [cursor=pointer]:
+              - /url: "#next-steps"
+              - img [ref=e647]
+            - generic [ref=e649] [cursor=pointer]: Next steps
+          - list [ref=e650]:
+            - listitem [ref=e651]:
+              - link "Person Search" [ref=e652] [cursor=pointer]:
+                - /url: /person-docs/search
+              - text: — find people by name, title, company, location, and more with advanced filters.
+            - listitem [ref=e653]:
+              - link "Person Autocomplete" [ref=e654] [cursor=pointer]:
+                - /url: /person-docs/autocomplete
+              - text: — discover valid filter values before building queries.
+            - listitem [ref=e655]:
+              - link "Person Enrich" [ref=e656] [cursor=pointer]:
+                - /url: /person-docs/enrichment
+              - text: — get detailed profiles from profile URLs or business emails, with batch support.
+            - listitem [ref=e657]:
+              - link "Live Search 🔒" [ref=e658] [cursor=pointer]:
+                - /url: https://crustdata.com/demo
+              - text: — search people in real time from the web.
+            - listitem [ref=e659]:
+              - link "Live Enrich 🔒" [ref=e660] [cursor=pointer]:
+                - /url: https://crustdata.com/demo
+              - text: — fetch a fresh person profile from the web.
+            - listitem [ref=e661]:
+              - link "Person Examples" [ref=e662] [cursor=pointer]:
+                - /url: /person-docs/examples
+              - text: — ready-to-copy workflow patterns.
+        - generic [ref=e664]:
+          - paragraph [ref=e665]: Was this page helpful?
+          - generic [ref=e667]:
+            - button "Yes" [ref=e668] [cursor=pointer]:
+              - img [ref=e669]
+              - generic [ref=e671]: "Yes"
+            - button "No" [ref=e672] [cursor=pointer]:
+              - img [ref=e673]
+              - generic [ref=e675]: "No"
+        - generic [ref=e676]:
+          - link "Company Examples Previous" [ref=e677] [cursor=pointer]:
+            - /url: /company-docs/examples
+            - generic [ref=e678]:
+              - generic [ref=e679]: Company Examples
+              - generic [ref=e680]:
+                - img [ref=e681]
+                - generic [ref=e683]: Previous
+          - link "Person Search Next" [ref=e684] [cursor=pointer]:
+            - /url: /person-docs/search
+            - generic [ref=e685]:
+              - generic [ref=e686]: Person Search
+              - generic [ref=e687]:
+                - img [ref=e688]
+                - generic [ref=e690]: Next
+        - generic [ref=e692]:
+          - textbox "Ask a question..." [ref=e693]
+          - generic: Ctrl+I
+          - button "Send message" [disabled] [ref=e694]:
+            - img [ref=e695]
+        - contentinfo [ref=e697]:
+          - generic [ref=e698]:
+            - link "x" [ref=e699] [cursor=pointer]:
+              - /url: https://x.com/crustdata
+              - generic [ref=e700]: x
+              - img [ref=e701]
+            - link "linkedin" [ref=e702] [cursor=pointer]:
+              - /url: https://www.linkedin.com/company/crustdata
+              - generic [ref=e703]: linkedin
+              - img [ref=e704]
+  - alert [ref=e705]
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - img
+            - generic: Assistant
+          - generic:
+            - button:
+              - img
+        - generic:
+          - generic:
+            - generic:
+              - generic: Responses are generated using AI and may contain mistakes.
+        - generic [ref=e706]:
+          - textbox [ref=e708]:
+            - /placeholder: Ask a question...
+          - generic [ref=e709]:
+            - button [ref=e710] [cursor=pointer]:
+              - img [ref=e711]
+            - button [disabled] [ref=e713]:
+              - img [ref=e714]

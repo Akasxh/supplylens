@@ -1,0 +1,414 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Web API Search" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Web API
+              - img [ref=e39]
+            - generic [ref=e41]: Search
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "Web API" [ref=e50] [cursor=pointer]:
+            - /url: /api-reference/web-apis/web-search
+          - generic [ref=e51]:
+            - heading "Search" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: Perform a web search query and return results from multiple sources including web, news, academic articles, academic author profiles, deep research results, and social media. Use this endpoint for competitive intelligence, market research, lead generation, and content discovery.
+          - generic [ref=e65]:
+            - img "Note" [ref=e67]
+            - paragraph [ref=e70]:
+              - text: Default
+              - code [ref=e71]: rate-limit
+              - text: is 15 requests per minute. Send an email to
+              - link "gtm@crustdata.co" [ref=e72] [cursor=pointer]:
+                - /url: mailto:gtm@crustdata.co
+              - text: to discuss higher limits if needed for your use case.
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e76]:
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: POST
+              - generic [ref=e79]:
+                - generic [ref=e80]: https://api.crustdata.com
+                - generic [ref=e81]:
+                  - generic [ref=e82]: /
+                  - generic [ref=e83]: web
+                  - generic [ref=e84]: /
+                  - generic [ref=e85]: search
+                  - generic [ref=e86]: /
+                  - generic [ref=e87]: live
+            - button "Try it" [ref=e88] [cursor=pointer]:
+              - generic [ref=e89]: Try it
+              - img [ref=e90]
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - button "cURL" [ref=e95] [cursor=pointer]:
+                  - generic [ref=e96]:
+                    - paragraph [ref=e97]: cURL
+                    - img [ref=e98]
+                - generic [ref=e100]:
+                  - button "basic_search" [ref=e101] [cursor=pointer]:
+                    - generic [ref=e102]:
+                      - paragraph [ref=e103]: basic_search
+                      - img [ref=e104]
+                  - generic [ref=e106]:
+                    - button "Copy the contents from the code block" [ref=e109] [cursor=pointer]:
+                      - img [ref=e110]
+                    - button "Ask AI" [ref=e114] [cursor=pointer]:
+                      - img [ref=e115]
+              - region "Code snippet" [ref=e118]:
+                - generic [ref=e121]: "curl --request POST \\ --url https://api.crustdata.com/web/search/live \\ --header 'Authorization: Bearer <token>' \\ --header 'Content-Type: application/json' \\ --header 'x-api-version: <x-api-version>' \\ --data ' { \"query\": \"crustdata\", \"location\": \"US\" } '"
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - button "200" [ref=e124] [cursor=pointer]:
+                  - generic [ref=e125]:
+                    - paragraph [ref=e126]: "200"
+                    - img [ref=e127]
+                - generic [ref=e129]:
+                  - button "basic_search_response" [ref=e130] [cursor=pointer]:
+                    - generic [ref=e131]:
+                      - paragraph [ref=e132]: basic_search_response
+                      - img [ref=e133]
+                  - generic [ref=e135]:
+                    - button "Copy the contents from the code block" [ref=e138] [cursor=pointer]:
+                      - img [ref=e139]
+                    - button "Ask AI" [ref=e143] [cursor=pointer]:
+                      - img [ref=e144]
+              - region "Code snippet" [ref=e147]:
+                - generic [ref=e150]: "{ \"success\": true, \"query\": \"crustdata\", \"timestamp\": 1775195367446, \"results\": [ { \"source\": \"web\", \"title\": \"Crustdata: Real-Time B2B Data Broker via API or Data Feed\", \"url\": \"https://crustdata.com/\", \"snippet\": \"Crustdata is a B2B data provider offering real-time company & people datasets. Access APIs and live signals to power sales and investment workflows.\", \"position\": 1 }, { \"source\": \"web\", \"title\": \"Crustdata: Real-time B2B data via simple APIs\", \"url\": \"https://www.ycombinator.com/companies/crustdata\", \"snippet\": \"Crustdata provides live company and people data via APIs and full dataset delivery.\", \"position\": 2 }, { \"source\": \"web\", \"title\": \"Crustdata (YC F24)\", \"url\": \"https://www.linkedin.com/company/crustdata\", \"snippet\": \"AI agents only grow revenue when they can act on the right data at the right time.\", \"position\": 3 } ], \"metadata\": { \"totalResults\": 7, \"failedPages\": [], \"emptyPages\": [] } }"
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - heading "Authorizations" [level=4] [ref=e156]
+            - generic [ref=e158]:
+              - generic [ref=e161]:
+                - link "Navigate to header" [ref=e162] [cursor=pointer]:
+                  - /url: "#authorization-authorization"
+                  - img [ref=e164]
+                - generic [ref=e167] [cursor=pointer]: Authorization
+                - generic [ref=e168]:
+                  - generic [ref=e169]: string
+                  - generic [ref=e170]: header
+                  - text: required
+              - paragraph [ref=e173]:
+                - text: Bearer token authentication. Pass your API key as
+                - code [ref=e174]: "Authorization: Bearer <your_api_key>"
+                - text: .
+          - generic [ref=e175]:
+            - heading "Headers" [level=4] [ref=e178]
+            - generic [ref=e180]:
+              - generic [ref=e183]:
+                - link "Navigate to header" [ref=e184] [cursor=pointer]:
+                  - /url: "#parameter-x-api-version"
+                  - img [ref=e186]
+                - generic [ref=e189] [cursor=pointer]: x-api-version
+                - generic [ref=e190]:
+                  - generic [ref=e191]: enum<string>
+                  - text: required
+              - generic [ref=e192]:
+                - paragraph [ref=e194]: API version to use for request routing and response shape.
+                - generic [ref=e195]:
+                  - text: "Available options:"
+                  - code [ref=e197]: 2025-11-01
+          - generic [ref=e198]:
+            - generic [ref=e199]:
+              - generic [ref=e200]:
+                - heading "Body" [level=4] [ref=e201]
+                - generic [ref=e203]: application/json
+              - paragraph [ref=e206]: Search query and optional filters.
+            - generic [ref=e209]:
+              - paragraph [ref=e211]: Request body for performing a web search.
+              - generic [ref=e213]:
+                - generic [ref=e215]:
+                  - generic [ref=e218]:
+                    - link "Navigate to header" [ref=e219] [cursor=pointer]:
+                      - /url: "#body-query"
+                      - img [ref=e221]
+                    - generic [ref=e224] [cursor=pointer]: query
+                    - generic [ref=e225]:
+                      - generic [ref=e226]: string
+                      - text: required
+                  - generic [ref=e227]:
+                    - paragraph [ref=e229]: The search query text. Keep queries concise and specific for better results. Supports standard search operators (e.g., site:, filetype:).
+                    - generic [ref=e230]:
+                      - text: "Required string length:"
+                      - code [ref=e231]: 1 - 5000
+                    - generic [ref=e232]:
+                      - generic [ref=e233]: "Example:"
+                      - paragraph [ref=e235]:
+                        - code [ref=e236]: "\"crustdata\""
+                - generic [ref=e238]:
+                  - generic [ref=e241]:
+                    - link "Navigate to header" [ref=e242] [cursor=pointer]:
+                      - /url: "#body-location-one-of-0"
+                      - img [ref=e244]
+                    - generic [ref=e247] [cursor=pointer]: location
+                    - generic [ref=e249]: string | null
+                  - generic [ref=e250]:
+                    - paragraph [ref=e252]: ISO 3166-1 alpha-2 country code for location targeting. Use this to get region-specific search results. Valid values include US, CA, MX, BR, AR, CL, CO, PE, VE, GB, DE, FR, IT, ES, PT, NL, BE, CH, AT, PL, SE, NO, DK, FI, IE, RU, UA, CZ, GR, TR, RO, HU, JP, CN, KR, IN, ID, TH, VN, MY, SG, PH, TW, HK, SA, AE, IL, EG, AU, NZ, ZA, NG, KE.
+                    - generic [ref=e253]:
+                      - generic [ref=e254]: "Example:"
+                      - paragraph [ref=e256]:
+                        - code [ref=e257]: "\"US\""
+                - generic [ref=e259]:
+                  - generic [ref=e262]:
+                    - link "Navigate to header" [ref=e263] [cursor=pointer]:
+                      - /url: "#body-sources-one-of-0"
+                      - img [ref=e265]
+                    - generic [ref=e268] [cursor=pointer]: sources
+                    - generic [ref=e270]: enum<string>[] | null
+                  - generic [ref=e271]:
+                    - paragraph [ref=e273]: List of search sources to query. If omitted, all sources are searched. Use specific sources to narrow results.
+                    - generic [ref=e276]:
+                      - paragraph [ref=e278]: A search source type.
+                      - generic [ref=e279]:
+                        - text: "Available options:"
+                        - generic [ref=e280]:
+                          - code [ref=e281]: news
+                          - text: ","
+                        - generic [ref=e282]:
+                          - code [ref=e283]: web
+                          - text: ","
+                        - generic [ref=e284]:
+                          - code [ref=e285]: scholar-articles
+                          - text: ","
+                        - generic [ref=e286]:
+                          - code [ref=e287]: scholar-articles-enriched
+                          - text: ","
+                        - generic [ref=e288]:
+                          - code [ref=e289]: scholar-author
+                          - text: ","
+                        - generic [ref=e290]:
+                          - code [ref=e291]: ai
+                          - text: ","
+                        - code [ref=e293]: social
+                    - generic [ref=e294]:
+                      - generic [ref=e295]: "Example:"
+                      - code [ref=e299]: "[\"news\", \"web\"]"
+                - generic [ref=e301]:
+                  - generic [ref=e304]:
+                    - link "Navigate to header" [ref=e305] [cursor=pointer]:
+                      - /url: "#body-site-one-of-0"
+                      - img [ref=e307]
+                    - generic [ref=e310] [cursor=pointer]: site
+                    - generic [ref=e312]: string | null
+                  - generic [ref=e313]:
+                    - paragraph [ref=e315]: Restrict search results to a specific site domain. For example, use "linkedin.com/company" to find company LinkedIn pages, or "site:github.com" for GitHub profiles.
+                    - generic [ref=e316]:
+                      - text: "Maximum string length:"
+                      - code [ref=e317]: "500"
+                    - generic [ref=e318]:
+                      - generic [ref=e319]: "Example:"
+                      - paragraph [ref=e321]:
+                        - code [ref=e322]: "\"example.com\""
+                - generic [ref=e324]:
+                  - generic [ref=e327]:
+                    - link "Navigate to header" [ref=e328] [cursor=pointer]:
+                      - /url: "#body-start-date-one-of-0"
+                      - img [ref=e330]
+                    - generic [ref=e333] [cursor=pointer]: start_date
+                    - generic [ref=e335]: integer | null
+                  - generic [ref=e336]:
+                    - paragraph [ref=e338]: Unix timestamp (seconds since epoch) for the start date filter. Must be less than end_date if both are provided.
+                    - generic [ref=e339]:
+                      - generic [ref=e340]: "Example:"
+                      - paragraph [ref=e342]:
+                        - code [ref=e343]: "1728259200"
+                - generic [ref=e345]:
+                  - generic [ref=e348]:
+                    - link "Navigate to header" [ref=e349] [cursor=pointer]:
+                      - /url: "#body-end-date-one-of-0"
+                      - img [ref=e351]
+                    - generic [ref=e354] [cursor=pointer]: end_date
+                    - generic [ref=e356]: integer | null
+                  - generic [ref=e357]:
+                    - paragraph [ref=e359]: Unix timestamp (seconds since epoch) for the end date filter. Must be greater than start_date if both are provided.
+                    - generic [ref=e360]:
+                      - generic [ref=e361]: "Example:"
+                      - paragraph [ref=e363]:
+                        - code [ref=e364]: "1730937600"
+                - generic [ref=e366]:
+                  - generic [ref=e369]:
+                    - link "Navigate to header" [ref=e370] [cursor=pointer]:
+                      - /url: "#body-human-mode"
+                      - img [ref=e372]
+                    - generic [ref=e375] [cursor=pointer]: human_mode
+                    - generic [ref=e376]:
+                      - generic [ref=e377]: boolean
+                      - generic [ref=e378]: default:false
+                  - generic [ref=e379]:
+                    - paragraph [ref=e381]: Whether to attempt bypassing Cloudflare protection for the search request.
+                    - generic [ref=e382]:
+                      - generic [ref=e383]: "Example:"
+                      - paragraph [ref=e385]:
+                        - code [ref=e386]: "false"
+                - generic [ref=e388]:
+                  - generic [ref=e391]:
+                    - link "Navigate to header" [ref=e392] [cursor=pointer]:
+                      - /url: "#body-page"
+                      - img [ref=e394]
+                    - generic [ref=e397] [cursor=pointer]: page
+                    - generic [ref=e398]:
+                      - generic [ref=e399]: integer
+                      - generic [ref=e400]: default:1
+                  - generic [ref=e401]:
+                    - paragraph [ref=e403]: Number of search result pages to return.
+                    - generic [ref=e404]:
+                      - text: "Required range:"
+                      - code [ref=e405]: x >= 1
+                    - generic [ref=e406]:
+                      - generic [ref=e407]: "Example:"
+                      - paragraph [ref=e409]:
+                        - code [ref=e410]: "1"
+          - generic [ref=e411]:
+            - generic [ref=e412]:
+              - generic [ref=e413]:
+                - heading "Response" [level=4] [ref=e414]
+                - generic [ref=e416]:
+                  - button "200" [ref=e418] [cursor=pointer]:
+                    - generic [ref=e419]:
+                      - generic [ref=e420]: "200"
+                      - img [ref=e421]
+                  - generic [ref=e423]:
+                    - button "application/json" [disabled]:
+                      - generic:
+                        - generic: application/json
+              - paragraph [ref=e426]: Successful search response with results.
+            - generic [ref=e429]:
+              - paragraph [ref=e431]: Response object for a web search request.
+              - generic [ref=e433]:
+                - generic [ref=e435]:
+                  - generic [ref=e438]:
+                    - link "Navigate to header" [ref=e439] [cursor=pointer]:
+                      - /url: "#response-success"
+                      - img [ref=e441]
+                    - generic [ref=e444] [cursor=pointer]: success
+                    - generic [ref=e445]:
+                      - generic [ref=e446]: boolean
+                      - text: required
+                  - generic [ref=e447]:
+                    - paragraph [ref=e449]: Whether the search was executed successfully.
+                    - generic [ref=e450]:
+                      - generic [ref=e451]: "Example:"
+                      - paragraph [ref=e453]:
+                        - code [ref=e454]: "true"
+                - generic [ref=e456]:
+                  - generic [ref=e459]:
+                    - link "Navigate to header" [ref=e460] [cursor=pointer]:
+                      - /url: "#response-query"
+                      - img [ref=e462]
+                    - generic [ref=e465] [cursor=pointer]: query
+                    - generic [ref=e466]:
+                      - generic [ref=e467]: string
+                      - text: required
+                  - generic [ref=e468]:
+                    - paragraph [ref=e470]: The original search query that was submitted.
+                    - generic [ref=e471]:
+                      - generic [ref=e472]: "Example:"
+                      - paragraph [ref=e474]:
+                        - code [ref=e475]: "\"crustdata\""
+                - generic [ref=e477]:
+                  - generic [ref=e480]:
+                    - link "Navigate to header" [ref=e481] [cursor=pointer]:
+                      - /url: "#response-timestamp"
+                      - img [ref=e483]
+                    - generic [ref=e486] [cursor=pointer]: timestamp
+                    - generic [ref=e487]:
+                      - generic [ref=e488]: integer
+                      - text: required
+                  - generic [ref=e489]:
+                    - paragraph [ref=e491]: Unix timestamp in milliseconds when the search was performed.
+                    - generic [ref=e492]:
+                      - generic [ref=e493]: "Example:"
+                      - paragraph [ref=e495]:
+                        - code [ref=e496]: "1762908151599"
+                - generic [ref=e498]:
+                  - generic [ref=e501]:
+                    - link "Navigate to header" [ref=e502] [cursor=pointer]:
+                      - /url: "#response-results"
+                      - img [ref=e504]
+                    - generic [ref=e507] [cursor=pointer]: results
+                    - generic [ref=e508]:
+                      - generic [ref=e509]: object[]
+                      - text: required
+                  - generic [ref=e510]:
+                    - paragraph [ref=e512]: Array of search result entries.
+                    - group [ref=e518]:
+                      - generic "Show child attributes" [ref=e519] [cursor=pointer]:
+                        - img [ref=e520]
+                        - paragraph [ref=e522]: Show child attributes
+                    - generic [ref=e523]:
+                      - generic [ref=e524]: "Example:"
+                      - code [ref=e528]: "[ { \"source\": \"web\", \"title\": \"Crustdata: Real-Time B2B Data Broker via API or Data Feed\", \"url\": \"https://crustdata.com/\", \"snippet\": \"Crustdata is a B2B data provider offering real-time company & people datasets.\", \"position\": 1 } ]"
+                - generic [ref=e530]:
+                  - generic [ref=e533]:
+                    - link "Navigate to header" [ref=e534] [cursor=pointer]:
+                      - /url: "#response-metadata"
+                      - img [ref=e536]
+                    - generic [ref=e539] [cursor=pointer]: metadata
+                    - generic [ref=e540]:
+                      - generic [ref=e541]: object
+                      - text: required
+                  - generic [ref=e543]:
+                    - paragraph [ref=e546]: Metadata about the search results.
+                    - group [ref=e548]:
+                      - generic "Show child attributes" [ref=e549] [cursor=pointer]:
+                        - img [ref=e550]
+                        - paragraph [ref=e552]: Show child attributes
+      - generic [ref=e554]:
+        - paragraph [ref=e555]: Was this page helpful?
+        - generic [ref=e557]:
+          - button "Yes" [ref=e558] [cursor=pointer]:
+            - img [ref=e559]
+            - generic [ref=e561]: "Yes"
+          - button "No" [ref=e562] [cursor=pointer]:
+            - img [ref=e563]
+            - generic [ref=e565]: "No"
+      - generic [ref=e567]:
+        - textbox "Ask a question..." [ref=e568]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e569]:
+          - img [ref=e570]
+      - contentinfo [ref=e572]:
+        - generic [ref=e573]:
+          - link "x" [ref=e574] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e575]: x
+            - img [ref=e576]
+          - link "linkedin" [ref=e577] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e578]: linkedin
+            - img [ref=e579]

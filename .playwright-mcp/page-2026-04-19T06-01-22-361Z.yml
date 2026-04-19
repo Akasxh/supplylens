@@ -1,0 +1,733 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "Composio" [ref=e5] [cursor=pointer]:
+        - /url: https://composio.dev?utm_campaign=toolkits
+        - img "Composio" [ref=e6]
+      - generic [ref=e7]:
+        - link "PRICING" [ref=e8] [cursor=pointer]:
+          - /url: https://composio.dev/pricing?utm_campaign=toolkits
+        - link "BLOG" [ref=e9] [cursor=pointer]:
+          - /url: https://composio.dev/blog?utm_campaign=toolkits
+        - link "ENTERPRISE" [ref=e10] [cursor=pointer]:
+          - /url: https://composio.dev/enterprise?utm_campaign=toolkits
+        - link "DOCS" [ref=e11] [cursor=pointer]:
+          - /url: https://docs.composio.dev?utm_campaign=toolkits
+        - link "TOOLKITS" [ref=e12] [cursor=pointer]:
+          - /url: https://composio.dev/toolkits?utm_campaign=toolkits
+      - link "SIGN IN" [ref=e14] [cursor=pointer]:
+        - /url: https://dashboard.composio.dev/login?utm_source=toolkits&utm_medium=navbar&utm_campaign=toolkits&utm_content=%2Ftoolkits%2Fcrustdata
+  - main [ref=e16]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - link "Home" [ref=e24] [cursor=pointer]:
+              - /url: https://composio.dev
+            - img [ref=e25]
+          - generic [ref=e28]:
+            - link "All Toolkits" [ref=e29] [cursor=pointer]:
+              - /url: /toolkits
+            - img [ref=e30]
+          - generic [ref=e34]: Crustdata
+        - heading "Crustdata Integration for AI Agents" [level=1] [ref=e35]
+        - generic [ref=e36]: Securely connect your AI agents and chatbots (Claude, ChatGPT, Cursor, etc) with Crustdata MCP or direct API to enrich contacts, track company signals, discover leads, and monitor real-time B2B data through natural language.
+        - link "GET STARTED FOR FREE" [ref=e39] [cursor=pointer]:
+          - /url: https://dashboard.composio.dev/login?utm_source=toolkits&utm_medium=hero&utm_campaign=toolkits-crustdata&utm_content=%2Ftoolkits%2Fcrustdata
+          - generic [ref=e40]: GET STARTED FOR FREE
+      - generic [ref=e42]:
+        - img "Crustdata Logo" [ref=e44]
+        - img "Gradient Top" [ref=e46]
+        - img "Gradient Middle" [ref=e48]
+        - img "Gradient Bottom" [ref=e50]
+    - img "divider" [ref=e52]
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - heading "Try Crustdata now" [level=2] [ref=e59]
+          - paragraph [ref=e60]: Enter a prompt below to test the integration in our Tool Router playground. You'll be redirected to sign in and try it live.
+        - generic [ref=e61]:
+          - textbox [ref=e62]
+          - img [ref=e64] [cursor=pointer]
+        - generic [ref=e67]:
+          - button "Find tech companies with recent funding milestones" [ref=e68] [cursor=pointer]
+          - button "Enrich this lead's profile with latest data" [ref=e69] [cursor=pointer]
+          - button "List top decision makers in SaaS startups" [ref=e70] [cursor=pointer]
+          - button "Fetch job listings for Fortune 500 companies" [ref=e71] [cursor=pointer]
+      - heading "Supported Tools" [level=2] [ref=e73]
+      - generic [ref=e74]:
+        - generic [ref=e77] [cursor=pointer]:
+          - img [ref=e78]
+          - generic [ref=e80]: Tools
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - generic [ref=e83]: Enrich person screener
+            - generic [ref=e84]: The screener person enrich endpoint enriches person data by providing additional information based on the given query.
+          - generic [ref=e85]:
+            - generic [ref=e86]: Fetch headcount by facet timeseries
+            - generic [ref=e87]: Retrieves headcount data as a timeseries with faceted analysis capabilities.
+          - generic [ref=e88]:
+            - generic [ref=e89]: Fetch investor portfolio data
+            - generic [ref=e90]: Retrieves comprehensive investor portfolio data from the data lab section of the crustdata api.
+          - generic [ref=e91]:
+            - generic [ref=e92]: Filter decision makers data
+            - generic [ref=e93]: Filters and retrieves decision maker data from the crustdata b2b saas integration platform based on complex criteria.
+          - generic [ref=e94]:
+            - generic [ref=e95]: Post funding milestone timeseries data
+            - generic [ref=e96]: The fundingmilestonetimeseries endpoint retrieves time-series data related to funding milestones for companies.
+          - generic [ref=e97]:
+            - generic [ref=e98]: Post headcount timeseries data
+            - generic [ref=e99]: Retrieves filtered and sorted headcount timeseries data from the crustdata data lab.
+          - generic [ref=e100]:
+            - generic [ref=e101]: Post job listings table data
+            - generic [ref=e102]: This endpoint retrieves filtered and sorted job listings data for specified company tickers from a chosen dataset in the crustdata platform.
+          - generic [ref=e103]:
+            - generic [ref=e104]: Post web traffic data
+            - generic [ref=e105]: Retrieves filtered and sorted web traffic data from the crustdata platform.
+          - generic [ref=e106]:
+            - generic [ref=e107]: Retrieve linkedin posts
+            - generic [ref=e108]: Retrieves linkedin posts for a specified company using crustdata's screener functionality.
+          - generic [ref=e109]:
+            - generic [ref=e110]: Screener company information
+            - generic [ref=e111]: The getcompanyscreener endpoint allows users to search and filter companies based on various criteria such as headcount, growth rate, funding, and more.
+          - generic [ref=e112]:
+            - generic [ref=e113]: Screen metrics and filter conditions
+            - generic [ref=e114]: The screendata endpoint enables advanced data screening and filtering on the crustdata platform.
+          - generic [ref=e115]:
+            - generic [ref=e116]: Search companies with filters
+            - generic [ref=e117]: The companysearch endpoint enables users to search and filter companies using the crustdata api.
+          - generic [ref=e118]:
+            - generic [ref=e119]: Search for job id in screener
+            - generic [ref=e120]: The screener person search endpoint allows users to search for persons associated with a specific job id within the crustdata b2b saas integration platform.
+          - generic [ref=e121]:
+            - generic [ref=e122]: Search linkedin posts by keyword
+            - generic [ref=e123]: This endpoint enables searching for linkedin posts using a specific keyword.
+      - generic [ref=e125]:
+        - generic [ref=e126]:
+          - button "Connect Crustdata MCP Tool with your Agent" [ref=e127] [cursor=pointer]:
+            - generic [ref=e128]:
+              - heading "Connect Crustdata MCP Tool with your Agent" [level=2] [ref=e129]
+              - img [ref=e130]
+          - generic [ref=e132]:
+            - generic [ref=e134]:
+              - generic [ref=e136] [cursor=pointer]: Python
+              - generic [ref=e138] [cursor=pointer]: TypeScript
+            - generic [ref=e141]:
+              - generic [ref=e142]:
+                - generic [ref=e145]: "1"
+                - generic [ref=e146]:
+                  - heading "Install Composio" [level=4] [ref=e147]
+                  - generic [ref=e148]:
+                    - generic [ref=e149]:
+                      - generic [ref=e151]: python
+                      - button "Copy" [ref=e152] [cursor=pointer]
+                    - code [ref=e155]: pip install composio claude-agent-sdk
+                  - generic [ref=e157]: Install the Composio SDK and Claude Agent SDK
+              - generic [ref=e158]:
+                - generic [ref=e161]: "2"
+                - generic [ref=e162]:
+                  - heading "Create Tool Router Session" [level=4] [ref=e163]
+                  - generic [ref=e164]:
+                    - generic [ref=e165]:
+                      - generic [ref=e167]: python
+                      - button "Copy" [ref=e168] [cursor=pointer]
+                    - code [ref=e171]: from composio import Composio from claude_agent_sdk import ClaudeSDKClient, ClaudeAgentOptions composio = Composio(api_key='your-composio-api-key') session = composio.create(user_id='your-user-id') url = session.mcp.url
+                  - generic [ref=e173]: Initialize the Composio client and create a Tool Router session
+              - generic [ref=e174]:
+                - generic [ref=e176]: "3"
+                - generic [ref=e177]:
+                  - heading "Connect to AI Agent" [level=4] [ref=e178]
+                  - generic [ref=e179]:
+                    - generic [ref=e180]:
+                      - generic [ref=e182]: python
+                      - button "Copy" [ref=e183] [cursor=pointer]
+                    - code [ref=e186]: "import asyncio options = ClaudeAgentOptions( permission_mode='bypassPermissions', mcp_servers={ 'tool_router': { 'type': 'http', 'url': url, 'headers': { 'x-api-key': 'your-composio-api-key' } } }, system_prompt='You are a helpful assistant with access to Crustdata tools.', max_turns=10 ) async def main(): async with ClaudeSDKClient(options=options) as client: await client.query('Find decision makers at SaaS companies in Germany with over 100 employees') async for message in client.receive_response(): if hasattr(message, 'content'): for block in message.content: if hasattr(block, 'text'): print(block.text) asyncio.run(main())"
+                  - generic [ref=e188]: Use the MCP server with your AI agent
+        - button "Connect Crustdata API Tool with your Agent" [ref=e190] [cursor=pointer]:
+          - generic [ref=e191]:
+            - heading "Connect Crustdata API Tool with your Agent" [level=2] [ref=e192]
+            - img [ref=e193]
+      - generic [ref=e195]:
+        - heading "Why Use Composio?" [level=2] [ref=e196]
+        - generic [ref=e198]:
+          - generic [ref=e199]:
+            - generic [ref=e202]: "1"
+            - generic [ref=e203]:
+              - heading "AI Native Crustdata Integration" [level=4] [ref=e204]
+              - list [ref=e207]:
+                - listitem [ref=e208]: Supports both Crustdata MCP and direct API based integrations
+                - listitem [ref=e209]: Structured, LLM-friendly schemas for reliable tool execution
+                - listitem [ref=e210]: Rich coverage for reading, writing, and querying your Crustdata data
+          - generic [ref=e211]:
+            - generic [ref=e214]: "2"
+            - generic [ref=e215]:
+              - heading "Managed Auth" [level=4] [ref=e216]
+              - list [ref=e219]:
+                - listitem [ref=e220]: Built-in API key handling with secure storage
+                - listitem [ref=e221]: Central place to manage, scope, and revoke Crustdata access
+                - listitem [ref=e222]: Per user and per environment credentials instead of hard-coded keys
+          - generic [ref=e223]:
+            - generic [ref=e226]: "3"
+            - generic [ref=e227]:
+              - heading "Agent Optimized Design" [level=4] [ref=e228]
+              - list [ref=e231]:
+                - listitem [ref=e232]: Tools are tuned using real error and success rates to improve reliability over time
+                - listitem [ref=e233]: Comprehensive execution logs so you always know what ran, when, and on whose behalf
+          - generic [ref=e234]:
+            - generic [ref=e236]: "4"
+            - generic [ref=e237]:
+              - heading "Enterprise Grade Security" [level=4] [ref=e238]
+              - list [ref=e241]:
+                - listitem [ref=e242]: Fine-grained RBAC so you control which agents and users can access Crustdata
+                - listitem [ref=e243]: Scoped, least privilege access to Crustdata resources
+                - listitem [ref=e244]: Full audit trail of agent actions to support review and compliance
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - heading "Use Crustdata with any AI Agent Framework" [level=2] [ref=e248]
+          - paragraph [ref=e249]: Choose a Framework you want to connect Crustdata with
+        - generic [ref=e251]:
+          - link "OpenAI Agents SDK logo OpenAI Agents SDK Use Crustdata MCP with OpenAI Agents SDK" [ref=e252] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/open-ai-agents-sdk
+            - generic [ref=e255]:
+              - img "OpenAI Agents SDK logo" [ref=e257]
+              - heading "OpenAI Agents SDK" [level=3] [ref=e258]
+              - paragraph [ref=e259]: Use Crustdata MCP with OpenAI Agents SDK
+          - link "Claude Agents SDK logo Claude Agents SDK Use Crustdata MCP with Claude Agents SDK" [ref=e260] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/claude-agents-sdk
+            - generic [ref=e263]:
+              - img "Claude Agents SDK logo" [ref=e265]
+              - heading "Claude Agents SDK" [level=3] [ref=e266]
+              - paragraph [ref=e267]: Use Crustdata MCP with Claude Agents SDK
+          - link "Claude Code logo Claude Code Use Crustdata MCP with Claude Code" [ref=e268] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/claude-code
+            - generic [ref=e271]:
+              - img "Claude Code logo" [ref=e273]
+              - heading "Claude Code" [level=3] [ref=e274]
+              - paragraph [ref=e275]: Use Crustdata MCP with Claude Code
+          - link "Codex logo Codex Use Crustdata MCP with Codex" [ref=e276] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/codex
+            - generic [ref=e279]:
+              - img "Codex logo" [ref=e281]
+              - heading "Codex" [level=3] [ref=e282]
+              - paragraph [ref=e283]: Use Crustdata MCP with Codex
+          - link "OpenClaw logo OpenClaw Use Crustdata MCP with OpenClaw" [ref=e284] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/openclaw
+            - generic [ref=e287]:
+              - img "OpenClaw logo" [ref=e289]
+              - heading "OpenClaw" [level=3] [ref=e290]
+              - paragraph [ref=e291]: Use Crustdata MCP with OpenClaw
+          - link "CLI logo CLI Use Crustdata MCP with CLI" [ref=e292] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/cli
+            - generic [ref=e295]:
+              - img "CLI logo" [ref=e297]
+              - heading "CLI" [level=3] [ref=e298]
+              - paragraph [ref=e299]: Use Crustdata MCP with CLI
+          - link "Google ADK logo Google ADK Use Crustdata MCP with Google ADK" [ref=e300] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/google-adk
+            - generic [ref=e303]:
+              - img "Google ADK logo" [ref=e305]
+              - heading "Google ADK" [level=3] [ref=e306]
+              - paragraph [ref=e307]: Use Crustdata MCP with Google ADK
+          - link "Langchain logo Langchain Use Crustdata MCP with Langchain" [ref=e308] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/langchain
+            - generic [ref=e311]:
+              - img "Langchain logo" [ref=e313]
+              - heading "Langchain" [level=3] [ref=e314]
+              - paragraph [ref=e315]: Use Crustdata MCP with Langchain
+          - link "AI SDK logo AI SDK Use Crustdata MCP with AI SDK" [ref=e316] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/ai-sdk
+            - generic [ref=e319]:
+              - img "AI SDK logo" [ref=e321]
+              - heading "AI SDK" [level=3] [ref=e322]
+              - paragraph [ref=e323]: Use Crustdata MCP with AI SDK
+          - link "Mastra AI logo Mastra AI Use Crustdata MCP with Mastra AI" [ref=e324] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/mastra-ai
+            - generic [ref=e327]:
+              - img "Mastra AI logo" [ref=e329]
+              - heading "Mastra AI" [level=3] [ref=e330]
+              - paragraph [ref=e331]: Use Crustdata MCP with Mastra AI
+          - link "LlamaIndex logo LlamaIndex Use Crustdata MCP with LlamaIndex" [ref=e332] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/llama-index
+            - generic [ref=e335]:
+              - img "LlamaIndex logo" [ref=e337]
+              - heading "LlamaIndex" [level=3] [ref=e338]
+              - paragraph [ref=e339]: Use Crustdata MCP with LlamaIndex
+          - link "CrewAI logo CrewAI Use Crustdata MCP with CrewAI" [ref=e340] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/crew-ai
+            - generic [ref=e343]:
+              - img "CrewAI logo" [ref=e345]
+              - heading "CrewAI" [level=3] [ref=e346]
+              - paragraph [ref=e347]: Use Crustdata MCP with CrewAI
+          - link "Pydantic AI logo Pydantic AI Use Crustdata MCP with Pydantic AI" [ref=e348] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/pydantic-ai
+            - generic [ref=e351]:
+              - img "Pydantic AI logo" [ref=e353]
+              - heading "Pydantic AI" [level=3] [ref=e354]
+              - paragraph [ref=e355]: Use Crustdata MCP with Pydantic AI
+          - link "Autogen logo Autogen Use Crustdata MCP with Autogen" [ref=e356] [cursor=pointer]:
+            - /url: /toolkits/crustdata/framework/autogen
+            - generic [ref=e359]:
+              - img "Autogen logo" [ref=e361]
+              - heading "Autogen" [level=3] [ref=e362]
+              - paragraph [ref=e363]: Use Crustdata MCP with Autogen
+      - generic [ref=e365]:
+        - heading "Explore Other Toolkits" [level=2] [ref=e367]
+        - generic [ref=e368]:
+          - link "Active campaign logo Active campaign API Key ActiveCampaign is a marketing automation and CRM platform for managing email campaigns, sales pipelines, and customer segmentation. It helps businesses engage customers and drive growth through smart automation and targeted outreach." [ref=e369] [cursor=pointer]:
+            - /url: /toolkits/active_campaign
+            - generic [ref=e370]:
+              - img "Active campaign logo" [ref=e372]
+              - generic [ref=e373]:
+                - generic [ref=e374]:
+                  - heading "Active campaign" [level=3] [ref=e375]
+                  - generic [ref=e377]: API Key
+                - paragraph [ref=e378]: ActiveCampaign is a marketing automation and CRM platform for managing email campaigns, sales pipelines, and customer segmentation. It helps businesses engage customers and drive growth through smart automation and targeted outreach.
+          - link "ActiveTrail logo ActiveTrail Api Key ActiveTrail is a user-friendly email marketing and automation platform. It helps you reach subscribers and automate campaigns with ease." [ref=e379] [cursor=pointer]:
+            - /url: /toolkits/active_trail
+            - generic [ref=e380]:
+              - img "ActiveTrail logo" [ref=e382]
+              - generic [ref=e383]:
+                - generic [ref=e384]:
+                  - heading "ActiveTrail" [level=3] [ref=e385]
+                  - generic [ref=e387]: Api Key
+                - paragraph [ref=e388]: ActiveTrail is a user-friendly email marketing and automation platform. It helps you reach subscribers and automate campaigns with ease.
+          - link "Ahrefs logo Ahrefs API Key Ahrefs is an SEO and marketing platform for site audits, keyword research, and competitor insights. It helps you improve search rankings and drive organic traffic." [ref=e389] [cursor=pointer]:
+            - /url: /toolkits/ahrefs
+            - generic [ref=e390]:
+              - img "Ahrefs logo" [ref=e392]
+              - generic [ref=e393]:
+                - generic [ref=e394]:
+                  - heading "Ahrefs" [level=3] [ref=e395]
+                  - generic [ref=e397]: API Key
+                - paragraph [ref=e398]: Ahrefs is an SEO and marketing platform for site audits, keyword research, and competitor insights. It helps you improve search rankings and drive organic traffic.
+          - button "Load More" [ref=e399] [cursor=pointer]:
+            - generic [ref=e400]: Load More
+          - link "TOOLKIT MARKETPLACE" [ref=e401] [cursor=pointer]:
+            - /url: /toolkits
+            - generic [ref=e402]: TOOLKIT MARKETPLACE
+            - img [ref=e403]
+    - generic [ref=e406]:
+      - heading "Frequently Asked Questions" [level=2] [ref=e408]
+      - generic [ref=e410]:
+        - generic [ref=e411]:
+          - heading "Do I need my own developer credentials to use Crustdata with Composio?" [level=3] [ref=e412]
+          - generic [ref=e413]: Yes, Crustdata requires you to configure your own API key credentials. Once set up, Composio handles secure credential storage and API request handling for you.
+        - generic [ref=e414]:
+          - heading "Can I use multiple toolkits together?" [level=3] [ref=e415]
+          - generic [ref=e416]:
+            - text: Yes! Composio's Tool Router enables agents to use multiple toolkits.
+            - link "Learn more" [ref=e417] [cursor=pointer]:
+              - /url: https://docs.composio.dev/tool-router/overview
+            - text: .
+        - generic [ref=e418]:
+          - heading "Is Composio secure?" [level=3] [ref=e419]
+          - generic [ref=e420]:
+            - text: Composio is SOC 2 and ISO 27001 compliant with all data encrypted in transit and at rest.
+            - link "Learn more" [ref=e421] [cursor=pointer]:
+              - /url: https://trust.composio.dev
+            - text: .
+        - generic [ref=e422]:
+          - heading "What if the API changes?" [level=3] [ref=e423]
+          - generic [ref=e424]: Composio maintains and updates all toolkit integrations automatically, so your agents always work with the latest API versions.
+    - generic [ref=e425]:
+      - generic:
+        - img
+      - generic [ref=e427]:
+        - generic [ref=e428]:
+          - heading "Used by agents from" [level=3] [ref=e429]
+          - generic [ref=e431]:
+            - generic [ref=e432]:
+              - img [ref=e434]
+              - img [ref=e437]
+              - img [ref=e440]
+              - img [ref=e443]
+              - img "Context"
+            - generic [ref=e445]:
+              - img [ref=e447]
+              - img [ref=e450]
+              - img [ref=e453]
+              - img [ref=e456]
+              - img "Letta"
+            - generic [ref=e458]:
+              - img [ref=e460]
+              - img [ref=e463]
+              - img [ref=e466]
+              - img [ref=e469]
+              - img "glean"
+            - generic [ref=e471]:
+              - img [ref=e473]
+              - img [ref=e476]
+              - img [ref=e479]
+              - img [ref=e482]
+              - img "HubSpot"
+            - generic [ref=e484]:
+              - img [ref=e486]
+              - img [ref=e489]
+              - img [ref=e492]
+              - img [ref=e495]
+              - img "Agent.ai"
+            - generic [ref=e497]:
+              - img [ref=e499]
+              - img [ref=e502]
+              - img [ref=e505]
+              - img [ref=e508]
+              - img "Altera"
+            - generic [ref=e510]:
+              - img [ref=e512]
+              - img [ref=e515]
+              - img [ref=e518]
+              - img [ref=e521]
+              - img "DataStax"
+            - generic [ref=e523]:
+              - img [ref=e525]
+              - img [ref=e528]
+              - img [ref=e531]
+              - img [ref=e534]
+              - img "Entelligence"
+            - generic [ref=e536]:
+              - img [ref=e538]
+              - img [ref=e541]
+              - img [ref=e544]
+              - img [ref=e547]
+              - img "Rolai"
+            - generic [ref=e549]:
+              - img [ref=e551]
+              - img [ref=e554]
+              - img [ref=e557]
+              - img [ref=e560]
+              - img "Context"
+            - generic [ref=e562]:
+              - img [ref=e564]
+              - img [ref=e567]
+              - img [ref=e570]
+              - img [ref=e573]
+              - img "Letta"
+            - generic [ref=e575]:
+              - img [ref=e577]
+              - img [ref=e580]
+              - img [ref=e583]
+              - img [ref=e586]
+              - img "glean"
+            - generic [ref=e588]:
+              - img [ref=e590]
+              - img [ref=e593]
+              - img [ref=e596]
+              - img [ref=e599]
+              - img "HubSpot"
+            - generic [ref=e601]:
+              - img [ref=e603]
+              - img [ref=e606]
+              - img [ref=e609]
+              - img [ref=e612]
+              - img "Agent.ai"
+            - generic [ref=e614]:
+              - img [ref=e616]
+              - img [ref=e619]
+              - img [ref=e622]
+              - img [ref=e625]
+              - img "Altera"
+            - generic [ref=e627]:
+              - img [ref=e629]
+              - img [ref=e632]
+              - img [ref=e635]
+              - img [ref=e638]
+              - img "DataStax"
+            - generic [ref=e640]:
+              - img [ref=e642]
+              - img [ref=e645]
+              - img [ref=e648]
+              - img [ref=e651]
+              - img "Entelligence"
+            - generic [ref=e653]:
+              - img [ref=e655]
+              - img [ref=e658]
+              - img [ref=e661]
+              - img [ref=e664]
+              - img "Rolai"
+            - generic [ref=e666]:
+              - img [ref=e668]
+              - img [ref=e671]
+              - img [ref=e674]
+              - img [ref=e677]
+              - img "Context"
+            - generic [ref=e679]:
+              - img [ref=e681]
+              - img [ref=e684]
+              - img [ref=e687]
+              - img [ref=e690]
+              - img "Letta"
+            - generic [ref=e692]:
+              - img [ref=e694]
+              - img [ref=e697]
+              - img [ref=e700]
+              - img [ref=e703]
+              - img "glean"
+            - generic [ref=e705]:
+              - img [ref=e707]
+              - img [ref=e710]
+              - img [ref=e713]
+              - img [ref=e716]
+              - img "HubSpot"
+            - generic [ref=e718]:
+              - img [ref=e720]
+              - img [ref=e723]
+              - img [ref=e726]
+              - img [ref=e729]
+              - img "Agent.ai"
+            - generic [ref=e731]:
+              - img [ref=e733]
+              - img [ref=e736]
+              - img [ref=e739]
+              - img [ref=e742]
+              - img "Altera"
+            - generic [ref=e744]:
+              - img [ref=e746]
+              - img [ref=e749]
+              - img [ref=e752]
+              - img [ref=e755]
+              - img "DataStax"
+            - generic [ref=e757]:
+              - img [ref=e759]
+              - img [ref=e762]
+              - img [ref=e765]
+              - img [ref=e768]
+              - img "Entelligence"
+            - generic [ref=e770]:
+              - img [ref=e772]
+              - img [ref=e775]
+              - img [ref=e778]
+              - img [ref=e781]
+              - img "Rolai"
+        - generic [ref=e783]:
+          - heading "Never worry about agent reliability" [level=2] [ref=e784]
+          - paragraph [ref=e785]: We handle tool reliability, observability, and security so you never have to second-guess an agent action.
+          - generic [ref=e786]:
+            - link "Book a call ↗" [ref=e787] [cursor=pointer]:
+              - /url: https://composio.dev/contact?utm_campaign=toolkits-crustdata
+              - text: Book a call
+              - generic [ref=e788]: ↗
+            - link "Get started for free" [ref=e789] [cursor=pointer]:
+              - /url: https://dashboard.composio.dev/login?utm_source=toolkits&utm_medium=prefooter&utm_campaign=toolkits-crustdata&utm_content=%2Ftoolkits%2Fcrustdata
+        - generic [ref=e791]:
+          - link "Harsha Gaddipati Harsha Gaddipati Co-founder, Slashy Karan skipped his own birthday party to fix our critical issue. It was 10 pm and he diverted his Waymo to help us instead. This really sets the bar, shows you the commitment you need to have when users rely on your software." [ref=e793] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/slashy
+            - img [ref=e795]
+            - generic [ref=e798]:
+              - img "Harsha Gaddipati" [ref=e800]
+              - generic [ref=e801]:
+                - generic [ref=e802]: Harsha Gaddipati
+                - generic [ref=e803]: Co-founder, Slashy
+            - paragraph [ref=e804]: Karan skipped his own birthday party to fix our critical issue. It was 10 pm and he diverted his Waymo to help us instead. This really sets the bar, shows you the commitment you need to have when users rely on your software.
+          - link "Abhi Arya Abhi Arya Co-founder, Opennote A lot of students tell us that the moment their connected tools start talking to each other inside Opennote feels almost magical. The agent just knows them, and it has immensely helped in keeping new users on the platform." [ref=e806] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/opennote
+            - img [ref=e808]
+            - generic [ref=e811]:
+              - img "Abhi Arya" [ref=e813]
+              - generic [ref=e814]:
+                - generic [ref=e815]: Abhi Arya
+                - generic [ref=e816]: Co-founder, Opennote
+            - paragraph [ref=e817]: A lot of students tell us that the moment their connected tools start talking to each other inside Opennote feels almost magical. The agent just knows them, and it has immensely helped in keeping new users on the platform.
+          - link "Nirman Dave Nirman Dave CEO, Zams We chose Composio over Pipedream because it delivered depth where it mattered. It supported niche tools and tricky edge cases that other platforms simply ignored. Giving us confidence to scale without compromising." [ref=e819] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/zams
+            - img [ref=e821]
+            - generic [ref=e824]:
+              - img "Nirman Dave" [ref=e826]
+              - generic [ref=e827]:
+                - generic [ref=e828]: Nirman Dave
+                - generic [ref=e829]: CEO, Zams
+            - paragraph [ref=e830]: We chose Composio over Pipedream because it delivered depth where it mattered. It supported niche tools and tricky edge cases that other platforms simply ignored. Giving us confidence to scale without compromising.
+          - link "Ryan Yu Ryan Yu Founder, Extra Thursday As a solo builder, shipping fast is life or death. The only way I can outcompete incumbents is by outmanoeuvring them. Getting bogged down in the complexities of managing agent auth would have been a death sentence for Extra Thursday." [ref=e832] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/extra-thursday-case-study
+            - img [ref=e834]
+            - generic [ref=e837]:
+              - img "Ryan Yu" [ref=e839]
+              - generic [ref=e840]:
+                - generic [ref=e841]: Ryan Yu
+                - generic [ref=e842]: Founder, Extra Thursday
+            - paragraph [ref=e843]: As a solo builder, shipping fast is life or death. The only way I can outcompete incumbents is by outmanoeuvring them. Getting bogged down in the complexities of managing agent auth would have been a death sentence for Extra Thursday.
+          - link "Tomisin Jenrola Tomisin Jenrola Founder & CEO, SwarmZero Before partnering with Composio, adding tool integrations was a slow, resource-intensive process. Each integration could take weeks or months of engineering time, and maintaining them meant constantly keeping up with API changes." [ref=e845] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/swarmzero-case-study
+            - img [ref=e847]
+            - generic [ref=e850]:
+              - img "Tomisin Jenrola" [ref=e852]
+              - generic [ref=e853]:
+                - generic [ref=e854]: Tomisin Jenrola
+                - generic [ref=e855]: Founder & CEO, SwarmZero
+            - paragraph [ref=e856]: Before partnering with Composio, adding tool integrations was a slow, resource-intensive process. Each integration could take weeks or months of engineering time, and maintaining them meant constantly keeping up with API changes.
+          - link "Jerome Leclanche Jerome Leclanche Co-Founder, Ingram Technologies With hands-on help from their founder, we integrated Gmail and Google Drive in just 30 minutes. This level of personal support and commitment is exactly what startups should strive for." [ref=e858] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/ingram-case-study
+            - img [ref=e860]
+            - generic [ref=e863]:
+              - img "Jerome Leclanche" [ref=e865]
+              - generic [ref=e866]:
+                - generic [ref=e867]: Jerome Leclanche
+                - generic [ref=e868]: Co-Founder, Ingram Technologies
+            - paragraph [ref=e869]: With hands-on help from their founder, we integrated Gmail and Google Drive in just 30 minutes. This level of personal support and commitment is exactly what startups should strive for.
+          - link "Harsha Gaddipati Harsha Gaddipati Co-founder, Slashy Karan skipped his own birthday party to fix our critical issue. It was 10 pm and he diverted his Waymo to help us instead. This really sets the bar, shows you the commitment you need to have when users rely on your software." [ref=e871] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/slashy
+            - img [ref=e873]
+            - generic [ref=e876]:
+              - img "Harsha Gaddipati" [ref=e878]
+              - generic [ref=e879]:
+                - generic [ref=e880]: Harsha Gaddipati
+                - generic [ref=e881]: Co-founder, Slashy
+            - paragraph [ref=e882]: Karan skipped his own birthday party to fix our critical issue. It was 10 pm and he diverted his Waymo to help us instead. This really sets the bar, shows you the commitment you need to have when users rely on your software.
+          - link "Abhi Arya Abhi Arya Co-founder, Opennote A lot of students tell us that the moment their connected tools start talking to each other inside Opennote feels almost magical. The agent just knows them, and it has immensely helped in keeping new users on the platform." [ref=e884] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/opennote
+            - img [ref=e886]
+            - generic [ref=e889]:
+              - img "Abhi Arya" [ref=e891]
+              - generic [ref=e892]:
+                - generic [ref=e893]: Abhi Arya
+                - generic [ref=e894]: Co-founder, Opennote
+            - paragraph [ref=e895]: A lot of students tell us that the moment their connected tools start talking to each other inside Opennote feels almost magical. The agent just knows them, and it has immensely helped in keeping new users on the platform.
+          - link "Nirman Dave Nirman Dave CEO, Zams We chose Composio over Pipedream because it delivered depth where it mattered. It supported niche tools and tricky edge cases that other platforms simply ignored. Giving us confidence to scale without compromising." [ref=e897] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/zams
+            - img [ref=e899]
+            - generic [ref=e902]:
+              - img "Nirman Dave" [ref=e904]
+              - generic [ref=e905]:
+                - generic [ref=e906]: Nirman Dave
+                - generic [ref=e907]: CEO, Zams
+            - paragraph [ref=e908]: We chose Composio over Pipedream because it delivered depth where it mattered. It supported niche tools and tricky edge cases that other platforms simply ignored. Giving us confidence to scale without compromising.
+          - link "Ryan Yu Ryan Yu Founder, Extra Thursday As a solo builder, shipping fast is life or death. The only way I can outcompete incumbents is by outmanoeuvring them. Getting bogged down in the complexities of managing agent auth would have been a death sentence for Extra Thursday." [ref=e910] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/extra-thursday-case-study
+            - img [ref=e912]
+            - generic [ref=e915]:
+              - img "Ryan Yu" [ref=e917]
+              - generic [ref=e918]:
+                - generic [ref=e919]: Ryan Yu
+                - generic [ref=e920]: Founder, Extra Thursday
+            - paragraph [ref=e921]: As a solo builder, shipping fast is life or death. The only way I can outcompete incumbents is by outmanoeuvring them. Getting bogged down in the complexities of managing agent auth would have been a death sentence for Extra Thursday.
+          - link "Tomisin Jenrola Tomisin Jenrola Founder & CEO, SwarmZero Before partnering with Composio, adding tool integrations was a slow, resource-intensive process. Each integration could take weeks or months of engineering time, and maintaining them meant constantly keeping up with API changes." [ref=e923] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/swarmzero-case-study
+            - img [ref=e925]
+            - generic [ref=e928]:
+              - img "Tomisin Jenrola" [ref=e930]
+              - generic [ref=e931]:
+                - generic [ref=e932]: Tomisin Jenrola
+                - generic [ref=e933]: Founder & CEO, SwarmZero
+            - paragraph [ref=e934]: Before partnering with Composio, adding tool integrations was a slow, resource-intensive process. Each integration could take weeks or months of engineering time, and maintaining them meant constantly keeping up with API changes.
+          - link "Jerome Leclanche Jerome Leclanche Co-Founder, Ingram Technologies With hands-on help from their founder, we integrated Gmail and Google Drive in just 30 minutes. This level of personal support and commitment is exactly what startups should strive for." [ref=e936] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/ingram-case-study
+            - img [ref=e938]
+            - generic [ref=e941]:
+              - img "Jerome Leclanche" [ref=e943]
+              - generic [ref=e944]:
+                - generic [ref=e945]: Jerome Leclanche
+                - generic [ref=e946]: Co-Founder, Ingram Technologies
+            - paragraph [ref=e947]: With hands-on help from their founder, we integrated Gmail and Google Drive in just 30 minutes. This level of personal support and commitment is exactly what startups should strive for.
+          - link "Harsha Gaddipati Harsha Gaddipati Co-founder, Slashy Karan skipped his own birthday party to fix our critical issue. It was 10 pm and he diverted his Waymo to help us instead. This really sets the bar, shows you the commitment you need to have when users rely on your software." [ref=e949] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/slashy
+            - img [ref=e951]
+            - generic [ref=e954]:
+              - img "Harsha Gaddipati" [ref=e956]
+              - generic [ref=e957]:
+                - generic [ref=e958]: Harsha Gaddipati
+                - generic [ref=e959]: Co-founder, Slashy
+            - paragraph [ref=e960]: Karan skipped his own birthday party to fix our critical issue. It was 10 pm and he diverted his Waymo to help us instead. This really sets the bar, shows you the commitment you need to have when users rely on your software.
+          - link "Abhi Arya Abhi Arya Co-founder, Opennote A lot of students tell us that the moment their connected tools start talking to each other inside Opennote feels almost magical. The agent just knows them, and it has immensely helped in keeping new users on the platform." [ref=e962] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/opennote
+            - img [ref=e964]
+            - generic [ref=e967]:
+              - img "Abhi Arya" [ref=e969]
+              - generic [ref=e970]:
+                - generic [ref=e971]: Abhi Arya
+                - generic [ref=e972]: Co-founder, Opennote
+            - paragraph [ref=e973]: A lot of students tell us that the moment their connected tools start talking to each other inside Opennote feels almost magical. The agent just knows them, and it has immensely helped in keeping new users on the platform.
+          - link "Nirman Dave Nirman Dave CEO, Zams We chose Composio over Pipedream because it delivered depth where it mattered. It supported niche tools and tricky edge cases that other platforms simply ignored. Giving us confidence to scale without compromising." [ref=e975] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/zams
+            - img [ref=e977]
+            - generic [ref=e980]:
+              - img "Nirman Dave" [ref=e982]
+              - generic [ref=e983]:
+                - generic [ref=e984]: Nirman Dave
+                - generic [ref=e985]: CEO, Zams
+            - paragraph [ref=e986]: We chose Composio over Pipedream because it delivered depth where it mattered. It supported niche tools and tricky edge cases that other platforms simply ignored. Giving us confidence to scale without compromising.
+          - link "Ryan Yu Ryan Yu Founder, Extra Thursday As a solo builder, shipping fast is life or death. The only way I can outcompete incumbents is by outmanoeuvring them. Getting bogged down in the complexities of managing agent auth would have been a death sentence for Extra Thursday." [ref=e988] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/extra-thursday-case-study
+            - img [ref=e990]
+            - generic [ref=e993]:
+              - img "Ryan Yu" [ref=e995]
+              - generic [ref=e996]:
+                - generic [ref=e997]: Ryan Yu
+                - generic [ref=e998]: Founder, Extra Thursday
+            - paragraph [ref=e999]: As a solo builder, shipping fast is life or death. The only way I can outcompete incumbents is by outmanoeuvring them. Getting bogged down in the complexities of managing agent auth would have been a death sentence for Extra Thursday.
+          - link "Tomisin Jenrola Tomisin Jenrola Founder & CEO, SwarmZero Before partnering with Composio, adding tool integrations was a slow, resource-intensive process. Each integration could take weeks or months of engineering time, and maintaining them meant constantly keeping up with API changes." [ref=e1001] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/swarmzero-case-study
+            - img [ref=e1003]
+            - generic [ref=e1006]:
+              - img "Tomisin Jenrola" [ref=e1008]
+              - generic [ref=e1009]:
+                - generic [ref=e1010]: Tomisin Jenrola
+                - generic [ref=e1011]: Founder & CEO, SwarmZero
+            - paragraph [ref=e1012]: Before partnering with Composio, adding tool integrations was a slow, resource-intensive process. Each integration could take weeks or months of engineering time, and maintaining them meant constantly keeping up with API changes.
+          - link "Jerome Leclanche Jerome Leclanche Co-Founder, Ingram Technologies With hands-on help from their founder, we integrated Gmail and Google Drive in just 30 minutes. This level of personal support and commitment is exactly what startups should strive for." [ref=e1014] [cursor=pointer]:
+            - /url: https://composio.dev/case-study/ingram-case-study
+            - img [ref=e1016]
+            - generic [ref=e1019]:
+              - img "Jerome Leclanche" [ref=e1021]
+              - generic [ref=e1022]:
+                - generic [ref=e1023]: Jerome Leclanche
+                - generic [ref=e1024]: Co-Founder, Ingram Technologies
+            - paragraph [ref=e1025]: With hands-on help from their founder, we integrated Gmail and Google Drive in just 30 minutes. This level of personal support and commitment is exactly what startups should strive for.
+  - contentinfo [ref=e1026]:
+    - generic:
+      - generic: Composio
+      - generic: Composio
+    - generic [ref=e1027]:
+      - generic [ref=e1028]:
+        - generic [ref=e1029]:
+          - link [ref=e1030] [cursor=pointer]:
+            - /url: https://composio.dev?utm_campaign=toolkits
+            - img [ref=e1031]
+          - generic [ref=e1034]:
+            - heading "Stay updated." [level=2] [ref=e1035]
+            - link "Join discord" [ref=e1036] [cursor=pointer]:
+              - /url: https://dub.composio.dev/discord
+        - generic [ref=e1037]:
+          - paragraph [ref=e1038]: PRODUCT
+          - generic [ref=e1039]:
+            - link "enterprise" [ref=e1040] [cursor=pointer]:
+              - /url: https://composio.dev/enterprise?utm_campaign=toolkits
+            - link "pricing" [ref=e1041] [cursor=pointer]:
+              - /url: https://composio.dev/pricing?utm_campaign=toolkits
+            - link "agent auth" [ref=e1042] [cursor=pointer]:
+              - /url: https://composio.dev/auth?utm_campaign=toolkits
+        - generic [ref=e1043]:
+          - paragraph [ref=e1044]: RESOURCES
+          - generic [ref=e1045]:
+            - link "docs" [ref=e1046] [cursor=pointer]:
+              - /url: https://docs.composio.dev/getting-started/welcome?utm_campaign=toolkits
+            - link "blog" [ref=e1047] [cursor=pointer]:
+              - /url: https://composio.dev/blog?utm_campaign=toolkits
+            - link "OAuth2 guides" [ref=e1048] [cursor=pointer]:
+              - /url: https://composio.dev/auth?utm_campaign=toolkits
+            - link "Case Studies" [ref=e1049] [cursor=pointer]:
+              - /url: https://composio.dev/case-studies?utm_campaign=toolkits
+        - generic [ref=e1050]:
+          - paragraph [ref=e1051]: COMPANY
+          - generic [ref=e1052]:
+            - link "Careers" [ref=e1053] [cursor=pointer]:
+              - /url: https://jobs.ashbyhq.com/composio
+            - link "trust" [ref=e1054] [cursor=pointer]:
+              - /url: https://trust.composio.dev/?utm_campaign=toolkits
+            - link "Support" [ref=e1055] [cursor=pointer]:
+              - /url: https://composio.dev/support?utm_campaign=toolkits
+            - link "Terms" [ref=e1056] [cursor=pointer]:
+              - /url: https://composio.dev/terms?utm_campaign=toolkits
+            - link "Privacy Policy" [ref=e1057] [cursor=pointer]:
+              - /url: https://composio.dev/privacy?utm_campaign=toolkits
+      - generic [ref=e1058]:
+        - generic [ref=e1059]:
+          - link [ref=e1060] [cursor=pointer]:
+            - /url: https://x.com/composio
+          - link [ref=e1062] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/composiohq/
+          - link [ref=e1064] [cursor=pointer]:
+            - /url: https://github.com/composiohq/composio/
+          - link [ref=e1066] [cursor=pointer]:
+            - /url: https://dub.composio.dev/discord
+          - link [ref=e1068] [cursor=pointer]:
+            - /url: https://www.youtube.com/@Composio
+        - paragraph [ref=e1071]: © Composio 2026

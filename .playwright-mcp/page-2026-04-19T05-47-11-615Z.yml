@@ -1,0 +1,274 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Company API Autocomplete" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Company API
+              - img [ref=e39]
+            - generic [ref=e41]: Autocomplete
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "Company API" [ref=e50] [cursor=pointer]:
+            - /url: /api-reference/company-apis/search-companies-with-indexed-fields-only
+          - generic [ref=e51]:
+            - heading "Autocomplete" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - generic [ref=e63]:
+          - paragraph [ref=e64]: Returns field value suggestions with document counts for company search fields. Useful for discovering valid filter values before building search queries. Accepts field names from the /company/search response schema using dot notation.
+          - generic [ref=e65]:
+            - img "Note" [ref=e67]
+            - paragraph [ref=e70]:
+              - text: Default
+              - code [ref=e71]: rate-limit
+              - text: is 15 requests per minute. Send an email to
+              - link "gtm@crustdata.co" [ref=e72] [cursor=pointer]:
+                - /url: mailto:gtm@crustdata.co
+              - text: to discuss higher limits if needed for your use case.
+      - generic [ref=e73]:
+        - generic [ref=e74]:
+          - generic [ref=e76]:
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e78]: POST
+              - generic [ref=e79]:
+                - generic [ref=e80]: https://api.crustdata.com
+                - generic [ref=e81]:
+                  - generic [ref=e82]: /
+                  - generic [ref=e83]: company
+                  - generic [ref=e84]: /
+                  - generic [ref=e85]: search
+                  - generic [ref=e86]: /
+                  - generic [ref=e87]: autocomplete
+            - button "Try it" [ref=e88] [cursor=pointer]:
+              - generic [ref=e89]: Try it
+              - img [ref=e90]
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - button "cURL" [ref=e95] [cursor=pointer]:
+                  - generic [ref=e96]:
+                    - paragraph [ref=e97]: cURL
+                    - img [ref=e98]
+                - generic [ref=e100]:
+                  - button "autocomplete_industries" [ref=e101] [cursor=pointer]:
+                    - generic [ref=e102]:
+                      - paragraph [ref=e103]: autocomplete_industries
+                      - img [ref=e104]
+                  - generic [ref=e106]:
+                    - button "Copy the contents from the code block" [ref=e109] [cursor=pointer]:
+                      - img [ref=e110]
+                    - button "Ask AI" [ref=e114] [cursor=pointer]:
+                      - img [ref=e115]
+              - region "Code snippet" [ref=e118]:
+                - generic [ref=e121]: "curl --request POST \\ --url https://api.crustdata.com/company/search/autocomplete \\ --header 'Authorization: Bearer <token>' \\ --header 'Content-Type: application/json' \\ --header 'x-api-version: <x-api-version>' \\ --data ' { \"field\": \"basic_info.industries\", \"query\": \"tech\", \"limit\": 5 } '"
+            - generic [ref=e122]:
+              - generic [ref=e123]:
+                - tablist [ref=e124]:
+                  - tab "200" [selected] [ref=e125] [cursor=pointer]:
+                    - generic [ref=e126]: "200"
+                  - tab "400" [ref=e128] [cursor=pointer]:
+                    - generic [ref=e129]: "400"
+                  - tab "401" [ref=e130] [cursor=pointer]:
+                    - generic [ref=e131]: "401"
+                  - tab "500" [ref=e132] [cursor=pointer]:
+                    - generic [ref=e133]: "500"
+                - generic [ref=e134]:
+                  - button "Copy the contents from the code block" [ref=e136] [cursor=pointer]:
+                    - img [ref=e137]
+                  - button "Ask AI" [ref=e141] [cursor=pointer]:
+                    - img [ref=e142]
+              - tabpanel "200" [ref=e146]:
+                - code [ref=e150]: "{ \"suggestions\": [ { \"value\": \"Technology, Information and Media\" }, { \"value\": \"Technology, Information and Internet\" }, { \"value\": \"Information Technology & Services\" }, { \"value\": \"Biotechnology Research\" }, { \"value\": \"Technical and Vocational Training\" } ] }"
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - heading "Authorizations" [level=4] [ref=e156]
+            - generic [ref=e158]:
+              - generic [ref=e161]:
+                - link "Navigate to header" [ref=e162] [cursor=pointer]:
+                  - /url: "#authorization-authorization"
+                  - img [ref=e164]
+                - generic [ref=e167] [cursor=pointer]: Authorization
+                - generic [ref=e168]:
+                  - generic [ref=e169]: string
+                  - generic [ref=e170]: header
+                  - text: required
+              - paragraph [ref=e173]: API key passed as a Bearer token in the Authorization header.
+          - generic [ref=e174]:
+            - heading "Headers" [level=4] [ref=e177]
+            - generic [ref=e179]:
+              - generic [ref=e182]:
+                - link "Navigate to header" [ref=e183] [cursor=pointer]:
+                  - /url: "#parameter-x-api-version"
+                  - img [ref=e185]
+                - generic [ref=e188] [cursor=pointer]: x-api-version
+                - generic [ref=e189]:
+                  - generic [ref=e190]: string
+                  - text: required
+              - generic [ref=e191]:
+                - paragraph [ref=e193]: API version to use. Must match a supported version (e.g., "2025-11-01").
+                - generic [ref=e194]:
+                  - generic [ref=e195]: "Example:"
+                  - paragraph [ref=e197]:
+                    - code [ref=e198]: "\"2025-11-01\""
+          - generic [ref=e199]:
+            - generic [ref=e200]:
+              - generic [ref=e201]:
+                - heading "Body" [level=4] [ref=e202]
+                - generic [ref=e204]: application/json
+              - paragraph [ref=e207]: Field name, query text, and optional filters for autocomplete
+            - generic [ref=e210]:
+              - paragraph [ref=e212]: Request body for autocomplete suggestions on company search fields.
+              - generic [ref=e214]:
+                - generic [ref=e216]:
+                  - generic [ref=e219]:
+                    - link "Navigate to header" [ref=e220] [cursor=pointer]:
+                      - /url: "#body-field"
+                      - img [ref=e222]
+                    - generic [ref=e225] [cursor=pointer]: field
+                    - generic [ref=e226]:
+                      - generic [ref=e227]: string
+                      - text: required
+                  - generic [ref=e228]:
+                    - paragraph [ref=e230]: "The dataset API field name to get suggestions for. Valid fields include: basic_info.name, basic_info.primary_domain, basic_info.website, basic_info.professional_network_url, basic_info.professional_network_id, basic_info.company_type, basic_info.year_founded, basic_info.employee_count_range, basic_info.markets, basic_info.industries, revenue.estimated.lower_bound_usd, revenue.estimated.upper_bound_usd, revenue.acquisition_status, funding.total_investment_usd, funding.last_round_type, funding.last_fundraise_date, funding.investors, headcount.latest_count, headcount.largest_headcount_country, locations.country, locations.state, locations.city, taxonomy.professional_network_industry, taxonomy.professional_network_specialities, taxonomy.categories, followers.latest_count, social_profiles.crunchbase.url, social_profiles.twitter_url"
+                    - generic [ref=e231]:
+                      - generic [ref=e232]: "Example:"
+                      - paragraph [ref=e234]:
+                        - code [ref=e235]: "\"taxonomy.professional_network_industry\""
+                - generic [ref=e237]:
+                  - generic [ref=e240]:
+                    - link "Navigate to header" [ref=e241] [cursor=pointer]:
+                      - /url: "#body-query"
+                      - img [ref=e243]
+                    - generic [ref=e246] [cursor=pointer]: query
+                    - generic [ref=e247]:
+                      - generic [ref=e248]: string
+                      - text: required
+                  - generic [ref=e249]:
+                    - paragraph [ref=e251]: The search query text (can be empty to get top values by frequency)
+                    - generic [ref=e252]:
+                      - generic [ref=e253]: "Example:"
+                      - paragraph [ref=e255]:
+                        - code [ref=e256]: "\"tech\""
+                - generic [ref=e258]:
+                  - generic [ref=e261]:
+                    - link "Navigate to header" [ref=e262] [cursor=pointer]:
+                      - /url: "#body-limit"
+                      - img [ref=e264]
+                    - generic [ref=e267] [cursor=pointer]: limit
+                    - generic [ref=e268]:
+                      - generic [ref=e269]: integer
+                      - generic [ref=e270]: default:20
+                  - generic [ref=e271]:
+                    - paragraph [ref=e273]: Maximum number of suggestions to return
+                    - generic [ref=e274]:
+                      - text: "Required range:"
+                      - code [ref=e275]: 1 <= x <= 100
+                - generic [ref=e277]:
+                  - generic [ref=e280]:
+                    - link "Navigate to header" [ref=e281] [cursor=pointer]:
+                      - /url: "#body-filters"
+                      - img [ref=e283]
+                    - generic [ref=e286] [cursor=pointer]: filters
+                    - generic [ref=e288]: object
+                  - generic [ref=e289]:
+                    - paragraph [ref=e291]: Optional filters to narrow down suggestions
+                    - generic [ref=e292]:
+                      - generic [ref=e294]:
+                        - tablist "Tabs" [ref=e295]:
+                          - tab "Option 1" [selected] [ref=e296] [cursor=pointer]:
+                            - generic [ref=e297]: Option 1
+                          - tab "Option 2" [ref=e298] [cursor=pointer]:
+                            - generic [ref=e299]: Option 2
+                        - generic:
+                          - tabpanel "Option 1"
+                      - group [ref=e301]:
+                        - generic "Show child attributes" [ref=e302] [cursor=pointer]:
+                          - img [ref=e303]
+                          - paragraph [ref=e305]: Show child attributes
+                      - generic [ref=e306]:
+                        - generic [ref=e307]: "Example:"
+                        - code [ref=e311]: "{ \"field\": \"locations.country\", \"type\": \"=\", \"value\": \"USA\" }"
+          - generic [ref=e312]:
+            - generic [ref=e313]:
+              - generic [ref=e314]:
+                - heading "Response" [level=4] [ref=e315]
+                - generic [ref=e317]:
+                  - button "200" [ref=e319] [cursor=pointer]:
+                    - generic [ref=e320]:
+                      - generic [ref=e321]: "200"
+                      - img [ref=e322]
+                  - generic [ref=e324]:
+                    - button "application/json" [disabled]:
+                      - generic:
+                        - generic: application/json
+              - paragraph [ref=e327]: Autocomplete suggestions with document counts
+            - generic [ref=e330]:
+              - paragraph [ref=e332]: Response with autocomplete suggestions for a company search field.
+              - generic [ref=e336]:
+                - generic [ref=e339]:
+                  - link "Navigate to header" [ref=e340] [cursor=pointer]:
+                    - /url: "#response-suggestions"
+                    - img [ref=e342]
+                  - generic [ref=e345] [cursor=pointer]: suggestions
+                  - generic [ref=e346]:
+                    - generic [ref=e347]: object[]
+                    - text: required
+                - group [ref=e354]:
+                  - generic "Show child attributes" [ref=e355] [cursor=pointer]:
+                    - img [ref=e356]
+                    - paragraph [ref=e358]: Show child attributes
+      - generic [ref=e360]:
+        - paragraph [ref=e361]: Was this page helpful?
+        - generic [ref=e363]:
+          - button "Yes" [ref=e364] [cursor=pointer]:
+            - img [ref=e365]
+            - generic [ref=e367]: "Yes"
+          - button "No" [ref=e368] [cursor=pointer]:
+            - img [ref=e369]
+            - generic [ref=e371]: "No"
+      - generic [ref=e373]:
+        - textbox "Ask a question..." [ref=e374]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e375]:
+          - img [ref=e376]
+      - contentinfo [ref=e378]:
+        - generic [ref=e379]:
+          - link "x" [ref=e380] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e381]: x
+            - img [ref=e382]
+          - link "linkedin" [ref=e383] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e384]: linkedin
+            - img [ref=e385]

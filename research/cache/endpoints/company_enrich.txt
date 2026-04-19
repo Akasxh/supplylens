@@ -1,0 +1,39 @@
+URL: https://docs.crustdata.com/api-reference/company-apis/get-full-company-enrichment
+Title: Enrich Companies
+
+Description: Get comprehensive company data including firmographics, headcount, funding, web traffic, employee reviews, people (founders, CXOs, decision makers), news, and more. Identify the company by domain, name, profile URL, or Crustdata company ID. Use the fields parameter to select specific data groups and reduce response size.
+- Same endpoint supports multiple identifiers of one type in a single request.
+- No-match responses return 200 with an empty matches array.
+
+Rate limit: Default 15 requests per minute (email gtm@crustdata.co for higher).
+
+Method: POST
+URL: https://api.crustdata.com/company/enrich
+
+Auth: Bearer token in Authorization header (required)
+Headers: x-api-version (required, e.g., "2025-11-01")
+
+Body (application/json):
+  Provide exactly one of: names[], domains[], crustdata_company_ids[], professional_network_profile_urls[]
+  fields: string[] — Valid enrich groups: basic_info, revenue, headcount, funding, hiring, web_traffic, seo,
+    competitors, employee_reviews, people, locations, taxonomy, followers, news, software_reviews,
+    social_profiles, status. (Not valid: roles, skills — search-only.)
+  exact_match: boolean | null — null = auto-detect
+
+Response (200):
+  results: object[]
+    matched_on: string (input value, e.g., "google.com")
+    match_type: enum ["name","domain","crustdata_company_id","professional_network_profile_url"]
+    matches: object[]
+      - confidence_score: number (0..1)
+      - company_data: {
+          crustdata_company_id,
+          basic_info: { name, primary_domain, all_domains, website, professional_network_url,
+                       professional_network_id, profile_name, logo_permalink, description, company_type,
+                       year_founded, employee_count_range, markets[], industries[] },
+          headcount: { total, ... } ,
+          funding: { total_investment_usd, last_round_amount_usd, last_fundraise_date, last_round_type,
+                    investors[] },
+          revenue, hiring, web_traffic, seo, competitors, employee_reviews, people, locations,
+          taxonomy, followers, news, software_reviews, social_profiles, status
+        }

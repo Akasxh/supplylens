@@ -1,0 +1,6 @@
+[     388ms] [ERROR] Error during data sending or redirect: TypeError: Failed to fetch
+    at Object.sendData (https://identity.mdb.tools/sync/resolve?client_id=7989e544-b3bc-431e-90db-47e8cd6568ff&client_uid=prd_assetloader%3Amdb_pxl_01KGK16NAVHMRBFAE76TF43Y7A%3A01KPJ565TZZB43RA6DZJY48KA1%3A01KPJ3W3T491X53V50FRTBFDQW%3Ac2prd:2:10800)
+    at Object.trackPageView (https://identity.mdb.tools/sync/resolve?client_id=7989e544-b3bc-431e-90db-47e8cd6568ff&client_uid=prd_assetloader%3Amdb_pxl_01KGK16NAVHMRBFAE76TF43Y7A%3A01KPJ565TZZB43RA6DZJY48KA1%3A01KPJ3W3T491X53V50FRTBFDQW%3Ac2prd:2:5991)
+    at Object.init (https://identity.mdb.tools/sync/resolve?client_id=7989e544-b3bc-431e-90db-47e8cd6568ff&client_uid=prd_assetloader%3Amdb_pxl_01KGK16NAVHMRBFAE76TF43Y7A%3A01KPJ565TZZB43RA6DZJY48KA1%3A01KPJ3W3T491X53V50FRTBFDQW%3Ac2prd:2:5483)
+    at Object.configureAsync (https://identity.mdb.tools/sync/resolve?client_id=7989e544-b3bc-431e-90db-47e8cd6568ff&client_uid=prd_assetloader%3Amdb_pxl_01KGK16NAVHMRBFAE76TF43Y7A%3A01KPJ565TZZB43RA6DZJY48KA1%3A01KPJ3W3T491X53V50FRTBFDQW%3Ac2prd:2:4332) @ https://us-assets.i.posthog.com/static/posthog-recorder.js?v=1.369.2:0
+[     426ms] [LOG] Hi!!! @ https://crustdata.com/apis/job-listing:27

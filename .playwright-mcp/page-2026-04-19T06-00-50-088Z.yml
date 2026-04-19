@@ -1,0 +1,375 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e7]:
+        - generic [ref=e8]:
+          - generic [ref=e11]:
+            - paragraph [ref=e13]: APIs
+            - paragraph [ref=e17]: Job Listings
+          - generic [ref=e18]:
+            - 'heading "Job Posting API: Access Real-Time Job Listings With 30+ Datapoints" [level=1] [ref=e21]'
+            - paragraph [ref=e24]: Our Job Posting API delivers structured, real-time job data including full descriptions and company context to power search, analysis, and prospecting workflows.
+        - link "Get a Demo" [ref=e28] [cursor=pointer]:
+          - /url: ../demo
+          - heading "Get a Demo" [level=5] [ref=e31]
+      - generic [ref=e39]:
+        - paragraph [ref=e41]: Our customers
+        - generic [ref=e42]:
+          - list [ref=e45]:
+            - listitem [ref=e46]
+            - listitem [ref=e49]
+            - listitem [ref=e52]
+            - listitem [ref=e55]
+            - listitem [ref=e58]
+            - listitem [ref=e61]
+            - listitem [ref=e64]
+            - listitem [ref=e67]
+            - listitem [ref=e70]
+            - listitem [ref=e73]
+            - listitem [ref=e76]
+            - listitem [ref=e79]
+            - listitem [ref=e82]
+            - listitem [ref=e85]
+            - listitem [ref=e88]
+            - listitem [ref=e91]
+            - listitem [ref=e94]
+            - listitem [ref=e97]
+            - listitem [ref=e100]
+            - listitem [ref=e103]
+            - listitem [ref=e106]
+            - listitem [ref=e109]
+            - listitem [ref=e112]
+            - listitem [ref=e115]
+            - listitem [ref=e118]
+            - listitem [ref=e121]
+            - listitem [ref=e124]
+            - listitem [ref=e127]
+            - listitem [ref=e130]
+            - listitem [ref=e133]
+            - listitem [ref=e136]
+            - listitem [ref=e139]
+            - listitem [ref=e142]
+            - listitem [ref=e145]
+            - listitem [ref=e148]
+            - listitem [ref=e151]
+          - list [ref=e156]:
+            - listitem [ref=e157]
+            - listitem [ref=e160]
+            - listitem [ref=e163]
+            - listitem [ref=e166]
+            - listitem [ref=e169]
+            - listitem [ref=e172]
+            - listitem [ref=e175]
+            - listitem [ref=e178]
+            - listitem [ref=e181]
+            - listitem [ref=e184]
+            - listitem [ref=e187]
+            - listitem [ref=e190]
+            - listitem [ref=e193]
+            - listitem [ref=e196]
+            - listitem [ref=e199]
+            - listitem [ref=e202]
+            - listitem [ref=e205]
+            - listitem [ref=e208]
+            - listitem [ref=e211]
+            - listitem [ref=e214]
+            - listitem [ref=e217]
+            - listitem [ref=e220]
+            - listitem [ref=e223]
+            - listitem [ref=e226]
+            - listitem [ref=e229]
+            - listitem [ref=e232]
+            - listitem [ref=e235]
+            - listitem [ref=e238]
+            - listitem [ref=e241]
+            - listitem [ref=e244]
+            - listitem [ref=e247]
+            - listitem [ref=e250]
+            - listitem [ref=e253]
+            - listitem [ref=e256]
+            - listitem [ref=e259]
+            - listitem [ref=e262]
+    - generic [ref=e266] [cursor=pointer]:
+      - heading "Datapoints You Get With Each Job Posting API Call" [level=2] [ref=e270]
+      - generic [ref=e271]:
+        - generic [ref=e275]:
+          - paragraph [ref=e278]: Company overview
+          - paragraph [ref=e280]: Website domain
+          - paragraph [ref=e282]: Industry
+          - paragraph [ref=e284]: Company size
+          - paragraph [ref=e286]: Largest headcount country
+          - paragraph [ref=e288]: Investment stage / valuation
+          - paragraph [ref=e290]: Acquisition status
+        - generic [ref=e294]:
+          - paragraph [ref=e297]: Employee data
+          - paragraph [ref=e299]: Full job description
+          - paragraph [ref=e301]: Job URL
+          - paragraph [ref=e303]: Job category / department
+          - paragraph [ref=e305]: Number of openings
+          - paragraph [ref=e307]:
+            - text: Workplace type
+            - text: (onsite, remote, hybrid)
+          - paragraph [ref=e309]: Date added / last updated
+          - paragraph [ref=e311]: Reposted job flag
+        - generic [ref=e318]:
+          - paragraph [ref=e321]: Performance & growth
+          - paragraph [ref=e323]: City
+          - paragraph [ref=e325]: District
+          - paragraph [ref=e327]: State
+          - paragraph [ref=e329]: Country (with codes)
+          - paragraph [ref=e331]: Pincode
+          - paragraph [ref=e333]: Location text
+          - paragraph [ref=e335]: Geocodes for district and state
+    - generic [ref=e336]:
+      - heading "Popular use cases" [level=2] [ref=e339]
+      - generic [ref=e341]:
+        - heading "Identify companies actively scaling specific departments" [level=3] [ref=e344]
+        - paragraph [ref=e346]: Use filters like job title, job category and number of openings to spot companies rapidly hiring in sales, engineering, or other functions. This is useful as a signal for outbound and for offering your recruiting services. For investment it’s a strong signal of company growth.
+      - generic [ref=e358]:
+        - heading "Track companies expanding into new markets" [level=3] [ref=e361]:
+          - text: Track companies expanding
+          - text: into new markets
+        - paragraph [ref=e363]: Filter by job locations and look for listings in countries, cities or regions the company hasn’t previously hired in. This is useful for location-based outreach. For investors, it’s a sign of domestic or international expansion of the company.
+      - generic [ref=e365]:
+        - heading "Find companies hiring for remote-first roles" [level=3] [ref=e368]:
+          - text: Find companies hiring
+          - text: for remote-first roles
+        - paragraph [ref=e370]: Use the workplace type filter to identify fully remote opportunities. This is useful for recruitment platforms indexing remote jobs or recruiters sourcing global candidates.
+      - generic [ref=e382]:
+        - heading "Discover early signals of new team formation" [level=4] [ref=e385]:
+          - text: Discover early signals of
+          - text: new team formation
+        - paragraph [ref=e387]: Spot listings for new roles like “Founding Product Designer” or “First AE” to find companies building out early teams. This is useful for outbound sales or early-stage investors.
+    - generic [ref=e388]:
+      - heading "See Our Job Posting API in Action" [level=2] [ref=e391]:
+        - generic [ref=e392]: See Our Job Posting API in Action
+      - link "Book a demo" [ref=e396] [cursor=pointer]:
+        - /url: ../demo
+        - heading "Book a demo" [level=5] [ref=e399]
+    - generic [ref=e403]:
+      - button "What is the Job Listing API and what can I use it for?" [ref=e405] [cursor=pointer]:
+        - generic [ref=e406]: What is the Job Listing API and what can I use it for?
+        - img [ref=e408]
+      - button "What 30+ data points do I get with each job listing?" [ref=e411] [cursor=pointer]:
+        - generic [ref=e412]: What 30+ data points do I get with each job listing?
+        - img [ref=e414]
+      - button "How fresh is Crustdata's job data (update frequency)?" [ref=e417] [cursor=pointer]:
+        - generic [ref=e418]: How fresh is Crustdata's job data (update frequency)?
+        - img [ref=e420]
+      - button "Do you have historical job listing data for trend analysis?" [ref=e423] [cursor=pointer]:
+        - generic [ref=e424]: Do you have historical job listing data for trend analysis?
+        - img [ref=e426]
+      - button "Can I track companies building early teams or launching new departments?" [ref=e429] [cursor=pointer]:
+        - generic [ref=e430]: Can I track companies building early teams or launching new departments?
+        - img [ref=e432]
+      - button "View all (5 more)" [ref=e434] [cursor=pointer]
+    - generic [ref=e435]:
+      - heading "How Crustdata's Job Posting API Compares to others" [level=2] [ref=e438]:
+        - generic [ref=e439]: How Crustdata's Job Posting API Compares to others
+      - table [ref=e443]:
+        - rowgroup [ref=e444]:
+          - row "Category Crustdata Coresignal PDL (beta)" [ref=e445]:
+            - columnheader "Category" [ref=e446]:
+              - generic [ref=e447]: Category
+            - columnheader "Crustdata" [ref=e448]:
+              - generic [ref=e449]: Crustdata
+            - columnheader "Coresignal" [ref=e450]:
+              - generic [ref=e451]: Coresignal
+            - columnheader "PDL (beta)" [ref=e452]:
+              - generic [ref=e453]: PDL (beta)
+        - rowgroup [ref=e454]:
+          - row "Search filters 35 13 Unspecified" [ref=e455]:
+            - cell "Search filters" [ref=e456]
+            - cell "35" [ref=e457]
+            - cell "13" [ref=e458]
+            - cell "Unspecified" [ref=e459]
+          - row "Enrichment data points 35 19 27" [ref=e460]:
+            - cell "Enrichment data points" [ref=e461]
+            - cell "35" [ref=e462]
+            - cell "19" [ref=e463]
+            - cell "27" [ref=e464]
+          - row "Realtime data Yes Unspecified Unspecified" [ref=e465]:
+            - cell "Realtime data" [ref=e466]
+            - cell "Yes" [ref=e467]
+            - cell "Unspecified" [ref=e468]
+            - cell "Unspecified" [ref=e469]
+    - generic [ref=e472]:
+      - generic [ref=e474]:
+        - generic [ref=e475]:
+          - generic [ref=e476]:
+            - paragraph [ref=e478]: Company
+            - paragraph [ref=e480]:
+              - link "About Us" [ref=e481] [cursor=pointer]:
+                - /url: ../about
+            - paragraph [ref=e483]:
+              - link "Contact Us" [ref=e484] [cursor=pointer]:
+                - /url: ../demo
+            - paragraph [ref=e486]:
+              - link "Pricing" [ref=e487] [cursor=pointer]:
+                - /url: ../pricing
+            - paragraph [ref=e489]:
+              - link "Careers" [ref=e490] [cursor=pointer]:
+                - /url: ../careers
+          - generic [ref=e491]:
+            - paragraph [ref=e493]: Resources
+            - paragraph [ref=e495]:
+              - link "Documentation" [ref=e496] [cursor=pointer]:
+                - /url: https://docs.crustdata.com
+            - paragraph [ref=e498]:
+              - link "Blog" [ref=e499] [cursor=pointer]:
+                - /url: ../blog
+            - paragraph [ref=e501]:
+              - link "Case Studies" [ref=e502] [cursor=pointer]:
+                - /url: ../case-studies
+        - generic [ref=e503]:
+          - paragraph [ref=e505]: Products
+          - paragraph [ref=e507]:
+            - link "Company Enrichment API" [ref=e508] [cursor=pointer]:
+              - /url: ./company-enrichment
+          - paragraph [ref=e510]:
+            - link "Company Search API" [ref=e511] [cursor=pointer]:
+              - /url: ./company-discovery
+          - paragraph [ref=e513]:
+            - link "People Enrichment API" [ref=e514] [cursor=pointer]:
+              - /url: ./people-enrichment
+          - paragraph [ref=e516]:
+            - link "People Search API" [ref=e517] [cursor=pointer]:
+              - /url: ./people-discovery
+          - paragraph [ref=e519]:
+            - link "Jobs API" [ref=e520] [cursor=pointer]:
+              - /url: ./job-listing
+          - paragraph [ref=e522]:
+            - link "Posts API" [ref=e523] [cursor=pointer]:
+              - /url: ./posts
+          - paragraph [ref=e525]:
+            - link "Watcher API" [ref=e526] [cursor=pointer]:
+              - /url: ./watcher
+          - paragraph [ref=e528]:
+            - link "Company Dataset" [ref=e529] [cursor=pointer]:
+              - /url: ../datasets/company-data
+          - paragraph [ref=e531]:
+            - link "People Dataset" [ref=e532] [cursor=pointer]:
+              - /url: ../datasets/people-data
+        - generic [ref=e533]:
+          - paragraph [ref=e535]: Popular Use Cases
+          - paragraph [ref=e537]:
+            - link "Power your AI SDR" [ref=e538] [cursor=pointer]:
+              - /url: ../solutions/ai-sdr
+          - paragraph [ref=e540]:
+            - link "Internal Sales Tools" [ref=e541] [cursor=pointer]:
+              - /url: ../solutions/build-internal-sales-tools
+          - paragraph [ref=e543]:
+            - link "Venture Capital" [ref=e544] [cursor=pointer]:
+              - /url: ../solutions/venture-capital
+          - paragraph [ref=e546]:
+            - link "Power your Recruiting Platform" [ref=e547] [cursor=pointer]:
+              - /url: ../solutions/recruiting
+          - paragraph [ref=e549]:
+            - link "Power your Deal Sourcing Platform" [ref=e550] [cursor=pointer]:
+              - /url: ../solutions/growth-equity--old
+          - paragraph [ref=e552]:
+            - link "Track Champions" [ref=e553] [cursor=pointer]:
+              - /url: ../solutions/customer-success
+          - paragraph [ref=e555]:
+            - link "Build Prospect Lists" [ref=e556] [cursor=pointer]:
+              - /url: ./company-discovery
+          - paragraph [ref=e558]:
+            - link "Build Candidate Lists" [ref=e559] [cursor=pointer]:
+              - /url: ./people-discovery
+          - paragraph [ref=e561]:
+            - link "Enrich Leads" [ref=e562] [cursor=pointer]:
+              - /url: ./people-enrichment
+          - paragraph [ref=e564]:
+            - link "Monitor Companies For Signals" [ref=e565] [cursor=pointer]:
+              - /url: ../webhook
+          - paragraph [ref=e567]:
+            - link "Build Internal Sales Tools" [ref=e568] [cursor=pointer]:
+              - /url: ../
+        - generic [ref=e569]:
+          - paragraph [ref=e571]: Competitor Comparisons
+          - paragraph [ref=e573]:
+            - link "Coresignal alternative" [ref=e574] [cursor=pointer]:
+              - /url: ../vs/coresignal-alternative
+          - paragraph [ref=e576]:
+            - link "PeopleDataLabs alternative" [ref=e577] [cursor=pointer]:
+              - /url: ../vs/peopledatalabs-alternative
+          - paragraph [ref=e579]:
+            - link "MixRank alternative" [ref=e580] [cursor=pointer]:
+              - /url: ../vs/mixrank-alternative
+          - paragraph [ref=e582]:
+            - link "Proxycurl alternative" [ref=e583] [cursor=pointer]:
+              - /url: ../vs/proxycurl-alternative
+          - paragraph [ref=e585]:
+            - link "Clay alternative" [ref=e586] [cursor=pointer]:
+              - /url: ../vs/clay-alternative-crustdata
+          - paragraph [ref=e588]:
+            - link "Clado alternative" [ref=e589] [cursor=pointer]:
+              - /url: ../vs/clado-alternative-crustdata
+          - paragraph [ref=e591]:
+            - link "Bright Data alternative" [ref=e592] [cursor=pointer]:
+              - /url: ../vs/bright-data-alternative
+          - paragraph [ref=e594]:
+            - link "Clearbit alternative" [ref=e595] [cursor=pointer]:
+              - /url: ../vs/clearbit-alternative
+          - paragraph [ref=e597]:
+            - link "Scrapin.io alternative" [ref=e598] [cursor=pointer]:
+              - /url: ../vs/scrapin-io-alternative
+          - paragraph [ref=e600]:
+            - link "ZoomInfo alternative" [ref=e601] [cursor=pointer]:
+              - /url: ../vs/zoominfo-alternative
+          - paragraph [ref=e603]:
+            - link "Enrich Layer alternative" [ref=e604] [cursor=pointer]:
+              - /url: ../vs/enrich-layer-alternative
+          - paragraph [ref=e606]:
+            - link "SerpApi alternative" [ref=e607] [cursor=pointer]:
+              - /url: ../vs/serpapi-alternative
+      - generic [ref=e608]:
+        - paragraph [ref=e610]:
+          - link "info@crustdata.com" [ref=e611] [cursor=pointer]:
+            - /url: mailto:info@crustdata.com
+        - generic [ref=e612]:
+          - paragraph [ref=e614]:
+            - link "Terms & Conditions" [ref=e615] [cursor=pointer]:
+              - /url: ../terms
+          - paragraph [ref=e617]: "|"
+          - paragraph [ref=e619]:
+            - link "Privacy Policy" [ref=e620] [cursor=pointer]:
+              - /url: ../privacy
+        - generic [ref=e621]:
+          - paragraph [ref=e622]: 95 Third Street, 2nd Floor, San Francisco,
+          - paragraph [ref=e623]: California 94103, United States of America
+        - paragraph [ref=e625]: © 2025 CrustData Inc.
+        - generic [ref=e626]:
+          - link [ref=e627] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata/
+            - img [ref=e629]
+          - link [ref=e631] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - img [ref=e633]
+    - generic [ref=e637]:
+      - generic [ref=e640]:
+        - generic [ref=e641]:
+          - generic [ref=e642]:
+            - paragraph [ref=e646]:
+              - strong [ref=e647]: NEW
+            - paragraph [ref=e649]:
+              - strong [ref=e650]: Crustdata now works inside Claude
+          - paragraph [ref=e652]:
+            - strong [ref=e653]: Give Claude real-time people and company data with MCP.
+        - link "Talk to founders" [ref=e656] [cursor=pointer]:
+          - /url: ../demo
+          - paragraph [ref=e659]: Talk to founders
+      - generic [ref=e665]:
+        - link [ref=e666] [cursor=pointer]:
+          - /url: ../
+          - img [ref=e669]
+        - generic [ref=e671]:
+          - link "Book Demo" [ref=e673] [cursor=pointer]:
+            - /url: ../demo
+            - paragraph [ref=e676]: Book Demo
+          - img [ref=e681] [cursor=pointer]
+  - img [ref=e683]
+  - img [ref=e685]
+  - img [ref=e687]
+  - img [ref=e695]
+  - img [ref=e697]

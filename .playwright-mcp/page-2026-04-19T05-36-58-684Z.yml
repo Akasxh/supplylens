@@ -1,0 +1,228 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e6]:
+      - heading "Crustdata API Documentation" [level=1] [ref=e8]:
+        - text: Crustdata
+        - text: API Documentation
+      - heading "The CrustData API provides comprehensive, programmatic access to a vast array of firmographic data and growth metrics for companies worldwide." [level=5] [ref=e10]
+    - generic [ref=e14]:
+      - generic [ref=e19]:
+        - img [ref=e22]
+        - generic [ref=e24]:
+          - heading "Documentation" [level=5] [ref=e26]
+          - paragraph [ref=e28]: An outline of the various endpoints available through our API.
+        - link "Learn more" [ref=e30] [cursor=pointer]:
+          - /url: https://docs.crustdata.com/docs/intro/
+          - generic [ref=e31]:
+            - heading "Learn more" [level=6] [ref=e33]
+            - img [ref=e36]
+      - generic [ref=e42]:
+        - img [ref=e45]
+        - generic [ref=e47]:
+          - heading "Company API" [level=5] [ref=e49]
+          - paragraph [ref=e51]: Detailed information about one or multiple companies.
+        - link "Learn more" [ref=e53] [cursor=pointer]:
+          - /url: https://docs.crustdata.com/api/#tag/company-api
+          - generic [ref=e54]:
+            - heading "Learn more" [level=6] [ref=e56]
+            - img [ref=e59]
+      - generic [ref=e65]:
+        - img [ref=e68]
+        - generic [ref=e70]:
+          - heading "People API" [level=5] [ref=e72]
+          - paragraph [ref=e74]: Discover and get detailed information on LinkedIn profiles.
+        - link "Learn more" [ref=e76] [cursor=pointer]:
+          - /url: https://docs.crustdata.com/api/#tag/people-api/POST/screener/person/search
+          - generic [ref=e77]:
+            - heading "Learn more" [level=6] [ref=e79]
+            - img [ref=e82]
+    - generic [ref=e86]:
+      - heading "Get access to actionable company and people data" [level=2] [ref=e88]:
+        - generic [ref=e89]: Get access to actionable company and people data
+      - link "Book a demo" [ref=e92] [cursor=pointer]:
+        - /url: ./demo
+        - heading "Book a demo" [level=5] [ref=e95]
+    - generic [ref=e99]:
+      - generic [ref=e101]:
+        - generic [ref=e102]:
+          - generic [ref=e103]:
+            - paragraph [ref=e105]: Company
+            - paragraph [ref=e107]:
+              - link "About Us" [ref=e108] [cursor=pointer]:
+                - /url: ./about
+            - paragraph [ref=e110]:
+              - link "Contact Us" [ref=e111] [cursor=pointer]:
+                - /url: ./demo
+            - paragraph [ref=e113]:
+              - link "Pricing" [ref=e114] [cursor=pointer]:
+                - /url: ./pricing
+            - paragraph [ref=e116]:
+              - link "Careers" [ref=e117] [cursor=pointer]:
+                - /url: ./careers
+          - generic [ref=e118]:
+            - paragraph [ref=e120]: Resources
+            - paragraph [ref=e122]:
+              - link "Documentation" [ref=e123] [cursor=pointer]:
+                - /url: https://docs.crustdata.com
+            - paragraph [ref=e125]:
+              - link "Blog" [ref=e126] [cursor=pointer]:
+                - /url: ./blog
+            - paragraph [ref=e128]:
+              - link "Case Studies" [ref=e129] [cursor=pointer]:
+                - /url: ./case-studies
+        - generic [ref=e130]:
+          - paragraph [ref=e132]: Products
+          - paragraph [ref=e134]:
+            - link "Company Enrichment API" [ref=e135] [cursor=pointer]:
+              - /url: ./apis/company-enrichment
+          - paragraph [ref=e137]:
+            - link "Company Search API" [ref=e138] [cursor=pointer]:
+              - /url: ./apis/company-discovery
+          - paragraph [ref=e140]:
+            - link "People Enrichment API" [ref=e141] [cursor=pointer]:
+              - /url: ./apis/people-enrichment
+          - paragraph [ref=e143]:
+            - link "People Search API" [ref=e144] [cursor=pointer]:
+              - /url: ./apis/people-discovery
+          - paragraph [ref=e146]:
+            - link "Jobs API" [ref=e147] [cursor=pointer]:
+              - /url: ./apis/job-listing
+          - paragraph [ref=e149]:
+            - link "Posts API" [ref=e150] [cursor=pointer]:
+              - /url: ./apis/posts
+          - paragraph [ref=e152]:
+            - link "Watcher API" [ref=e153] [cursor=pointer]:
+              - /url: ./apis/watcher
+          - paragraph [ref=e155]:
+            - link "Company Dataset" [ref=e156] [cursor=pointer]:
+              - /url: ./datasets/company-data
+          - paragraph [ref=e158]:
+            - link "People Dataset" [ref=e159] [cursor=pointer]:
+              - /url: ./datasets/people-data
+        - generic [ref=e160]:
+          - paragraph [ref=e162]: Popular Use Cases
+          - paragraph [ref=e164]:
+            - link "Power your AI SDR" [ref=e165] [cursor=pointer]:
+              - /url: ./solutions/ai-sdr
+          - paragraph [ref=e167]:
+            - link "Internal Sales Tools" [ref=e168] [cursor=pointer]:
+              - /url: ./solutions/build-internal-sales-tools
+          - paragraph [ref=e170]:
+            - link "Venture Capital" [ref=e171] [cursor=pointer]:
+              - /url: ./solutions/venture-capital
+          - paragraph [ref=e173]:
+            - link "Power your Recruiting Platform" [ref=e174] [cursor=pointer]:
+              - /url: ./solutions/recruiting
+          - paragraph [ref=e176]:
+            - link "Power your Deal Sourcing Platform" [ref=e177] [cursor=pointer]:
+              - /url: ./solutions/growth-equity--old
+          - paragraph [ref=e179]:
+            - link "Track Champions" [ref=e180] [cursor=pointer]:
+              - /url: ./solutions/customer-success
+          - paragraph [ref=e182]:
+            - link "Build Prospect Lists" [ref=e183] [cursor=pointer]:
+              - /url: ./apis/company-discovery
+          - paragraph [ref=e185]:
+            - link "Build Candidate Lists" [ref=e186] [cursor=pointer]:
+              - /url: ./apis/people-discovery
+          - paragraph [ref=e188]:
+            - link "Enrich Leads" [ref=e189] [cursor=pointer]:
+              - /url: ./apis/people-enrichment
+          - paragraph [ref=e191]:
+            - link "Monitor Companies For Signals" [ref=e192] [cursor=pointer]:
+              - /url: ./webhook
+          - paragraph [ref=e194]:
+            - link "Build Internal Sales Tools" [ref=e195] [cursor=pointer]:
+              - /url: ./
+        - generic [ref=e196]:
+          - paragraph [ref=e198]: Competitor Comparisons
+          - paragraph [ref=e200]:
+            - link "Coresignal alternative" [ref=e201] [cursor=pointer]:
+              - /url: ./vs/coresignal-alternative
+          - paragraph [ref=e203]:
+            - link "PeopleDataLabs alternative" [ref=e204] [cursor=pointer]:
+              - /url: ./vs/peopledatalabs-alternative
+          - paragraph [ref=e206]:
+            - link "MixRank alternative" [ref=e207] [cursor=pointer]:
+              - /url: ./vs/mixrank-alternative
+          - paragraph [ref=e209]:
+            - link "Proxycurl alternative" [ref=e210] [cursor=pointer]:
+              - /url: ./vs/proxycurl-alternative
+          - paragraph [ref=e212]:
+            - link "Clay alternative" [ref=e213] [cursor=pointer]:
+              - /url: ./vs/clay-alternative-crustdata
+          - paragraph [ref=e215]:
+            - link "Clado alternative" [ref=e216] [cursor=pointer]:
+              - /url: ./vs/clado-alternative-crustdata
+          - paragraph [ref=e218]:
+            - link "Bright Data alternative" [ref=e219] [cursor=pointer]:
+              - /url: ./vs/bright-data-alternative
+          - paragraph [ref=e221]:
+            - link "Clearbit alternative" [ref=e222] [cursor=pointer]:
+              - /url: ./vs/clearbit-alternative
+          - paragraph [ref=e224]:
+            - link "Scrapin.io alternative" [ref=e225] [cursor=pointer]:
+              - /url: ./vs/scrapin-io-alternative
+          - paragraph [ref=e227]:
+            - link "ZoomInfo alternative" [ref=e228] [cursor=pointer]:
+              - /url: ./vs/zoominfo-alternative
+          - paragraph [ref=e230]:
+            - link "Enrich Layer alternative" [ref=e231] [cursor=pointer]:
+              - /url: ./vs/enrich-layer-alternative
+          - paragraph [ref=e233]:
+            - link "SerpApi alternative" [ref=e234] [cursor=pointer]:
+              - /url: ./vs/serpapi-alternative
+      - generic [ref=e235]:
+        - paragraph [ref=e237]:
+          - link "info@crustdata.com" [ref=e238] [cursor=pointer]:
+            - /url: mailto:info@crustdata.com
+        - generic [ref=e239]:
+          - paragraph [ref=e241]:
+            - link "Terms & Conditions" [ref=e242] [cursor=pointer]:
+              - /url: ./terms
+          - paragraph [ref=e244]: "|"
+          - paragraph [ref=e246]:
+            - link "Privacy Policy" [ref=e247] [cursor=pointer]:
+              - /url: ./privacy
+        - generic [ref=e248]:
+          - paragraph [ref=e249]: 95 Third Street, 2nd Floor, San Francisco,
+          - paragraph [ref=e250]: California 94103, United States of America
+        - paragraph [ref=e252]: © 2025 CrustData Inc.
+        - generic [ref=e253]:
+          - link [ref=e254] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata/
+            - img [ref=e256]
+          - link [ref=e258] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - img [ref=e260]
+    - generic [ref=e264]:
+      - generic [ref=e267]:
+        - generic [ref=e268]:
+          - generic [ref=e269]:
+            - paragraph [ref=e273]:
+              - strong [ref=e274]: NEW
+            - paragraph [ref=e276]:
+              - strong [ref=e277]: Crustdata now works inside Claude
+          - paragraph [ref=e279]:
+            - strong [ref=e280]: Give Claude real-time people and company data with MCP.
+        - link "Talk to founders" [ref=e283] [cursor=pointer]:
+          - /url: ./demo
+          - paragraph [ref=e286]: Talk to founders
+      - generic [ref=e292]:
+        - link [ref=e293] [cursor=pointer]:
+          - /url: ./
+          - img [ref=e296]
+        - generic [ref=e298]:
+          - link "Book Demo" [ref=e300] [cursor=pointer]:
+            - /url: ./demo
+            - paragraph [ref=e303]: Book Demo
+          - img [ref=e308] [cursor=pointer]
+  - img [ref=e310]
+  - img [ref=e312]
+  - img [ref=e314]
+  - img [ref=e316]
+  - img [ref=e318]
+  - img [ref=e320]
+  - img [ref=e322]
+  - img [ref=e330]
+  - img [ref=e332]

@@ -1,0 +1,33 @@
+URL: https://docs.crustdata.com/api-reference/company-apis/get-autocomplete-suggestions-for-company-search-fields
+Title: Company Autocomplete
+
+Description: Returns field value suggestions with document counts for company search fields. Useful for discovering valid filter values before building search queries. Accepts field names from the /company/search response schema using dot notation.
+
+Rate limit: Default 15 requests per minute.
+
+Method: POST
+URL: https://api.crustdata.com/company/search/autocomplete
+
+Auth: Bearer token in Authorization header (required)
+Headers: x-api-version (required)
+
+Body (application/json):
+  field: string (required) — Dot-notation field name. Valid fields include:
+    basic_info.name, basic_info.primary_domain, basic_info.website, basic_info.professional_network_url,
+    basic_info.professional_network_id, basic_info.company_type, basic_info.year_founded,
+    basic_info.employee_count_range, basic_info.markets, basic_info.industries,
+    revenue.estimated.lower_bound_usd, revenue.estimated.upper_bound_usd, revenue.acquisition_status,
+    funding.total_investment_usd, funding.last_round_type, funding.last_fundraise_date, funding.investors,
+    headcount.latest_count, headcount.largest_headcount_country,
+    locations.country, locations.state, locations.city,
+    taxonomy.professional_network_industry, taxonomy.professional_network_specialities, taxonomy.categories,
+    followers.latest_count, social_profiles.crunchbase.url, social_profiles.twitter_url
+  query: string (required) — search text (empty = top by frequency)
+  limit: integer, default 20, range 1..100
+  filters: object (optional) — narrow suggestions
+    filters.field: string (required)
+    filters.type: enum [ =, !=, <, =<, >, =>, in, not_in, contains ] (required)
+    filters.value: string|number|integer|boolean|array (required)
+
+Response (200):
+  suggestions: array of { value: string }

@@ -1,0 +1,57 @@
+URL: https://docs.crustdata.com/general/pricing
+
+Credits are valid for 6 months from purchase date.
+
+Self-serve endpoint pricing:
+
+Person endpoints:
+  /person/search                    0.03 per result
+  /person/search/autocomplete       Free
+  /person/enrich                    1-7 per record (base 1 + addons)
+
+Company endpoints:
+  /company/search                   0.03 per result
+  /company/search/autocomplete      Free
+  /company/enrich                   2 per record
+  /company/identify                 Free
+
+Job endpoints:
+  /job/search                       0.03 per result
+
+Web endpoints:
+  /web/search/live                  1 per query (self-serve + enterprise)
+  /web/enrich/live                  1 per page   (self-serve + enterprise)
+
+Person enrich additive pricing:
+  Base profile                       1 (identity, role, location, experience, education, certifications, skills, social handles)
+  Personal email data                +2
+  Phone data                         +2
+  Business email data                +1
+  Developer platform data            +1 (platform profile, repos, orgs, activity)
+  Max total: 7 credits
+
+Common patterns:
+  Base profile lookup: 1
+  Sales outreach (base+business email): 2
+  Full outbound (base+business email+phone): 4
+  Recruiting (base+personal email+phone): 5
+  Max payload: 7
+
+Enterprise-only / plan-gated live endpoints:
+  /person/professional_network/search/live    2 per profile
+  /person/professional_network/enrich/live    7 per profile
+  /company/professional_network/search/live   2 per company
+  /job/professional_network/search/live       2 per result
+  /professional_network/search/autocomplete   Free (shared live-search autocomplete when enabled)
+
+Free endpoints:
+  /person/search/autocomplete
+  /company/search/autocomplete
+  /company/identify
+  /professional_network/search/autocomplete (enterprise only when enabled)
+
+FAQ notes:
+  - Search billed per result returned; no results = no credits.
+  - Out of credits → billable requests return error.
+  - Credits expire 6 months after purchase.
+  - /professional_network/search/autocomplete is free but enterprise-only/plan-gated.

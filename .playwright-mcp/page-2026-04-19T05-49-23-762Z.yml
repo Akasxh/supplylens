@@ -1,0 +1,300 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Person API Autocomplete" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Person API
+              - img [ref=e39]
+            - generic [ref=e41]: Autocomplete
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "Person API" [ref=e50] [cursor=pointer]:
+            - /url: /api-reference/person-apis/search-people-using-filters-and-sorting
+          - generic [ref=e51]:
+            - heading "Autocomplete" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - generic [ref=e63]:
+          - paragraph [ref=e64]:
+            - text: Return ranked field-value suggestions for any supported person search field. Use this endpoint to discover the exact indexed values that
+            - code [ref=e65]: /person/search
+            - text: filters expect — feed the suggestion
+            - code [ref=e66]: value
+            - text: back into a search filter verbatim to retrieve the matching profiles.
+          - paragraph [ref=e67]:
+            - text: Pass a partial
+            - code [ref=e68]: query
+            - text: string for type-ahead behaviour, or pass an empty
+            - code [ref=e69]: query
+            - text: to retrieve the most common values for the field by frequency. An optional
+            - code [ref=e70]: filters
+            - text: scope lets you compute autocomplete results against a subset of the dataset (for example, top job titles among current Google employees in the United States).
+          - paragraph [ref=e71]:
+            - text: The top-level
+            - code [ref=e72]: field
+            - text: must be one of the supported autocomplete fields — an allowlisted subset of the field names used by
+            - code [ref=e73]: /person/search
+            - text: ", not every field exposed in its request and response schemas. Sending an unsupported field returns a 400 whose error message lists every accepted field."
+          - generic [ref=e74]:
+            - img "Note" [ref=e76]
+            - paragraph [ref=e79]:
+              - text: Default
+              - code [ref=e80]: rate-limit
+              - text: is 15 requests per minute. Send an email to
+              - link "gtm@crustdata.co" [ref=e81] [cursor=pointer]:
+                - /url: mailto:gtm@crustdata.co
+              - text: to discuss higher limits if needed for your use case.
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - generic [ref=e85]:
+            - generic [ref=e86] [cursor=pointer]:
+              - generic [ref=e87]: POST
+              - generic [ref=e88]:
+                - generic [ref=e89]: https://api.crustdata.com
+                - generic [ref=e90]:
+                  - generic [ref=e91]: /
+                  - generic [ref=e92]: person
+                  - generic [ref=e93]: /
+                  - generic [ref=e94]: search
+                  - generic [ref=e95]: /
+                  - generic [ref=e96]: autocomplete
+            - button "Try it" [ref=e97] [cursor=pointer]:
+              - generic [ref=e98]: Try it
+              - img [ref=e99]
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - button "cURL" [ref=e104] [cursor=pointer]:
+                  - generic [ref=e105]:
+                    - paragraph [ref=e106]: cURL
+                    - img [ref=e107]
+                - generic [ref=e109]:
+                  - button "title_query" [ref=e110] [cursor=pointer]:
+                    - generic [ref=e111]:
+                      - paragraph [ref=e112]: title_query
+                      - img [ref=e113]
+                  - generic [ref=e115]:
+                    - button "Copy the contents from the code block" [ref=e118] [cursor=pointer]:
+                      - img [ref=e119]
+                    - button "Ask AI" [ref=e123] [cursor=pointer]:
+                      - img [ref=e124]
+              - region "Code snippet" [ref=e127]:
+                - generic [ref=e130]: "curl --request POST \\ --url https://api.crustdata.com/person/search/autocomplete \\ --header 'Authorization: Bearer <token>' \\ --header 'Content-Type: application/json' \\ --header 'x-api-version: <x-api-version>' \\ --data ' { \"field\": \"experience.employment_details.current.title\", \"query\": \"VP\", \"limit\": 5 } '"
+            - generic [ref=e131]:
+              - generic [ref=e132]:
+                - button "200" [ref=e133] [cursor=pointer]:
+                  - generic [ref=e134]:
+                    - paragraph [ref=e135]: "200"
+                    - img [ref=e136]
+                - generic [ref=e138]:
+                  - button "title_query" [ref=e139] [cursor=pointer]:
+                    - generic [ref=e140]:
+                      - paragraph [ref=e141]: title_query
+                      - img [ref=e142]
+                  - generic [ref=e144]:
+                    - button "Copy the contents from the code block" [ref=e147] [cursor=pointer]:
+                      - img [ref=e148]
+                    - button "Ask AI" [ref=e152] [cursor=pointer]:
+                      - img [ref=e153]
+              - region "Code snippet" [ref=e156]:
+                - generic [ref=e159]: "{ \"suggestions\": [ { \"value\": \"VP\" }, { \"value\": \"VP of Sales\" }, { \"value\": \"vp\" }, { \"value\": \"VP Sales\" }, { \"value\": \"VP Operations\" } ] }"
+        - generic [ref=e161]:
+          - generic [ref=e162]:
+            - heading "Authorizations" [level=4] [ref=e165]
+            - generic [ref=e167]:
+              - generic [ref=e170]:
+                - link "Navigate to header" [ref=e171] [cursor=pointer]:
+                  - /url: "#authorization-authorization"
+                  - img [ref=e173]
+                - generic [ref=e176] [cursor=pointer]: Authorization
+                - generic [ref=e177]:
+                  - generic [ref=e178]: string
+                  - generic [ref=e179]: header
+                  - text: required
+              - paragraph [ref=e182]: API key passed as a Bearer token in the Authorization header.
+          - generic [ref=e183]:
+            - heading "Headers" [level=4] [ref=e186]
+            - generic [ref=e188]:
+              - generic [ref=e191]:
+                - link "Navigate to header" [ref=e192] [cursor=pointer]:
+                  - /url: "#parameter-x-api-version"
+                  - img [ref=e194]
+                - generic [ref=e197] [cursor=pointer]: x-api-version
+                - generic [ref=e198]:
+                  - generic [ref=e199]: string
+                  - text: required
+              - generic [ref=e200]:
+                - paragraph [ref=e202]: API version to use. Must match a supported version (e.g., "2025-11-01").
+                - generic [ref=e203]:
+                  - generic [ref=e204]: "Example:"
+                  - paragraph [ref=e206]:
+                    - code [ref=e207]: "\"2025-11-01\""
+          - generic [ref=e208]:
+            - generic [ref=e209]:
+              - generic [ref=e210]:
+                - heading "Body" [level=4] [ref=e211]
+                - generic [ref=e213]: application/json
+              - paragraph [ref=e216]:
+                - text: Specify the dataset field to autocomplete, the partial
+                - code [ref=e217]: query
+                - text: text to match against, an optional
+                - code [ref=e218]: limit
+                - text: (1-100, default 20), and an optional
+                - code [ref=e219]: filters
+                - text: scope that narrows the population the suggestions are computed against.
+            - generic [ref=e222]:
+              - paragraph [ref=e224]: Request body for autocomplete suggestions on person search fields.
+              - generic [ref=e226]:
+                - generic [ref=e228]:
+                  - generic [ref=e231]:
+                    - link "Navigate to header" [ref=e232] [cursor=pointer]:
+                      - /url: "#body-field"
+                      - img [ref=e234]
+                    - generic [ref=e237] [cursor=pointer]: field
+                    - generic [ref=e238]:
+                      - generic [ref=e239]: string
+                      - text: required
+                  - generic [ref=e240]:
+                    - paragraph [ref=e242]: "The dataset API field name to get suggestions for. Valid fields include: basic_profile.name, basic_profile.headline, basic_profile.languages, basic_profile.location, basic_profile.location.raw, basic_profile.location.city, basic_profile.location.state, basic_profile.location.country, basic_profile.location.continent, professional_network.location, professional_network.location.raw, professional_network.location.city, professional_network.location.state, professional_network.location.country, professional_network.location.continent, skills.professional_network_skills, experience.employment_details.current.name, experience.employment_details.current.title, experience.employment_details.current.seniority_level, experience.employment_details.current.function_category, experience.employment_details.current.company_industries, experience.employment_details.current.company_type, experience.employment_details.current.company_hq_location, experience.employment_details.current.company_website_domain, experience.employment_details.past.name, experience.employment_details.past.title, education.schools.school, education.schools.degree, education.schools.field_of_study, certifications.name, certifications.issuing_organization, honors.title, social_handles.twitter_identifier.slug"
+                    - generic [ref=e243]:
+                      - generic [ref=e244]: "Example:"
+                      - paragraph [ref=e246]:
+                        - code [ref=e247]: "\"basic_profile.location.city\""
+                - generic [ref=e249]:
+                  - generic [ref=e252]:
+                    - link "Navigate to header" [ref=e253] [cursor=pointer]:
+                      - /url: "#body-query"
+                      - img [ref=e255]
+                    - generic [ref=e258] [cursor=pointer]: query
+                    - generic [ref=e259]:
+                      - generic [ref=e260]: string
+                      - text: required
+                  - generic [ref=e261]:
+                    - paragraph [ref=e263]: The search query text (can be empty to get top values by frequency)
+                    - generic [ref=e264]:
+                      - generic [ref=e265]: "Example:"
+                      - paragraph [ref=e267]:
+                        - code [ref=e268]: "\"VP\""
+                - generic [ref=e270]:
+                  - generic [ref=e273]:
+                    - link "Navigate to header" [ref=e274] [cursor=pointer]:
+                      - /url: "#body-limit"
+                      - img [ref=e276]
+                    - generic [ref=e279] [cursor=pointer]: limit
+                    - generic [ref=e280]:
+                      - generic [ref=e281]: integer
+                      - generic [ref=e282]: default:20
+                  - generic [ref=e283]:
+                    - paragraph [ref=e285]: Maximum number of suggestions to return
+                    - generic [ref=e286]:
+                      - text: "Required range:"
+                      - code [ref=e287]: 1 <= x <= 100
+                - generic [ref=e289]:
+                  - generic [ref=e292]:
+                    - link "Navigate to header" [ref=e293] [cursor=pointer]:
+                      - /url: "#body-filters"
+                      - img [ref=e295]
+                    - generic [ref=e298] [cursor=pointer]: filters
+                    - generic [ref=e300]: object
+                  - generic [ref=e301]:
+                    - paragraph [ref=e303]: Optional filters to narrow down suggestions. Filter field names use the same dataset API field names.
+                    - generic [ref=e304]:
+                      - generic [ref=e306]:
+                        - tablist "Tabs" [ref=e307]:
+                          - tab "Option 1" [selected] [ref=e308] [cursor=pointer]:
+                            - generic [ref=e309]: Option 1
+                          - tab "Option 2" [ref=e310] [cursor=pointer]:
+                            - generic [ref=e311]: Option 2
+                        - generic:
+                          - tabpanel "Option 1"
+                      - group [ref=e313]:
+                        - generic "Show child attributes" [ref=e314] [cursor=pointer]:
+                          - img [ref=e315]
+                          - paragraph [ref=e317]: Show child attributes
+                      - generic [ref=e318]:
+                        - generic [ref=e319]: "Example:"
+                        - code [ref=e323]: "{ \"field\": \"experience.employment_details.current.company_name\", \"type\": \"=\", \"value\": \"Retool\" }"
+          - generic [ref=e324]:
+            - generic [ref=e325]:
+              - generic [ref=e326]:
+                - heading "Response" [level=4] [ref=e327]
+                - generic [ref=e329]:
+                  - button "200" [ref=e331] [cursor=pointer]:
+                    - generic [ref=e332]:
+                      - generic [ref=e333]: "200"
+                      - img [ref=e334]
+                  - generic [ref=e336]:
+                    - button "application/json" [disabled]:
+                      - generic:
+                        - generic: application/json
+              - paragraph [ref=e339]: Ranked autocomplete suggestions for the requested person search field.
+            - generic [ref=e342]:
+              - paragraph [ref=e344]: Response with autocomplete suggestions for a person search field.
+              - generic [ref=e348]:
+                - generic [ref=e351]:
+                  - link "Navigate to header" [ref=e352] [cursor=pointer]:
+                    - /url: "#response-suggestions"
+                    - img [ref=e354]
+                  - generic [ref=e357] [cursor=pointer]: suggestions
+                  - generic [ref=e358]:
+                    - generic [ref=e359]: object[]
+                    - text: required
+                - group [ref=e366]:
+                  - generic "Show child attributes" [ref=e367] [cursor=pointer]:
+                    - img [ref=e368]
+                    - paragraph [ref=e370]: Show child attributes
+      - generic [ref=e372]:
+        - paragraph [ref=e373]: Was this page helpful?
+        - generic [ref=e375]:
+          - button "Yes" [ref=e376] [cursor=pointer]:
+            - img [ref=e377]
+            - generic [ref=e379]: "Yes"
+          - button "No" [ref=e380] [cursor=pointer]:
+            - img [ref=e381]
+            - generic [ref=e383]: "No"
+      - generic [ref=e385]:
+        - textbox "Ask a question..." [ref=e386]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e387]:
+          - img [ref=e388]
+      - contentinfo [ref=e390]:
+        - generic [ref=e391]:
+          - link "x" [ref=e392] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e393]: x
+            - img [ref=e394]
+          - link "linkedin" [ref=e395] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e396]: linkedin
+            - img [ref=e397]

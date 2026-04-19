@@ -1,0 +1,1062 @@
+- generic [ref=e3]:
+  - region "Skip to main content" [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - banner [ref=e6]:
+    - generic [ref=e7]:
+      - text: This is a sample of our Full API suite. To see our full offering including Watcher, advanced search, and more
+      - link "Request demo now" [ref=e8] [cursor=pointer]:
+        - /url: https://web.archive.org/web/20251214143012/https://crustdata.com/demo
+      - text: →
+    - button "Close" [ref=e9]:
+      - img [ref=e10]
+  - navigation "Main" [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - button "Toggle navigation bar" [ref=e16]:
+          - img [ref=e17]
+        - link "Crustdata APICrustdata API" [ref=e19] [cursor=pointer]:
+          - /url: /web/20251214143012/https://docs.crustdata.com/
+          - generic [ref=e20]:
+            - img "Crustdata API" [ref=e21]
+            - img "Crustdata API" [ref=e22]
+        - link "Documentation" [ref=e23] [cursor=pointer]:
+          - /url: /web/20251214143012/https://docs.crustdata.com/docs/intro
+        - link "API Reference" [ref=e24] [cursor=pointer]:
+          - /url: /web/20251214143012/https://docs.crustdata.com/api
+      - generic [ref=e25]:
+        - link "Login" [ref=e26] [cursor=pointer]:
+          - /url: https://web.archive.org/web/20251214143012/https://crustdata.com/screenerv2/query
+        - button "Request Demo" [ref=e28] [cursor=pointer]:
+          - link "Request Demo" [ref=e29]:
+            - /url: https://web.archive.org/web/20251214143012/https://crustdata.com/demo
+  - generic [ref=e31]:
+    - button "Scroll back to top" [ref=e32]
+    - generic [ref=e33]:
+      - complementary [ref=e34]:
+        - navigation "Docs sidebar" [ref=e37]:
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - link "Getting Started" [ref=e40] [cursor=pointer]:
+                - /url: /web/20251214143012/https://docs.crustdata.com/docs/intro
+            - listitem [ref=e41]:
+              - link "Enrichment APIs" [ref=e43] [cursor=pointer]:
+                - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/company-data-api
+              - list [ref=e44]:
+                - listitem [ref=e45]:
+                  - link "Company Data API" [ref=e46] [cursor=pointer]:
+                    - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/company-data-api
+                - listitem [ref=e47]:
+                  - link "People Data API" [ref=e48] [cursor=pointer]:
+                    - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/people-data-api
+            - listitem [ref=e49]:
+              - link "Search APIs" [ref=e51] [cursor=pointer]:
+                - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+              - list [ref=e52]:
+                - listitem [ref=e53]:
+                  - link "Real-time Company Search APIs" [ref=e55] [cursor=pointer]:
+                    - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                  - list [ref=e56]:
+                    - listitem [ref=e57]:
+                      - link "via Filters" [ref=e58] [cursor=pointer]:
+                        - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                - listitem [ref=e59]:
+                  - link "Real-time People Search APIs" [ref=e61] [cursor=pointer]:
+                    - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                  - list [ref=e62]:
+                    - listitem [ref=e63]:
+                      - link "via Filters" [ref=e64] [cursor=pointer]:
+                        - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                - listitem [ref=e65]:
+                  - link "How to Build Filters" [ref=e66] [cursor=pointer]:
+                    - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/how-to-build-filters
+            - listitem [ref=e67]:
+              - link "Data Dictionary" [ref=e69] [cursor=pointer]:
+                - /url: /web/20251214143012/https://docs.crustdata.com/docs/dictionary/company
+              - list [ref=e70]:
+                - listitem [ref=e71]:
+                  - link "Company Data" [ref=e72] [cursor=pointer]:
+                    - /url: /web/20251214143012/https://docs.crustdata.com/docs/dictionary/company
+                - listitem [ref=e73]:
+                  - link "People Data" [ref=e74] [cursor=pointer]:
+                    - /url: /web/20251214143012/https://docs.crustdata.com/docs/dictionary/people
+      - main [ref=e75]:
+        - generic [ref=e77]:
+          - generic [ref=e79]:
+            - article [ref=e80]:
+              - navigation "Breadcrumbs" [ref=e81]:
+                - list [ref=e82]:
+                  - listitem [ref=e83]:
+                    - link "Home page" [ref=e84] [cursor=pointer]:
+                      - /url: /web/20251214143012/https://docs.crustdata.com/
+                      - img [ref=e85]
+                  - listitem [ref=e87]: Data Dictionary
+              - button "On this page" [ref=e89]
+              - generic [ref=e90]:
+                - heading "Crustdata Data Dictionary (Company)" [level=1] [ref=e92]
+                - heading "FirmographicsDirect link to Firmographics" [level=2] [ref=e93]:
+                  - text: Firmographics
+                  - link "Direct link to Firmographics":
+                    - /url: "#firmographics"
+                - table [ref=e94]:
+                  - rowgroup [ref=e95]:
+                    - row "Column Description Time series available" [ref=e96]:
+                      - columnheader "Column" [ref=e97]
+                      - columnheader "Description" [ref=e98]
+                      - columnheader "Time series available" [ref=e99]
+                  - rowgroup [ref=e100]:
+                    - row "company_name Name of the company" [ref=e101]:
+                      - cell "company_name" [ref=e102]
+                      - cell "Name of the company" [ref=e103]
+                      - cell [ref=e104]
+                    - row "last_updated_date The timestamp when this information was last updated" [ref=e105]:
+                      - cell "last_updated_date" [ref=e106]
+                      - cell "The timestamp when this information was last updated" [ref=e107]
+                      - cell [ref=e108]
+                    - row "hq_country The country where the company's headquarters is located" [ref=e109]:
+                      - cell "hq_country" [ref=e110]
+                      - cell "The country where the company's headquarters is located" [ref=e111]
+                      - cell [ref=e112]
+                    - row "largest_headcount_country The country with the most employees of the company" [ref=e113]:
+                      - cell "largest_headcount_country" [ref=e114]
+                      - cell "The country with the most employees of the company" [ref=e115]
+                      - cell [ref=e116]
+                    - row "last_funding_round_type The type of the company's last funding round" [ref=e117]:
+                      - cell "last_funding_round_type" [ref=e118]
+                      - cell "The type of the company's last funding round" [ref=e119]
+                      - cell [ref=e120]
+                    - row "company_website The company's official website URL" [ref=e121]:
+                      - cell "company_website" [ref=e122]
+                      - cell "The company's official website URL" [ref=e123]
+                      - cell [ref=e124]
+                    - row "company_website_domain The domain of the company's website" [ref=e125]:
+                      - cell "company_website_domain" [ref=e126]
+                      - cell "The domain of the company's website" [ref=e127]
+                      - cell [ref=e128]
+                    - row "valuation_usd The current valuation of the company in USD" [ref=e129]:
+                      - cell "valuation_usd" [ref=e130]
+                      - cell "The current valuation of the company in USD" [ref=e131]
+                      - cell [ref=e132]
+                    - row "valuation_date The date when the current valuation was determined" [ref=e133]:
+                      - cell "valuation_date" [ref=e134]
+                      - cell "The date when the current valuation was determined" [ref=e135]
+                      - cell [ref=e136]
+                    - row "categories The categories of the company" [ref=e137]:
+                      - cell "categories" [ref=e138]
+                      - cell "The categories of the company" [ref=e139]
+                      - cell [ref=e140]
+                    - row "industries The industries in which the company operates" [ref=e141]:
+                      - cell "industries" [ref=e142]
+                      - cell "The industries in which the company operates" [ref=e143]
+                      - cell [ref=e144]
+                    - row "investors The investors in the company" [ref=e145]:
+                      - cell "investors" [ref=e146]
+                      - cell "The investors in the company" [ref=e147]
+                      - cell [ref=e148]
+                    - row "total_investment_usd The total amount of investment the company has received Yes" [ref=e149]:
+                      - cell "total_investment_usd" [ref=e150]
+                      - cell "The total amount of investment the company has received" [ref=e151]
+                      - cell "Yes" [ref=e152]
+                    - 'row "markets The markets in which the company operates. Eg: Private/NSE/NASDAQ" [ref=e153]':
+                      - cell "markets" [ref=e154]
+                      - 'cell "The markets in which the company operates. Eg: Private/NSE/NASDAQ" [ref=e155]'
+                      - cell [ref=e156]
+                    - row "days_since_last_fundraise The number of days since the company's last fundraising round" [ref=e157]:
+                      - cell "days_since_last_fundraise" [ref=e158]
+                      - cell "The number of days since the company's last fundraising round" [ref=e159]
+                      - cell [ref=e160]
+                    - row "profile_url The URL of the company's profile" [ref=e161]:
+                      - cell "profile_url" [ref=e162]
+                      - cell "The URL of the company's profile" [ref=e163]
+                      - cell [ref=e164]
+                    - row "acquisition_status The current acquisition status of the company" [ref=e165]:
+                      - cell "acquisition_status" [ref=e166]
+                      - cell "The current acquisition status of the company" [ref=e167]
+                      - cell [ref=e168]
+                    - row "year_founded The year the company was founded" [ref=e169]:
+                      - cell "year_founded" [ref=e170]
+                      - cell "The year the company was founded" [ref=e171]
+                      - cell [ref=e172]
+                    - row "technology_domains The technology domains in which the company operates" [ref=e173]:
+                      - cell "technology_domains" [ref=e174]
+                      - cell "The technology domains in which the company operates" [ref=e175]
+                      - cell [ref=e176]
+                    - row "twitter_handle Twitter handle of the company" [ref=e177]:
+                      - cell "twitter_handle" [ref=e178]
+                      - cell "Twitter handle of the company" [ref=e179]
+                      - cell [ref=e180]
+                    - row "company_id ID of the company" [ref=e181]:
+                      - cell "company_id" [ref=e182]
+                      - cell "ID of the company" [ref=e183]
+                      - cell [ref=e184]
+                    - row "company_description Description about the company" [ref=e185]:
+                      - cell "company_description" [ref=e186]
+                      - cell "Description about the company" [ref=e187]
+                      - cell [ref=e188]
+                - heading "Founder backgroundDirect link to Founder background" [level=2] [ref=e189]:
+                  - text: Founder background
+                  - link "Direct link to Founder background":
+                    - /url: "#founder-background"
+                - table [ref=e190]:
+                  - rowgroup [ref=e191]:
+                    - row "Column Name Description" [ref=e192]:
+                      - columnheader "Column Name" [ref=e193]:
+                        - strong [ref=e194]: Column Name
+                      - columnheader "Description" [ref=e195]:
+                        - strong [ref=e196]: Description
+                  - rowgroup [ref=e197]:
+                    - row "founder_names_and_profile_urls Names and profile URLs of the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e198]:
+                      - cell "founder_names_and_profile_urls" [ref=e199]
+                      - cell "Names and profile URLs of the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e200]
+                    - row "founders_location geographical location(s) of the company's and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e201]:
+                      - cell "founders_location" [ref=e202]
+                      - cell "geographical location(s) of the company's and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e203]
+                    - row "founders_education_institute educational institutions attended by the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e204]:
+                      - cell "founders_education_institute" [ref=e205]
+                      - cell "educational institutions attended by the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e206]
+                    - row "founders_degree_name degree(s) held by the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e207]:
+                      - cell "founders_degree_name" [ref=e208]
+                      - cell "degree(s) held by the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e209]
+                    - row "founders_previous_company previous company(ies) where the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product) have worked before" [ref=e210]:
+                      - cell "founders_previous_company" [ref=e211]
+                      - cell "previous company(ies) where the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product) have worked before" [ref=e212]
+                    - row "founders_previous_title previous job title(s) held by the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e213]:
+                      - cell "founders_previous_title" [ref=e214]
+                      - cell "previous job title(s) held by the company's founders and decision makers (CxO and VP/Head of Sales/Marketing/Engineering/Product)" [ref=e215]
+                    - row "founders_email business email of founders" [ref=e216]:
+                      - cell "founders_email" [ref=e217]
+                      - cell "business email of founders" [ref=e218]
+                - heading "RevenueDirect link to Revenue" [level=2] [ref=e219]:
+                  - text: Revenue
+                  - link "Direct link to Revenue":
+                    - /url: "#revenue"
+                - table [ref=e220]:
+                  - rowgroup [ref=e221]:
+                    - row "Column Name Description" [ref=e222]:
+                      - columnheader "Column Name" [ref=e223]:
+                        - strong [ref=e224]: Column Name
+                      - columnheader "Description" [ref=e225]:
+                        - strong [ref=e226]: Description
+                  - rowgroup [ref=e227]:
+                    - row "estimated_revenue_lower_bound_usd Estimated revenue in USD lower limit" [ref=e228]:
+                      - cell "estimated_revenue_lower_bound_usd" [ref=e229]
+                      - cell "Estimated revenue in USD lower limit" [ref=e230]
+                    - row "estimated_revenue_higher_bound_usd Estimated revenue in USD higher limit" [ref=e231]:
+                      - cell "estimated_revenue_higher_bound_usd" [ref=e232]
+                      - cell "Estimated revenue in USD higher limit" [ref=e233]
+                - heading "Employee HeadcountDirect link to Employee Headcount" [level=2] [ref=e234]:
+                  - text: Employee Headcount
+                  - link "Direct link to Employee Headcount":
+                    - /url: "#employee-headcount"
+                - table [ref=e235]:
+                  - rowgroup [ref=e236]:
+                    - row "Column Name Description Time Series Available" [ref=e237]:
+                      - columnheader "Column Name" [ref=e238]:
+                        - strong [ref=e239]: Column Name
+                      - columnheader "Description" [ref=e240]:
+                        - strong [ref=e241]: Description
+                      - columnheader "Time Series Available" [ref=e242]:
+                        - strong [ref=e243]: Time Series Available
+                  - rowgroup [ref=e244]:
+                    - row "headcount The total number of employees at the company Yes" [ref=e245]:
+                      - cell "headcount" [ref=e246]
+                      - cell "The total number of employees at the company" [ref=e247]
+                      - cell "Yes" [ref=e248]
+                    - row "followers The total number of followers of the company's profile Yes" [ref=e249]:
+                      - cell "followers" [ref=e250]
+                      - cell "The total number of followers of the company's profile" [ref=e251]
+                      - cell "Yes" [ref=e252]
+                    - row "headcount_engineering The total number of engineering employees at the company Yes" [ref=e253]:
+                      - cell "headcount_engineering" [ref=e254]
+                      - cell "The total number of engineering employees at the company" [ref=e255]
+                      - cell "Yes" [ref=e256]
+                    - row "headcount_sales The total number of sales employees at the company Yes" [ref=e257]:
+                      - cell "headcount_sales" [ref=e258]
+                      - cell "The total number of sales employees at the company" [ref=e259]
+                      - cell "Yes" [ref=e260]
+                    - row "headcount_operations The total number of operations employees at the company Yes" [ref=e261]:
+                      - cell "headcount_operations" [ref=e262]
+                      - cell "The total number of operations employees at the company" [ref=e263]
+                      - cell "Yes" [ref=e264]
+                    - row "headcount_human_resource The total number of human resources employees at the company Yes" [ref=e265]:
+                      - cell "headcount_human_resource" [ref=e266]
+                      - cell "The total number of human resources employees at the company" [ref=e267]
+                      - cell "Yes" [ref=e268]
+                    - row "headcount_india The total number of employees based in India at the company Yes" [ref=e269]:
+                      - cell "headcount_india" [ref=e270]
+                      - cell "The total number of employees based in India at the company" [ref=e271]
+                      - cell "Yes" [ref=e272]
+                    - row "headcount_usa The total number of employees based in USA at the company Yes" [ref=e273]:
+                      - cell "headcount_usa" [ref=e274]
+                      - cell "The total number of employees based in USA at the company" [ref=e275]
+                      - cell "Yes" [ref=e276]
+                    - row "headcount_engineering_pct The percentage of employees that are in engineering roles Yes" [ref=e277]:
+                      - cell "headcount_engineering_pct" [ref=e278]
+                      - cell "The percentage of employees that are in engineering roles" [ref=e279]
+                      - cell "Yes" [ref=e280]
+                    - row "headcount_sales_pct The percentage of employees that are in sales roles Yes" [ref=e281]:
+                      - cell "headcount_sales_pct" [ref=e282]
+                      - cell "The percentage of employees that are in sales roles" [ref=e283]
+                      - cell "Yes" [ref=e284]
+                    - row "headcount_operations_pct The percentage of employees that are in operations roles Yes" [ref=e285]:
+                      - cell "headcount_operations_pct" [ref=e286]
+                      - cell "The percentage of employees that are in operations roles" [ref=e287]
+                      - cell "Yes" [ref=e288]
+                    - row "headcount_human_resource_pct The percentage of employees that are in human resources roles Yes" [ref=e289]:
+                      - cell "headcount_human_resource_pct" [ref=e290]
+                      - cell "The percentage of employees that are in human resources roles" [ref=e291]
+                      - cell "Yes" [ref=e292]
+                    - row "headcount_india_pct The percentage of employees that are based in India" [ref=e293]:
+                      - cell "headcount_india_pct" [ref=e294]
+                      - cell "The percentage of employees that are based in India" [ref=e295]
+                      - cell [ref=e296]
+                    - row "headcount_usa_pct The percentage of employees that are based in USA" [ref=e297]:
+                      - cell "headcount_usa_pct" [ref=e298]
+                      - cell "The percentage of employees that are based in USA" [ref=e299]
+                      - cell [ref=e300]
+                    - row "headcount_mom_pct The month-over-month percentage change in headcount" [ref=e301]:
+                      - cell "headcount_mom_pct" [ref=e302]
+                      - cell "The month-over-month percentage change in headcount" [ref=e303]
+                      - cell [ref=e304]
+                    - row "headcount_qoq_pct The quarter-over-quarter percentage change in headcount" [ref=e305]:
+                      - cell "headcount_qoq_pct" [ref=e306]
+                      - cell "The quarter-over-quarter percentage change in headcount" [ref=e307]
+                      - cell [ref=e308]
+                    - row "headcount_yoy_pct The year-over-year percentage change in headcount" [ref=e309]:
+                      - cell "headcount_yoy_pct" [ref=e310]
+                      - cell "The year-over-year percentage change in headcount" [ref=e311]
+                      - cell [ref=e312]
+                    - row "headcount_mom_absolute The month-over-month absolute change in headcount" [ref=e313]:
+                      - cell "headcount_mom_absolute" [ref=e314]
+                      - cell "The month-over-month absolute change in headcount" [ref=e315]
+                      - cell [ref=e316]
+                    - row "headcount_qoq_absolute The quarter-over-quarter absolute change in headcount" [ref=e317]:
+                      - cell "headcount_qoq_absolute" [ref=e318]
+                      - cell "The quarter-over-quarter absolute change in headcount" [ref=e319]
+                      - cell [ref=e320]
+                    - row "headcount_yoy_absolute The year-over-year absolute change in headcount" [ref=e321]:
+                      - cell "headcount_yoy_absolute" [ref=e322]
+                      - cell "The year-over-year absolute change in headcount" [ref=e323]
+                      - cell [ref=e324]
+                    - row "followers_mom_pct The month-over-month percentage change in the number of followers" [ref=e325]:
+                      - cell "followers_mom_pct" [ref=e326]
+                      - cell "The month-over-month percentage change in the number of followers" [ref=e327]
+                      - cell [ref=e328]
+                    - row "followers_qoq_pct The quarter-over-quarter percentage change in the number of followers" [ref=e329]:
+                      - cell "followers_qoq_pct" [ref=e330]
+                      - cell "The quarter-over-quarter percentage change in the number of followers" [ref=e331]
+                      - cell [ref=e332]
+                    - row "followers_yoy_pct The year-over-year percentage change in the number of followers" [ref=e333]:
+                      - cell "followers_yoy_pct" [ref=e334]
+                      - cell "The year-over-year percentage change in the number of followers" [ref=e335]
+                      - cell [ref=e336]
+                    - row "headcount_sales_six_months_growth_pct The six months growth percentage in Sales headcount" [ref=e337]:
+                      - cell "headcount_sales_six_months_growth_pct" [ref=e338]
+                      - cell "The six months growth percentage in Sales headcount" [ref=e339]
+                      - cell [ref=e340]
+                    - row "headcount_sales_yoy_growth_pct The one year growth percentage in Sales headcount" [ref=e341]:
+                      - cell "headcount_sales_yoy_growth_pct" [ref=e342]
+                      - cell "The one year growth percentage in Sales headcount" [ref=e343]
+                      - cell [ref=e344]
+                    - row "headcount_operations_six_months_growth_pct The six months growth percentage in Sales headcount" [ref=e345]:
+                      - cell "headcount_operations_six_months_growth_pct" [ref=e346]
+                      - cell "The six months growth percentage in Sales headcount" [ref=e347]
+                      - cell [ref=e348]
+                    - row "headcount_operations_yoy_growth_pct The one year growth percentage in Operations headcount" [ref=e349]:
+                      - cell "headcount_operations_yoy_growth_pct" [ref=e350]
+                      - cell "The one year growth percentage in Operations headcount" [ref=e351]
+                      - cell [ref=e352]
+                    - row "headcount_quality_assurance_six_months_growth_pct The six months growth percentage in Quality Assurance headcount" [ref=e353]:
+                      - cell "headcount_quality_assurance_six_months_growth_pct" [ref=e354]
+                      - cell "The six months growth percentage in Quality Assurance headcount" [ref=e355]
+                      - cell [ref=e356]
+                    - row "headcount_quality_assurance_yoy_growth_pct The one year growth percentage in Quality Assurance headcount" [ref=e357]:
+                      - cell "headcount_quality_assurance_yoy_growth_pct" [ref=e358]
+                      - cell "The one year growth percentage in Quality Assurance headcount" [ref=e359]
+                      - cell [ref=e360]
+                    - row "headcount_usa_six_months_growth_pct The six months growth percentage in US headcount" [ref=e361]:
+                      - cell "headcount_usa_six_months_growth_pct" [ref=e362]
+                      - cell "The six months growth percentage in US headcount" [ref=e363]
+                      - cell [ref=e364]
+                    - row "headcount_usa_yoy_growth_pct The one year growth percentage in US headcount" [ref=e365]:
+                      - cell "headcount_usa_yoy_growth_pct" [ref=e366]
+                      - cell "The one year growth percentage in US headcount" [ref=e367]
+                      - cell [ref=e368]
+                    - row "headcount_india_six_months_growth_pct The six months growth percentage in US headcount" [ref=e369]:
+                      - cell "headcount_india_six_months_growth_pct" [ref=e370]
+                      - cell "The six months growth percentage in US headcount" [ref=e371]
+                      - cell [ref=e372]
+                    - row "headcount_india_yoy_growth_pct The one year growth percentage in US headcount" [ref=e373]:
+                      - cell "headcount_india_yoy_growth_pct" [ref=e374]
+                      - cell "The one year growth percentage in US headcount" [ref=e375]
+                      - cell [ref=e376]
+                    - row "headcount_mexico_six_months_growth_pct The six months growth percentage in US headcount" [ref=e377]:
+                      - cell "headcount_mexico_six_months_growth_pct" [ref=e378]
+                      - cell "The six months growth percentage in US headcount" [ref=e379]
+                      - cell [ref=e380]
+                    - row "headcount_mexico_yoy_growth_pct The one year growth percentage in US headcount" [ref=e381]:
+                      - cell "headcount_mexico_yoy_growth_pct" [ref=e382]
+                      - cell "The one year growth percentage in US headcount" [ref=e383]
+                      - cell [ref=e384]
+                - heading "Employee SkillsDirect link to Employee Skills" [level=2] [ref=e385]:
+                  - text: Employee Skills
+                  - link "Direct link to Employee Skills":
+                    - /url: "#employee-skills"
+                - table [ref=e386]:
+                  - rowgroup [ref=e387]:
+                    - row "Column Name Description Time Series Available" [ref=e388]:
+                      - columnheader "Column Name" [ref=e389]
+                      - columnheader "Description" [ref=e390]
+                      - columnheader "Time Series Available" [ref=e391]
+                  - rowgroup [ref=e392]:
+                    - row "all_employee_skill_names All skill names of employees at the company" [ref=e393]:
+                      - cell "all_employee_skill_names" [ref=e394]
+                      - cell "All skill names of employees at the company" [ref=e395]
+                      - cell [ref=e396]
+                    - row "all_employee_skill_count Count of each skill among employees at the company Yes" [ref=e397]:
+                      - cell "all_employee_skill_count" [ref=e398]
+                      - cell "Count of each skill among employees at the company" [ref=e399]
+                      - cell "Yes" [ref=e400]
+                    - row "employee_skills_0_to_10_pct Percentage of employees with 0-10% proficiency in skills" [ref=e401]:
+                      - cell "employee_skills_0_to_10_pct" [ref=e402]
+                      - cell "Percentage of employees with 0-10% proficiency in skills" [ref=e403]
+                      - cell [ref=e404]
+                    - row "employee_skills_11_to_30_pct Percentage of employees with 11-30% proficiency in skills" [ref=e405]:
+                      - cell "employee_skills_11_to_30_pct" [ref=e406]
+                      - cell "Percentage of employees with 11-30% proficiency in skills" [ref=e407]
+                      - cell [ref=e408]
+                    - row "employee_skills_31_to_50_pct Percentage of employees with 31-50% proficiency in skills" [ref=e409]:
+                      - cell "employee_skills_31_to_50_pct" [ref=e410]
+                      - cell "Percentage of employees with 31-50% proficiency in skills" [ref=e411]
+                      - cell [ref=e412]
+                    - row "employee_skills_51_to_70_pct Percentage of employees with 51-70% proficiency in skills" [ref=e413]:
+                      - cell "employee_skills_51_to_70_pct" [ref=e414]
+                      - cell "Percentage of employees with 51-70% proficiency in skills" [ref=e415]
+                      - cell [ref=e416]
+                    - row "employee_skills_71_to_100_pct Percentage of employees with 71-100% proficiency in skills" [ref=e417]:
+                      - cell "employee_skills_71_to_100_pct" [ref=e418]
+                      - cell "Percentage of employees with 71-100% proficiency in skills" [ref=e419]
+                      - cell [ref=e420]
+                - heading "Employee Review and RatingDirect link to Employee Review and Rating" [level=2] [ref=e421]:
+                  - text: Employee Review and Rating
+                  - link "Direct link to Employee Review and Rating":
+                    - /url: "#employee-review-and-rating"
+                - table [ref=e422]:
+                  - rowgroup [ref=e423]:
+                    - row "Column Name Description Time series available" [ref=e424]:
+                      - columnheader "Column Name" [ref=e425]:
+                        - strong [ref=e426]: Column Name
+                      - columnheader "Description" [ref=e427]:
+                        - strong [ref=e428]: Description
+                      - columnheader "Time series available" [ref=e429]
+                  - rowgroup [ref=e430]:
+                    - row "overall_rating The company's overall rating Yes" [ref=e431]:
+                      - cell "overall_rating" [ref=e432]
+                      - cell "The company's overall rating" [ref=e433]
+                      - cell "Yes" [ref=e434]
+                    - row "culture_rating The company's culture rating Yes" [ref=e435]:
+                      - cell "culture_rating" [ref=e436]
+                      - cell "The company's culture rating" [ref=e437]
+                      - cell "Yes" [ref=e438]
+                    - row "diversity_rating The company's diversity rating Yes" [ref=e439]:
+                      - cell "diversity_rating" [ref=e440]
+                      - cell "The company's diversity rating" [ref=e441]
+                      - cell "Yes" [ref=e442]
+                    - row "work_life_balance_rating The company's work-life balance rating Yes" [ref=e443]:
+                      - cell "work_life_balance_rating" [ref=e444]
+                      - cell "The company's work-life balance rating" [ref=e445]
+                      - cell "Yes" [ref=e446]
+                    - row "senior_management_rating The company's senior management rating Yes" [ref=e447]:
+                      - cell "senior_management_rating" [ref=e448]
+                      - cell "The company's senior management rating" [ref=e449]
+                      - cell "Yes" [ref=e450]
+                    - row "compensation_rating The company's compensation rating Yes" [ref=e451]:
+                      - cell "compensation_rating" [ref=e452]
+                      - cell "The company's compensation rating" [ref=e453]
+                      - cell "Yes" [ref=e454]
+                    - row "career_opportunities_rating The company's career opportunities rating Yes" [ref=e455]:
+                      - cell "career_opportunities_rating" [ref=e456]
+                      - cell "The company's career opportunities rating" [ref=e457]
+                      - cell "Yes" [ref=e458]
+                    - row "recommend_to_friend_pct The percentage of reviewers who would recommend the company to a friend Yes" [ref=e459]:
+                      - cell "recommend_to_friend_pct" [ref=e460]
+                      - cell "The percentage of reviewers who would recommend the company to a friend" [ref=e461]
+                      - cell "Yes" [ref=e462]
+                    - row "ceo_approval_pct The percentage of reviewers who approve of the CEO Yes" [ref=e463]:
+                      - cell "ceo_approval_pct" [ref=e464]
+                      - cell "The percentage of reviewers who approve of the CEO" [ref=e465]
+                      - cell "Yes" [ref=e466]
+                    - row "business_outlook_pct The percentage of reviewers who have a positive business outlook for the company Yes" [ref=e467]:
+                      - cell "business_outlook_pct" [ref=e468]
+                      - cell "The percentage of reviewers who have a positive business outlook for the company" [ref=e469]
+                      - cell "Yes" [ref=e470]
+                    - row "review_count The number of reviews of the company Yes" [ref=e471]:
+                      - cell "review_count" [ref=e472]
+                      - cell "The number of reviews of the company" [ref=e473]
+                      - cell "Yes" [ref=e474]
+                    - row "ceo_approval_mom_pct The month-over-month percentage change in CEO approval rating" [ref=e475]:
+                      - cell "ceo_approval_mom_pct" [ref=e476]
+                      - cell "The month-over-month percentage change in CEO approval rating" [ref=e477]
+                      - cell [ref=e478]
+                    - row "ceo_approval_qoq_pct The quarter-over-quarter percentage change in CEO approval rating" [ref=e479]:
+                      - cell "ceo_approval_qoq_pct" [ref=e480]
+                      - cell "The quarter-over-quarter percentage change in CEO approval rating" [ref=e481]
+                      - cell [ref=e482]
+                    - row "ceo_approval_mom_pct The year-over-year percentage change in CEO approval rating" [ref=e483]:
+                      - cell "ceo_approval_mom_pct" [ref=e484]
+                      - cell "The year-over-year percentage change in CEO approval rating" [ref=e485]
+                      - cell [ref=e486]
+                    - row "review_count_mom_pct The month-over-month percentage change in the number of reviews" [ref=e487]:
+                      - cell "review_count_mom_pct" [ref=e488]
+                      - cell "The month-over-month percentage change in the number of reviews" [ref=e489]
+                      - cell [ref=e490]
+                    - row "review_count_qoq_pct The quarter-over-quarter percentage change in the number of reviews" [ref=e491]:
+                      - cell "review_count_qoq_pct" [ref=e492]
+                      - cell "The quarter-over-quarter percentage change in the number of reviews" [ref=e493]
+                      - cell [ref=e494]
+                    - row "review_count_yoy_pct The year-over-year percentage change in the number of reviews" [ref=e495]:
+                      - cell "review_count_yoy_pct" [ref=e496]
+                      - cell "The year-over-year percentage change in the number of reviews" [ref=e497]
+                      - cell [ref=e498]
+                - heading "Product ReviewsDirect link to Product Reviews" [level=2] [ref=e499]:
+                  - text: Product Reviews
+                  - link "Direct link to Product Reviews":
+                    - /url: "#product-reviews"
+                - table [ref=e500]:
+                  - rowgroup [ref=e501]:
+                    - row "Column Name Description Time Series Available" [ref=e502]:
+                      - columnheader "Column Name" [ref=e503]:
+                        - strong [ref=e504]: Column Name
+                      - columnheader "Description" [ref=e505]:
+                        - strong [ref=e506]: Description
+                      - columnheader "Time Series Available" [ref=e507]
+                  - rowgroup [ref=e508]:
+                    - row "review_count The number of reviews of the company Yes" [ref=e509]:
+                      - cell "review_count" [ref=e510]
+                      - cell "The number of reviews of the company" [ref=e511]
+                      - cell "Yes" [ref=e512]
+                    - row "average_rating The company's average rating Yes" [ref=e513]:
+                      - cell "average_rating" [ref=e514]
+                      - cell "The company's average rating" [ref=e515]
+                      - cell "Yes" [ref=e516]
+                    - row "review_count_mom_pct The month-over-month percentage change in the number of reviews" [ref=e517]:
+                      - cell "review_count_mom_pct" [ref=e518]
+                      - cell "The month-over-month percentage change in the number of reviews" [ref=e519]
+                      - cell [ref=e520]
+                    - row "review_count_qoq_pct The quarter-over-quarter percentage change in the number of reviews" [ref=e521]:
+                      - cell "review_count_qoq_pct" [ref=e522]
+                      - cell "The quarter-over-quarter percentage change in the number of reviews" [ref=e523]
+                      - cell [ref=e524]
+                    - row "review_count_yoy_pct The year-over-year percentage change in the number of reviews" [ref=e525]:
+                      - cell "review_count_yoy_pct" [ref=e526]
+                      - cell "The year-over-year percentage change in the number of reviews" [ref=e527]
+                      - cell [ref=e528]
+                - heading "Web TrafficDirect link to Web Traffic" [level=2] [ref=e529]:
+                  - text: Web Traffic
+                  - link "Direct link to Web Traffic":
+                    - /url: "#web-traffic"
+                - table [ref=e530]:
+                  - rowgroup [ref=e531]:
+                    - row "Column Name Description Time series available" [ref=e532]:
+                      - columnheader "Column Name" [ref=e533]:
+                        - strong [ref=e534]: Column Name
+                      - columnheader "Description" [ref=e535]:
+                        - strong [ref=e536]: Description
+                      - columnheader "Time series available" [ref=e537]
+                  - rowgroup [ref=e538]:
+                    - row "monthly_visitors The number of monthly visitors to the company's site Yes" [ref=e539]:
+                      - cell "monthly_visitors" [ref=e540]
+                      - cell "The number of monthly visitors to the company's site" [ref=e541]
+                      - cell "Yes" [ref=e542]
+                    - row "monthly_visitor_mom_pct The month-over-month percentage change in the number of monthly visitors to the company's site" [ref=e543]:
+                      - cell "monthly_visitor_mom_pct" [ref=e544]
+                      - cell "The month-over-month percentage change in the number of monthly visitors to the company's site" [ref=e545]
+                      - cell [ref=e546]
+                    - row "traffic_source_social_pct The percentage of the company's site traffic that comes from social media" [ref=e547]:
+                      - cell "traffic_source_social_pct" [ref=e548]
+                      - cell "The percentage of the company's site traffic that comes from social media" [ref=e549]
+                      - cell [ref=e550]
+                    - row "traffic_source_search_pct The percentage of the company's site traffic that comes from search engines" [ref=e551]:
+                      - cell "traffic_source_search_pct" [ref=e552]
+                      - cell "The percentage of the company's site traffic that comes from search engines" [ref=e553]
+                      - cell [ref=e554]
+                    - row "traffic_source_direct_pct The percentage of the company's site traffic that comes directly" [ref=e555]:
+                      - cell "traffic_source_direct_pct" [ref=e556]
+                      - cell "The percentage of the company's site traffic that comes directly" [ref=e557]
+                      - cell [ref=e558]
+                    - row "traffic_source_paid_referral_pct The percentage of the company's site traffic that comes from paid referrals" [ref=e559]:
+                      - cell "traffic_source_paid_referral_pct" [ref=e560]
+                      - cell "The percentage of the company's site traffic that comes from paid referrals" [ref=e561]
+                      - cell [ref=e562]
+                    - row "traffic_source_referral_pct The percentage of the company's site traffic that comes from non-paid referrals" [ref=e563]:
+                      - cell "traffic_source_referral_pct" [ref=e564]
+                      - cell "The percentage of the company's site traffic that comes from non-paid referrals" [ref=e565]
+                      - cell [ref=e566]
+                - heading "Job Listing Growth By FunctionDirect link to Job Listing Growth By Function" [level=2] [ref=e567]:
+                  - text: Job Listing Growth By Function
+                  - link "Direct link to Job Listing Growth By Function":
+                    - /url: "#job-listing-growth-by-function"
+                - table [ref=e568]:
+                  - rowgroup [ref=e569]:
+                    - row "Column Name Description" [ref=e570]:
+                      - columnheader "Column Name" [ref=e571]:
+                        - strong [ref=e572]: Column Name
+                      - columnheader "Description" [ref=e573]:
+                        - strong [ref=e574]: Description
+                  - rowgroup [ref=e575]:
+                    - row "job_openings_accounting_qoq_pct Quarterly growth percentage of job openings in accounting" [ref=e576]:
+                      - cell "job_openings_accounting_qoq_pct" [ref=e577]
+                      - cell "Quarterly growth percentage of job openings in accounting" [ref=e578]
+                    - row "job_openings_accounting_six_months_growth_pct Six months growth percentage of job openings in accounting" [ref=e579]:
+                      - cell "job_openings_accounting_six_months_growth_pct" [ref=e580]
+                      - cell "Six months growth percentage of job openings in accounting" [ref=e581]
+                    - row "job_openings_art_and_design_qoq_pct Quarterly growth percentage of job openings in art and design" [ref=e582]:
+                      - cell "job_openings_art_and_design_qoq_pct" [ref=e583]
+                      - cell "Quarterly growth percentage of job openings in art and design" [ref=e584]
+                    - row "job_openings_art_and_design_six_months_growth_pct Six months growth percentage of job openings in art and design" [ref=e585]:
+                      - cell "job_openings_art_and_design_six_months_growth_pct" [ref=e586]
+                      - cell "Six months growth percentage of job openings in art and design" [ref=e587]
+                    - row "job_openings_business_development_qoq_pct Quarterly growth percentage of job openings in business development" [ref=e588]:
+                      - cell "job_openings_business_development_qoq_pct" [ref=e589]
+                      - cell "Quarterly growth percentage of job openings in business development" [ref=e590]
+                    - row "job_openings_business_development_six_months_growth_pct Six months growth percentage of job openings in business development" [ref=e591]:
+                      - cell "job_openings_business_development_six_months_growth_pct" [ref=e592]
+                      - cell "Six months growth percentage of job openings in business development" [ref=e593]
+                    - row "job_openings_engineering_qoq_pct Quarterly growth percentage of job openings in engineering" [ref=e594]:
+                      - cell "job_openings_engineering_qoq_pct" [ref=e595]
+                      - cell "Quarterly growth percentage of job openings in engineering" [ref=e596]
+                    - row "job_openings_engineering_six_months_growth_pct Six months growth percentage of job openings in engineering" [ref=e597]:
+                      - cell "job_openings_engineering_six_months_growth_pct" [ref=e598]
+                      - cell "Six months growth percentage of job openings in engineering" [ref=e599]
+                    - row "job_openings_finance_qoq_pct Quarterly growth percentage of job openings in finance" [ref=e600]:
+                      - cell "job_openings_finance_qoq_pct" [ref=e601]
+                      - cell "Quarterly growth percentage of job openings in finance" [ref=e602]
+                    - row "job_openings_finance_six_months_growth_pct Six months growth percentage of job openings in finance" [ref=e603]:
+                      - cell "job_openings_finance_six_months_growth_pct" [ref=e604]
+                      - cell "Six months growth percentage of job openings in finance" [ref=e605]
+                    - row "job_openings_human_resource_qoq_pct Quarterly growth percentage of job openings in human resources" [ref=e606]:
+                      - cell "job_openings_human_resource_qoq_pct" [ref=e607]
+                      - cell "Quarterly growth percentage of job openings in human resources" [ref=e608]
+                    - row "job_openings_human_resource_six_months_growth_pct Six months growth percentage of job openings in human resources" [ref=e609]:
+                      - cell "job_openings_human_resource_six_months_growth_pct" [ref=e610]
+                      - cell "Six months growth percentage of job openings in human resources" [ref=e611]
+                    - row "job_openings_information_technology_qoq_pct Quarterly growth percentage of job openings in information technology" [ref=e612]:
+                      - cell "job_openings_information_technology_qoq_pct" [ref=e613]
+                      - cell "Quarterly growth percentage of job openings in information technology" [ref=e614]
+                    - row "job_openings_information_technology_six_months_growth_pct Six months growth percentage of job openings in information technology" [ref=e615]:
+                      - cell "job_openings_information_technology_six_months_growth_pct" [ref=e616]
+                      - cell "Six months growth percentage of job openings in information technology" [ref=e617]
+                    - row "job_openings_marketing_qoq_pct Quarterly growth percentage of job openings in marketing" [ref=e618]:
+                      - cell "job_openings_marketing_qoq_pct" [ref=e619]
+                      - cell "Quarterly growth percentage of job openings in marketing" [ref=e620]
+                    - row "job_openings_marketing_six_months_growth_pct Six months growth percentage of job openings in marketing" [ref=e621]:
+                      - cell "job_openings_marketing_six_months_growth_pct" [ref=e622]
+                      - cell "Six months growth percentage of job openings in marketing" [ref=e623]
+                    - row "job_openings_media_and_communication_qoq_pct Quarterly growth percentage of job openings in media and communication" [ref=e624]:
+                      - cell "job_openings_media_and_communication_qoq_pct" [ref=e625]
+                      - cell "Quarterly growth percentage of job openings in media and communication" [ref=e626]
+                    - row "job_openings_media_and_communication_six_months_growth_pct Six months growth percentage of job openings in media and communication" [ref=e627]:
+                      - cell "job_openings_media_and_communication_six_months_growth_pct" [ref=e628]
+                      - cell "Six months growth percentage of job openings in media and communication" [ref=e629]
+                    - row "job_openings_operations_qoq_pct Quarterly growth percentage of job openings in operations" [ref=e630]:
+                      - cell "job_openings_operations_qoq_pct" [ref=e631]
+                      - cell "Quarterly growth percentage of job openings in operations" [ref=e632]
+                    - row "job_openings_operations_six_months_growth_pct Six months growth percentage of job openings in operations" [ref=e633]:
+                      - cell "job_openings_operations_six_months_growth_pct" [ref=e634]
+                      - cell "Six months growth percentage of job openings in operations" [ref=e635]
+                    - row "job_openings_research_qoq_pct Quarterly growth percentage of job openings in research" [ref=e636]:
+                      - cell "job_openings_research_qoq_pct" [ref=e637]
+                      - cell "Quarterly growth percentage of job openings in research" [ref=e638]
+                    - row "job_openings_research_six_months_growth_pct Six months growth percentage of job openings in research" [ref=e639]:
+                      - cell "job_openings_research_six_months_growth_pct" [ref=e640]
+                      - cell "Six months growth percentage of job openings in research" [ref=e641]
+                    - row "job_openings_sales_qoq_pct Quarterly growth percentage of job openings in sales" [ref=e642]:
+                      - cell "job_openings_sales_qoq_pct" [ref=e643]
+                      - cell "Quarterly growth percentage of job openings in sales" [ref=e644]
+                    - row "job_openings_sales_six_months_growth_pct Six months growth percentage of job openings in sales" [ref=e645]:
+                      - cell "job_openings_sales_six_months_growth_pct" [ref=e646]
+                      - cell "Six months growth percentage of job openings in sales" [ref=e647]
+                    - row "job_openings_product_management_qoq_pct Quarterly growth percentage of job openings in product management" [ref=e648]:
+                      - cell "job_openings_product_management_qoq_pct" [ref=e649]
+                      - cell "Quarterly growth percentage of job openings in product management" [ref=e650]
+                    - row "job_openings_product_management_six_months_growth_pct Six months growth percentage of job openings in product management" [ref=e651]:
+                      - cell "job_openings_product_management_six_months_growth_pct" [ref=e652]
+                      - cell "Six months growth percentage of job openings in product management" [ref=e653]
+                    - row "job_openings_overall_qoq_pct Quarterly growth percentage of overall job openings" [ref=e654]:
+                      - cell "job_openings_overall_qoq_pct" [ref=e655]
+                      - cell "Quarterly growth percentage of overall job openings" [ref=e656]
+                    - row "job_openings_overall_six_months_growth_pct Six months growth percentage of overall job openings" [ref=e657]:
+                      - cell "job_openings_overall_six_months_growth_pct" [ref=e658]
+                      - cell "Six months growth percentage of overall job openings" [ref=e659]
+                - heading "Total Job ListingsDirect link to Total Job Listings" [level=2] [ref=e660]:
+                  - text: Total Job Listings
+                  - link "Direct link to Total Job Listings":
+                    - /url: "#total-job-listings"
+                - table [ref=e661]:
+                  - rowgroup [ref=e662]:
+                    - row "Column Name Description" [ref=e663]:
+                      - columnheader "Column Name" [ref=e664]:
+                        - strong [ref=e665]: Column Name
+                      - columnheader "Description" [ref=e666]:
+                        - strong [ref=e667]: Description
+                  - rowgroup [ref=e668]:
+                    - row "job_openings_title Current job opening titles at the company" [ref=e669]:
+                      - cell "job_openings_title" [ref=e670]
+                      - cell "Current job opening titles at the company" [ref=e671]
+                    - row "job_openings_count The total count of current job openings at the company" [ref=e672]:
+                      - cell "job_openings_count" [ref=e673]
+                      - cell "The total count of current job openings at the company" [ref=e674]
+                    - row "job_openings_count_mom_pct The percentage change in the number of job openings at the company on a month-over-month basis" [ref=e675]:
+                      - cell "job_openings_count_mom_pct" [ref=e676]
+                      - cell "The percentage change in the number of job openings at the company on a month-over-month basis" [ref=e677]
+                    - row "job_openings_count_qoq_pct The percentage change in the number of job openings at the company on a quarter-over-quarter basis" [ref=e678]:
+                      - cell "job_openings_count_qoq_pct" [ref=e679]
+                      - cell "The percentage change in the number of job openings at the company on a quarter-over-quarter basis" [ref=e680]
+                    - row "job_openings_count_yoy_pct The percentage change in the number of job openings at the company on a year-over-year basis" [ref=e681]:
+                      - cell "job_openings_count_yoy_pct" [ref=e682]
+                      - cell "The percentage change in the number of job openings at the company on a year-over-year basis" [ref=e683]
+                - heading "AdsDirect link to Ads" [level=2] [ref=e684]:
+                  - text: Ads
+                  - link "Direct link to Ads":
+                    - /url: "#ads"
+                - table [ref=e685]:
+                  - rowgroup [ref=e686]:
+                    - row "Column Name Description" [ref=e687]:
+                      - columnheader "Column Name" [ref=e688]:
+                        - strong [ref=e689]: Column Name
+                      - columnheader "Description" [ref=e690]:
+                        - strong [ref=e691]: Description
+                  - rowgroup [ref=e692]:
+                    - row "meta_total_ads Total Ads during the lifetime of the company" [ref=e693]:
+                      - cell "meta_total_ads" [ref=e694]
+                      - cell "Total Ads during the lifetime of the company" [ref=e695]
+                    - row "meta_active_ads Currently active Ads by the company" [ref=e696]:
+                      - cell "meta_active_ads" [ref=e697]
+                      - cell "Currently active Ads by the company" [ref=e698]
+                    - row "meta_ad_url URL of company's page on Meta Ads Library" [ref=e699]:
+                      - cell "meta_ad_url" [ref=e700]
+                      - cell "URL of company's page on Meta Ads Library" [ref=e701]
+                - heading "SEO and Search Engine RankingDirect link to SEO and Search Engine Ranking" [level=2] [ref=e702]:
+                  - text: SEO and Search Engine Ranking
+                  - link "Direct link to SEO and Search Engine Ranking":
+                    - /url: "#seo-and-search-engine-ranking"
+                - table [ref=e703]:
+                  - rowgroup [ref=e704]:
+                    - row "Column Name Description" [ref=e705]:
+                      - columnheader "Column Name" [ref=e706]:
+                        - strong [ref=e707]: Column Name
+                      - columnheader "Description" [ref=e708]:
+                        - strong [ref=e709]: Description
+                  - rowgroup [ref=e710]:
+                    - row "average_organic_rank Average rank of company domain on keywords for which it ranks in top 100 results" [ref=e711]:
+                      - cell "average_organic_rank" [ref=e712]
+                      - cell "Average rank of company domain on keywords for which it ranks in top 100 results" [ref=e713]
+                    - row "monthly_paid_clicks Estimated number of clicks on website from Google Ads" [ref=e714]:
+                      - cell "monthly_paid_clicks" [ref=e715]
+                      - cell "Estimated number of clicks on website from Google Ads" [ref=e716]
+                    - row "monthly_organic_clicks Estimated number of clicks on website from organic search results" [ref=e717]:
+                      - cell "monthly_organic_clicks" [ref=e718]
+                      - cell "Estimated number of clicks on website from organic search results" [ref=e719]
+                    - row "average_ad_rank Average position of all the company domain's ad" [ref=e720]:
+                      - cell "average_ad_rank" [ref=e721]
+                      - cell "Average position of all the company domain's ad" [ref=e722]
+                    - row "total_organic_results Number of keywords for which the company domain appears in organic search result" [ref=e723]:
+                      - cell "total_organic_results" [ref=e724]
+                      - cell "Number of keywords for which the company domain appears in organic search result" [ref=e725]
+                    - row "monthly_google_ads_budget Monthly budget in USD of google ads campaigns" [ref=e726]:
+                      - cell "monthly_google_ads_budget" [ref=e727]
+                      - cell "Monthly budget in USD of google ads campaigns" [ref=e728]
+                    - row "monthly_organic_value A rollup of all of company domain's organic keywords and their collective value that their clicks bring in. In USD" [ref=e729]:
+                      - cell "monthly_organic_value" [ref=e730]
+                      - cell "A rollup of all of company domain's organic keywords and their collective value that their clicks bring in. In USD" [ref=e731]
+                    - row [ref=e732]:
+                      - cell [ref=e733]
+                      - cell [ref=e734]
+                    - row "total_ads_purchased Total number of keywords on which company's domain has advertised on." [ref=e735]:
+                      - cell "total_ads_purchased" [ref=e736]
+                      - cell "Total number of keywords on which company's domain has advertised on." [ref=e737]
+                    - row "lost_ranks Number of keywords on which company's domain dropped its rank this month in search result while still being in top 100" [ref=e738]:
+                      - cell "lost_ranks" [ref=e739]
+                      - cell "Number of keywords on which company's domain dropped its rank this month in search result while still being in top 100" [ref=e740]
+                    - row "gained_ranks Number of keywords on which company's domain improved its rank this month in search result while still being in top 100" [ref=e741]:
+                      - cell "gained_ranks" [ref=e742]
+                      - cell "Number of keywords on which company's domain improved its rank this month in search result while still being in top 100" [ref=e743]
+                    - row "newly_ranked Number of keywords on which atleast one of the company's domain's page started ranking in top 100 for the first time this month" [ref=e744]:
+                      - cell "newly_ranked" [ref=e745]
+                      - cell "Number of keywords on which atleast one of the company's domain's page started ranking in top 100 for the first time this month" [ref=e746]
+                    - row "paid_competitors Domains that are competing for the same paid keywords/clicks" [ref=e747]:
+                      - cell "paid_competitors" [ref=e748]
+                      - cell "Domains that are competing for the same paid keywords/clicks" [ref=e749]
+                    - row "organic_competitors Domains that are competing for the same organic keywords" [ref=e750]:
+                      - cell "organic_competitors" [ref=e751]
+                      - cell "Domains that are competing for the same organic keywords" [ref=e752]
+                    - row [ref=e753]:
+                      - cell [ref=e754]
+                      - cell [ref=e755]
+                    - row [ref=e756]:
+                      - cell [ref=e757]
+                      - cell [ref=e758]
+                    - row [ref=e759]:
+                      - cell [ref=e760]
+                      - cell [ref=e761]
+                    - row [ref=e762]:
+                      - cell [ref=e763]
+                      - cell [ref=e764]
+                - heading "Search Engine ImpressionDirect link to Search Engine Impression" [level=2] [ref=e765]:
+                  - text: Search Engine Impression
+                  - link "Direct link to Search Engine Impression":
+                    - /url: "#search-engine-impression"
+                - table [ref=e766]:
+                  - rowgroup [ref=e767]:
+                    - row "Column Name Description Time Series Available" [ref=e768]:
+                      - columnheader "Column Name" [ref=e769]
+                      - columnheader "Description" [ref=e770]
+                      - columnheader "Time Series Available" [ref=e771]
+                  - rowgroup [ref=e772]:
+                    - row "num_of_impressions Number of times company is searched on Google Yes" [ref=e773]:
+                      - cell "num_of_impressions" [ref=e774]
+                      - cell "Number of times company is searched on Google" [ref=e775]
+                      - cell "Yes" [ref=e776]
+                    - row "num_of_impressions_mom_growth Monthly growth of number of times company is searched on Google" [ref=e777]:
+                      - cell "num_of_impressions_mom_growth" [ref=e778]
+                      - cell "Monthly growth of number of times company is searched on Google" [ref=e779]
+                      - cell [ref=e780]
+                    - row "num_of_impressions_qoq_growth Quarterly growth of number of times company is searched on Google" [ref=e781]:
+                      - cell "num_of_impressions_qoq_growth" [ref=e782]
+                      - cell "Quarterly growth of number of times company is searched on Google" [ref=e783]
+                      - cell [ref=e784]
+                    - row "num_of_impressions_yoy_growth Yearly growth of number of times company is searched on Google" [ref=e785]:
+                      - cell "num_of_impressions_yoy_growth" [ref=e786]
+                      - cell "Yearly growth of number of times company is searched on Google" [ref=e787]
+                      - cell [ref=e788]
+                - heading "Twitter FollowersDirect link to Twitter Followers" [level=2] [ref=e789]:
+                  - text: Twitter Followers
+                  - link "Direct link to Twitter Followers":
+                    - /url: "#twitter-followers"
+                - table [ref=e790]:
+                  - rowgroup [ref=e791]:
+                    - row "Column Name Description Time Series Available" [ref=e792]:
+                      - columnheader "Column Name" [ref=e793]
+                      - columnheader "Description" [ref=e794]
+                      - columnheader "Time Series Available" [ref=e795]
+                  - rowgroup [ref=e796]:
+                    - row "followers Number of followers on company's Twitter handle Yes" [ref=e797]:
+                      - cell "followers" [ref=e798]
+                      - cell "Number of followers on company's Twitter handle" [ref=e799]
+                      - cell "Yes" [ref=e800]
+                    - row "followers_mom_growth Monthly growth of Twitter followers" [ref=e801]:
+                      - cell "followers_mom_growth" [ref=e802]
+                      - cell "Monthly growth of Twitter followers" [ref=e803]
+                      - cell [ref=e804]
+                    - row "followers_qoq_growth Quarterly growth of Twitter followers" [ref=e805]:
+                      - cell "followers_qoq_growth" [ref=e806]
+                      - cell "Quarterly growth of Twitter followers" [ref=e807]
+                      - cell [ref=e808]
+                    - row "followers_yoy_growth Yearly growth of Twitter followers" [ref=e809]:
+                      - cell "followers_yoy_growth" [ref=e810]
+                      - cell "Yearly growth of Twitter followers" [ref=e811]
+                      - cell [ref=e812]
+                    - row "founder_handles Twitter handles of founders" [ref=e813]:
+                      - cell "founder_handles" [ref=e814]
+                      - cell "Twitter handles of founders" [ref=e815]
+                      - cell [ref=e816]
+                    - row [ref=e817]:
+                      - cell [ref=e818]
+                      - cell [ref=e819]
+                      - cell [ref=e820]
+                - heading "Twitter PostsDirect link to Twitter Posts" [level=2] [ref=e821]:
+                  - text: Twitter Posts
+                  - link "Direct link to Twitter Posts":
+                    - /url: "#twitter-posts"
+                - table [ref=e822]:
+                  - rowgroup [ref=e823]:
+                    - row "Column Name Description Time Series Available" [ref=e824]:
+                      - columnheader "Column Name" [ref=e825]
+                      - columnheader "Description" [ref=e826]
+                      - columnheader "Time Series Available" [ref=e827]
+                  - rowgroup [ref=e828]:
+                    - row "post_content Content of the post on Twitter by the Company" [ref=e829]:
+                      - cell "post_content" [ref=e830]
+                      - cell "Content of the post on Twitter by the Company" [ref=e831]
+                      - cell [ref=e832]
+                    - row "date_posted Date of the Twitter post Yes" [ref=e833]:
+                      - cell "date_posted" [ref=e834]
+                      - cell "Date of the Twitter post" [ref=e835]
+                      - cell "Yes" [ref=e836]
+                    - row "likes Number of likes of the post Yes" [ref=e837]:
+                      - cell "likes" [ref=e838]
+                      - cell "Number of likes of the post" [ref=e839]
+                      - cell "Yes" [ref=e840]
+                    - row "retweets Number of retweets of the post Yes" [ref=e841]:
+                      - cell "retweets" [ref=e842]
+                      - cell "Number of retweets of the post" [ref=e843]
+                      - cell "Yes" [ref=e844]
+                    - row "comments Number of comments on the post Yes" [ref=e845]:
+                      - cell "comments" [ref=e846]
+                      - cell "Number of comments on the post" [ref=e847]
+                      - cell "Yes" [ref=e848]
+                - heading "Social Media PostsDirect link to Social Media Posts" [level=2] [ref=e849]:
+                  - text: Social Media Posts
+                  - link "Direct link to Social Media Posts":
+                    - /url: "#social-media-posts"
+                - table [ref=e850]:
+                  - rowgroup [ref=e851]:
+                    - row "Column Name Description Time Series Available" [ref=e852]:
+                      - columnheader "Column Name" [ref=e853]
+                      - columnheader "Description" [ref=e854]
+                      - columnheader "Time Series Available" [ref=e855]
+                  - rowgroup [ref=e856]:
+                    - row "post_content Content of the post on social media by the Company" [ref=e857]:
+                      - cell "post_content" [ref=e858]
+                      - cell "Content of the post on social media by the Company" [ref=e859]
+                      - cell [ref=e860]
+                    - row "date_posted Date of the social media post Yes" [ref=e861]:
+                      - cell "date_posted" [ref=e862]
+                      - cell "Date of the social media post" [ref=e863]
+                      - cell "Yes" [ref=e864]
+                    - row "likes Number of likes of the post Yes" [ref=e865]:
+                      - cell "likes" [ref=e866]
+                      - cell "Number of likes of the post" [ref=e867]
+                      - cell "Yes" [ref=e868]
+                    - row "reposts Number of reposts of the post Yes" [ref=e869]:
+                      - cell "reposts" [ref=e870]
+                      - cell "Number of reposts of the post" [ref=e871]
+                      - cell "Yes" [ref=e872]
+                    - row "comments Number of comments on the post Yes" [ref=e873]:
+                      - cell "comments" [ref=e874]
+                      - cell "Number of comments on the post" [ref=e875]
+                      - cell "Yes" [ref=e876]
+                    - row "reactors List of full person/company profile of the entity reacting to the post. Each profile covers these full details of the reactor along with their work history see here." [ref=e877]:
+                      - cell "reactors" [ref=e878]
+                      - cell "List of full person/company profile of the entity reacting to the post. Each profile covers these full details of the reactor along with their work history see here." [ref=e879]:
+                        - text: List of full person/company profile of the entity reacting to the post. Each profile covers these full details of the reactor along with their work history
+                        - link "see here" [ref=e880] [cursor=pointer]:
+                          - /url: /web/20251214143012/https://docs.crustdata.com/docs/dictionary/people#reactor
+                        - text: .
+                      - cell [ref=e881]
+                - heading "News ArticlesDirect link to News Articles" [level=2] [ref=e882]:
+                  - text: News Articles
+                  - link "Direct link to News Articles":
+                    - /url: "#news-articles"
+                - table [ref=e883]:
+                  - rowgroup [ref=e884]:
+                    - row "Column Name Description Time Series Available" [ref=e885]:
+                      - columnheader "Column Name" [ref=e886]
+                      - columnheader "Description" [ref=e887]
+                      - columnheader "Time Series Available" [ref=e888]
+                  - rowgroup [ref=e889]:
+                    - row "title Title of article" [ref=e890]:
+                      - cell "title" [ref=e891]
+                      - cell "Title of article" [ref=e892]
+                      - cell [ref=e893]
+                    - row "article_link Website link of the article" [ref=e894]:
+                      - cell "article_link" [ref=e895]
+                      - cell "Website link of the article" [ref=e896]
+                      - cell [ref=e897]
+                    - row "publisher_name Name of the news publisher" [ref=e898]:
+                      - cell "publisher_name" [ref=e899]
+                      - cell "Name of the news publisher" [ref=e900]
+                      - cell [ref=e901]
+                    - row "date_published Date the article was first published by the news publisher" [ref=e902]:
+                      - cell "date_published" [ref=e903]
+                      - cell "Date the article was first published by the news publisher" [ref=e904]
+                      - cell [ref=e905]
+                    - row "one_line_description One line description of the content of the article" [ref=e906]:
+                      - cell "one_line_description" [ref=e907]
+                      - cell "One line description of the content of the article" [ref=e908]
+                      - cell [ref=e909]
+                - heading "Form D FilingsDirect link to Form D Filings" [level=2] [ref=e910]:
+                  - text: Form D Filings
+                  - link "Direct link to Form D Filings":
+                    - /url: "#form-d-filings"
+                - table [ref=e911]:
+                  - rowgroup [ref=e912]:
+                    - row "Column Name Description Time Series Available" [ref=e913]:
+                      - columnheader "Column Name" [ref=e914]
+                      - columnheader "Description" [ref=e915]
+                      - columnheader "Time Series Available" [ref=e916]
+                  - rowgroup [ref=e917]:
+                    - row "total_amount Total offering amount in USD Yes" [ref=e918]:
+                      - cell "total_amount" [ref=e919]
+                      - cell "Total offering amount in USD" [ref=e920]
+                      - cell "Yes" [ref=e921]
+                    - row "date_filed Date FORM D was filed" [ref=e922]:
+                      - cell "date_filed" [ref=e923]
+                      - cell "Date FORM D was filed" [ref=e924]
+                      - cell [ref=e925]
+                    - row "date_of_first_sale Date of sale of the security" [ref=e926]:
+                      - cell "date_of_first_sale" [ref=e927]
+                      - cell "Date of sale of the security" [ref=e928]
+                      - cell [ref=e929]
+                    - row "accession_no SEC Accession No" [ref=e930]:
+                      - cell "accession_no" [ref=e931]
+                      - cell "SEC Accession No" [ref=e932]
+                      - cell [ref=e933]
+                    - row "file_no SEC File No" [ref=e934]:
+                      - cell "file_no" [ref=e935]
+                      - cell "SEC File No" [ref=e936]
+                      - cell [ref=e937]
+            - navigation "Docs pages" [ref=e938]:
+              - link "Previous How to Build Filters" [ref=e939] [cursor=pointer]:
+                - /url: /web/20251214143012/https://docs.crustdata.com/docs/discover/how-to-build-filters
+                - generic [ref=e940]: Previous
+                - generic [ref=e941]: How to Build Filters
+              - link "Next Company Data" [ref=e942] [cursor=pointer]:
+                - /url: /web/20251214143012/https://docs.crustdata.com/docs/dictionary/company
+                - generic [ref=e943]: Next
+                - generic [ref=e944]: Company Data
+          - list [ref=e947]:
+            - listitem [ref=e948]:
+              - link "Firmographics" [ref=e949] [cursor=pointer]:
+                - /url: "#firmographics"
+            - listitem [ref=e950]:
+              - link "Founder background" [ref=e951] [cursor=pointer]:
+                - /url: "#founder-background"
+            - listitem [ref=e952]:
+              - link "Revenue" [ref=e953] [cursor=pointer]:
+                - /url: "#revenue"
+            - listitem [ref=e954]:
+              - link "Employee Headcount" [ref=e955] [cursor=pointer]:
+                - /url: "#employee-headcount"
+            - listitem [ref=e956]:
+              - link "Employee Skills" [ref=e957] [cursor=pointer]:
+                - /url: "#employee-skills"
+            - listitem [ref=e958]:
+              - link "Employee Review and Rating" [ref=e959] [cursor=pointer]:
+                - /url: "#employee-review-and-rating"
+            - listitem [ref=e960]:
+              - link "Product Reviews" [ref=e961] [cursor=pointer]:
+                - /url: "#product-reviews"
+            - listitem [ref=e962]:
+              - link "Web Traffic" [ref=e963] [cursor=pointer]:
+                - /url: "#web-traffic"
+            - listitem [ref=e964]:
+              - link "Job Listing Growth By Function" [ref=e965] [cursor=pointer]:
+                - /url: "#job-listing-growth-by-function"
+            - listitem [ref=e966]:
+              - link "Total Job Listings" [ref=e967] [cursor=pointer]:
+                - /url: "#total-job-listings"
+            - listitem [ref=e968]:
+              - link "Ads" [ref=e969] [cursor=pointer]:
+                - /url: "#ads"
+            - listitem [ref=e970]:
+              - link "SEO and Search Engine Ranking" [ref=e971] [cursor=pointer]:
+                - /url: "#seo-and-search-engine-ranking"
+            - listitem [ref=e972]:
+              - link "Search Engine Impression" [ref=e973] [cursor=pointer]:
+                - /url: "#search-engine-impression"
+            - listitem [ref=e974]:
+              - link "Twitter Followers" [ref=e975] [cursor=pointer]:
+                - /url: "#twitter-followers"
+            - listitem [ref=e976]:
+              - link "Twitter Posts" [ref=e977] [cursor=pointer]:
+                - /url: "#twitter-posts"
+            - listitem [ref=e978]:
+              - link "Social Media Posts" [ref=e979] [cursor=pointer]:
+                - /url: "#social-media-posts"
+            - listitem [ref=e980]:
+              - link "News Articles" [ref=e981] [cursor=pointer]:
+                - /url: "#news-articles"
+            - listitem [ref=e982]:
+              - link "Form D Filings" [ref=e983] [cursor=pointer]:
+                - /url: "#form-d-filings"

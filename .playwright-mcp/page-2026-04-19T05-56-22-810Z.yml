@@ -1,0 +1,381 @@
+- generic [ref=e3]:
+  - region "Skip to main content" [ref=e4]:
+    - link "Skip to main content" [ref=e5] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - banner [ref=e6]:
+    - generic [ref=e7]:
+      - text: This is a sample of our Full API suite. To see our full offering including Watcher, advanced search, and more
+      - link "Request demo now" [ref=e8] [cursor=pointer]:
+        - /url: https://web.archive.org/web/20251210152755/https://crustdata.com/demo
+      - text: →
+    - button "Close" [ref=e9]:
+      - img [ref=e10]
+  - navigation "Main" [ref=e13]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - button "Toggle navigation bar" [ref=e16]:
+          - img [ref=e17]
+        - link "Crustdata APICrustdata API" [ref=e19] [cursor=pointer]:
+          - /url: /web/20251210152755/https://docs.crustdata.com/
+          - generic [ref=e20]:
+            - img "Crustdata API" [ref=e21]
+            - img "Crustdata API" [ref=e22]
+        - link "Documentation" [ref=e23] [cursor=pointer]:
+          - /url: /web/20251210152755/https://docs.crustdata.com/docs/intro
+        - link "API Reference" [ref=e24] [cursor=pointer]:
+          - /url: /web/20251210152755/https://docs.crustdata.com/api
+      - generic [ref=e25]:
+        - link "Login" [ref=e26] [cursor=pointer]:
+          - /url: https://web.archive.org/web/20251210152755/https://crustdata.com/screenerv2/query
+        - button "Request Demo" [ref=e28] [cursor=pointer]:
+          - link "Request Demo" [ref=e29]:
+            - /url: https://web.archive.org/web/20251210152755/https://crustdata.com/demo
+  - generic [ref=e31]:
+    - button "Scroll back to top" [ref=e32]
+    - generic [ref=e33]:
+      - complementary [ref=e34]:
+        - navigation "Docs sidebar" [ref=e37]:
+          - list [ref=e38]:
+            - listitem [ref=e39]:
+              - link "Getting Started" [ref=e40] [cursor=pointer]:
+                - /url: /web/20251210152755/https://docs.crustdata.com/docs/intro
+            - listitem [ref=e41]:
+              - link "Enrichment APIs" [ref=e43] [cursor=pointer]:
+                - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/company-data-api
+              - list [ref=e44]:
+                - listitem [ref=e45]:
+                  - link "Company Data API" [ref=e46] [cursor=pointer]:
+                    - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/company-data-api
+                - listitem [ref=e47]:
+                  - link "People Data API" [ref=e48] [cursor=pointer]:
+                    - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/people-data-api
+            - listitem [ref=e49]:
+              - link "Search APIs" [ref=e51] [cursor=pointer]:
+                - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+              - list [ref=e52]:
+                - listitem [ref=e53]:
+                  - link "Real-time Company Search APIs" [ref=e55] [cursor=pointer]:
+                    - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                  - list [ref=e56]:
+                    - listitem [ref=e57]:
+                      - link "via Filters" [ref=e58] [cursor=pointer]:
+                        - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                - listitem [ref=e59]:
+                  - link "Real-time People Search APIs" [ref=e61] [cursor=pointer]:
+                    - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                  - list [ref=e62]:
+                    - listitem [ref=e63]:
+                      - link "via Filters" [ref=e64] [cursor=pointer]:
+                        - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+                - listitem [ref=e65]:
+                  - link "How to Build Filters" [ref=e66] [cursor=pointer]:
+                    - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/how-to-build-filters
+            - listitem [ref=e67]:
+              - link "Data Dictionary" [ref=e69] [cursor=pointer]:
+                - /url: /web/20251210152755/https://docs.crustdata.com/docs/dictionary/company
+              - list [ref=e70]:
+                - listitem [ref=e71]:
+                  - link "Company Data" [ref=e72] [cursor=pointer]:
+                    - /url: /web/20251210152755/https://docs.crustdata.com/docs/dictionary/company
+                - listitem [ref=e73]:
+                  - link "People Data" [ref=e74] [cursor=pointer]:
+                    - /url: /web/20251210152755/https://docs.crustdata.com/docs/dictionary/people
+      - main [ref=e75]:
+        - generic [ref=e77]:
+          - generic [ref=e79]:
+            - article [ref=e80]:
+              - navigation "Breadcrumbs" [ref=e81]:
+                - list [ref=e82]:
+                  - listitem [ref=e83]:
+                    - link "Home page" [ref=e84] [cursor=pointer]:
+                      - /url: /web/20251210152755/https://docs.crustdata.com/
+                      - img [ref=e85]
+                  - listitem [ref=e87]: Search APIs
+              - button "On this page" [ref=e89]
+              - generic [ref=e90]:
+                - heading "Company Search API via Filters" [level=1] [ref=e92]
+                - paragraph [ref=e93]: The Company Search API allows you to search for company profiles based on various filters, providing detailed information about companies that match your criteria. This guide will help you understand how to make queries to the API using filters, with easy-to-follow examples.
+                - heading "EndpointDirect link to Endpoint" [level=2] [ref=e94]:
+                  - text: Endpoint
+                  - link "Direct link to Endpoint":
+                    - /url: "#endpoint"
+                - code [ref=e98]:
+                  - generic [ref=e99]: POST /screener/company/search
+                - heading "AuthenticationDirect link to Authentication" [level=2] [ref=e100]:
+                  - text: Authentication
+                  - link "Direct link to Authentication":
+                    - /url: "#authentication"
+                - paragraph [ref=e101]:
+                  - text: Include your Bearer token in the
+                  - code [ref=e102]: Authorization
+                  - text: header of your request.
+                - heading "RequestDirect link to Request" [level=2] [ref=e103]:
+                  - text: Request
+                  - link "Direct link to Request":
+                    - /url: "#request"
+                - heading "HeadersDirect link to Headers" [level=3] [ref=e104]:
+                  - text: Headers
+                  - link "Direct link to Headers":
+                    - /url: "#headers"
+                - list [ref=e105]:
+                  - listitem [ref=e106]:
+                    - code [ref=e107]: "Content-Type: application/json"
+                  - listitem [ref=e108]:
+                    - code [ref=e109]: "Authorization: Bearer <your_token>"
+                - heading "Body ParametersDirect link to Body Parameters" [level=3] [ref=e110]:
+                  - text: Body Parameters
+                  - link "Direct link to Body Parameters":
+                    - /url: "#body-parameters"
+                - list [ref=e111]:
+                  - listitem [ref=e112]:
+                    - code [ref=e113]: filters
+                    - text: "(array): An array of filter objects specifying your search criteria."
+                  - listitem [ref=e114]:
+                    - code [ref=e115]: page
+                    - text: "(integer): The page number for pagination."
+                - heading "Building FiltersDirect link to Building Filters" [level=3] [ref=e116]:
+                  - text: Building Filters
+                  - link "Direct link to Building Filters":
+                    - /url: "#building-filters"
+                - paragraph [ref=e117]:
+                  - text: Each filter in the
+                  - code [ref=e118]: filters
+                  - text: array is an object that specifies a
+                  - code [ref=e119]: filter_type
+                  - text: and associated parameters. You can combine multiple filters to refine your search results.
+                - paragraph [ref=e120]:
+                  - text: For detailed information on how to build filters, including valid
+                  - code [ref=e121]: filter_type
+                  - text: values and their usage, refer to
+                  - link "How to Build Filters" [ref=e122] [cursor=pointer]:
+                    - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/how-to-build-filters
+                    - strong [ref=e123]: How to Build Filters
+                  - text: .
+                - heading "Example RequestDirect link to Example Request" [level=3] [ref=e124]:
+                  - text: Example Request
+                  - link "Direct link to Example Request":
+                    - /url: "#example-request"
+                - 'heading "Example 1: Companies with Large Headcounts and High Revenue Outside the USDirect link to Example 1: Companies with Large Headcounts and High Revenue Outside the US" [level=4] [ref=e125]':
+                  - text: "Example 1: Companies with Large Headcounts and High Revenue Outside the US"
+                  - 'link "Direct link to Example 1: Companies with Large Headcounts and High Revenue Outside the US"':
+                    - /url: "#example-1-companies-with-large-headcounts-and-high-revenue-outside-the-us"
+                - paragraph [ref=e126]: "To find companies with headcounts over 1,000 employees, annual revenue between $1 million and $500 million USD, excluding companies in the United States:"
+                - code [ref=e130]:
+                  - generic [ref=e131]: "{"
+                  - generic [ref=e132]: "\"filters\": ["
+                  - generic [ref=e133]: "{"
+                  - generic [ref=e134]: "\"filter_type\": \"COMPANY_HEADCOUNT\","
+                  - generic [ref=e135]: "\"type\": \"in\","
+                  - generic [ref=e136]: "\"value\": [\"1,001-5,000\", \"5,001-10,000\", \"10,001+\"]"
+                  - generic [ref=e137]: "},"
+                  - generic [ref=e138]: "{"
+                  - generic [ref=e139]: "\"filter_type\": \"ANNUAL_REVENUE\","
+                  - generic [ref=e140]: "\"type\": \"between\","
+                  - generic [ref=e141]: "\"value\": { \"min\": 1, \"max\": 500 },"
+                  - generic [ref=e142]: "\"sub_filter\": \"USD\""
+                  - generic [ref=e143]: "},"
+                  - generic [ref=e144]: "{"
+                  - generic [ref=e145]: "\"filter_type\": \"REGION\","
+                  - generic [ref=e146]: "\"type\": \"not in\","
+                  - generic [ref=e147]: "\"value\": [\"United States\"]"
+                  - generic [ref=e148]: "}"
+                  - generic [ref=e149]: "],"
+                  - generic [ref=e150]: "\"page\": 1"
+                  - generic [ref=e151]: "}"
+                - 'heading "Example 2: Companies with Recent Funding EventsDirect link to Example 2: Companies with Recent Funding Events" [level=4] [ref=e152]':
+                  - text: "Example 2: Companies with Recent Funding Events"
+                  - 'link "Direct link to Example 2: Companies with Recent Funding Events"':
+                    - /url: "#example-2-companies-with-recent-funding-events"
+                - paragraph [ref=e153]: "To find companies that have had funding events in the past 12 months:"
+                - code [ref=e157]:
+                  - generic [ref=e158]: "{"
+                  - generic [ref=e159]: "\"filters\": ["
+                  - generic [ref=e160]: "{"
+                  - generic [ref=e161]: "\"filter_type\": \"ACCOUNT_ACTIVITIES\","
+                  - generic [ref=e162]: "\"type\": \"in\","
+                  - generic [ref=e163]: "\"value\": [\"Funding events in past 12 months\"]"
+                  - generic [ref=e164]: "}"
+                  - generic [ref=e165]: "],"
+                  - generic [ref=e166]: "\"page\": 1"
+                  - generic [ref=e167]: "}"
+                - heading "ResponseDirect link to Response" [level=2] [ref=e168]:
+                  - text: Response
+                  - link "Direct link to Response":
+                    - /url: "#response"
+                - heading "Successful Response (200 OK)Direct link to Successful Response (200 OK)" [level=3] [ref=e169]:
+                  - text: Successful Response (200 OK)
+                  - link "Direct link to Successful Response (200 OK)":
+                    - /url: "#successful-response-200-ok"
+                - paragraph [ref=e170]: "A successful response returns a JSON object containing:"
+                - list [ref=e171]:
+                  - listitem [ref=e172]:
+                    - code [ref=e173]: companies
+                    - text: ": An array of company objects matching your filters."
+                  - listitem [ref=e174]:
+                    - code [ref=e175]: total_display_count
+                    - text: ": The total number of results available for your query."
+                - heading "Example ResponseDirect link to Example Response" [level=4] [ref=e176]:
+                  - text: Example Response
+                  - link "Direct link to Example Response":
+                    - /url: "#example-response"
+                - code [ref=e180]:
+                  - generic [ref=e181]: "{"
+                  - generic [ref=e182]: "\"companies\": ["
+                  - generic [ref=e183]: "{"
+                  - generic [ref=e184]: "\"name\": \"Mashreq\","
+                  - generic [ref=e185]: "\"description\": \"Disclaimer: Mashreq will never ask for your bank related information via phone call, SMS or email. We will also never contact you from a mobile number to resolve your query. More than half a century old, we proudly think like a challenger, startup, and innovator in banking and finance, powered by a diverse and dynamic team who put customers first. Together, we pioneer key innovations and developments in banking and financial services. Our mandate? To help customers find their way to Rise Every Day, partnering with them through the highs and lows to help them reach their goals and unlock their unique vision of success. Join Mashreq and find your way to Rise Every Day.\","
+                  - generic [ref=e186]: "\"linkedin_company_url\": \"https://www.linkedin.com/company/mashreq-uae/\","
+                  - generic [ref=e187]: "\"website\": \"http://www.mashreq.com/rise\","
+                  - generic [ref=e188]: "\"industry\": \"Banking\","
+                  - generic [ref=e189]: "\"company_type\": \"Public Company\","
+                  - generic [ref=e190]: "\"founded_year\": 1967,"
+                  - generic [ref=e191]: "\"location\": \"Dubai, Dubai, United Arab Emirates\","
+                  - generic [ref=e192]: "\"headquarters\": {"
+                  - generic [ref=e193]: "\"country\": \"United Arab Emirates\","
+                  - generic [ref=e194]: "\"geographicArea\": \"UAE\","
+                  - generic [ref=e195]: "\"city\": \"Dubai\","
+                  - generic [ref=e196]: "\"line1\": \"Mashreq Bank PSC, Umniyati Street (off Al Asayel Street Burj Khalifa Community\""
+                  - generic [ref=e197]: "},"
+                  - generic [ref=e198]: "\"employee_count\": 9085,"
+                  - generic [ref=e199]: "\"employee_count_range\": \"1001-5000\","
+                  - generic [ref=e200]: "\"employee_growth_percentages\": ["
+                  - generic [ref=e201]: "{"
+                  - generic [ref=e202]: "\"timespan\": \"SIX_MONTHS\","
+                  - generic [ref=e203]: "\"percentage\": 2"
+                  - generic [ref=e204]: "},"
+                  - generic [ref=e205]: "{"
+                  - generic [ref=e206]: "\"timespan\": \"YEAR\","
+                  - generic [ref=e207]: "\"percentage\": 5"
+                  - generic [ref=e208]: "},"
+                  - generic [ref=e209]: "{"
+                  - generic [ref=e210]: "\"timespan\": \"TWO_YEAR\","
+                  - generic [ref=e211]: "\"percentage\": 15"
+                  - generic [ref=e212]: "}"
+                  - generic [ref=e213]: "],"
+                  - generic [ref=e214]: "\"specialties\": ["
+                  - generic [ref=e215]: "\"Retail Banking\","
+                  - generic [ref=e216]: "\"Corporate Banking\","
+                  - generic [ref=e217]: "\"SME Banking\","
+                  - generic [ref=e218]: "\"Islamic Banking\","
+                  - generic [ref=e219]: "\"Treasury and Capital Markets\","
+                  - generic [ref=e220]: "\"Digital Banking\","
+                  - generic [ref=e221]: "\"Financial Institutions\","
+                  - generic [ref=e222]: "\"Global Trade Banking\","
+                  - generic [ref=e223]: "\"Wholesale Banking\","
+                  - generic [ref=e224]: "\"International Banking\""
+                  - generic [ref=e225]: "],"
+                  - generic [ref=e226]: "\"revenue_range\": {"
+                  - generic [ref=e227]: "\"estimatedMinRevenue\": {"
+                  - generic [ref=e228]: "\"amount\": 500.0,"
+                  - generic [ref=e229]: "\"unit\": \"MILLION\","
+                  - generic [ref=e230]: "\"currencyCode\": \"USD\""
+                  - generic [ref=e231]: "},"
+                  - generic [ref=e232]: "\"estimatedMaxRevenue\": {"
+                  - generic [ref=e233]: "\"amount\": 1.0,"
+                  - generic [ref=e234]: "\"unit\": \"BILLION\","
+                  - generic [ref=e235]: "\"currencyCode\": \"USD\""
+                  - generic [ref=e236]: "}"
+                  - generic [ref=e237]: "},"
+                  - generic [ref=e238]: "\"decision_makers_count\": \"681\","
+                  - generic [ref=e239]: "\"logo_urls\": {"
+                  - generic [ref=e240]: "\"200x200\": \"...\","
+                  - generic [ref=e241]: "\"100x100\": \"...\","
+                  - generic [ref=e242]: "\"400x400\": \"...\""
+                  - generic [ref=e243]: "}"
+                  - generic [ref=e244]: "},"
+                  - generic [ref=e245]: // More company objects...
+                  - generic [ref=e246]: "],"
+                  - generic [ref=e247]: "\"total_display_count\": 120"
+                  - generic [ref=e248]: "}"
+                - heading "Error Response (400 Bad Request)Direct link to Error Response (400 Bad Request)" [level=3] [ref=e249]:
+                  - text: Error Response (400 Bad Request)
+                  - link "Direct link to Error Response (400 Bad Request)":
+                    - /url: "#error-response-400-bad-request"
+                - paragraph [ref=e250]: "If your filters are invalid or there is an error processing your request, you will receive an error message:"
+                - code [ref=e254]:
+                  - generic [ref=e255]: "{"
+                  - generic [ref=e256]: "\"error\": \"Failed to parse filters\""
+                  - generic [ref=e257]: "}"
+                - heading "Usage NotesDirect link to Usage Notes" [level=2] [ref=e258]:
+                  - text: Usage Notes
+                  - link "Direct link to Usage Notes":
+                    - /url: "#usage-notes"
+                - list [ref=e259]:
+                  - listitem [ref=e260]:
+                    - strong [ref=e261]: Pagination
+                    - text: ": Each request returns up to 25 results. Use the"
+                    - code [ref=e262]: page
+                    - text: parameter to access additional results.
+                  - listitem [ref=e263]:
+                    - strong [ref=e264]: Combining Filters
+                    - text: ": You can combine multiple filters to narrow down your search. Filters are combined using logical"
+                    - code [ref=e265]: AND
+                    - text: operations.
+                  - listitem [ref=e266]:
+                    - strong [ref=e267]: Valid Values
+                    - text: ": Ensure you're using valid values for each"
+                    - code [ref=e268]: filter_type
+                    - text: . Refer to
+                    - link "How to Build Filters" [ref=e269] [cursor=pointer]:
+                      - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/how-to-build-filters
+                    - text: for a comprehensive list of filter types and acceptable values.
+                  - listitem [ref=e270]:
+                    - strong [ref=e271]: Authentication
+                    - text: ": A valid Bearer token is required for all requests. Ensure your token has the necessary permissions."
+                - heading "Additional ExamplesDirect link to Additional Examples" [level=2] [ref=e272]:
+                  - text: Additional Examples
+                  - link "Direct link to Additional Examples":
+                    - /url: "#additional-examples"
+                - paragraph [ref=e273]:
+                  - text: Explore more examples and learn how to build complex queries in the
+                  - link "How to Build Filters" [ref=e274] [cursor=pointer]:
+                    - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/how-to-build-filters
+                  - text: guide.
+            - navigation "Docs pages" [ref=e275]:
+              - link "Previous People Data API" [ref=e276] [cursor=pointer]:
+                - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/people-data-api
+                - generic [ref=e277]: Previous
+                - generic [ref=e278]: People Data API
+              - link "Next Company Search API via Filters" [ref=e279] [cursor=pointer]:
+                - /url: /web/20251210152755/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+                - generic [ref=e280]: Next
+                - generic [ref=e281]: Company Search API via Filters
+          - list [ref=e284]:
+            - listitem [ref=e285]:
+              - link "Endpoint" [ref=e286] [cursor=pointer]:
+                - /url: "#endpoint"
+            - listitem [ref=e287]:
+              - link "Authentication" [ref=e288] [cursor=pointer]:
+                - /url: "#authentication"
+            - listitem [ref=e289]:
+              - link "Request" [ref=e290] [cursor=pointer]:
+                - /url: "#request"
+              - list [ref=e291]:
+                - listitem [ref=e292]:
+                  - link "Headers" [ref=e293] [cursor=pointer]:
+                    - /url: "#headers"
+                - listitem [ref=e294]:
+                  - link "Body Parameters" [ref=e295] [cursor=pointer]:
+                    - /url: "#body-parameters"
+                - listitem [ref=e296]:
+                  - link "Building Filters" [ref=e297] [cursor=pointer]:
+                    - /url: "#building-filters"
+                - listitem [ref=e298]:
+                  - link "Example Request" [ref=e299] [cursor=pointer]:
+                    - /url: "#example-request"
+            - listitem [ref=e300]:
+              - link "Response" [ref=e301] [cursor=pointer]:
+                - /url: "#response"
+              - list [ref=e302]:
+                - listitem [ref=e303]:
+                  - link "Successful Response (200 OK)" [ref=e304] [cursor=pointer]:
+                    - /url: "#successful-response-200-ok"
+                - listitem [ref=e305]:
+                  - link "Error Response (400 Bad Request)" [ref=e306] [cursor=pointer]:
+                    - /url: "#error-response-400-bad-request"
+            - listitem [ref=e307]:
+              - link "Usage Notes" [ref=e308] [cursor=pointer]:
+                - /url: "#usage-notes"
+            - listitem [ref=e309]:
+              - link "Additional Examples" [ref=e310] [cursor=pointer]:
+                - /url: "#additional-examples"

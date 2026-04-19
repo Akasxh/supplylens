@@ -1,0 +1,36 @@
+URL: https://docs.crustdata.com/api-reference/company-apis/identify-a-company-from-name-domain-id-or-profile-url
+Title: Identify Companies
+
+Description: Match a company by name, website domain, profile URL, or Crustdata company ID. Returns one or more matches ranked by confidence score. Useful for entity resolution before enrichment.
+- Current behavior returns a top-level array with one result per submitted identifier.
+- Each match currently includes company_data.crustdata_company_id and company_data.basic_info.
+- Exactly one identifier type must be provided per request.
+
+Rate limit: Default rate-limit is 15 requests per minute. Email gtm@crustdata.co for higher limits.
+
+Method: POST
+URL: https://api.crustdata.com/company/identify
+
+Auth: Bearer token in Authorization header (required)
+Headers: x-api-version (required, e.g., "2025-11-01")
+
+Body (application/json):
+  Provide exactly one of:
+    names: string[] | null
+    domains: string[] | null
+    crustdata_company_ids: integer[] | null
+    professional_network_profile_urls: string[] | null
+  fields: string[] — Fields to include. Valid enrich groups: basic_info, revenue, headcount, funding, hiring,
+    web_traffic, seo, competitors, employee_reviews, people, locations, taxonomy, followers, news,
+    software_reviews, social_profiles, status. NOT valid for enrich: roles, skills (search-only).
+  exact_match: boolean | null — auto-detect if null
+
+Response (200): Top-level array (or results wrapper contract) with one entry per submitted identifier.
+  results[].matched_on: string (the submitted identifier, e.g., "serverobotics.com")
+  results[].match_type: string (e.g., "domain")
+  results[].matches[]:
+    - confidence_score: number (0..1)
+    - company_data.crustdata_company_id: integer
+    - company_data.basic_info: { crustdata_company_id, name, primary_domain, all_domains[], website,
+        professional_network_url, professional_network_id, profile_name, logo_permalink, description,
+        company_type, year_founded, employee_count_range, markets, industries[] }

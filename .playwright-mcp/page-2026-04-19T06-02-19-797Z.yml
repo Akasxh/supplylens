@@ -1,0 +1,188 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic "Main" [ref=e3]:
+      - navigation [ref=e6]:
+        - link "Composio" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Composio" [ref=e8]
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Docs" [ref=e11] [cursor=pointer]:
+              - /url: /docs
+          - listitem [ref=e12]:
+            - link "Toolkits" [ref=e13] [cursor=pointer]:
+              - /url: /toolkits
+          - listitem [ref=e14]:
+            - link "Reference" [ref=e15] [cursor=pointer]:
+              - /url: /reference
+              - generic [ref=e16]: Reference
+          - listitem [ref=e17]:
+            - link "Cookbooks" [ref=e18] [cursor=pointer]:
+              - /url: /cookbooks
+        - list [ref=e19]:
+          - button "Open Search" [ref=e20]:
+            - img [ref=e21]
+          - button "Ask AI" [ref=e24]:
+            - img [ref=e25]
+          - listitem [ref=e27]:
+            - button "Toggle Menu" [ref=e28]:
+              - img [ref=e29]
+    - main [ref=e31]:
+      - generic [ref=e33]:
+        - link "All Toolkits" [ref=e34] [cursor=pointer]:
+          - /url: /toolkits
+          - img [ref=e35]
+          - text: All Toolkits
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]:
+              - heading "Crustdata" [level=1] [ref=e42]
+              - button "CRUSTDATA" [ref=e43]:
+                - text: CRUSTDATA
+                - img [ref=e44]
+            - generic [ref=e47]:
+              - generic [ref=e48]: Latest version
+              - button "20260407_00" [ref=e49]:
+                - text: 20260407_00
+                - img [ref=e50]
+          - paragraph [ref=e53]: CrustData is an AI-powered data intelligence platform that provides real-time company and people data via APIs and webhooks, empowering B2B sales teams, AI SDRs, and investors to act on live signals
+          - link "Try Crustdata" [ref=e56] [cursor=pointer]:
+            - /url: https://platform.composio.dev/marketplace/crustdata
+            - text: Try Crustdata
+            - img [ref=e57]
+          - group "Page actions" [ref=e61]:
+            - button "Copy page as markdown" [ref=e62]:
+              - img [ref=e64]
+              - generic [ref=e67]: Copy page
+            - link "View page as markdown (opens in new tab)" [ref=e68] [cursor=pointer]:
+              - /url: /toolkits/crustdata.md
+              - img [ref=e69]
+              - generic [ref=e73]: View
+              - generic [ref=e74]: Markdown
+            - separator [ref=e75]
+            - button "Ask AI" [ref=e76]:
+              - img [ref=e77]
+              - generic [ref=e80]: Ask AI
+            - button "Share feedback about this page" [ref=e81]:
+              - img [ref=e82]
+              - generic [ref=e84]: Feedback
+        - generic [ref=e85]:
+          - heading "Authentication Details" [level=2] [ref=e86]:
+            - img [ref=e87]
+            - text: Authentication Details
+          - heading "API Key Copy Link" [level=3] [ref=e93]:
+            - button "API Key" [ref=e94]:
+              - img [ref=e95]
+              - text: API Key
+            - button "Copy Link" [ref=e97]:
+              - img [ref=e98]
+        - generic [ref=e101]:
+          - button "Tools (14)" [ref=e103]: Tools (14)
+          - generic [ref=e105]:
+            - img [ref=e106]
+            - textbox "Search tools" [ref=e109]:
+              - /placeholder: Search tools…
+          - generic [ref=e110]:
+            - button "Enrich person screener CRUSTDATA_ENRICH_PERSON_SCREENER" [ref=e112]:
+              - img [ref=e114]
+              - generic [ref=e116]:
+                - generic [ref=e118]: Enrich person screener
+                - button "CRUSTDATA_ENRICH_PERSON_SCREENER" [ref=e119]:
+                  - generic [ref=e120]: CRUSTDATA_ENRICH_PERSON_SCREENER
+                  - img [ref=e121]
+            - button "Fetch headcount by facet timeseries CRUSTDATA_FETCH_HEADCOUNT_BY_FACET_TIMESERIES" [ref=e125]:
+              - img [ref=e127]
+              - generic [ref=e129]:
+                - generic [ref=e131]: Fetch headcount by facet timeseries
+                - button "CRUSTDATA_FETCH_HEADCOUNT_BY_FACET_TIMESERIES" [ref=e132]:
+                  - generic [ref=e133]: CRUSTDATA_FETCH_HEADCOUNT_BY_FACET_TIMESERIES
+                  - img [ref=e134]
+            - button "Fetch investor portfolio data CRUSTDATA_FETCH_INVESTOR_PORTFOLIO_DATA" [ref=e138]:
+              - img [ref=e140]
+              - generic [ref=e142]:
+                - generic [ref=e144]: Fetch investor portfolio data
+                - button "CRUSTDATA_FETCH_INVESTOR_PORTFOLIO_DATA" [ref=e145]:
+                  - generic [ref=e146]: CRUSTDATA_FETCH_INVESTOR_PORTFOLIO_DATA
+                  - img [ref=e147]
+            - button "Filter decision makers data CRUSTDATA_FILTER_DECISION_MAKERS_DATA" [ref=e151]:
+              - img [ref=e153]
+              - generic [ref=e155]:
+                - generic [ref=e157]: Filter decision makers data
+                - button "CRUSTDATA_FILTER_DECISION_MAKERS_DATA" [ref=e158]:
+                  - generic [ref=e159]: CRUSTDATA_FILTER_DECISION_MAKERS_DATA
+                  - img [ref=e160]
+            - button "Post funding milestone timeseries data CRUSTDATA_POST_FUNDING_MILESTONE_TIME_SERIES_DATA" [ref=e164]:
+              - img [ref=e166]
+              - generic [ref=e168]:
+                - generic [ref=e170]: Post funding milestone timeseries data
+                - button "CRUSTDATA_POST_FUNDING_MILESTONE_TIME_SERIES_DATA" [ref=e171]:
+                  - generic [ref=e172]: CRUSTDATA_POST_FUNDING_MILESTONE_TIME_SERIES_DATA
+                  - img [ref=e173]
+            - button "Post headcount timeseries data CRUSTDATA_POST_HEADCOUNT_TIMESERIES_DATA" [ref=e177]:
+              - img [ref=e179]
+              - generic [ref=e181]:
+                - generic [ref=e183]: Post headcount timeseries data
+                - button "CRUSTDATA_POST_HEADCOUNT_TIMESERIES_DATA" [ref=e184]:
+                  - generic [ref=e185]: CRUSTDATA_POST_HEADCOUNT_TIMESERIES_DATA
+                  - img [ref=e186]
+            - button "Post job listings table data CRUSTDATA_POST_JOB_LISTINGS_TABLE_DATA" [ref=e190]:
+              - img [ref=e192]
+              - generic [ref=e194]:
+                - generic [ref=e196]: Post job listings table data
+                - button "CRUSTDATA_POST_JOB_LISTINGS_TABLE_DATA" [ref=e197]:
+                  - generic [ref=e198]: CRUSTDATA_POST_JOB_LISTINGS_TABLE_DATA
+                  - img [ref=e199]
+            - button "Post web traffic data CRUSTDATA_POST_WEB_TRAFFIC_DATA" [ref=e203]:
+              - img [ref=e205]
+              - generic [ref=e207]:
+                - generic [ref=e209]: Post web traffic data
+                - button "CRUSTDATA_POST_WEB_TRAFFIC_DATA" [ref=e210]:
+                  - generic [ref=e211]: CRUSTDATA_POST_WEB_TRAFFIC_DATA
+                  - img [ref=e212]
+            - button "Retrieve linkedin posts CRUSTDATA_RETRIEVE_LINKED_IN_POSTS" [ref=e216]:
+              - img [ref=e218]
+              - generic [ref=e220]:
+                - generic [ref=e222]: Retrieve linkedin posts
+                - button "CRUSTDATA_RETRIEVE_LINKED_IN_POSTS" [ref=e223]:
+                  - generic [ref=e224]: CRUSTDATA_RETRIEVE_LINKED_IN_POSTS
+                  - img [ref=e225]
+            - button "Screener company information CRUSTDATA_SCREENER_COMPANY_INFORMATION" [ref=e229]:
+              - img [ref=e231]
+              - generic [ref=e233]:
+                - generic [ref=e235]: Screener company information
+                - button "CRUSTDATA_SCREENER_COMPANY_INFORMATION" [ref=e236]:
+                  - generic [ref=e237]: CRUSTDATA_SCREENER_COMPANY_INFORMATION
+                  - img [ref=e238]
+            - button "Screen metrics and filter conditions CRUSTDATA_SCREEN_METRICS_AND_FILTER_CONDITIONS" [ref=e242]:
+              - img [ref=e244]
+              - generic [ref=e246]:
+                - generic [ref=e248]: Screen metrics and filter conditions
+                - button "CRUSTDATA_SCREEN_METRICS_AND_FILTER_CONDITIONS" [ref=e249]:
+                  - generic [ref=e250]: CRUSTDATA_SCREEN_METRICS_AND_FILTER_CONDITIONS
+                  - img [ref=e251]
+            - button "Search companies with filters CRUSTDATA_SEARCH_COMPANIES_WITH_FILTERS" [ref=e255]:
+              - img [ref=e257]
+              - generic [ref=e259]:
+                - generic [ref=e261]: Search companies with filters
+                - button "CRUSTDATA_SEARCH_COMPANIES_WITH_FILTERS" [ref=e262]:
+                  - generic [ref=e263]: CRUSTDATA_SEARCH_COMPANIES_WITH_FILTERS
+                  - img [ref=e264]
+            - button "Search for job id in screener CRUSTDATA_SEARCH_FOR_JOB_ID_IN_SCREENER" [ref=e268]:
+              - img [ref=e270]
+              - generic [ref=e272]:
+                - generic [ref=e274]: Search for job id in screener
+                - button "CRUSTDATA_SEARCH_FOR_JOB_ID_IN_SCREENER" [ref=e275]:
+                  - generic [ref=e276]: CRUSTDATA_SEARCH_FOR_JOB_ID_IN_SCREENER
+                  - img [ref=e277]
+            - button "Search linkedin posts by keyword CRUSTDATA_SEARCH_LINKED_IN_POSTS_BY_KEYWORD" [ref=e281]:
+              - img [ref=e283]
+              - generic [ref=e285]:
+                - generic [ref=e287]: Search linkedin posts by keyword
+                - button "CRUSTDATA_SEARCH_LINKED_IN_POSTS_BY_KEYWORD" [ref=e288]:
+                  - generic [ref=e289]: CRUSTDATA_SEARCH_LINKED_IN_POSTS_BY_KEYWORD
+                  - img [ref=e290]
+  - alert [ref=e293]
+  - generic [ref=e294]:
+    - separator "Resize sidebar"
+    - iframe [ref=e295]:
+      

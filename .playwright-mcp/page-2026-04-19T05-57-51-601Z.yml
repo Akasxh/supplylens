@@ -1,0 +1,804 @@
+- generic [ref=e3]:
+  - region "Skip to main content":
+    - link "Skip to main content" [ref=e4] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - navigation "Main" [ref=e5]:
+    - generic [ref=e7]:
+      - button "Toggle navigation bar" [ref=e8] [cursor=pointer]:
+        - img [ref=e9]
+      - link "Crustdata API" [ref=e11] [cursor=pointer]:
+        - /url: /web/20250907204018/https://docs.crustdata.com/
+        - img "Crustdata API" [ref=e13]
+  - main [ref=e17]:
+    - generic [ref=e21]:
+      - article [ref=e22]:
+        - navigation "Breadcrumbs" [ref=e23]:
+          - list [ref=e24]:
+            - listitem [ref=e25]:
+              - link "Home page" [ref=e26] [cursor=pointer]:
+                - /url: /web/20250907204018/https://docs.crustdata.com/
+                - img [ref=e27]
+            - listitem [ref=e29]:
+              - link "Search APIs" [ref=e30] [cursor=pointer]:
+                - /url: /web/20250907204018/https://docs.crustdata.com/docs/discover/company-search-api-via-filters
+            - listitem [ref=e31]:
+              - generic [ref=e32]: How to Build Filters
+        - button "On this page" [ref=e34] [cursor=pointer]
+        - generic [ref=e35]:
+          - heading "How to Build Filters" [level=1] [ref=e37]
+          - paragraph [ref=e38]:
+            - text: The Company Search API allows filtering results using
+            - strong [ref=e39]: text
+            - text: ","
+            - strong [ref=e40]: range
+            - text: ", and"
+            - strong [ref=e41]: boolean
+            - text: filters. Below is a guide on how to construct each type of filter with examples.
+          - heading "Text FilterDirect link to Text Filter" [level=3] [ref=e42]:
+            - text: Text Filter
+            - link "Direct link to Text Filter" [ref=e43] [cursor=pointer]:
+              - /url: "#text-filter"
+              - text: "#"
+          - paragraph [ref=e44]:
+            - text: A
+            - strong [ref=e45]: text filter
+            - text: is used to filter based on specific text values. Each
+            - strong [ref=e46]: text filter
+            - text: must contain
+            - strong [ref=e47]: filter_type
+            - text: ","
+            - strong [ref=e48]: type
+            - text: and list of
+            - strong [ref=e49]: value
+            - text: .
+          - heading "Valid Types:Direct link to Valid Types:" [level=4] [ref=e50]:
+            - text: "Valid Types:"
+            - link "Direct link to Valid Types:" [ref=e51] [cursor=pointer]:
+              - /url: "#valid-types"
+              - text: "#"
+          - list [ref=e52]:
+            - listitem [ref=e53]:
+              - code [ref=e54]: in
+              - text: ": To include values."
+            - listitem [ref=e55]:
+              - code [ref=e56]: not in
+              - text: ": To exclude values. Excluding values might not be supported for every filter."
+          - heading "Example:Direct link to Example:" [level=4] [ref=e57]:
+            - text: "Example:"
+            - link "Direct link to Example:" [ref=e58] [cursor=pointer]:
+              - /url: "#example"
+              - text: "#"
+          - generic [ref=e60]:
+            - code [ref=e62]:
+              - generic [ref=e63]: "{"
+              - generic [ref=e64]: "\"filter_type\": \"COMPANY_HEADCOUNT\","
+              - generic [ref=e65]: "\"type\": \"in\","
+              - generic [ref=e66]: "\"value\": [\"10,001+\", \"1,001-5,000\"]"
+              - generic [ref=e67]: "}"
+            - button "Copy code to clipboard" [ref=e69] [cursor=pointer]:
+              - generic [ref=e70]:
+                - img [ref=e71]
+                - img [ref=e73]
+          - heading "Range FilterDirect link to Range Filter" [level=3] [ref=e75]:
+            - text: Range Filter
+            - link "Direct link to Range Filter" [ref=e76] [cursor=pointer]:
+              - /url: "#range-filter"
+              - text: "#"
+          - paragraph [ref=e77]:
+            - text: A
+            - strong [ref=e78]: range filter
+            - text: is used to filter based on a range of values. Each filter must contain
+            - strong [ref=e79]: filter_type
+            - text: ","
+            - strong [ref=e80]: type
+            - text: and
+            - strong [ref=e81]: value
+            - text: . Few range filters might contain a
+            - strong [ref=e82]: sub_filter
+            - text: . Ensure that you correctly pass
+            - strong [ref=e83]: sub_filter
+            - text: if required.
+          - heading "sub_filterDirect link to sub_filter" [level=4] [ref=e84]:
+            - text: sub_filter
+            - link "Direct link to sub_filter" [ref=e85] [cursor=pointer]:
+              - /url: "#sub_filter"
+              - text: "#"
+          - paragraph [ref=e86]:
+            - text: The
+            - strong [ref=e87]: sub_filter
+            - text: is an optional field that provides additional context for the range filter. For example, with the
+            - code [ref=e88]: DEPARTMENT_HEADCOUNT
+            - text: filter, the
+            - strong [ref=e89]: sub_filter
+            - text: specifies which department the filter applies to. Ensure that you correctly pass
+            - strong [ref=e90]: sub_filter
+            - text: if required.
+          - heading "Valid Types:Direct link to Valid Types:" [level=4] [ref=e91]:
+            - text: "Valid Types:"
+            - link "Direct link to Valid Types:" [ref=e92] [cursor=pointer]:
+              - /url: "#valid-types-1"
+              - text: "#"
+          - list [ref=e93]:
+            - listitem [ref=e94]:
+              - code [ref=e95]: between
+              - text: ": To specify a range of values, indicating that the value must fall within the defined minimum and maximum limits."
+          - heading "Example:Direct link to Example:" [level=4] [ref=e96]:
+            - text: "Example:"
+            - link "Direct link to Example:" [ref=e97] [cursor=pointer]:
+              - /url: "#example-1"
+              - text: "#"
+          - generic [ref=e99]:
+            - code [ref=e101]:
+              - generic [ref=e102]: "{"
+              - generic [ref=e103]: "\"filter_type\": \"ANNUAL_REVENUE\","
+              - generic [ref=e104]: "\"type\": \"between\","
+              - generic [ref=e105]: "\"value\": {\"min\": 1, \"max\": 500},"
+              - generic [ref=e106]: "\"sub_filter\": \"USD\""
+              - generic [ref=e107]: "}"
+            - button "Copy code to clipboard" [ref=e109] [cursor=pointer]:
+              - generic [ref=e110]:
+                - img [ref=e111]
+                - img [ref=e113]
+          - heading "Boolean FilterDirect link to Boolean Filter" [level=3] [ref=e115]:
+            - text: Boolean Filter
+            - link "Direct link to Boolean Filter" [ref=e116] [cursor=pointer]:
+              - /url: "#boolean-filter"
+              - text: "#"
+          - paragraph [ref=e117]:
+            - text: A
+            - strong [ref=e118]: boolean filter
+            - text: is used to filter based on true/false values. It doesn't contain any
+            - strong [ref=e119]: type
+            - text: or
+            - strong [ref=e120]: value
+          - heading "Example:Direct link to Example:" [level=4] [ref=e121]:
+            - text: "Example:"
+            - link "Direct link to Example:" [ref=e122] [cursor=pointer]:
+              - /url: "#example-2"
+              - text: "#"
+          - generic [ref=e124]:
+            - code [ref=e126]:
+              - generic [ref=e127]: "{"
+              - generic [ref=e128]: "\"filter_type\": \"IN_THE_NEWS\""
+              - generic [ref=e129]: "}"
+            - button "Copy code to clipboard" [ref=e131] [cursor=pointer]:
+              - generic [ref=e132]:
+                - img [ref=e133]
+                - img [ref=e135]
+          - generic [ref=e137]:
+            - generic [ref=e138]:
+              - img [ref=e140]
+              - text: tip
+            - paragraph [ref=e143]: Filters often require specific values. Only use values that are defined for each filter.
+          - heading "Filters for Company SearchDirect link to Filters for Company Search" [level=3] [ref=e144]:
+            - text: Filters for Company Search
+            - link "Direct link to Filters for Company Search" [ref=e145] [cursor=pointer]:
+              - /url: "#filters-for-company-search"
+              - text: "#"
+          - table [ref=e146]:
+            - rowgroup [ref=e147]:
+              - row "Filter Type Description Properties Values/Sub-filters" [ref=e148]:
+                - columnheader "Filter Type" [ref=e149]
+                - columnheader "Description" [ref=e150]
+                - columnheader "Properties" [ref=e151]
+                - columnheader "Values/Sub-filters" [ref=e152]
+            - rowgroup [ref=e153]:
+              - 'row "COMPANY_HEADCOUNT Specifies the size of the company based on the number of employees. types: [in] \"1-10\", \"11-50\", \"51-200\", \"201-500\", \"501-1,000\", \"1,001-5,000\", \"5,001-10,000\", \"10,001+\"" [ref=e154]':
+                - cell "COMPANY_HEADCOUNT" [ref=e155]:
+                  - code [ref=e156]: COMPANY_HEADCOUNT
+                - cell "Specifies the size of the company based on the number of employees." [ref=e157]
+                - 'cell "types: [in]" [ref=e158]':
+                  - code [ref=e159]: "types: [in]"
+                - cell "\"1-10\", \"11-50\", \"51-200\", \"201-500\", \"501-1,000\", \"1,001-5,000\", \"5,001-10,000\", \"10,001+\"" [ref=e160]:
+                  - code [ref=e161]: "\"1-10\""
+                  - text: ","
+                  - code [ref=e162]: "\"11-50\""
+                  - text: ","
+                  - code [ref=e163]: "\"51-200\""
+                  - text: ","
+                  - code [ref=e164]: "\"201-500\""
+                  - text: ","
+                  - code [ref=e165]: "\"501-1,000\""
+                  - text: ","
+                  - code [ref=e166]: "\"1,001-5,000\""
+                  - text: ","
+                  - code [ref=e167]: "\"5,001-10,000\""
+                  - text: ","
+                  - code [ref=e168]: "\"10,001+\""
+              - 'row "REGION Specifies the geographical region of the company. types: [in, not in] region_values" [ref=e169]':
+                - cell "REGION" [ref=e170]:
+                  - code [ref=e171]: REGION
+                - cell "Specifies the geographical region of the company." [ref=e172]
+                - 'cell "types: [in, not in]" [ref=e173]':
+                  - code [ref=e174]: "types: [in, not in]"
+                - cell "region_values" [ref=e175]:
+                  - link "region_values" [ref=e176] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20250907204018/https://crustdata-docs-region-json.s3.us-east-2.amazonaws.com/updated_regions.json
+                    - strong [ref=e177]: region_values
+              - 'row "INDUSTRY Specifies the industry of the company. types: [in, not in] industry_values" [ref=e178]':
+                - cell "INDUSTRY" [ref=e179]:
+                  - code [ref=e180]: INDUSTRY
+                - cell "Specifies the industry of the company." [ref=e181]
+                - 'cell "types: [in, not in]" [ref=e182]':
+                  - code [ref=e183]: "types: [in, not in]"
+                - cell "industry_values" [ref=e184]:
+                  - link "industry_values" [ref=e185] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20250907204018/https://jsonhero.io/j/Ornox9bmhwXE
+                    - strong [ref=e186]: industry_values
+              - 'row "NUM_OF_FOLLOWERS Specifies the number of followers a company has. types: [in] \"1-50\", \"51-100\", \"101-1000\", \"1001-5000\", \"5001+\"" [ref=e187]':
+                - cell "NUM_OF_FOLLOWERS" [ref=e188]:
+                  - code [ref=e189]: NUM_OF_FOLLOWERS
+                - cell "Specifies the number of followers a company has." [ref=e190]
+                - 'cell "types: [in]" [ref=e191]':
+                  - code [ref=e192]: "types: [in]"
+                - cell "\"1-50\", \"51-100\", \"101-1000\", \"1001-5000\", \"5001+\"" [ref=e193]:
+                  - code [ref=e194]: "\"1-50\""
+                  - text: ","
+                  - code [ref=e195]: "\"51-100\""
+                  - text: ","
+                  - code [ref=e196]: "\"101-1000\""
+                  - text: ","
+                  - code [ref=e197]: "\"1001-5000\""
+                  - text: ","
+                  - code [ref=e198]: "\"5001+\""
+              - 'row "FORTUNE Specifies the Fortune ranking of the company. types: [in] \"Fortune 50\", \"Fortune 51-100\", \"Fortune 101-250\", \"Fortune 251-500\"" [ref=e199]':
+                - cell "FORTUNE" [ref=e200]:
+                  - code [ref=e201]: FORTUNE
+                - cell "Specifies the Fortune ranking of the company." [ref=e202]
+                - 'cell "types: [in]" [ref=e203]':
+                  - code [ref=e204]: "types: [in]"
+                - cell "\"Fortune 50\", \"Fortune 51-100\", \"Fortune 101-250\", \"Fortune 251-500\"" [ref=e205]:
+                  - code [ref=e206]: "\"Fortune 50\""
+                  - text: ","
+                  - code [ref=e207]: "\"Fortune 51-100\""
+                  - text: ","
+                  - code [ref=e208]: "\"Fortune 101-250\""
+                  - text: ","
+                  - code [ref=e209]: "\"Fortune 251-500\""
+              - 'row "ACCOUNT_ACTIVITIES Specifies recent account activities, such as leadership changes or funding events. types: [in] \"Senior leadership changes in last 3 months\", \"Funding events in past 12 months\"" [ref=e210]':
+                - cell "ACCOUNT_ACTIVITIES" [ref=e211]:
+                  - code [ref=e212]: ACCOUNT_ACTIVITIES
+                - cell "Specifies recent account activities, such as leadership changes or funding events." [ref=e213]
+                - 'cell "types: [in]" [ref=e214]':
+                  - code [ref=e215]: "types: [in]"
+                - cell "\"Senior leadership changes in last 3 months\", \"Funding events in past 12 months\"" [ref=e216]:
+                  - code [ref=e217]: "\"Senior leadership changes in last 3 months\""
+                  - text: ","
+                  - code [ref=e218]: "\"Funding events in past 12 months\""
+              - 'row "JOB_OPPORTUNITIES Specifies job opportunities available at the company. types: [in] \"Hiring\"" [ref=e219]':
+                - cell "JOB_OPPORTUNITIES" [ref=e220]:
+                  - code [ref=e221]: JOB_OPPORTUNITIES
+                - cell "Specifies job opportunities available at the company." [ref=e222]
+                - 'cell "types: [in]" [ref=e223]':
+                  - code [ref=e224]: "types: [in]"
+                - cell "\"Hiring\"" [ref=e225]:
+                  - code [ref=e226]: "\"Hiring\""
+              - 'row "COMPANY_HEADCOUNT_GROWTH Specifies the growth of the company''s headcount. allowed_without_sub_filter, types: [between] N/A" [ref=e227]':
+                - cell "COMPANY_HEADCOUNT_GROWTH" [ref=e228]:
+                  - code [ref=e229]: COMPANY_HEADCOUNT_GROWTH
+                - cell "Specifies the growth of the company's headcount." [ref=e230]
+                - 'cell "allowed_without_sub_filter, types: [between]" [ref=e231]':
+                  - code [ref=e232]: allowed_without_sub_filter
+                  - text: ","
+                  - code [ref=e233]: "types: [between]"
+                - cell "N/A" [ref=e234]
+              - 'row "ANNUAL_REVENUE Specifies the annual revenue of the company. types: [between] \"USD\", \"AED\", \"AUD\", \"BRL\", \"CAD\", \"CNY\", \"DKK\", \"EUR\", \"GBP\", \"HKD\", \"IDR\", \"ILS\", \"INR\", \"JPY\", \"NOK\", \"NZD\", \"RUB\", \"SEK\", \"SGD\", \"THB\", \"TRY\", \"TWD\"" [ref=e235]':
+                - cell "ANNUAL_REVENUE" [ref=e236]:
+                  - code [ref=e237]: ANNUAL_REVENUE
+                - cell "Specifies the annual revenue of the company." [ref=e238]
+                - 'cell "types: [between]" [ref=e239]':
+                  - code [ref=e240]: "types: [between]"
+                - cell "\"USD\", \"AED\", \"AUD\", \"BRL\", \"CAD\", \"CNY\", \"DKK\", \"EUR\", \"GBP\", \"HKD\", \"IDR\", \"ILS\", \"INR\", \"JPY\", \"NOK\", \"NZD\", \"RUB\", \"SEK\", \"SGD\", \"THB\", \"TRY\", \"TWD\"" [ref=e241]:
+                  - code [ref=e242]: "\"USD\""
+                  - text: ","
+                  - code [ref=e243]: "\"AED\""
+                  - text: ","
+                  - code [ref=e244]: "\"AUD\""
+                  - text: ","
+                  - code [ref=e245]: "\"BRL\""
+                  - text: ","
+                  - code [ref=e246]: "\"CAD\""
+                  - text: ","
+                  - code [ref=e247]: "\"CNY\""
+                  - text: ","
+                  - code [ref=e248]: "\"DKK\""
+                  - text: ","
+                  - code [ref=e249]: "\"EUR\""
+                  - text: ","
+                  - code [ref=e250]: "\"GBP\""
+                  - text: ","
+                  - code [ref=e251]: "\"HKD\""
+                  - text: ","
+                  - code [ref=e252]: "\"IDR\""
+                  - text: ","
+                  - code [ref=e253]: "\"ILS\""
+                  - text: ","
+                  - code [ref=e254]: "\"INR\""
+                  - text: ","
+                  - code [ref=e255]: "\"JPY\""
+                  - text: ","
+                  - code [ref=e256]: "\"NOK\""
+                  - text: ","
+                  - code [ref=e257]: "\"NZD\""
+                  - text: ","
+                  - code [ref=e258]: "\"RUB\""
+                  - text: ","
+                  - code [ref=e259]: "\"SEK\""
+                  - text: ","
+                  - code [ref=e260]: "\"SGD\""
+                  - text: ","
+                  - code [ref=e261]: "\"THB\""
+                  - text: ","
+                  - code [ref=e262]: "\"TRY\""
+                  - text: ","
+                  - code [ref=e263]: "\"TWD\""
+              - 'row "DEPARTMENT_HEADCOUNT Specifies the headcount of specific departments within the company. types: [between] \"Accounting\", \"Administrative\", \"Arts and Design\", \"Business Development\", \"Community and Social Services\", \"Consulting\", \"Education\", \"Engineering\", \"Entrepreneurship\", \"Finance\", \"Healthcare Services\", \"Human Resources\", \"Information Technology\", \"Legal\", \"Marketing\", \"Media and Communication\", \"Military and Protective Services\", \"Operations\", \"Product Management\", \"Program and Project Management\", \"Purchasing\", \"Quality Assurance\", \"Real Estate\", \"Research\", \"Sales\", \"Customer Success and Support\"" [ref=e264]':
+                - cell "DEPARTMENT_HEADCOUNT" [ref=e265]:
+                  - code [ref=e266]: DEPARTMENT_HEADCOUNT
+                - cell "Specifies the headcount of specific departments within the company." [ref=e267]
+                - 'cell "types: [between]" [ref=e268]':
+                  - code [ref=e269]: "types: [between]"
+                - cell "\"Accounting\", \"Administrative\", \"Arts and Design\", \"Business Development\", \"Community and Social Services\", \"Consulting\", \"Education\", \"Engineering\", \"Entrepreneurship\", \"Finance\", \"Healthcare Services\", \"Human Resources\", \"Information Technology\", \"Legal\", \"Marketing\", \"Media and Communication\", \"Military and Protective Services\", \"Operations\", \"Product Management\", \"Program and Project Management\", \"Purchasing\", \"Quality Assurance\", \"Real Estate\", \"Research\", \"Sales\", \"Customer Success and Support\"" [ref=e270]:
+                  - code [ref=e271]: "\"Accounting\""
+                  - text: ","
+                  - code [ref=e272]: "\"Administrative\""
+                  - text: ","
+                  - code [ref=e273]: "\"Arts and Design\""
+                  - text: ","
+                  - code [ref=e274]: "\"Business Development\""
+                  - text: ","
+                  - code [ref=e275]: "\"Community and Social Services\""
+                  - text: ","
+                  - code [ref=e276]: "\"Consulting\""
+                  - text: ","
+                  - code [ref=e277]: "\"Education\""
+                  - text: ","
+                  - code [ref=e278]: "\"Engineering\""
+                  - text: ","
+                  - code [ref=e279]: "\"Entrepreneurship\""
+                  - text: ","
+                  - code [ref=e280]: "\"Finance\""
+                  - text: ","
+                  - code [ref=e281]: "\"Healthcare Services\""
+                  - text: ","
+                  - code [ref=e282]: "\"Human Resources\""
+                  - text: ","
+                  - code [ref=e283]: "\"Information Technology\""
+                  - text: ","
+                  - code [ref=e284]: "\"Legal\""
+                  - text: ","
+                  - code [ref=e285]: "\"Marketing\""
+                  - text: ","
+                  - code [ref=e286]: "\"Media and Communication\""
+                  - text: ","
+                  - code [ref=e287]: "\"Military and Protective Services\""
+                  - text: ","
+                  - code [ref=e288]: "\"Operations\""
+                  - text: ","
+                  - code [ref=e289]: "\"Product Management\""
+                  - text: ","
+                  - code [ref=e290]: "\"Program and Project Management\""
+                  - text: ","
+                  - code [ref=e291]: "\"Purchasing\""
+                  - text: ","
+                  - code [ref=e292]: "\"Quality Assurance\""
+                  - text: ","
+                  - code [ref=e293]: "\"Real Estate\""
+                  - text: ","
+                  - code [ref=e294]: "\"Research\""
+                  - text: ","
+                  - code [ref=e295]: "\"Sales\""
+                  - text: ","
+                  - code [ref=e296]: "\"Customer Success and Support\""
+              - 'row "DEPARTMENT_HEADCOUNT_GROWTH Specifies the growth of headcount in specific departments. types: [between] \"Accounting\", \"Administrative\", \"Arts and Design\", \"Business Development\", \"Community and Social Services\", \"Consulting\", \"Education\", \"Engineering\", \"Entrepreneurship\", \"Finance\", \"Healthcare Services\", \"Human Resources\", \"Information Technology\", \"Legal\", \"Marketing\", \"Media and Communication\", \"Military and Protective Services\", \"Operations\", \"Product Management\", \"Program and Project Management\", \"Purchasing\", \"Quality Assurance\", \"Real Estate\", \"Research\", \"Sales\", \"Customer Success and Support\"" [ref=e297]':
+                - cell "DEPARTMENT_HEADCOUNT_GROWTH" [ref=e298]:
+                  - code [ref=e299]: DEPARTMENT_HEADCOUNT_GROWTH
+                - cell "Specifies the growth of headcount in specific departments." [ref=e300]
+                - 'cell "types: [between]" [ref=e301]':
+                  - code [ref=e302]: "types: [between]"
+                - cell "\"Accounting\", \"Administrative\", \"Arts and Design\", \"Business Development\", \"Community and Social Services\", \"Consulting\", \"Education\", \"Engineering\", \"Entrepreneurship\", \"Finance\", \"Healthcare Services\", \"Human Resources\", \"Information Technology\", \"Legal\", \"Marketing\", \"Media and Communication\", \"Military and Protective Services\", \"Operations\", \"Product Management\", \"Program and Project Management\", \"Purchasing\", \"Quality Assurance\", \"Real Estate\", \"Research\", \"Sales\", \"Customer Success and Support\"" [ref=e303]:
+                  - code [ref=e304]: "\"Accounting\""
+                  - text: ","
+                  - code [ref=e305]: "\"Administrative\""
+                  - text: ","
+                  - code [ref=e306]: "\"Arts and Design\""
+                  - text: ","
+                  - code [ref=e307]: "\"Business Development\""
+                  - text: ","
+                  - code [ref=e308]: "\"Community and Social Services\""
+                  - text: ","
+                  - code [ref=e309]: "\"Consulting\""
+                  - text: ","
+                  - code [ref=e310]: "\"Education\""
+                  - text: ","
+                  - code [ref=e311]: "\"Engineering\""
+                  - text: ","
+                  - code [ref=e312]: "\"Entrepreneurship\""
+                  - text: ","
+                  - code [ref=e313]: "\"Finance\""
+                  - text: ","
+                  - code [ref=e314]: "\"Healthcare Services\""
+                  - text: ","
+                  - code [ref=e315]: "\"Human Resources\""
+                  - text: ","
+                  - code [ref=e316]: "\"Information Technology\""
+                  - text: ","
+                  - code [ref=e317]: "\"Legal\""
+                  - text: ","
+                  - code [ref=e318]: "\"Marketing\""
+                  - text: ","
+                  - code [ref=e319]: "\"Media and Communication\""
+                  - text: ","
+                  - code [ref=e320]: "\"Military and Protective Services\""
+                  - text: ","
+                  - code [ref=e321]: "\"Operations\""
+                  - text: ","
+                  - code [ref=e322]: "\"Product Management\""
+                  - text: ","
+                  - code [ref=e323]: "\"Program and Project Management\""
+                  - text: ","
+                  - code [ref=e324]: "\"Purchasing\""
+                  - text: ","
+                  - code [ref=e325]: "\"Quality Assurance\""
+                  - text: ","
+                  - code [ref=e326]: "\"Real Estate\""
+                  - text: ","
+                  - code [ref=e327]: "\"Research\""
+                  - text: ","
+                  - code [ref=e328]: "\"Sales\""
+                  - text: ","
+                  - code [ref=e329]: "\"Customer Success and Support\""
+              - 'row "KEYWORD Filters based on specific keywords related to the company. types: [in] List of strings (max length 1)" [ref=e330]':
+                - cell "KEYWORD" [ref=e331]:
+                  - code [ref=e332]: KEYWORD
+                - cell "Filters based on specific keywords related to the company." [ref=e333]
+                - 'cell "types: [in]" [ref=e334]':
+                  - code [ref=e335]: "types: [in]"
+                - cell "List of strings (max length 1)" [ref=e336]
+          - heading "Filters for Person SearchDirect link to Filters for Person Search" [level=3] [ref=e337]:
+            - text: Filters for Person Search
+            - link "Direct link to Filters for Person Search" [ref=e338] [cursor=pointer]:
+              - /url: "#filters-for-person-search"
+              - text: "#"
+          - table [ref=e339]:
+            - rowgroup [ref=e340]:
+              - row "Filter Type Description Properties Values/Sub-filters" [ref=e341]:
+                - columnheader "Filter Type" [ref=e342]
+                - columnheader "Description" [ref=e343]
+                - columnheader "Properties" [ref=e344]
+                - columnheader "Values/Sub-filters" [ref=e345]
+            - rowgroup [ref=e346]:
+              - 'row "CURRENT_COMPANY Specifies the current company of the person. types: [in, not in] List of strings" [ref=e347]':
+                - cell "CURRENT_COMPANY" [ref=e348]:
+                  - code [ref=e349]: CURRENT_COMPANY
+                - cell "Specifies the current company of the person." [ref=e350]
+                - 'cell "types: [in, not in]" [ref=e351]':
+                  - code [ref=e352]: "types: [in, not in]"
+                - cell "List of strings" [ref=e353]
+              - 'row "CURRENT_TITLE Specifies the current title of the person. types: [in, not in] List of strings" [ref=e354]':
+                - cell "CURRENT_TITLE" [ref=e355]:
+                  - code [ref=e356]: CURRENT_TITLE
+                - cell "Specifies the current title of the person." [ref=e357]
+                - 'cell "types: [in, not in]" [ref=e358]':
+                  - code [ref=e359]: "types: [in, not in]"
+                - cell "List of strings" [ref=e360]
+              - 'row "PAST_TITLE Specifies the past titles held by the person. types: [in, not in] List of strings" [ref=e361]':
+                - cell "PAST_TITLE" [ref=e362]:
+                  - code [ref=e363]: PAST_TITLE
+                - cell "Specifies the past titles held by the person." [ref=e364]
+                - 'cell "types: [in, not in]" [ref=e365]':
+                  - code [ref=e366]: "types: [in, not in]"
+                - cell "List of strings" [ref=e367]
+              - 'row "COMPANY_HEADQUARTERS Specifies the headquarters of the person''s company. types: [in, not in] region_values" [ref=e368]':
+                - cell "COMPANY_HEADQUARTERS" [ref=e369]:
+                  - code [ref=e370]: COMPANY_HEADQUARTERS
+                - cell "Specifies the headquarters of the person's company." [ref=e371]
+                - 'cell "types: [in, not in]" [ref=e372]':
+                  - code [ref=e373]: "types: [in, not in]"
+                - cell "region_values" [ref=e374]:
+                  - link "region_values" [ref=e375] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20250907204018/https://crustdata-docs-region-json.s3.us-east-2.amazonaws.com/updated_regions.json
+                    - strong [ref=e376]: region_values
+              - 'row "COMPANY_HEADCOUNT Specifies the size of the company based on the number of employees. types: [in] \"Self-employed\", \"1-10\", \"11-50\", \"51-200\", \"201-500\", \"501-1,000\", \"1,001-5,000\", \"5,001-10,000\", \"10,001+\"" [ref=e377]':
+                - cell "COMPANY_HEADCOUNT" [ref=e378]:
+                  - code [ref=e379]: COMPANY_HEADCOUNT
+                - cell "Specifies the size of the company based on the number of employees." [ref=e380]
+                - 'cell "types: [in]" [ref=e381]':
+                  - code [ref=e382]: "types: [in]"
+                - cell "\"Self-employed\", \"1-10\", \"11-50\", \"51-200\", \"201-500\", \"501-1,000\", \"1,001-5,000\", \"5,001-10,000\", \"10,001+\"" [ref=e383]:
+                  - code [ref=e384]: "\"Self-employed\""
+                  - text: ","
+                  - code [ref=e385]: "\"1-10\""
+                  - text: ","
+                  - code [ref=e386]: "\"11-50\""
+                  - text: ","
+                  - code [ref=e387]: "\"51-200\""
+                  - text: ","
+                  - code [ref=e388]: "\"201-500\""
+                  - text: ","
+                  - code [ref=e389]: "\"501-1,000\""
+                  - text: ","
+                  - code [ref=e390]: "\"1,001-5,000\""
+                  - text: ","
+                  - code [ref=e391]: "\"5,001-10,000\""
+                  - text: ","
+                  - code [ref=e392]: "\"10,001+\""
+              - 'row "REGION Specifies the geographical region of the person. types: [in, not in] region_values" [ref=e393]':
+                - cell "REGION" [ref=e394]:
+                  - code [ref=e395]: REGION
+                - cell "Specifies the geographical region of the person." [ref=e396]
+                - 'cell "types: [in, not in]" [ref=e397]':
+                  - code [ref=e398]: "types: [in, not in]"
+                - cell "region_values" [ref=e399]:
+                  - link "region_values" [ref=e400] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20250907204018/https://crustdata-docs-region-json.s3.us-east-2.amazonaws.com/updated_regions.json
+                    - strong [ref=e401]: region_values
+              - 'row "INDUSTRY Specifies the industry of the person''s company. types: [in, not in] industry_values" [ref=e402]':
+                - cell "INDUSTRY" [ref=e403]:
+                  - code [ref=e404]: INDUSTRY
+                - cell "Specifies the industry of the person's company." [ref=e405]
+                - 'cell "types: [in, not in]" [ref=e406]':
+                  - code [ref=e407]: "types: [in, not in]"
+                - cell "industry_values" [ref=e408]:
+                  - link "industry_values" [ref=e409] [cursor=pointer]:
+                    - /url: https://web.archive.org/web/20250907204018/https://jsonhero.io/j/Ornox9bmhwXE
+                    - strong [ref=e410]: industry_values
+              - 'row "PROFILE_LANGUAGE Specifies the language of the person''s profile. types: [in] \"Arabic\", \"English\", \"Spanish\", \"Portuguese\", \"Chinese\", \"French\", \"Italian\", \"Russian\", \"German\", \"Dutch\", \"Turkish\", \"Tagalog\", \"Polish\", \"Korean\", \"Japanese\", \"Malay\", \"Norwegian\", \"Danish\", \"Romanian\", \"Swedish\", \"Bahasa Indonesia\", \"Czech\"" [ref=e411]':
+                - cell "PROFILE_LANGUAGE" [ref=e412]:
+                  - code [ref=e413]: PROFILE_LANGUAGE
+                - cell "Specifies the language of the person's profile." [ref=e414]
+                - 'cell "types: [in]" [ref=e415]':
+                  - code [ref=e416]: "types: [in]"
+                - cell "\"Arabic\", \"English\", \"Spanish\", \"Portuguese\", \"Chinese\", \"French\", \"Italian\", \"Russian\", \"German\", \"Dutch\", \"Turkish\", \"Tagalog\", \"Polish\", \"Korean\", \"Japanese\", \"Malay\", \"Norwegian\", \"Danish\", \"Romanian\", \"Swedish\", \"Bahasa Indonesia\", \"Czech\"" [ref=e417]:
+                  - code [ref=e418]: "\"Arabic\""
+                  - text: ","
+                  - code [ref=e419]: "\"English\""
+                  - text: ","
+                  - code [ref=e420]: "\"Spanish\""
+                  - text: ","
+                  - code [ref=e421]: "\"Portuguese\""
+                  - text: ","
+                  - code [ref=e422]: "\"Chinese\""
+                  - text: ","
+                  - code [ref=e423]: "\"French\""
+                  - text: ","
+                  - code [ref=e424]: "\"Italian\""
+                  - text: ","
+                  - code [ref=e425]: "\"Russian\""
+                  - text: ","
+                  - code [ref=e426]: "\"German\""
+                  - text: ","
+                  - code [ref=e427]: "\"Dutch\""
+                  - text: ","
+                  - code [ref=e428]: "\"Turkish\""
+                  - text: ","
+                  - code [ref=e429]: "\"Tagalog\""
+                  - text: ","
+                  - code [ref=e430]: "\"Polish\""
+                  - text: ","
+                  - code [ref=e431]: "\"Korean\""
+                  - text: ","
+                  - code [ref=e432]: "\"Japanese\""
+                  - text: ","
+                  - code [ref=e433]: "\"Malay\""
+                  - text: ","
+                  - code [ref=e434]: "\"Norwegian\""
+                  - text: ","
+                  - code [ref=e435]: "\"Danish\""
+                  - text: ","
+                  - code [ref=e436]: "\"Romanian\""
+                  - text: ","
+                  - code [ref=e437]: "\"Swedish\""
+                  - text: ","
+                  - code [ref=e438]: "\"Bahasa Indonesia\""
+                  - text: ","
+                  - code [ref=e439]: "\"Czech\""
+              - 'row "SENIORITY_LEVEL Specifies the seniority level of the person. types: [in, not in] \"Owner / Partner\", \"CXO\", \"Vice President\", \"Director\", \"Experienced Manager\", \"Entry Level Manager\", \"Strategic\", \"Senior\", \"Entry Level\", \"In Training\"" [ref=e440]':
+                - cell "SENIORITY_LEVEL" [ref=e441]:
+                  - code [ref=e442]: SENIORITY_LEVEL
+                - cell "Specifies the seniority level of the person." [ref=e443]
+                - 'cell "types: [in, not in]" [ref=e444]':
+                  - code [ref=e445]: "types: [in, not in]"
+                - cell "\"Owner / Partner\", \"CXO\", \"Vice President\", \"Director\", \"Experienced Manager\", \"Entry Level Manager\", \"Strategic\", \"Senior\", \"Entry Level\", \"In Training\"" [ref=e446]:
+                  - code [ref=e447]: "\"Owner / Partner\""
+                  - text: ","
+                  - code [ref=e448]: "\"CXO\""
+                  - text: ","
+                  - code [ref=e449]: "\"Vice President\""
+                  - text: ","
+                  - code [ref=e450]: "\"Director\""
+                  - text: ","
+                  - code [ref=e451]: "\"Experienced Manager\""
+                  - text: ","
+                  - code [ref=e452]: "\"Entry Level Manager\""
+                  - text: ","
+                  - code [ref=e453]: "\"Strategic\""
+                  - text: ","
+                  - code [ref=e454]: "\"Senior\""
+                  - text: ","
+                  - code [ref=e455]: "\"Entry Level\""
+                  - text: ","
+                  - code [ref=e456]: "\"In Training\""
+              - 'row "YEARS_AT_CURRENT_COMPANY Specifies the number of years the person has been at their current company. types: [in] \"Less than 1 year\", \"1 to 2 years\", \"3 to 5 years\", \"6 to 10 years\", \"More than 10 years\"" [ref=e457]':
+                - cell "YEARS_AT_CURRENT_COMPANY" [ref=e458]:
+                  - code [ref=e459]: YEARS_AT_CURRENT_COMPANY
+                - cell "Specifies the number of years the person has been at their current company." [ref=e460]
+                - 'cell "types: [in]" [ref=e461]':
+                  - code [ref=e462]: "types: [in]"
+                - cell "\"Less than 1 year\", \"1 to 2 years\", \"3 to 5 years\", \"6 to 10 years\", \"More than 10 years\"" [ref=e463]:
+                  - code [ref=e464]: "\"Less than 1 year\""
+                  - text: ","
+                  - code [ref=e465]: "\"1 to 2 years\""
+                  - text: ","
+                  - code [ref=e466]: "\"3 to 5 years\""
+                  - text: ","
+                  - code [ref=e467]: "\"6 to 10 years\""
+                  - text: ","
+                  - code [ref=e468]: "\"More than 10 years\""
+              - 'row "YEARS_IN_CURRENT_POSITION Specifies the number of years the person has been in their current position. types: [in] \"Less than 1 year\", \"1 to 2 years\", \"3 to 5 years\", \"6 to 10 years\", \"More than 10 years\"" [ref=e469]':
+                - cell "YEARS_IN_CURRENT_POSITION" [ref=e470]:
+                  - code [ref=e471]: YEARS_IN_CURRENT_POSITION
+                - cell "Specifies the number of years the person has been in their current position." [ref=e472]
+                - 'cell "types: [in]" [ref=e473]':
+                  - code [ref=e474]: "types: [in]"
+                - cell "\"Less than 1 year\", \"1 to 2 years\", \"3 to 5 years\", \"6 to 10 years\", \"More than 10 years\"" [ref=e475]:
+                  - code [ref=e476]: "\"Less than 1 year\""
+                  - text: ","
+                  - code [ref=e477]: "\"1 to 2 years\""
+                  - text: ","
+                  - code [ref=e478]: "\"3 to 5 years\""
+                  - text: ","
+                  - code [ref=e479]: "\"6 to 10 years\""
+                  - text: ","
+                  - code [ref=e480]: "\"More than 10 years\""
+              - 'row "YEARS_OF_EXPERIENCE Specifies the total years of experience the person has. types: [in] \"Less than 1 year\", \"1 to 2 years\", \"3 to 5 years\", \"6 to 10 years\", \"More than 10 years\"" [ref=e481]':
+                - cell "YEARS_OF_EXPERIENCE" [ref=e482]:
+                  - code [ref=e483]: YEARS_OF_EXPERIENCE
+                - cell "Specifies the total years of experience the person has." [ref=e484]
+                - 'cell "types: [in]" [ref=e485]':
+                  - code [ref=e486]: "types: [in]"
+                - cell "\"Less than 1 year\", \"1 to 2 years\", \"3 to 5 years\", \"6 to 10 years\", \"More than 10 years\"" [ref=e487]:
+                  - code [ref=e488]: "\"Less than 1 year\""
+                  - text: ","
+                  - code [ref=e489]: "\"1 to 2 years\""
+                  - text: ","
+                  - code [ref=e490]: "\"3 to 5 years\""
+                  - text: ","
+                  - code [ref=e491]: "\"6 to 10 years\""
+                  - text: ","
+                  - code [ref=e492]: "\"More than 10 years\""
+              - 'row "FIRST_NAME Specifies the first name of the person. types: [in] List of strings (max length 1)" [ref=e493]':
+                - cell "FIRST_NAME" [ref=e494]:
+                  - code [ref=e495]: FIRST_NAME
+                - cell "Specifies the first name of the person." [ref=e496]
+                - 'cell "types: [in]" [ref=e497]':
+                  - code [ref=e498]: "types: [in]"
+                - cell "List of strings (max length 1)" [ref=e499]
+              - 'row "LAST_NAME Specifies the last name of the person. types: [in] List of strings (max length 1)" [ref=e500]':
+                - cell "LAST_NAME" [ref=e501]:
+                  - code [ref=e502]: LAST_NAME
+                - cell "Specifies the last name of the person." [ref=e503]
+                - 'cell "types: [in]" [ref=e504]':
+                  - code [ref=e505]: "types: [in]"
+                - cell "List of strings (max length 1)" [ref=e506]
+              - 'row "FUNCTION Specifies the function or role of the person. types: [in, not in] \"Accounting\", \"Administrative\", \"Arts and Design\", \"Business Development\", \"Community and Social Services\", \"Consulting\", \"Education\", \"Engineering\", \"Entrepreneurship\", \"Finance\", \"Healthcare Services\", \"Human Resources\", \"Information Technology\", \"Legal\", \"Marketing\", \"Media and Communication\", \"Military and Protective Services\", \"Operations\", \"Product Management\", \"Program and Project Management\", \"Purchasing\", \"Quality Assurance\", \"Real Estate\", \"Research\", \"Sales\", \"Customer Success and Support\"" [ref=e507]':
+                - cell "FUNCTION" [ref=e508]:
+                  - code [ref=e509]: FUNCTION
+                - cell "Specifies the function or role of the person." [ref=e510]
+                - 'cell "types: [in, not in]" [ref=e511]':
+                  - code [ref=e512]: "types: [in, not in]"
+                - cell "\"Accounting\", \"Administrative\", \"Arts and Design\", \"Business Development\", \"Community and Social Services\", \"Consulting\", \"Education\", \"Engineering\", \"Entrepreneurship\", \"Finance\", \"Healthcare Services\", \"Human Resources\", \"Information Technology\", \"Legal\", \"Marketing\", \"Media and Communication\", \"Military and Protective Services\", \"Operations\", \"Product Management\", \"Program and Project Management\", \"Purchasing\", \"Quality Assurance\", \"Real Estate\", \"Research\", \"Sales\", \"Customer Success and Support\"" [ref=e513]:
+                  - code [ref=e514]: "\"Accounting\""
+                  - text: ","
+                  - code [ref=e515]: "\"Administrative\""
+                  - text: ","
+                  - code [ref=e516]: "\"Arts and Design\""
+                  - text: ","
+                  - code [ref=e517]: "\"Business Development\""
+                  - text: ","
+                  - code [ref=e518]: "\"Community and Social Services\""
+                  - text: ","
+                  - code [ref=e519]: "\"Consulting\""
+                  - text: ","
+                  - code [ref=e520]: "\"Education\""
+                  - text: ","
+                  - code [ref=e521]: "\"Engineering\""
+                  - text: ","
+                  - code [ref=e522]: "\"Entrepreneurship\""
+                  - text: ","
+                  - code [ref=e523]: "\"Finance\""
+                  - text: ","
+                  - code [ref=e524]: "\"Healthcare Services\""
+                  - text: ","
+                  - code [ref=e525]: "\"Human Resources\""
+                  - text: ","
+                  - code [ref=e526]: "\"Information Technology\""
+                  - text: ","
+                  - code [ref=e527]: "\"Legal\""
+                  - text: ","
+                  - code [ref=e528]: "\"Marketing\""
+                  - text: ","
+                  - code [ref=e529]: "\"Media and Communication\""
+                  - text: ","
+                  - code [ref=e530]: "\"Military and Protective Services\""
+                  - text: ","
+                  - code [ref=e531]: "\"Operations\""
+                  - text: ","
+                  - code [ref=e532]: "\"Product Management\""
+                  - text: ","
+                  - code [ref=e533]: "\"Program and Project Management\""
+                  - text: ","
+                  - code [ref=e534]: "\"Purchasing\""
+                  - text: ","
+                  - code [ref=e535]: "\"Quality Assurance\""
+                  - text: ","
+                  - code [ref=e536]: "\"Real Estate\""
+                  - text: ","
+                  - code [ref=e537]: "\"Research\""
+                  - text: ","
+                  - code [ref=e538]: "\"Sales\""
+                  - text: ","
+                  - code [ref=e539]: "\"Customer Success and Support\""
+              - 'row "PAST_COMPANY Specifies the past companies the person has worked for. types: [in, not in] List of strings" [ref=e540]':
+                - cell "PAST_COMPANY" [ref=e541]:
+                  - code [ref=e542]: PAST_COMPANY
+                - cell "Specifies the past companies the person has worked for." [ref=e543]
+                - 'cell "types: [in, not in]" [ref=e544]':
+                  - code [ref=e545]: "types: [in, not in]"
+                - cell "List of strings" [ref=e546]
+              - 'row "COMPANY_TYPE Specifies the type of company the person works for. types: [in] \"Public Company\", \"Privately Held\", \"Non Profit\", \"Educational Institution\", \"Partnership\", \"Self Employed\", \"Self Owned\", \"Government Agency\"" [ref=e547]':
+                - cell "COMPANY_TYPE" [ref=e548]:
+                  - code [ref=e549]: COMPANY_TYPE
+                - cell "Specifies the type of company the person works for." [ref=e550]
+                - 'cell "types: [in]" [ref=e551]':
+                  - code [ref=e552]: "types: [in]"
+                - cell "\"Public Company\", \"Privately Held\", \"Non Profit\", \"Educational Institution\", \"Partnership\", \"Self Employed\", \"Self Owned\", \"Government Agency\"" [ref=e553]:
+                  - code [ref=e554]: "\"Public Company\""
+                  - text: ","
+                  - code [ref=e555]: "\"Privately Held\""
+                  - text: ","
+                  - code [ref=e556]: "\"Non Profit\""
+                  - text: ","
+                  - code [ref=e557]: "\"Educational Institution\""
+                  - text: ","
+                  - code [ref=e558]: "\"Partnership\""
+                  - text: ","
+                  - code [ref=e559]: "\"Self Employed\""
+                  - text: ","
+                  - code [ref=e560]: "\"Self Owned\""
+                  - text: ","
+                  - code [ref=e561]: "\"Government Agency\""
+              - row "POSTED_ON_SOCIAL_MEDIA Specifies if the person has posted on social media. N/A N/A" [ref=e562]:
+                - cell "POSTED_ON_SOCIAL_MEDIA" [ref=e563]:
+                  - code [ref=e564]: POSTED_ON_SOCIAL_MEDIA
+                - cell "Specifies if the person has posted on social media." [ref=e565]
+                - cell "N/A" [ref=e566]
+                - cell "N/A" [ref=e567]
+              - row "RECENTLY_CHANGED_JOBS Specifies if the person has recently changed jobs. N/A N/A" [ref=e568]:
+                - cell "RECENTLY_CHANGED_JOBS" [ref=e569]:
+                  - code [ref=e570]: RECENTLY_CHANGED_JOBS
+                - cell "Specifies if the person has recently changed jobs." [ref=e571]
+                - cell "N/A" [ref=e572]
+                - cell "N/A" [ref=e573]
+              - row "IN_THE_NEWS Specifies if the person has been mentioned in the news. N/A N/A" [ref=e574]:
+                - cell "IN_THE_NEWS" [ref=e575]:
+                  - code [ref=e576]: IN_THE_NEWS
+                - cell "Specifies if the person has been mentioned in the news." [ref=e577]
+                - cell "N/A" [ref=e578]
+                - cell "N/A" [ref=e579]
+              - 'row "KEYWORD Filters based on specific keywords related to the company. types: [in] List of strings (max length 1)" [ref=e580]':
+                - cell "KEYWORD" [ref=e581]:
+                  - code [ref=e582]: KEYWORD
+                - cell "Filters based on specific keywords related to the company." [ref=e583]
+                - 'cell "types: [in]" [ref=e584]':
+                  - code [ref=e585]: "types: [in]"
+                - cell "List of strings (max length 1)" [ref=e586]
+      - navigation "Docs pages" [ref=e587]:
+        - link "Previous « via Filters" [ref=e588] [cursor=pointer]:
+          - /url: /web/20250907204018/https://docs.crustdata.com/docs/discover/people-search-api-via-filters
+          - generic [ref=e589]: Previous
+          - generic [ref=e590]: « via Filters
+        - link "Next Crustdata Data Dictionary (Company) »" [ref=e591] [cursor=pointer]:
+          - /url: /web/20250907204018/https://docs.crustdata.com/docs/dictionary/company
+          - generic [ref=e592]: Next
+          - generic [ref=e593]: Crustdata Data Dictionary (Company) »

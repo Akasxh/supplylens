@@ -1,0 +1,24 @@
+URL: https://docs.crustdata.com/api-reference/web-apis/web-fetch
+Title: Web Fetch (Enrich Live)
+
+Description: Fetch HTML content of webpages given their URLs. Retrieves page title and full HTML for up to 10 URLs in a single request. For content extraction, web content retrieval, data collection, content monitoring, and SEO analysis.
+
+Rate limit: Default 15 requests per minute.
+
+Method: POST
+URL: https://api.crustdata.com/web/enrich/live
+
+Auth: Bearer token (required)
+Headers: x-api-version (enum, required, must be "2025-11-01")
+
+Body (application/json):
+  urls: string[] (required, 1..10 URLs, each max 2000 chars, must include http:// or https://)
+  human_mode: boolean (default false) — bypass Cloudflare
+
+Response (200): array of:
+  success: boolean
+  url: string | null
+  timestamp: integer | null (Unix seconds)
+  title: string | null (HTML <title>)
+  content: string | null (full HTML)
+Failed URLs have null fields but success=false.

@@ -1,0 +1,141 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Documentation Introduction" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Documentation
+              - img [ref=e39]
+            - generic [ref=e41]: Introduction
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - link "Documentation" [ref=e50] [cursor=pointer]:
+            - /url: /general/introduction
+          - generic [ref=e51]:
+            - heading "Introduction" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - button "Copy page" [ref=e54] [cursor=pointer]:
+                - generic [ref=e55]:
+                  - img [ref=e56]
+                  - generic [ref=e59]: Copy page
+              - button "More actions" [ref=e60] [cursor=pointer]:
+                - img [ref=e61]
+        - paragraph [ref=e64]: Explore Crustdata’s public Company, Person, and Web APIs for search, identify, enrich, autocomplete, and fetch workflows.
+      - generic [ref=e65]:
+        - generic [ref=e66]: "Crustdata’s public docs currently cover three API areas: Company, Person, and Web. You can search and enrich companies, search and enrich people, resolve companies from known identifiers, build filter UIs with autocomplete, and search or fetch content from public webpages."
+        - generic [ref=e67]:
+          - img "Note" [ref=e69]
+          - generic [ref=e72]:
+            - text: The public guides in this docs site focus on indexed Company and Person workflows plus the Web APIs. Company and Person live endpoints are enterprise-only and plan-specific. Review
+            - link "Pricing" [ref=e73] [cursor=pointer]:
+              - /url: /general/pricing
+            - text: before you build a live workflow.
+        - heading "Navigate to header What you can do with the public APIs" [level=2] [ref=e74]:
+          - link "Navigate to header" [ref=e75] [cursor=pointer]:
+            - /url: "#what-you-can-do-with-the-public-apis"
+            - img [ref=e77]
+          - generic [ref=e79] [cursor=pointer]: What you can do with the public APIs
+        - list [ref=e80]:
+          - listitem [ref=e81]: Build targeted account and prospect lists with structured company and person search.
+          - listitem [ref=e82]: Resolve company records from domains, names, profile URLs, or IDs.
+          - listitem [ref=e83]: Enrich known companies and people before outreach, routing, or research.
+          - listitem [ref=e84]: Power filter builders and search UX with autocomplete endpoints.
+          - listitem [ref=e85]: Search the web or fetch page content, then pass identifiers into Company or Person workflows.
+        - heading "Navigate to header API areas in this docs site" [level=2] [ref=e86]:
+          - link "Navigate to header" [ref=e87] [cursor=pointer]:
+            - /url: "#api-areas-in-this-docs-site"
+            - img [ref=e89]
+          - generic [ref=e91] [cursor=pointer]: API areas in this docs site
+        - list [ref=e92]:
+          - listitem [ref=e93]:
+            - link "Company APIs" [ref=e94] [cursor=pointer]:
+              - /url: /company-docs/quickstart
+            - text: — search, identify, enrich, and autocomplete company records.
+          - listitem [ref=e95]:
+            - link "Person APIs" [ref=e96] [cursor=pointer]:
+              - /url: /person-docs/quickstart
+            - text: — search, enrich, and autocomplete people records.
+          - listitem [ref=e97]:
+            - link "Web APIs" [ref=e98] [cursor=pointer]:
+              - /url: /web-docs/quickstart
+            - text: — search the web and fetch webpage content.
+        - heading "Navigate to header Common starting points" [level=2] [ref=e99]:
+          - link "Navigate to header" [ref=e100] [cursor=pointer]:
+            - /url: "#common-starting-points"
+            - img [ref=e102]
+          - generic [ref=e104] [cursor=pointer]: Common starting points
+        - list [ref=e105]:
+          - listitem [ref=e106]:
+            - text: Start with
+            - link "Company quickstart" [ref=e107] [cursor=pointer]:
+              - /url: /company-docs/quickstart
+            - text: if you need company search, identify, or enrich workflows.
+          - listitem [ref=e108]:
+            - text: Start with
+            - link "Person quickstart" [ref=e109] [cursor=pointer]:
+              - /url: /person-docs/quickstart
+            - text: if you need people search or enrich workflows.
+          - listitem [ref=e110]:
+            - text: Start with
+            - link "Web quickstart" [ref=e111] [cursor=pointer]:
+              - /url: /web-docs/quickstart
+            - text: if you need web search or page fetch workflows.
+          - listitem [ref=e112]:
+            - text: Review
+            - link "Pricing" [ref=e113] [cursor=pointer]:
+              - /url: /general/pricing
+            - text: before you estimate production usage.
+          - listitem [ref=e114]:
+            - text: Open the
+            - link "API reference" [ref=e115] [cursor=pointer]:
+              - /url: /openapi-specs/2025-11-01/introduction
+            - text: for headers, versioning, and endpoint details.
+      - generic [ref=e117]:
+        - paragraph [ref=e118]: Was this page helpful?
+        - generic [ref=e120]:
+          - button "Yes" [ref=e121] [cursor=pointer]:
+            - img [ref=e122]
+            - generic [ref=e124]: "Yes"
+          - button "No" [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+            - generic [ref=e128]: "No"
+      - generic [ref=e130]:
+        - textbox "Ask a question..." [ref=e131]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e132]:
+          - img [ref=e133]
+      - contentinfo [ref=e135]:
+        - generic [ref=e136]:
+          - link "x" [ref=e137] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e138]: x
+            - img [ref=e139]
+          - link "linkedin" [ref=e140] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e141]: linkedin
+            - img [ref=e142]

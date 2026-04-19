@@ -1,0 +1,41 @@
+URL: https://docs.crustdata.com/api-reference/person-apis/get-autocomplete-suggestions-for-person-search-fields
+Title: Person Autocomplete
+
+Description: Return ranked field-value suggestions for supported person search fields. Feed the suggestion value back into /person/search filters verbatim.
+- Empty query = top values by frequency.
+- Optional filters scope narrows autocomplete population (e.g., top titles among current Google employees in US).
+- Top-level field must be on the allowlisted subset; unsupported field returns 400 listing all accepted fields.
+
+Rate limit: Default 15 requests per minute.
+
+Method: POST
+URL: https://api.crustdata.com/person/search/autocomplete
+
+Auth: Bearer token (required) / x-api-version header (required)
+
+Body (application/json):
+  field: string (required). Valid:
+    basic_profile.name, basic_profile.headline, basic_profile.languages,
+    basic_profile.location, basic_profile.location.raw, basic_profile.location.city,
+    basic_profile.location.state, basic_profile.location.country, basic_profile.location.continent,
+    professional_network.location, professional_network.location.raw,
+    professional_network.location.city, professional_network.location.state,
+    professional_network.location.country, professional_network.location.continent,
+    skills.professional_network_skills,
+    experience.employment_details.current.name, experience.employment_details.current.title,
+    experience.employment_details.current.seniority_level,
+    experience.employment_details.current.function_category,
+    experience.employment_details.current.company_industries,
+    experience.employment_details.current.company_type,
+    experience.employment_details.current.company_hq_location,
+    experience.employment_details.current.company_website_domain,
+    experience.employment_details.past.name, experience.employment_details.past.title,
+    education.schools.school, education.schools.degree, education.schools.field_of_study,
+    certifications.name, certifications.issuing_organization, honors.title,
+    social_handles.twitter_identifier.slug
+  query: string (required)
+  limit: integer, default 20, range 1..100
+  filters: { field: string, type: enum [=,!=,<,=<,>,=>,in,not_in,contains], value: any }
+
+Response (200):
+  suggestions: array of { value: string }

@@ -1,0 +1,12 @@
+[    2114ms] [ERROR] Error fetching navigation: TypeError: Failed to fetch
+    at https://docs.crustdata.com/mintlify-assets/_next/static/chunks/55016-8ed633c9e6a92376.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:8566
+    at https://docs.crustdata.com/mintlify-assets/_next/static/chunks/55016-8ed633c9e6a92376.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:315518
+    at o1 (https://docs.crustdata.com/mintlify-assets/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:88955)
+    at uE (https://docs.crustdata.com/mintlify-assets/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:104847)
+    at ux (https://docs.crustdata.com/mintlify-assets/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:104731)
+    at uE (https://docs.crustdata.com/mintlify-assets/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:104892)
+    at ux (https://docs.crustdata.com/mintlify-assets/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:104731)
+    at uE (https://docs.crustdata.com/mintlify-assets/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:104827)
+    at ux (https://docs.crustdata.com/mintlify-assets/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:104731)
+    at uE (https://docs.crustdata.com/mintlify-assets/_next/static/chunks/87c73c54-09e1ba5c70e60a51.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:1:104892) @ https://docs.crustdata.com/mintlify-assets/_next/static/chunks/55016-8ed633c9e6a92376.js?dpl=dpl_3mKBXCJosjTP8qy78m2psGWcvpMM:0
+[    2813ms] [ERROR] Failed to load resource: the server responded with a status of 401 () @ https://docs.crustdata.com/_mintlify/navigation:0

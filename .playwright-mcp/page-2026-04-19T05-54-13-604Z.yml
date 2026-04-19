@@ -1,0 +1,1182 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#content-area"
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - paragraph [ref=e11]:
+        - text: You are viewing the documentation of the new API versions. We would love to hear from you. You can write to use at
+        - link "support@crustdata.tech" [ref=e12] [cursor=pointer]:
+          - /url: mailto:support@crustdata.tech
+        - text: for feedback and clarifications.
+      - generic [ref=e14]:
+        - generic [ref=e16]:
+          - link "Crustdata Docs home page light logo" [ref=e18] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e19]: Crustdata Docs home page
+            - img "light logo" [ref=e20]
+          - generic [ref=e21]:
+            - button "Open search" [ref=e22] [cursor=pointer]:
+              - generic [ref=e23]: Search...
+              - img [ref=e24]
+            - button [ref=e25] [cursor=pointer]:
+              - img [ref=e26]
+            - button "More actions" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+        - button "Navigation Company Company Enrich" [ref=e31] [cursor=pointer]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: Navigation
+            - img [ref=e34]
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: Company
+              - img [ref=e39]
+            - generic [ref=e41]: Company Enrich
+    - generic [ref=e45]:
+      - banner [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - generic [ref=e49]:
+              - link "Products" [ref=e50] [cursor=pointer]:
+                - /url: /company-docs/quickstart
+              - img [ref=e51]
+            - link "Company" [ref=e54] [cursor=pointer]:
+              - /url: /company-docs/quickstart
+          - generic [ref=e55]:
+            - heading "Company Enrich" [level=1] [ref=e56]
+            - generic [ref=e57]:
+              - button "Copy page" [ref=e58] [cursor=pointer]:
+                - generic [ref=e59]:
+                  - img [ref=e60]
+                  - generic [ref=e63]: Copy page
+              - button "More actions" [ref=e64] [cursor=pointer]:
+                - img [ref=e65]
+        - paragraph [ref=e68]: Learn how to enrich company records using domains, profile URLs, names, or IDs, including multi-company requests and exact matching.
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - strong [ref=e71]: Use this when
+          - text: you already know the company and want its full profile — for research, scoring, personalization, or diligence.
+        - generic [ref=e72]: The Company Enrich API takes an identifier you already have — a website domain, a profile URL, a company name, or a Crustdata company ID — and returns a detailed company profile with headcount, funding, industry, hiring, and more. The same endpoint supports both single-company lookups and multi-company requests.
+        - generic [ref=e73]: "Every request goes to the same endpoint:"
+        - generic [ref=e74]:
+          - generic [ref=e75]:
+            - button "Report incorrect code" [ref=e77] [cursor=pointer]:
+              - img [ref=e78]
+            - button "Copy the contents from the code block" [ref=e81] [cursor=pointer]:
+              - img [ref=e82]
+            - button "Ask AI" [ref=e86] [cursor=pointer]:
+              - img [ref=e87]
+          - code [ref=e93]:
+            - generic [ref=e94]: POST https://api.crustdata.com/company/enrich
+        - generic [ref=e95]:
+          - img "Note" [ref=e97]
+          - generic [ref=e100]:
+            - text: Replace
+            - code [ref=e101]: YOUR_API_KEY
+            - text: in each example with your actual API key. All requests require the
+            - code [ref=e102]: "x-api-version: 2025-11-01"
+            - text: header.
+        - heading "Navigate to header Rate limits and pricing" [level=2] [ref=e103]:
+          - link "Navigate to header" [ref=e104] [cursor=pointer]:
+            - /url: "#rate-limits-and-pricing"
+            - img [ref=e106]
+          - generic [ref=e108] [cursor=pointer]: Rate limits and pricing
+        - generic [ref=e109]:
+          - img "Note" [ref=e111]
+          - generic [ref=e114]:
+            - strong [ref=e115]: Current platform behavior
+            - text: "— not specified in the OpenAPI contract:"
+        - generic [ref=e116]:
+          - img [ref=e118]
+          - generic [ref=e120]:
+            - strong [ref=e121]: "Pricing:"
+            - code [ref=e122]: 2 credits per record
+            - text: .
+        - list [ref=e123]:
+          - listitem [ref=e124]:
+            - strong [ref=e125]: "Rate limit:"
+            - text: 15 requests per minute.
+        - generic [ref=e126]:
+          - text: If you only need lightweight discovery, start with
+          - link "Company Search" [ref=e127] [cursor=pointer]:
+            - /url: /company-docs/search
+          - text: ", then enrich the companies you want in full detail."
+        - separator [ref=e128]
+        - 'heading "Navigate to header Your first enrichment: look up a company by domain" [level=2] [ref=e129]':
+          - link "Navigate to header" [ref=e130] [cursor=pointer]:
+            - /url: "#your-first-enrichment-look-up-a-company-by-domain"
+            - img [ref=e132]
+          - generic [ref=e134] [cursor=pointer]: "Your first enrichment: look up a company by domain"
+        - generic [ref=e135]:
+          - text: The simplest enrichment takes a website domain and returns matching company profiles. Pass the domain in the
+          - code [ref=e136]: domains
+          - text: array.
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - tablist [ref=e139]:
+              - tab "Request" [selected] [ref=e140] [cursor=pointer]:
+                - generic [ref=e141]: Request
+              - tab "Response" [ref=e143] [cursor=pointer]:
+                - generic [ref=e144]: Response
+            - generic [ref=e145]:
+              - button "Report incorrect code" [ref=e147] [cursor=pointer]:
+                - img [ref=e148]
+              - button "Copy the contents from the code block" [ref=e151] [cursor=pointer]:
+                - img [ref=e152]
+              - button "Ask AI" [ref=e156] [cursor=pointer]:
+                - img [ref=e157]
+          - tabpanel "Request" [ref=e161]:
+            - code [ref=e165]:
+              - generic [ref=e166]: curl --request POST \
+              - generic [ref=e167]: "--url https://api.crustdata.com/company/enrich \\"
+              - generic [ref=e168]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e169]: "--header 'content-type: application/json' \\"
+              - generic [ref=e170]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e171]: "--data '{"
+              - generic [ref=e172]: "\"domains\": [\"retool.com\"]"
+              - generic [ref=e173]: "}'"
+        - generic [ref=e174]:
+          - img "Note" [ref=e176]
+          - generic [ref=e178]: Response trimmed for clarity.
+        - generic [ref=e179]:
+          - img "Tip" [ref=e181]
+          - generic [ref=e184]:
+            - text: The
+            - code [ref=e185]: year_founded
+            - text: field is returned as a string. The format may be a full date (e.g.,
+            - code [ref=e186]: 2017-01-01
+            - text: ) or a year string (e.g.,
+            - code [ref=e187]: "2017"
+            - text: ) depending on the data source.
+        - heading "Navigate to header Understanding the response" [level=3] [ref=e188]:
+          - link "Navigate to header" [ref=e189] [cursor=pointer]:
+            - /url: "#understanding-the-response"
+            - img [ref=e191]
+          - generic [ref=e193] [cursor=pointer]: Understanding the response
+        - generic [ref=e194]:
+          - text: The Enrich API returns a
+          - strong [ref=e195]: top-level array
+          - text: "— one entry per identifier you submitted. Each entry has three fields:"
+        - list [ref=e196]:
+          - listitem [ref=e197]:
+            - strong [ref=e198]:
+              - code [ref=e199]: matched_on
+            - text: — the identifier you submitted (the domain, URL, name, or ID).
+          - listitem [ref=e200]:
+            - strong [ref=e201]:
+              - code [ref=e202]: match_type
+            - text: "— which identifier type was used. Possible values:"
+            - code [ref=e203]: domain
+            - text: ","
+            - code [ref=e204]: name
+            - text: ","
+            - code [ref=e205]: crustdata_company_id
+            - text: ","
+            - code [ref=e206]: professional_network_profile_url
+            - text: .
+          - listitem [ref=e207]:
+            - strong [ref=e208]:
+              - code [ref=e209]: matches
+            - text: — an array of candidate companies. Each match includes a
+            - code [ref=e210]: confidence_score
+            - text: and the full
+            - code [ref=e211]: company_data
+            - text: object.
+        - generic [ref=e212]:
+          - text: Domain lookups may return multiple matches if the domain is ambiguous. The highest
+          - code [ref=e213]: confidence_score
+          - text: indicates the best match. Use
+          - code [ref=e214]: "exact_match: true"
+          - text: to restrict results to companies whose
+          - code [ref=e215]: primary_domain
+          - text: exactly matches your input (see below).
+        - heading "Navigate to header How to interpret results" [level=3] [ref=e216]:
+          - link "Navigate to header" [ref=e217] [cursor=pointer]:
+            - /url: "#how-to-interpret-results"
+            - img [ref=e219]
+          - generic [ref=e221] [cursor=pointer]: How to interpret results
+        - list [ref=e222]:
+          - listitem [ref=e223]:
+            - strong [ref=e224]: "Multiple matches:"
+            - text: If
+            - code [ref=e225]: matches
+            - text: contains more than one entry, check
+            - code [ref=e226]: confidence_score
+            - text: — the highest score is the best match. Use
+            - code [ref=e227]: primary_domain
+            - text: to verify.
+          - listitem [ref=e228]:
+            - strong [ref=e229]:
+              - text: Empty
+              - code [ref=e230]: matches
+              - text: "array:"
+            - text: The identifier did not match any company. Check for typos or try a different identifier type.
+          - listitem [ref=e231]:
+            - strong [ref=e232]:
+              - code [ref=e233]: confidence_score
+              - text: ":"
+            - text: Higher is better. A score of
+            - code [ref=e234]: "1.0"
+            - text: is common for direct identifier lookups such as profile URLs or company IDs.
+        - heading "Navigate to header What is inside company_data?" [level=3] [ref=e235]:
+          - link "Navigate to header" [ref=e236] [cursor=pointer]:
+            - /url: "#what-is-inside-company_data"
+            - img [ref=e238]
+          - generic [ref=e240] [cursor=pointer]:
+            - text: What is inside
+            - code [ref=e241]: company_data
+            - text: "?"
+        - generic [ref=e242]:
+          - text: The enriched
+          - code [ref=e243]: company_data
+          - text: "object contains the following sections:"
+        - table [ref=e246]:
+          - rowgroup [ref=e247]:
+            - row "Section Key fields Description" [ref=e248]:
+              - columnheader "Section" [ref=e249]
+              - columnheader "Key fields" [ref=e250]
+              - columnheader "Description" [ref=e251]
+          - rowgroup [ref=e252]:
+            - row "basic_info name, primary_domain, website, professional_network_url, year_founded, description, company_type, employee_count_range, industries Core identity and classification" [ref=e253]:
+              - cell "basic_info" [ref=e254]:
+                - code [ref=e255]: basic_info
+              - cell "name, primary_domain, website, professional_network_url, year_founded, description, company_type, employee_count_range, industries" [ref=e256]:
+                - code [ref=e257]: name
+                - text: ","
+                - code [ref=e258]: primary_domain
+                - text: ","
+                - code [ref=e259]: website
+                - text: ","
+                - code [ref=e260]: professional_network_url
+                - text: ","
+                - code [ref=e261]: year_founded
+                - text: ","
+                - code [ref=e262]: description
+                - text: ","
+                - code [ref=e263]: company_type
+                - text: ","
+                - code [ref=e264]: employee_count_range
+                - text: ","
+                - code [ref=e265]: industries
+              - cell "Core identity and classification" [ref=e266]
+            - row "headcount total, by_role_absolute, by_role_percent, by_region_absolute, growth_percent Employee footprint and growth" [ref=e267]:
+              - cell "headcount" [ref=e268]:
+                - code [ref=e269]: headcount
+              - cell "total, by_role_absolute, by_role_percent, by_region_absolute, growth_percent" [ref=e270]:
+                - code [ref=e271]: total
+                - text: ","
+                - code [ref=e272]: by_role_absolute
+                - text: ","
+                - code [ref=e273]: by_role_percent
+                - text: ","
+                - code [ref=e274]: by_region_absolute
+                - text: ","
+                - code [ref=e275]: growth_percent
+              - cell "Employee footprint and growth" [ref=e276]
+            - row "funding total_investment_usd, last_round_amount_usd, last_fundraise_date, last_round_type, investors Funding and investor data" [ref=e277]:
+              - cell "funding" [ref=e278]:
+                - code [ref=e279]: funding
+              - cell "total_investment_usd, last_round_amount_usd, last_fundraise_date, last_round_type, investors" [ref=e280]:
+                - code [ref=e281]: total_investment_usd
+                - text: ","
+                - code [ref=e282]: last_round_amount_usd
+                - text: ","
+                - code [ref=e283]: last_fundraise_date
+                - text: ","
+                - code [ref=e284]: last_round_type
+                - text: ","
+                - code [ref=e285]: investors
+              - cell "Funding and investor data" [ref=e286]
+            - row "locations hq_country, hq_state, hq_city, headquarters Headquarters location" [ref=e287]:
+              - cell "locations" [ref=e288]:
+                - code [ref=e289]: locations
+              - cell "hq_country, hq_state, hq_city, headquarters" [ref=e290]:
+                - code [ref=e291]: hq_country
+                - text: ","
+                - code [ref=e292]: hq_state
+                - text: ","
+                - code [ref=e293]: hq_city
+                - text: ","
+                - code [ref=e294]: headquarters
+              - cell "Headquarters location" [ref=e295]
+            - row "taxonomy categories, professional_network_industry, professional_network_specialities Industry and classification data" [ref=e296]:
+              - cell "taxonomy" [ref=e297]:
+                - code [ref=e298]: taxonomy
+              - cell "categories, professional_network_industry, professional_network_specialities" [ref=e299]:
+                - code [ref=e300]: categories
+                - text: ","
+                - code [ref=e301]: professional_network_industry
+                - text: ","
+                - code [ref=e302]: professional_network_specialities
+              - cell "Industry and classification data" [ref=e303]
+            - row "revenue estimated (lower_bound_usd, upper_bound_usd), public_markets, acquisition_status Revenue estimates and market data" [ref=e304]:
+              - cell "revenue" [ref=e305]:
+                - code [ref=e306]: revenue
+              - cell "estimated (lower_bound_usd, upper_bound_usd), public_markets, acquisition_status" [ref=e307]:
+                - code [ref=e308]: estimated
+                - text: (
+                - code [ref=e309]: lower_bound_usd
+                - text: ","
+                - code [ref=e310]: upper_bound_usd
+                - text: ),
+                - code [ref=e311]: public_markets
+                - text: ","
+                - code [ref=e312]: acquisition_status
+              - cell "Revenue estimates and market data" [ref=e313]
+            - row "hiring openings_count, openings_growth_percent, recent_titles_csv Hiring demand and open roles" [ref=e314]:
+              - cell "hiring" [ref=e315]:
+                - code [ref=e316]: hiring
+              - cell "openings_count, openings_growth_percent, recent_titles_csv" [ref=e317]:
+                - code [ref=e318]: openings_count
+                - text: ","
+                - code [ref=e319]: openings_growth_percent
+                - text: ","
+                - code [ref=e320]: recent_titles_csv
+              - cell "Hiring demand and open roles" [ref=e321]
+            - row "followers count, mom_percent, qoq_percent, yoy_percent Audience and follower metrics" [ref=e322]:
+              - cell "followers" [ref=e323]:
+                - code [ref=e324]: followers
+              - cell "count, mom_percent, qoq_percent, yoy_percent" [ref=e325]:
+                - code [ref=e326]: count
+                - text: ","
+                - code [ref=e327]: mom_percent
+                - text: ","
+                - code [ref=e328]: qoq_percent
+                - text: ","
+                - code [ref=e329]: yoy_percent
+              - cell "Audience and follower metrics" [ref=e330]
+            - row "seo total_organic_results, monthly_organic_clicks, monthly_google_ads_budget Search visibility metrics" [ref=e331]:
+              - cell "seo" [ref=e332]:
+                - code [ref=e333]: seo
+              - cell "total_organic_results, monthly_organic_clicks, monthly_google_ads_budget" [ref=e334]:
+                - code [ref=e335]: total_organic_results
+                - text: ","
+                - code [ref=e336]: monthly_organic_clicks
+                - text: ","
+                - code [ref=e337]: monthly_google_ads_budget
+              - cell "Search visibility metrics" [ref=e338]
+            - row "competitors company_ids, websites Competitor data" [ref=e339]:
+              - cell "competitors" [ref=e340]:
+                - code [ref=e341]: competitors
+              - cell "company_ids, websites" [ref=e342]:
+                - code [ref=e343]: company_ids
+                - text: ","
+                - code [ref=e344]: websites
+              - cell "Competitor data" [ref=e345]
+            - row "social_profiles twitter_url and other external profile links External profiles and links" [ref=e346]:
+              - cell "social_profiles" [ref=e347]:
+                - code [ref=e348]: social_profiles
+              - cell "twitter_url and other external profile links" [ref=e349]:
+                - code [ref=e350]: twitter_url
+                - text: and other external profile links
+              - cell "External profiles and links" [ref=e351]
+            - row "web_traffic domain_traffic (monthly_visitors, traffic sources) Website traffic and sources" [ref=e352]:
+              - cell "web_traffic" [ref=e353]:
+                - code [ref=e354]: web_traffic
+              - cell "domain_traffic (monthly_visitors, traffic sources)" [ref=e355]:
+                - code [ref=e356]: domain_traffic
+                - text: (
+                - code [ref=e357]: monthly_visitors
+                - text: ", traffic sources)"
+              - cell "Website traffic and sources" [ref=e358]
+            - row "employee_reviews overall_rating, culture_and_values_rating, work_life_balance_rating, review_count Employee review data" [ref=e359]:
+              - cell "employee_reviews" [ref=e360]:
+                - code [ref=e361]: employee_reviews
+              - cell "overall_rating, culture_and_values_rating, work_life_balance_rating, review_count" [ref=e362]:
+                - code [ref=e363]: overall_rating
+                - text: ","
+                - code [ref=e364]: culture_and_values_rating
+                - text: ","
+                - code [ref=e365]: work_life_balance_rating
+                - text: ","
+                - code [ref=e366]: review_count
+              - cell "Employee review data" [ref=e367]
+            - row "people decision_makers, founders, cxos Key people at the company" [ref=e368]:
+              - cell "people" [ref=e369]:
+                - code [ref=e370]: people
+              - cell "decision_makers, founders, cxos" [ref=e371]:
+                - code [ref=e372]: decision_makers
+                - text: ","
+                - code [ref=e373]: founders
+                - text: ","
+                - code [ref=e374]: cxos
+              - cell "Key people at the company" [ref=e375]
+            - row "news article_url, article_title, article_publish_date Recent news articles" [ref=e376]:
+              - cell "news" [ref=e377]:
+                - code [ref=e378]: news
+              - cell "article_url, article_title, article_publish_date" [ref=e379]:
+                - code [ref=e380]: article_url
+                - text: ","
+                - code [ref=e381]: article_title
+                - text: ","
+                - code [ref=e382]: article_publish_date
+              - cell "Recent news articles" [ref=e383]
+            - row "software_reviews review_count, average_rating Software review metrics" [ref=e384]:
+              - cell "software_reviews" [ref=e385]:
+                - code [ref=e386]: software_reviews
+              - cell "review_count, average_rating" [ref=e387]:
+                - code [ref=e388]: review_count
+                - text: ","
+                - code [ref=e389]: average_rating
+              - cell "Software review metrics" [ref=e390]
+            - row "status state (enriching, not_found) Enrichment processing status" [ref=e391]:
+              - cell "status" [ref=e392]:
+                - code [ref=e393]: status
+              - cell "state (enriching, not_found)" [ref=e394]:
+                - code [ref=e395]: state
+                - text: (
+                - code [ref=e396]: enriching
+                - text: ","
+                - code [ref=e397]: not_found
+                - text: )
+              - cell "Enrichment processing status" [ref=e398]
+        - separator [ref=e399]
+        - heading "Navigate to header Enrich by profile URL" [level=2] [ref=e400]:
+          - link "Navigate to header" [ref=e401] [cursor=pointer]:
+            - /url: "#enrich-by-profile-url"
+            - img [ref=e403]
+          - generic [ref=e405] [cursor=pointer]: Enrich by profile URL
+        - generic [ref=e406]:
+          - text: If you have a company profile URL, pass it in
+          - code [ref=e407]: professional_network_profile_urls
+          - text: . This gives you a direct match.
+        - generic [ref=e408]:
+          - generic [ref=e409]:
+            - tablist [ref=e410]:
+              - tab "Request" [selected] [ref=e411] [cursor=pointer]:
+                - generic [ref=e412]: Request
+              - tab "Response" [ref=e414] [cursor=pointer]:
+                - generic [ref=e415]: Response
+            - generic [ref=e416]:
+              - button "Report incorrect code" [ref=e418] [cursor=pointer]:
+                - img [ref=e419]
+              - button "Copy the contents from the code block" [ref=e422] [cursor=pointer]:
+                - img [ref=e423]
+              - button "Ask AI" [ref=e427] [cursor=pointer]:
+                - img [ref=e428]
+          - tabpanel "Request" [ref=e432]:
+            - code [ref=e436]:
+              - generic [ref=e437]: curl --request POST \
+              - generic [ref=e438]: "--url https://api.crustdata.com/company/enrich \\"
+              - generic [ref=e439]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e440]: "--header 'content-type: application/json' \\"
+              - generic [ref=e441]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e442]: "--data '{"
+              - generic [ref=e443]: "\"professional_network_profile_urls\": ["
+              - generic [ref=e444]: "\"https://www.linkedin.com/company/serverobotics\""
+              - generic [ref=e445]: "]"
+              - generic [ref=e446]: "}'"
+        - generic [ref=e447]:
+          - img "Note" [ref=e449]
+          - generic [ref=e451]: Response trimmed for clarity.
+        - generic [ref=e452]: Profile URL lookups are direct matches — they typically return a single match with high confidence.
+        - separator [ref=e453]
+        - heading "Navigate to header Enrich by company name" [level=2] [ref=e454]:
+          - link "Navigate to header" [ref=e455] [cursor=pointer]:
+            - /url: "#enrich-by-company-name"
+            - img [ref=e457]
+          - generic [ref=e459] [cursor=pointer]: Enrich by company name
+        - generic [ref=e460]: You can also enrich by company name. This is useful when you only have a name from a form submission or event badge scan.
+        - generic [ref=e461]:
+          - generic [ref=e462]:
+            - tablist [ref=e463]:
+              - tab "Request" [selected] [ref=e464] [cursor=pointer]:
+                - generic [ref=e465]: Request
+            - generic [ref=e467]:
+              - button "Report incorrect code" [ref=e469] [cursor=pointer]:
+                - img [ref=e470]
+              - button "Copy the contents from the code block" [ref=e473] [cursor=pointer]:
+                - img [ref=e474]
+              - button "Ask AI" [ref=e478] [cursor=pointer]:
+                - img [ref=e479]
+          - tabpanel "Request" [ref=e483]:
+            - code [ref=e487]:
+              - generic [ref=e488]: curl --request POST \
+              - generic [ref=e489]: "--url https://api.crustdata.com/company/enrich \\"
+              - generic [ref=e490]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e491]: "--header 'content-type: application/json' \\"
+              - generic [ref=e492]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e493]: "--data '{"
+              - generic [ref=e494]: "\"names\": [\"Retool\"]"
+              - generic [ref=e495]: "}'"
+        - generic [ref=e496]:
+          - text: Name-based enrichment may return multiple candidates. Check
+          - code [ref=e497]: confidence_score
+          - text: and
+          - code [ref=e498]: primary_domain
+          - text: to pick the right match.
+        - separator [ref=e499]
+        - heading "Navigate to header Enrich by company ID" [level=2] [ref=e500]:
+          - link "Navigate to header" [ref=e501] [cursor=pointer]:
+            - /url: "#enrich-by-company-id"
+            - img [ref=e503]
+          - generic [ref=e505] [cursor=pointer]: Enrich by company ID
+        - generic [ref=e506]:
+          - text: If you already have a Crustdata company ID (from a previous search call), pass it in
+          - code [ref=e507]: crustdata_company_ids
+          - text: for an exact lookup.
+        - generic [ref=e508]:
+          - generic [ref=e509]:
+            - tablist [ref=e510]:
+              - tab "Request" [selected] [ref=e511] [cursor=pointer]:
+                - generic [ref=e512]: Request
+            - generic [ref=e514]:
+              - button "Report incorrect code" [ref=e516] [cursor=pointer]:
+                - img [ref=e517]
+              - button "Copy the contents from the code block" [ref=e520] [cursor=pointer]:
+                - img [ref=e521]
+              - button "Ask AI" [ref=e525] [cursor=pointer]:
+                - img [ref=e526]
+          - tabpanel "Request" [ref=e530]:
+            - code [ref=e534]:
+              - generic [ref=e535]: curl --request POST \
+              - generic [ref=e536]: "--url https://api.crustdata.com/company/enrich \\"
+              - generic [ref=e537]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e538]: "--header 'content-type: application/json' \\"
+              - generic [ref=e539]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e540]: "--data '{"
+              - generic [ref=e541]: "\"crustdata_company_ids\": [633593]"
+              - generic [ref=e542]: "}'"
+        - generic [ref=e543]: Company ID lookups typically return a single exact match, making this the most precise enrichment method.
+        - separator [ref=e544]
+        - heading "Navigate to header Use exact match for stricter domain matching" [level=2] [ref=e545]:
+          - link "Navigate to header" [ref=e546] [cursor=pointer]:
+            - /url: "#use-exact-match-for-stricter-domain-matching"
+            - img [ref=e548]
+          - generic [ref=e550] [cursor=pointer]: Use exact match for stricter domain matching
+        - generic [ref=e551]:
+          - text: By default, domain-based enrichment can return multiple candidates. Set
+          - code [ref=e552]: "exact_match: true"
+          - text: to restrict results to companies whose
+          - code [ref=e553]: primary_domain
+          - text: exactly matches your input.
+        - generic [ref=e554]:
+          - generic [ref=e555]:
+            - tablist [ref=e556]:
+              - tab "Request" [selected] [ref=e557] [cursor=pointer]:
+                - generic [ref=e558]: Request
+              - tab "Response" [ref=e560] [cursor=pointer]:
+                - generic [ref=e561]: Response
+            - generic [ref=e562]:
+              - button "Report incorrect code" [ref=e564] [cursor=pointer]:
+                - img [ref=e565]
+              - button "Copy the contents from the code block" [ref=e568] [cursor=pointer]:
+                - img [ref=e569]
+              - button "Ask AI" [ref=e573] [cursor=pointer]:
+                - img [ref=e574]
+          - tabpanel "Request" [ref=e578]:
+            - code [ref=e582]:
+              - generic [ref=e583]: curl --request POST \
+              - generic [ref=e584]: "--url https://api.crustdata.com/company/enrich \\"
+              - generic [ref=e585]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e586]: "--header 'content-type: application/json' \\"
+              - generic [ref=e587]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e588]: "--data '{"
+              - generic [ref=e589]: "\"domains\": [\"cashfree.com\"],"
+              - generic [ref=e590]: "\"exact_match\": true"
+              - generic [ref=e591]: "}'"
+        - generic [ref=e592]:
+          - img "Note" [ref=e594]
+          - generic [ref=e596]: Response trimmed for clarity.
+        - generic [ref=e597]:
+          - text: With
+          - code [ref=e598]: "exact_match: true"
+          - text: ", results are limited to records whose"
+          - code [ref=e599]: primary_domain
+          - text: exactly matches your input. You may still receive multiple matches when more than one company record shares that same domain.
+        - separator [ref=e600]
+        - heading "Navigate to header Enrich multiple companies in one request" [level=2] [ref=e601]:
+          - link "Navigate to header" [ref=e602] [cursor=pointer]:
+            - /url: "#enrich-multiple-companies-in-one-request"
+            - img [ref=e604]
+          - generic [ref=e606] [cursor=pointer]: Enrich multiple companies in one request
+        - generic [ref=e607]: The same endpoint supports multiple identifiers in a single request, so multi-company enrich stays on this page rather than as a separate API.
+        - generic [ref=e608]:
+          - generic [ref=e609]:
+            - tablist [ref=e610]:
+              - tab "Request" [selected] [ref=e611] [cursor=pointer]:
+                - generic [ref=e612]: Request
+            - generic [ref=e614]:
+              - button "Report incorrect code" [ref=e616] [cursor=pointer]:
+                - img [ref=e617]
+              - button "Copy the contents from the code block" [ref=e620] [cursor=pointer]:
+                - img [ref=e621]
+              - button "Ask AI" [ref=e625] [cursor=pointer]:
+                - img [ref=e626]
+          - tabpanel "Request" [ref=e630]:
+            - code [ref=e634]:
+              - generic [ref=e635]: curl --request POST \
+              - generic [ref=e636]: "--url https://api.crustdata.com/company/enrich \\"
+              - generic [ref=e637]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+              - generic [ref=e638]: "--header 'content-type: application/json' \\"
+              - generic [ref=e639]: "--header 'x-api-version: 2025-11-01' \\"
+              - generic [ref=e640]: "--data '{"
+              - generic [ref=e641]: "\"crustdata_company_ids\": [633593, 628895]"
+              - generic [ref=e642]: "}'"
+        - heading "Navigate to header Multi-company enrich tips" [level=3] [ref=e643]:
+          - link "Navigate to header" [ref=e644] [cursor=pointer]:
+            - /url: "#multi-company-enrich-tips"
+            - img [ref=e646]
+          - generic [ref=e648] [cursor=pointer]: Multi-company enrich tips
+        - list [ref=e649]:
+          - listitem [ref=e650]:
+            - text: Submit
+            - strong [ref=e651]: one identifier type
+            - text: per request. Mixing identifier types (e.g., sending both
+            - code [ref=e652]: domains
+            - text: and
+            - code [ref=e653]: names
+            - text: ) is not supported.
+          - listitem [ref=e654]: Each entry in the response corresponds to the input at the same position, so you can match results back to your input list by index.
+          - listitem [ref=e655]:
+            - text: If some identifiers fail to match, their
+            - code [ref=e656]: matches
+            - text: array will be empty, but the request still succeeds for the others.
+        - separator [ref=e657]
+        - heading "Navigate to header Choosing the right identifier" [level=2] [ref=e658]:
+          - link "Navigate to header" [ref=e659] [cursor=pointer]:
+            - /url: "#choosing-the-right-identifier"
+            - img [ref=e661]
+          - generic [ref=e663] [cursor=pointer]: Choosing the right identifier
+        - generic [ref=e664]: Each identifier type has trade-offs in precision and convenience.
+        - table [ref=e667]:
+          - rowgroup [ref=e668]:
+            - row "Domain Profile URL Company Name Company ID" [ref=e669]:
+              - columnheader [ref=e670]
+              - columnheader "Domain" [ref=e671]
+              - columnheader "Profile URL" [ref=e672]
+              - columnheader "Company Name" [ref=e673]
+              - columnheader "Company ID" [ref=e674]
+          - rowgroup [ref=e675]:
+            - row "Precision High Highest Medium Highest" [ref=e676]:
+              - cell "Precision" [ref=e677]:
+                - strong [ref=e678]: Precision
+              - cell "High" [ref=e679]
+              - cell "Highest" [ref=e680]
+              - cell "Medium" [ref=e681]
+              - cell "Highest" [ref=e682]
+            - row "Best for CRM cleanup, inbound leads Known company profiles Fuzzy matching Internal pipelines and search follow-up" [ref=e683]:
+              - cell "Best for" [ref=e684]:
+                - strong [ref=e685]: Best for
+              - cell "CRM cleanup, inbound leads" [ref=e686]
+              - cell "Known company profiles" [ref=e687]
+              - cell "Fuzzy matching" [ref=e688]
+              - cell "Internal pipelines and search follow-up" [ref=e689]
+            - row "Typical matches One or more exact-domain candidates 1 Multiple candidates 1" [ref=e690]:
+              - cell "Typical matches" [ref=e691]:
+                - strong [ref=e692]: Typical matches
+              - cell "One or more exact-domain candidates" [ref=e693]
+              - cell "1" [ref=e694]
+              - cell "Multiple candidates" [ref=e695]
+              - cell "1" [ref=e696]
+        - separator [ref=e697]
+        - 'heading "Navigate to header Common workflow: Search then Enrich" [level=2] [ref=e698]':
+          - link "Navigate to header" [ref=e699] [cursor=pointer]:
+            - /url: "#common-workflow-search-then-enrich"
+            - img [ref=e701]
+          - generic [ref=e703] [cursor=pointer]: "Common workflow: Search then Enrich"
+        - generic [ref=e704]:
+          - text: The most powerful pattern combines
+          - link "Company Search" [ref=e705] [cursor=pointer]:
+            - /url: /company-docs/search
+          - text: with Company Enrich. Search finds companies matching your criteria; Enrich gets the full profile for each match.
+        - generic [ref=e706]:
+          - strong [ref=e707]: "Step 1:"
+          - text: Search for well-funded software companies.
+        - generic [ref=e708]:
+          - generic [ref=e709]:
+            - button "Report incorrect code" [ref=e711] [cursor=pointer]:
+              - img [ref=e712]
+            - button "Copy the contents from the code block" [ref=e715] [cursor=pointer]:
+              - img [ref=e716]
+            - button "Ask AI" [ref=e720] [cursor=pointer]:
+              - img [ref=e721]
+          - code [ref=e727]:
+            - generic [ref=e728]: curl --request POST \
+            - generic [ref=e729]: "--url https://api.crustdata.com/company/search \\"
+            - generic [ref=e730]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+            - generic [ref=e731]: "--header 'content-type: application/json' \\"
+            - generic [ref=e732]: "--header 'x-api-version: 2025-11-01' \\"
+            - generic [ref=e733]: "--data '{"
+            - generic [ref=e734]: "\"filters\": {"
+            - generic [ref=e735]: "\"op\": \"and\","
+            - generic [ref=e736]: "\"conditions\": ["
+            - generic [ref=e737]: "{"
+            - generic [ref=e738]: "\"field\": \"basic_info.industries\","
+            - generic [ref=e739]: "\"type\": \"in\","
+            - generic [ref=e740]: "\"value\": [\"Software Development\"]"
+            - generic [ref=e741]: "},"
+            - generic [ref=e742]: "{"
+            - generic [ref=e743]: "\"field\": \"funding.total_investment_usd\","
+            - generic [ref=e744]: "\"type\": \">\","
+            - generic [ref=e745]: "\"value\": 10000000"
+            - generic [ref=e746]: "}"
+            - generic [ref=e747]: "]"
+            - generic [ref=e748]: "},"
+            - generic [ref=e749]: "\"limit\": 5,"
+            - generic [ref=e750]: "\"fields\": [\"crustdata_company_id\", \"basic_info.name\", \"basic_info.primary_domain\"]"
+            - generic [ref=e751]: "}'"
+        - generic [ref=e752]:
+          - strong [ref=e753]: "Step 2:"
+          - text: Take the
+          - code [ref=e754]: crustdata_company_id
+          - text: values from the search results and pass them in
+          - code [ref=e755]: crustdata_company_ids
+          - text: to enrich.
+        - generic [ref=e756]:
+          - generic [ref=e757]:
+            - button "Report incorrect code" [ref=e759] [cursor=pointer]:
+              - img [ref=e760]
+            - button "Copy the contents from the code block" [ref=e763] [cursor=pointer]:
+              - img [ref=e764]
+            - button "Ask AI" [ref=e768] [cursor=pointer]:
+              - img [ref=e769]
+          - code [ref=e775]:
+            - generic [ref=e776]: curl --request POST \
+            - generic [ref=e777]: "--url https://api.crustdata.com/company/enrich \\"
+            - generic [ref=e778]: "--header 'authorization: Bearer YOUR_API_KEY' \\"
+            - generic [ref=e779]: "--header 'content-type: application/json' \\"
+            - generic [ref=e780]: "--header 'x-api-version: 2025-11-01' \\"
+            - generic [ref=e781]: "--data '{"
+            - generic [ref=e782]: "\"crustdata_company_ids\": [633593, 628895]"
+            - generic [ref=e783]: "}'"
+        - generic [ref=e784]:
+          - text: This two-step pattern is the foundation for sales, research, and investment workflows. Search narrows the universe; Enrich fills in the details. Because
+          - code [ref=e785]: crustdata_company_ids
+          - text: is an array, the same endpoint works for one company or many companies.
+        - separator [ref=e786]
+        - heading "Navigate to header Request parameter reference" [level=2] [ref=e787]:
+          - link "Navigate to header" [ref=e788] [cursor=pointer]:
+            - /url: "#request-parameter-reference"
+            - img [ref=e790]
+          - generic [ref=e792] [cursor=pointer]: Request parameter reference
+        - table [ref=e795]:
+          - rowgroup [ref=e796]:
+            - row "Parameter Type Required Default Description" [ref=e797]:
+              - columnheader "Parameter" [ref=e798]
+              - columnheader "Type" [ref=e799]
+              - columnheader "Required" [ref=e800]
+              - columnheader "Default" [ref=e801]
+              - columnheader "Description" [ref=e802]
+          - rowgroup [ref=e803]:
+            - row "domains string[] Exactly one identifier type required — Website domains to enrich." [ref=e804]:
+              - cell "domains" [ref=e805]:
+                - code [ref=e806]: domains
+              - cell "string[]" [ref=e807]
+              - cell "Exactly one identifier type required" [ref=e808]
+              - cell "—" [ref=e809]
+              - cell "Website domains to enrich." [ref=e810]
+            - row "professional_network_profile_urls string[] Exactly one identifier type required — Company profile URLs to enrich." [ref=e811]:
+              - cell "professional_network_profile_urls" [ref=e812]:
+                - code [ref=e813]: professional_network_profile_urls
+              - cell "string[]" [ref=e814]
+              - cell "Exactly one identifier type required" [ref=e815]
+              - cell "—" [ref=e816]
+              - cell "Company profile URLs to enrich." [ref=e817]
+            - row "names string[] Exactly one identifier type required — Company names to enrich." [ref=e818]:
+              - cell "names" [ref=e819]:
+                - code [ref=e820]: names
+              - cell "string[]" [ref=e821]
+              - cell "Exactly one identifier type required" [ref=e822]
+              - cell "—" [ref=e823]
+              - cell "Company names to enrich." [ref=e824]
+            - row "crustdata_company_ids integer[] Exactly one identifier type required — Crustdata company IDs to enrich." [ref=e825]:
+              - cell "crustdata_company_ids" [ref=e826]:
+                - code [ref=e827]: crustdata_company_ids
+              - cell "integer[]" [ref=e828]
+              - cell "Exactly one identifier type required" [ref=e829]
+              - cell "—" [ref=e830]
+              - cell "Crustdata company IDs to enrich." [ref=e831]
+            - row "fields string[] No All Specific field groups to include in the response." [ref=e832]:
+              - cell "fields" [ref=e833]:
+                - code [ref=e834]: fields
+              - cell "string[]" [ref=e835]
+              - cell "No" [ref=e836]
+              - cell "All" [ref=e837]
+              - cell "Specific field groups to include in the response." [ref=e838]
+            - row "exact_match boolean No null Set to true to force exact domain matching." [ref=e839]:
+              - cell "exact_match" [ref=e840]:
+                - code [ref=e841]: exact_match
+              - cell "boolean" [ref=e842]
+              - cell "No" [ref=e843]
+              - cell "null" [ref=e844]:
+                - code [ref=e845]: "null"
+              - cell "Set to true to force exact domain matching." [ref=e846]:
+                - text: Set to
+                - code [ref=e847]: "true"
+                - text: to force exact domain matching.
+        - generic [ref=e848]:
+          - img "Note" [ref=e850]
+          - generic [ref=e853]:
+            - strong [ref=e854]: "Current platform behavior:"
+            - text: Submit exactly one identifier type per request.
+        - heading "Navigate to header Valid fields values" [level=3] [ref=e855]:
+          - link "Navigate to header" [ref=e856] [cursor=pointer]:
+            - /url: "#valid-fields-values"
+            - img [ref=e858]
+          - generic [ref=e860] [cursor=pointer]:
+            - text: Valid
+            - code [ref=e861]: fields
+            - text: values
+        - generic [ref=e862]:
+          - text: Use the
+          - code [ref=e863]: fields
+          - text: parameter to limit which sections are returned in
+          - code [ref=e864]: company_data
+          - text: . If
+          - code [ref=e865]: fields
+          - text: is omitted, all sections are returned.
+        - table [ref=e868]:
+          - rowgroup [ref=e869]:
+            - row "Field group What it returns" [ref=e870]:
+              - columnheader "Field group" [ref=e871]
+              - columnheader "What it returns" [ref=e872]
+          - rowgroup [ref=e873]:
+            - row "basic_info Company name, domain, website, profile URL, industry, type, year founded" [ref=e874]:
+              - cell "basic_info" [ref=e875]:
+                - code [ref=e876]: basic_info
+              - cell "Company name, domain, website, profile URL, industry, type, year founded" [ref=e877]
+            - row "headcount Employee count, role/region breakdowns, growth metrics" [ref=e878]:
+              - cell "headcount" [ref=e879]:
+                - code [ref=e880]: headcount
+              - cell "Employee count, role/region breakdowns, growth metrics" [ref=e881]
+            - row "funding Total funding, last round details, investor list" [ref=e882]:
+              - cell "funding" [ref=e883]:
+                - code [ref=e884]: funding
+              - cell "Total funding, last round details, investor list" [ref=e885]
+            - row "locations HQ country, state, city, full headquarters address" [ref=e886]:
+              - cell "locations" [ref=e887]:
+                - code [ref=e888]: locations
+              - cell "HQ country, state, city, full headquarters address" [ref=e889]
+            - row "taxonomy Industry, category, and speciality fields" [ref=e890]:
+              - cell "taxonomy" [ref=e891]:
+                - code [ref=e892]: taxonomy
+              - cell "Industry, category, and speciality fields" [ref=e893]
+            - row "revenue Revenue estimates (lower/upper bound), public markets, acquisition status" [ref=e894]:
+              - cell "revenue" [ref=e895]:
+                - code [ref=e896]: revenue
+              - cell "Revenue estimates (lower/upper bound), public markets, acquisition status" [ref=e897]
+            - row "hiring Open job count, hiring growth rate, recent job titles" [ref=e898]:
+              - cell "hiring" [ref=e899]:
+                - code [ref=e900]: hiring
+              - cell "Open job count, hiring growth rate, recent job titles" [ref=e901]
+            - row "followers Follower count, month-over-month/quarter/year growth" [ref=e902]:
+              - cell "followers" [ref=e903]:
+                - code [ref=e904]: followers
+              - cell "Follower count, month-over-month/quarter/year growth" [ref=e905]
+            - row "seo Organic search results, monthly organic clicks, Google Ads budget" [ref=e906]:
+              - cell "seo" [ref=e907]:
+                - code [ref=e908]: seo
+              - cell "Organic search results, monthly organic clicks, Google Ads budget" [ref=e909]
+            - row "competitors Competitor company IDs and websites" [ref=e910]:
+              - cell "competitors" [ref=e911]:
+                - code [ref=e912]: competitors
+              - cell "Competitor company IDs and websites" [ref=e913]
+            - row "social_profiles External profile links" [ref=e914]:
+              - cell "social_profiles" [ref=e915]:
+                - code [ref=e916]: social_profiles
+              - cell "External profile links" [ref=e917]
+            - row "web_traffic Monthly visitors, traffic source breakdown" [ref=e918]:
+              - cell "web_traffic" [ref=e919]:
+                - code [ref=e920]: web_traffic
+              - cell "Monthly visitors, traffic source breakdown" [ref=e921]
+            - row "employee_reviews Overall, culture, and work-life balance ratings" [ref=e922]:
+              - cell "employee_reviews" [ref=e923]:
+                - code [ref=e924]: employee_reviews
+              - cell "Overall, culture, and work-life balance ratings" [ref=e925]
+            - row "people Decision makers, founders, C-level executives" [ref=e926]:
+              - cell "people" [ref=e927]:
+                - code [ref=e928]: people
+              - cell "Decision makers, founders, C-level executives" [ref=e929]
+            - row "news Recent article URLs, titles, and publish dates" [ref=e930]:
+              - cell "news" [ref=e931]:
+                - code [ref=e932]: news
+              - cell "Recent article URLs, titles, and publish dates" [ref=e933]
+            - row "software_reviews Review count and average rating" [ref=e934]:
+              - cell "software_reviews" [ref=e935]:
+                - code [ref=e936]: software_reviews
+              - cell "Review count and average rating" [ref=e937]
+            - row "status Enrichment processing state (enriching, not found)" [ref=e938]:
+              - cell "status" [ref=e939]:
+                - code [ref=e940]: status
+              - cell "Enrichment processing state (enriching, not found)" [ref=e941]
+        - heading "Navigate to header Response fields reference" [level=2] [ref=e942]:
+          - link "Navigate to header" [ref=e943] [cursor=pointer]:
+            - /url: "#response-fields-reference"
+            - img [ref=e945]
+          - generic [ref=e947] [cursor=pointer]: Response fields reference
+        - generic [ref=e948]: "The response is a top-level array. Each item in the array contains:"
+        - table [ref=e951]:
+          - rowgroup [ref=e952]:
+            - row "Field Type Description" [ref=e953]:
+              - columnheader "Field" [ref=e954]
+              - columnheader "Type" [ref=e955]
+              - columnheader "Description" [ref=e956]
+          - rowgroup [ref=e957]:
+            - row "matched_on string The input identifier you submitted" [ref=e958]:
+              - cell "matched_on" [ref=e959]:
+                - code [ref=e960]: matched_on
+              - cell "string" [ref=e961]
+              - cell "The input identifier you submitted" [ref=e962]
+            - row "match_type string domain, name, crustdata_company_id, professional_network_profile_url" [ref=e963]:
+              - cell "match_type" [ref=e964]:
+                - code [ref=e965]: match_type
+              - cell "string" [ref=e966]
+              - cell "domain, name, crustdata_company_id, professional_network_profile_url" [ref=e967]:
+                - code [ref=e968]: domain
+                - text: ","
+                - code [ref=e969]: name
+                - text: ","
+                - code [ref=e970]: crustdata_company_id
+                - text: ","
+                - code [ref=e971]: professional_network_profile_url
+            - row "matches array Array of candidate matches (may be empty for no-match)" [ref=e972]:
+              - cell "matches" [ref=e973]:
+                - code [ref=e974]: matches
+              - cell "array" [ref=e975]
+              - cell "Array of candidate matches (may be empty for no-match)" [ref=e976]
+            - row "matches[].confidence_score number How confident the match is. Higher is better." [ref=e977]:
+              - cell "matches[].confidence_score" [ref=e978]:
+                - code [ref=e979]: matches[].confidence_score
+              - cell "number" [ref=e980]
+              - cell "How confident the match is. Higher is better." [ref=e981]
+            - row "matches[].company_data object Full enriched company profile (see table above)" [ref=e982]:
+              - cell "matches[].company_data" [ref=e983]:
+                - code [ref=e984]: matches[].company_data
+              - cell "object" [ref=e985]
+              - cell "Full enriched company profile (see table above)" [ref=e986]
+        - separator [ref=e987]
+        - heading "Navigate to header Validation rules" [level=2] [ref=e988]:
+          - link "Navigate to header" [ref=e989] [cursor=pointer]:
+            - /url: "#validation-rules"
+            - img [ref=e991]
+          - generic [ref=e993] [cursor=pointer]: Validation rules
+        - generic [ref=e994]:
+          - img "Note" [ref=e996]
+          - generic [ref=e999]:
+            - text: These rules reflect current platform behavior. See the
+            - link "API reference" [ref=e1000] [cursor=pointer]:
+              - /url: /openapi-specs/2025-11-01/introduction
+            - text: for the formal OpenAPI contract.
+        - table [ref=e1003]:
+          - rowgroup [ref=e1004]:
+            - row "Rule Behavior" [ref=e1005]:
+              - columnheader "Rule" [ref=e1006]
+              - columnheader "Behavior" [ref=e1007]
+          - rowgroup [ref=e1008]:
+            - row "One identifier type per request Submit domains, names, crustdata_company_ids, or professional_network_profile_urls — not a mix. Mixing types is not supported." [ref=e1009]:
+              - cell "One identifier type per request" [ref=e1010]
+              - cell "Submit domains, names, crustdata_company_ids, or professional_network_profile_urls — not a mix. Mixing types is not supported." [ref=e1011]:
+                - text: Submit
+                - code [ref=e1012]: domains
+                - text: ","
+                - code [ref=e1013]: names
+                - text: ","
+                - code [ref=e1014]: crustdata_company_ids
+                - text: ", or"
+                - code [ref=e1015]: professional_network_profile_urls
+                - text: — not a mix. Mixing types is not supported.
+            - row "fields is optional Omitting returns all sections. Pass section group names to reduce payload." [ref=e1016]:
+              - cell "fields is optional" [ref=e1017]:
+                - code [ref=e1018]: fields
+                - text: is optional
+              - cell "Omitting returns all sections. Pass section group names to reduce payload." [ref=e1019]
+            - row "exact_match is optional Default is null (auto-detect). Set true for strict domain-only matching." [ref=e1020]:
+              - cell "exact_match is optional" [ref=e1021]:
+                - code [ref=e1022]: exact_match
+                - text: is optional
+              - cell "Default is null (auto-detect). Set true for strict domain-only matching." [ref=e1023]:
+                - text: Default is
+                - code [ref=e1024]: "null"
+                - text: (auto-detect). Set
+                - code [ref=e1025]: "true"
+                - text: for strict domain-only matching.
+            - row "Multi-company requests You can submit multiple values in one identifier array. Each is matched independently." [ref=e1026]:
+              - cell "Multi-company requests" [ref=e1027]
+              - cell "You can submit multiple values in one identifier array. Each is matched independently." [ref=e1028]
+        - heading "Navigate to header Errors" [level=2] [ref=e1029]:
+          - link "Navigate to header" [ref=e1030] [cursor=pointer]:
+            - /url: "#errors"
+            - img [ref=e1032]
+          - generic [ref=e1034] [cursor=pointer]: Errors
+        - heading "Navigate to header No-match behavior" [level=3] [ref=e1035]:
+          - link "Navigate to header" [ref=e1036] [cursor=pointer]:
+            - /url: "#no-match-behavior"
+            - img [ref=e1038]
+          - generic [ref=e1040] [cursor=pointer]: No-match behavior
+        - generic [ref=e1041]: "When enriching, each identifier is matched independently:"
+        - list [ref=e1042]:
+          - listitem [ref=e1043]:
+            - strong [ref=e1044]: "Full match:"
+            - text: All identifiers match — each array entry has populated
+            - code [ref=e1045]: matches
+            - text: .
+          - listitem [ref=e1046]:
+            - strong [ref=e1047]: "Partial match:"
+            - text: Some identifiers match and others do not. Matched identifiers have
+            - code [ref=e1048]: company_data
+            - text: ; unmatched identifiers return an empty
+            - code [ref=e1049]: "matches: []"
+            - text: array.
+          - listitem [ref=e1050]:
+            - strong [ref=e1051]: "No match:"
+            - text: All identifiers fail to match. Current platform behavior returns
+            - code [ref=e1052]: 200 OK
+            - text: with empty
+            - code [ref=e1053]: "matches: []"
+            - text: for each array entry.
+        - generic [ref=e1054]:
+          - img "Note" [ref=e1056]
+          - generic [ref=e1059]:
+            - text: The OpenAPI spec also defines a
+            - code [ref=e1060]: "404"
+            - text: response for this endpoint. Current platform behavior returns
+            - code [ref=e1061]: "200"
+            - text: with empty
+            - code [ref=e1062]: matches
+            - text: ", but integrations should handle both"
+            - code [ref=e1063]: "200"
+            - text: empty-match and
+            - code [ref=e1064]: "404"
+            - text: cases.
+        - generic [ref=e1065]:
+          - generic [ref=e1066]:
+            - generic "No match — 200 with empty matches" [ref=e1068]
+            - generic [ref=e1069]:
+              - button "Report incorrect code" [ref=e1071] [cursor=pointer]:
+                - img [ref=e1072]
+              - button "Copy the contents from the code block" [ref=e1075] [cursor=pointer]:
+                - img [ref=e1076]
+              - button "Ask AI" [ref=e1080] [cursor=pointer]:
+                - img [ref=e1081]
+          - code [ref=e1087]:
+            - generic [ref=e1088]: "["
+            - generic [ref=e1089]: "{"
+            - generic [ref=e1090]: "\"matched_on\": \"nonexistent-domain.com\","
+            - generic [ref=e1091]: "\"match_type\": \"domain\","
+            - generic [ref=e1092]: "\"matches\": []"
+            - generic [ref=e1093]: "}"
+            - generic [ref=e1094]: "]"
+        - separator [ref=e1095]
+        - heading "Navigate to header API reference summary" [level=2] [ref=e1096]:
+          - link "Navigate to header" [ref=e1097] [cursor=pointer]:
+            - /url: "#api-reference-summary"
+            - img [ref=e1099]
+          - generic [ref=e1101] [cursor=pointer]: API reference summary
+        - table [ref=e1104]:
+          - rowgroup [ref=e1105]:
+            - row "Detail Value" [ref=e1106]:
+              - columnheader "Detail" [ref=e1107]
+              - columnheader "Value" [ref=e1108]
+          - rowgroup [ref=e1109]:
+            - row "Endpoint POST /company/enrich" [ref=e1110]:
+              - cell "Endpoint" [ref=e1111]:
+                - strong [ref=e1112]: Endpoint
+              - cell "POST /company/enrich" [ref=e1113]:
+                - code [ref=e1114]: POST /company/enrich
+            - 'row "Auth Bearer token + x-api-version: 2025-11-01" [ref=e1115]':
+              - cell "Auth" [ref=e1116]:
+                - strong [ref=e1117]: Auth
+              - 'cell "Bearer token + x-api-version: 2025-11-01" [ref=e1118]':
+                - text: Bearer token +
+                - code [ref=e1119]: "x-api-version: 2025-11-01"
+            - 'row "Request One identifier type: domains, names, crustdata_company_ids, or professional_network_profile_urls. Optional: fields, exact_match." [ref=e1120]':
+              - cell "Request" [ref=e1121]:
+                - strong [ref=e1122]: Request
+              - 'cell "One identifier type: domains, names, crustdata_company_ids, or professional_network_profile_urls. Optional: fields, exact_match." [ref=e1123]':
+                - text: "One identifier type:"
+                - code [ref=e1124]: domains
+                - text: ","
+                - code [ref=e1125]: names
+                - text: ","
+                - code [ref=e1126]: crustdata_company_ids
+                - text: ", or"
+                - code [ref=e1127]: professional_network_profile_urls
+                - text: ". Optional:"
+                - code [ref=e1128]: fields
+                - text: ","
+                - code [ref=e1129]: exact_match
+                - text: .
+            - 'row "Response Top-level array: [{ matched_on, match_type, matches: [{ confidence_score, company_data }] }]" [ref=e1130]':
+              - cell "Response" [ref=e1131]:
+                - strong [ref=e1132]: Response
+              - 'cell "Top-level array: [{ matched_on, match_type, matches: [{ confidence_score, company_data }] }]" [ref=e1133]':
+                - text: "Top-level array:"
+                - code [ref=e1134]: "[{ matched_on, match_type, matches: [{ confidence_score, company_data }] }]"
+            - 'row "No match 200 with empty matches: [] for unmatched identifiers. The OpenAPI spec also defines 404; handle both." [ref=e1135]':
+              - cell "No match" [ref=e1136]:
+                - strong [ref=e1137]: No match
+              - 'cell "200 with empty matches: [] for unmatched identifiers. The OpenAPI spec also defines 404; handle both." [ref=e1138]':
+                - code [ref=e1139]: "200"
+                - text: with empty
+                - code [ref=e1140]: "matches: []"
+                - text: for unmatched identifiers. The OpenAPI spec also defines
+                - code [ref=e1141]: "404"
+                - text: ; handle both.
+            - row "Errors 400 (bad request), 401 (bad auth), 403 (permission/credits), 404 (per spec), 500 (server error)" [ref=e1142]:
+              - cell "Errors" [ref=e1143]:
+                - strong [ref=e1144]: Errors
+              - cell "400 (bad request), 401 (bad auth), 403 (permission/credits), 404 (per spec), 500 (server error)" [ref=e1145]:
+                - code [ref=e1146]: "400"
+                - text: (bad request),
+                - code [ref=e1147]: "401"
+                - text: (bad auth),
+                - code [ref=e1148]: "403"
+                - text: (permission/credits),
+                - code [ref=e1149]: "404"
+                - text: (per spec),
+                - code [ref=e1150]: "500"
+                - text: (server error)
+        - generic [ref=e1151]:
+          - text: See the
+          - link "full API reference" [ref=e1152] [cursor=pointer]:
+            - /url: /openapi-specs/2025-11-01/introduction
+          - text: for the complete OpenAPI schema.
+        - separator [ref=e1153]
+        - heading "Navigate to header What to do next" [level=2] [ref=e1154]:
+          - link "Navigate to header" [ref=e1155] [cursor=pointer]:
+            - /url: "#what-to-do-next"
+            - img [ref=e1157]
+          - generic [ref=e1159] [cursor=pointer]: What to do next
+        - list [ref=e1160]:
+          - listitem [ref=e1161]:
+            - strong [ref=e1162]: Search for companies
+            - text: — use
+            - link "Company Search" [ref=e1163] [cursor=pointer]:
+              - /url: /company-docs/search
+            - text: to find companies by industry, funding, headcount, and more.
+          - listitem [ref=e1164]:
+            - strong [ref=e1165]: Discover filter values
+            - text: — use
+            - link "Autocomplete" [ref=e1166] [cursor=pointer]:
+              - /url: /company-docs/autocomplete
+            - text: to find valid values before building search filters.
+          - listitem [ref=e1167]:
+            - strong [ref=e1168]: See more examples
+            - text: — browse
+            - link "company examples" [ref=e1169] [cursor=pointer]:
+              - /url: /company-docs/examples
+            - text: for ready-to-copy patterns.
+      - generic [ref=e1171]:
+        - paragraph [ref=e1172]: Was this page helpful?
+        - generic [ref=e1174]:
+          - button "Yes" [ref=e1175] [cursor=pointer]:
+            - img [ref=e1176]
+            - generic [ref=e1178]: "Yes"
+          - button "No" [ref=e1179] [cursor=pointer]:
+            - img [ref=e1180]
+            - generic [ref=e1182]: "No"
+      - generic [ref=e1184]:
+        - textbox "Ask a question..." [ref=e1185]
+        - generic: ⌘I
+        - button "Send message" [disabled] [ref=e1186]:
+          - img [ref=e1187]
+      - contentinfo [ref=e1189]:
+        - generic [ref=e1190]:
+          - link "x" [ref=e1191] [cursor=pointer]:
+            - /url: https://x.com/crustdata
+            - generic [ref=e1192]: x
+            - img [ref=e1193]
+          - link "linkedin" [ref=e1194] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/crustdata
+            - generic [ref=e1195]: linkedin
+            - img [ref=e1196]

@@ -1,0 +1,33 @@
+URL: https://docs.crustdata.com/api-reference/person-apis/enrich-person-profiles-from-cached-dataset
+Title: Enrich People
+
+Description: Enrich person records using the Crustdata cached dataset. Provide either a profile URL or a business email to retrieve detailed person data including employment history, education, skills, contact information, and developer platform data when available. Exactly one identifier type must be provided per request. Supports batch enrichment of up to 25 profiles at once.
+
+Rate limit: Default 15 requests per minute.
+
+Method: POST
+URL: https://api.crustdata.com/person/enrich
+
+Auth: Bearer token in Authorization header (required)
+Headers: x-api-version (required)
+
+Body (application/json):
+  Submit exactly one of:
+    professional_network_profile_urls: string[] (max 25)
+    business_emails: string[]
+  fields: string[] — Valid groups: basic_profile, professional_network, skills, contact, social_handles,
+    experience, education, certifications, honors, dev_platform_profiles. Dot-notation OK.
+  min_similarity_score: number [0..1] — for email matching
+  preview: boolean, default false — basic profile only, 0 credits. Cannot combine with enrich_realtime.
+
+Note: Same body shape is also used by /person/professional_network/enrich/live (see separate endpoint).
+
+Response (200): Array of:
+  matched_on: string (the input identifier)
+  match_type: enum ["professional_network_profile_url", "business_email"]
+  matches: array of
+    confidence_score: number
+    person_data:
+      basic_profile: { name, current_title, headline, location { raw, ... }, ... }
+      professional_network, skills, contact, social_handles, experience, education, certifications,
+        honors, dev_platform_profiles
