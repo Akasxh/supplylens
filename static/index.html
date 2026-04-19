@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SupplyLens — Supply Chain Discovery</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50: '#f0f7ff', 100: '#e0effe', 200: '#bae0fd', 400: '#60b8fa', 500: '#3b9cf5', 600: '#2080e5', 700: '#1a6abf', 800: '#1b5699', 900: '#1d4878' },
+            surface: { 50: '#fafbfc', 100: '#f4f5f7', 200: '#e8eaed', 300: '#d1d5db', 800: '#1f2937', 900: '#111827' }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    * { font-family: 'Inter', system-ui, sans-serif; }
+    .score-ring { background: conic-gradient(var(--ring-color) calc(var(--score) * 3.6deg), #e5e7eb 0deg); }
+    .fade-in { animation: fadeIn 0.3s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .shimmer { background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    .glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    .mic-pulse { animation: micPulse 1.2s ease-in-out infinite; }
+    @keyframes micPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); } 50% { box-shadow: 0 0 0 12px rgba(239,68,68,0); } }
+  </style>
+</head>
+<body class="bg-surface-50 text-surface-900 min-h-screen">
+
+  <!-- Header -->
+  <header class="glass sticky top-0 z-50 border-b border-surface-200">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center gap-4">
+      <div class="flex items-center gap-2">
+        <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        </div>
+        <span class="text-xl font-bold text-surface-900">Supply<span class="text-brand-600">Lens</span></span>
+      </div>
+      <span class="text-sm text-surface-300 hidden sm:inline">Supply Chain Intelligence</span>
+    </div>
+  </header>
+
+  <!-- Hero / Search -->
+  <section class="max-w-7xl mx-auto px-6 pt-12 pb-8">
+    <div class="text-center mb-8">
+      <h1 class="text-3xl font-bold text-surface-900 mb-2">Find Verified Suppliers & Parts</h1>
+      <p class="text-surface-300 text-lg">Describe what you need in plain language. We'll find companies, verify legitimacy, and help you reach out.</p>
+      <p class="text-surface-300 text-sm mt-1">Type or speak in Hindi / English</p>
+    </div>
+    <div class="max-w-3xl mx-auto relative">
+      <input id="searchInput" type="text" placeholder='e.g. "GPU manufacturers in Taiwan" or "aerospace composite parts suppliers"'
+        class="w-full px-5 py-4 pr-44 rounded-2xl border border-surface-200 bg-white shadow-lg shadow-brand-500/5 text-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition">
+      <div class="absolute right-2 top-2 bottom-2 flex items-center gap-1.5">
+        <button id="micBtn" onclick="toggleVoice()" title="Voice search (Hindi / English)"
+          class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-100 hover:bg-surface-200 text-surface-800 transition">
+          <svg id="micIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4M12 15a3 3 0 003-3V5a3 3 0 00-6 0v7a3 3 0 003 3z"/></svg>
+        </button>
+        <button id="searchBtn" onclick="doSearch()"
+          class="h-10 px-5 bg-brand-600 hover:bg-brand-700 text-white font-semibold rounded-xl transition flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          Search
+        </button>
+      </div>
+    </div>
+    <div id="voiceStatus" class="hidden max-w-3xl mx-auto mt-2 text-center">
+      <span id="voiceText" class="text-sm text-red-600 font-medium"></span>
+    </div>
+    <div class="max-w-3xl mx-auto mt-3 flex flex-wrap gap-2 justify-center">
+      <button onclick="quickSearch('semiconductor manufacturers')" class="px-3 py-1 text-sm bg-brand-50 text-brand-700 rounded-full hover:bg-brand-100 transition">Semiconductors</button>
+      <button onclick="quickSearch('aerospace parts suppliers')" class="px-3 py-1 text-sm bg-brand-50 text-brand-700 rounded-full hover:bg-brand-100 transition">Aerospace Parts</button>
+      <button onclick="quickSearch('GPU hardware manufacturers')" class="px-3 py-1 text-sm bg-brand-50 text-brand-700 rounded-full hover:bg-brand-100 transition">GPU Hardware</button>
+      <button onclick="quickSearch('precision optics manufacturers')" class="px-3 py-1 text-sm bg-brand-50 text-brand-700 rounded-full hover:bg-brand-100 transition">Precision Optics</button>
+      <button onclick="quickSearch('battery cell manufacturers')" class="px-3 py-1 text-sm bg-brand-50 text-brand-700 rounded-full hover:bg-brand-100 transition">Battery Cells</button>
+      <button onclick="quickSearch('robotics components supplier')" class="px-3 py-1 text-sm bg-brand-50 text-brand-700 rounded-full hover:bg-brand-100 transition">Robotics</button>
+    </div>
+  </section>
+
+  <!-- Parsed Query Info -->
+  <div id="parsedQuery" class="hidden max-w-7xl mx-auto px-6 mb-4">
+    <div class="bg-brand-50 border border-brand-200 rounded-xl px-5 py-3 flex items-center gap-3">
+      <svg class="w-5 h-5 text-brand-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+      <span id="parsedText" class="text-sm text-brand-800"></span>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div id="loading" class="hidden max-w-7xl mx-auto px-6">
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white rounded-2xl p-6 border border-surface-200"><div class="shimmer h-6 w-3/4 rounded mb-3"></div><div class="shimmer h-4 w-1/2 rounded mb-2"></div><div class="shimmer h-4 w-2/3 rounded mb-4"></div><div class="shimmer h-20 w-full rounded"></div></div>
+      <div class="bg-white rounded-2xl p-6 border border-surface-200"><div class="shimmer h-6 w-3/4 rounded mb-3"></div><div class="shimmer h-4 w-1/2 rounded mb-2"></div><div class="shimmer h-4 w-2/3 rounded mb-4"></div><div class="shimmer h-20 w-full rounded"></div></div>
+      <div class="bg-white rounded-2xl p-6 border border-surface-200"><div class="shimmer h-6 w-3/4 rounded mb-3"></div><div class="shimmer h-4 w-1/2 rounded mb-2"></div><div class="shimmer h-4 w-2/3 rounded mb-4"></div><div class="shimmer h-20 w-full rounded"></div></div>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div id="results" class="hidden max-w-7xl mx-auto px-6 pb-16">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-lg font-semibold"><span id="resultCount">0</span> suppliers found</h2>
+    </div>
+    <div id="resultGrid" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"></div>
+  </div>
+
+  <!-- Error -->
+  <div id="error" class="hidden max-w-7xl mx-auto px-6">
+    <div class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
+      <p class="text-red-700 font-medium" id="errorMsg"></p>
+    </div>
+  </div>
+
+  <!-- Company Detail Modal -->
+  <div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeModal()"></div>
+    <div class="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-100 transition">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="modalContent" class="p-8"></div>
+    </div>
+  </div>
+
+  <script>
+    let currentQuery = '';
+    let searchResults = [];
+
+    function quickSearch(q) {
+      document.getElementById('searchInput').value = q;
+      doSearch();
+    }
+
+    document.getElementById('searchInput').addEventListener('keydown', e => { if (e.key === 'Enter') doSearch(); });
+
+    async function doSearch() {
+      const query = document.getElementById('searchInput').value.trim();
+      if (!query) return;
+      currentQuery = query;
+
+      document.getElementById('loading').classList.remove('hidden');
+      document.getElementById('results').classList.add('hidden');
+      document.getElementById('error').classList.add('hidden');
+      document.getElementById('parsedQuery').classList.add('hidden');
+      document.getElementById('searchBtn').disabled = true;
+      document.getElementById('searchBtn').innerHTML = '<svg class="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/></svg> Searching...';
+
+      try {
+        const resp = await fetch('/api/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query, limit: 30 })
+        });
+        if (!resp.ok) throw new Error(`API returned ${resp.status}`);
+        const data = await resp.json();
+        searchResults = data.results || [];
+
+        if (data.parsed_query?.summary) {
+          document.getElementById('parsedText').textContent = `AI understood: "${data.parsed_query.summary}" — searching: ${(data.parsed_query.search_terms || []).join(', ')}`;
+          document.getElementById('parsedQuery').classList.remove('hidden');
+        }
+
+        renderResults(searchResults);
+      } catch (err) {
+        document.getElementById('error').classList.remove('hidden');
+        document.getElementById('errorMsg').textContent = `Search failed: ${err.message}`;
+      } finally {
+        document.getElementById('loading').classList.add('hidden');
+        document.getElementById('searchBtn').disabled = false;
+        document.getElementById('searchBtn').innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg> Search';
+      }
+    }
+
+    function scoreColor(score) {
+      if (score >= 75) return '#16a34a';
+      if (score >= 50) return '#ca8a04';
+      if (score >= 25) return '#ea580c';
+      return '#dc2626';
+    }
+
+    function scoreBg(score) {
+      if (score >= 75) return 'bg-green-50 text-green-800 border-green-200';
+      if (score >= 50) return 'bg-yellow-50 text-yellow-800 border-yellow-200';
+      if (score >= 25) return 'bg-orange-50 text-orange-800 border-orange-200';
+      return 'bg-red-50 text-red-800 border-red-200';
+    }
+
+    function renderResults(results) {
+      const grid = document.getElementById('resultGrid');
+      grid.innerHTML = '';
+      document.getElementById('resultCount').textContent = results.length;
+
+      if (results.length === 0) {
+        grid.innerHTML = '<div class="col-span-full text-center py-12 text-surface-300">No suppliers found. Try a different search term.</div>';
+        document.getElementById('results').classList.remove('hidden');
+        return;
+      }
+
+      results.forEach((r, i) => {
+        const score = r.legitimacy?.score || 0;
+        const verdict = r.legitimacy?.verdict || 'Unknown';
+        const color = scoreColor(score);
+        const card = document.createElement('div');
+        card.className = 'fade-in bg-white rounded-2xl border border-surface-200 hover:border-brand-300 hover:shadow-lg hover:shadow-brand-500/10 transition-all cursor-pointer';
+        card.style.animationDelay = `${i * 50}ms`;
+        card.onclick = () => openDetail(r);
+
+        const industries = (r.industries || []).slice(0, 2).map(ind =>
+          `<span class="px-2 py-0.5 text-xs bg-surface-100 text-surface-800 rounded-full">${ind}</span>`
+        ).join('');
+
+        const fundingStr = r.funding_total_usd ? `$${(r.funding_total_usd / 1e6).toFixed(0)}M raised` : '';
+        const location = r.locations?.headquarters || r.locations?.hq_country || '';
+
+        card.innerHTML = `
+          <div class="p-5">
+            <div class="flex items-start justify-between mb-3">
+              <div class="flex-1 min-w-0">
+                <h3 class="font-semibold text-lg truncate">${r.name}</h3>
+                <p class="text-sm text-surface-300 truncate">${r.domain || ''}</p>
+              </div>
+              <div class="ml-3 flex flex-col items-center shrink-0">
+                <div class="w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold text-white" style="background:${color}">
+                  ${score}
+                </div>
+                <span class="text-[10px] mt-1 text-surface-300">${verdict}</span>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-1 mb-3">${industries}</div>
+            <div class="grid grid-cols-2 gap-2 text-sm">
+              <div class="flex items-center gap-1.5 text-surface-800">
+                <svg class="w-4 h-4 text-surface-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                ${r.headcount ? r.headcount.toLocaleString() + ' employees' : r.employee_range || 'N/A'}
+              </div>
+              <div class="flex items-center gap-1.5 text-surface-800">
+                <svg class="w-4 h-4 text-surface-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                ${r.year_founded ? 'Est. ' + r.year_founded : 'N/A'}
+              </div>
+              ${location ? `<div class="flex items-center gap-1.5 text-surface-800 col-span-2">
+                <svg class="w-4 h-4 text-surface-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                ${location}
+              </div>` : ''}
+              ${fundingStr ? `<div class="flex items-center gap-1.5 text-surface-800 col-span-2">
+                <svg class="w-4 h-4 text-surface-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                ${fundingStr}
+              </div>` : ''}
+            </div>
+            <div class="mt-3 flex gap-2">
+              ${r.website ? `<a href="${r.website}" target="_blank" onclick="event.stopPropagation()" class="text-xs px-3 py-1.5 bg-surface-100 hover:bg-surface-200 rounded-lg transition">Website</a>` : ''}
+              ${r.linkedin ? `<a href="${r.linkedin}" target="_blank" onclick="event.stopPropagation()" class="text-xs px-3 py-1.5 bg-blue-50 text-blue-700 hover:bg-blue-100 rounded-lg transition">LinkedIn</a>` : ''}
+              <button onclick="event.stopPropagation(); analyzeCompany(${JSON.stringify(r).replace(/"/g, '&quot;')})" class="text-xs px-3 py-1.5 bg-brand-50 text-brand-700 hover:bg-brand-100 rounded-lg transition ml-auto">AI Analysis</button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+
+      document.getElementById('results').classList.remove('hidden');
+    }
+
+    async function openDetail(company) {
+      modalCompanyData = company;
+      modalContacts = [];
+      const modal = document.getElementById('modal');
+      const content = document.getElementById('modalContent');
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+
+      const score = company.legitimacy?.score || 0;
+      const factors = company.legitimacy?.factors || [];
+
+      let factorsHtml = factors.map(f => {
+        const statusColors = {
+          strong: 'bg-green-100 text-green-800',
+          moderate: 'bg-yellow-100 text-yellow-800',
+          weak: 'bg-orange-100 text-orange-800',
+          risk: 'bg-red-100 text-red-800',
+          unknown: 'bg-gray-100 text-gray-600',
+        };
+        return `<div class="flex items-center justify-between py-2 border-b border-surface-100 last:border-0">
+          <span class="text-sm font-medium">${f.name}</span>
+          <div class="flex items-center gap-2">
+            <span class="text-sm text-surface-800">${f.value}</span>
+            <span class="px-2 py-0.5 text-xs rounded-full ${statusColors[f.status] || statusColors.unknown}">${f.points}/25</span>
+          </div>
+        </div>`;
+      }).join('');
+
+      content.innerHTML = `
+        <div class="mb-6">
+          <h2 class="text-2xl font-bold mb-1">${company.name}</h2>
+          <p class="text-surface-300">${company.domain || ''} ${company.company_type ? '&middot; ' + company.company_type : ''}</p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-6">
+          <div class="bg-surface-50 rounded-xl p-4">
+            <div class="text-sm text-surface-300 mb-1">Legitimacy Score</div>
+            <div class="text-3xl font-bold" style="color:${scoreColor(score)}">${score}/100</div>
+            <div class="text-sm font-medium" style="color:${scoreColor(score)}">${company.legitimacy?.verdict}</div>
+          </div>
+          <div class="bg-surface-50 rounded-xl p-4">
+            <div class="text-sm text-surface-300 mb-1">Employees</div>
+            <div class="text-3xl font-bold">${company.headcount ? company.headcount.toLocaleString() : 'N/A'}</div>
+            <div class="text-sm text-surface-300">${company.employee_range || ''}</div>
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-2">Legitimacy Breakdown</h3>
+          <div class="bg-surface-50 rounded-xl p-4">${factorsHtml}</div>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-semibold mb-2">Industries</h3>
+          <div class="flex flex-wrap gap-2">
+            ${(company.industries || []).map(i => `<span class="px-3 py-1 text-sm bg-brand-50 text-brand-700 rounded-full">${i}</span>`).join('')}
+          </div>
+        </div>
+
+        <div class="flex gap-3 mb-6">
+          ${company.website ? `<a href="${company.website}" target="_blank" class="px-4 py-2 bg-surface-800 text-white rounded-xl hover:bg-surface-900 transition text-sm">Visit Website</a>` : ''}
+          ${company.linkedin ? `<a href="${company.linkedin}" target="_blank" class="px-4 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition text-sm">LinkedIn Profile</a>` : ''}
+        </div>
+
+        <div class="border-t border-surface-200 pt-4">
+          <h3 class="font-semibold mb-3">Key Contacts</h3>
+          <div id="contactsContainer">
+            <div class="text-center py-4">
+              <div class="shimmer h-4 w-1/2 mx-auto rounded mb-2"></div>
+              <div class="shimmer h-4 w-1/3 mx-auto rounded"></div>
+              <p class="text-sm text-surface-300 mt-2">Loading contacts...</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-surface-200 pt-4 mt-4">
+          <h3 class="font-semibold mb-3">AI Compliance Analysis</h3>
+          <div id="analysisContainer">
+            <button onclick="analyzeInModal(${JSON.stringify(company).replace(/"/g, '&quot;')})"
+              class="w-full py-3 bg-brand-50 text-brand-700 rounded-xl hover:bg-brand-100 transition text-sm font-medium">
+              Run AI Analysis
+            </button>
+          </div>
+        </div>
+      `;
+
+      if (company.domain) {
+        loadContacts(company.domain);
+      }
+    }
+
+    let modalCompanyData = null;
+    let modalContacts = [];
+
+    async function loadContacts(domain) {
+      const container = document.getElementById('contactsContainer');
+      try {
+        const resp = await fetch(`/api/contacts?domain=${encodeURIComponent(domain)}`);
+        if (!resp.ok) throw new Error('Failed to load contacts');
+        const data = await resp.json();
+        modalContacts = data.contacts || [];
+
+        if (modalContacts.length === 0) {
+          container.innerHTML = '<p class="text-sm text-surface-300 py-2">No contacts found for this company.</p>';
+          return;
+        }
+
+        container.innerHTML = modalContacts.map((c, idx) => `
+          <div class="flex items-center justify-between py-3 border-b border-surface-100 last:border-0">
+            <div>
+              <div class="font-medium text-sm">${c.name || 'Unknown'}</div>
+              <div class="text-xs text-surface-300">${c.title || ''} ${c.department ? '&middot; ' + c.department : ''}</div>
+              ${c.location ? `<div class="text-xs text-surface-300">${c.location}</div>` : ''}
+            </div>
+            <div class="flex items-center gap-2">
+              ${c.linkedin ? `<a href="${c.linkedin}" target="_blank" class="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded hover:bg-blue-100 transition">LinkedIn</a>` : ''}
+              ${(c.business_emails || []).length > 0 ? `<span class="text-xs px-2 py-1 bg-green-50 text-green-700 rounded">Email available</span>` : ''}
+              <button onclick="generateOutreach(${idx})"
+                class="text-xs px-2 py-1 bg-brand-50 text-brand-700 rounded hover:bg-brand-100 transition">Draft Email</button>
+            </div>
+          </div>
+        `).join('');
+      } catch {
+        container.innerHTML = '<p class="text-sm text-surface-300 py-2">Could not load contacts. The company may not be indexed for people search.</p>';
+      }
+    }
+
+    async function analyzeCompany(company) {
+      openDetail(company);
+      setTimeout(() => analyzeInModal(company), 300);
+    }
+
+    async function analyzeInModal(company) {
+      const container = document.getElementById('analysisContainer');
+      container.innerHTML = '<div class="py-4 text-center"><div class="shimmer h-4 w-2/3 mx-auto rounded mb-2"></div><div class="shimmer h-4 w-1/2 mx-auto rounded"></div><p class="text-sm text-surface-300 mt-2">AI is analyzing this supplier...</p></div>';
+
+      try {
+        const resp = await fetch('/api/analyze', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ company, user_need: currentQuery })
+        });
+        if (!resp.ok) throw new Error('Analysis failed');
+        const data = await resp.json();
+
+        const fitColor = data.fit_score >= 7 ? 'text-green-700 bg-green-50' : data.fit_score >= 4 ? 'text-yellow-700 bg-yellow-50' : 'text-red-700 bg-red-50';
+
+        container.innerHTML = `
+          <div class="space-y-3 fade-in">
+            <div class="flex items-center gap-3">
+              <span class="text-sm font-medium">Fit Score:</span>
+              <span class="px-3 py-1 rounded-full text-sm font-bold ${fitColor}">${data.fit_score}/10</span>
+            </div>
+            <div>
+              <span class="text-sm font-medium">Reasoning:</span>
+              <p class="text-sm text-surface-800 mt-1">${data.fit_reasoning || ''}</p>
+            </div>
+            ${(data.compliance_flags || []).length > 0 ? `
+              <div>
+                <span class="text-sm font-medium text-red-700">Compliance Flags:</span>
+                <ul class="mt-1 space-y-1">${data.compliance_flags.map(f => `<li class="text-sm text-red-600 flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>${f}</li>`).join('')}</ul>
+              </div>
+            ` : '<div class="text-sm text-green-700 flex items-center gap-1"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>No compliance flags detected</div>'}
+            <div>
+              <span class="text-sm font-medium">Outreach Suggestion:</span>
+              <p class="text-sm text-surface-800 mt-1">${data.outreach_suggestion || ''}</p>
+            </div>
+            <div>
+              <span class="text-sm font-medium">Export Control:</span>
+              <p class="text-sm text-surface-800 mt-1">${data.export_control_note || ''}</p>
+            </div>
+          </div>
+        `;
+      } catch {
+        container.innerHTML = '<p class="text-sm text-red-600">AI analysis failed. Please try again.</p>';
+      }
+    }
+
+    async function generateOutreach(contactIdx) {
+      const contact = modalContacts[contactIdx];
+      if (!contact || !modalCompanyData) return;
+
+      const container = document.getElementById('contactsContainer');
+      const outreachDiv = document.createElement('div');
+      outreachDiv.className = 'mt-4 bg-brand-50 rounded-xl p-4 fade-in';
+      outreachDiv.innerHTML = '<div class="shimmer h-4 w-full rounded mb-2"></div><div class="shimmer h-4 w-2/3 rounded"></div><p class="text-xs text-surface-300 mt-2">Crafting personalized email with company intelligence...</p>';
+      container.appendChild(outreachDiv);
+
+      try {
+        const resp = await fetch('/api/outreach', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            company_name: modalCompanyData.name,
+            contact_name: contact.name,
+            contact_title: contact.title,
+            user_need: currentQuery,
+            company_context: modalCompanyData,
+            contact_context: contact,
+          })
+        });
+        if (!resp.ok) throw new Error('Failed');
+        const data = await resp.json();
+        outreachDiv.innerHTML = `
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-sm font-semibold text-brand-800">Personalized Email to ${contact.name}</span>
+            <button onclick="navigator.clipboard.writeText(this.closest('.fade-in').querySelector('.email-body').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})" class="text-xs px-2 py-1 bg-white rounded hover:bg-brand-100 transition">Copy</button>
+          </div>
+          <p class="email-body text-sm text-surface-800 whitespace-pre-wrap leading-relaxed">${data.email}</p>
+        `;
+      } catch {
+        outreachDiv.innerHTML = '<p class="text-sm text-red-600">Could not generate outreach email.</p>';
+      }
+    }
+
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+      document.body.style.overflow = '';
+      modalCompanyData = null;
+      modalContacts = [];
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // ---- Voice Search (Sarvam STT — Hindi + English) ----
+    let mediaRecorder = null;
+    let audioChunks = [];
+    let isRecording = false;
+
+    async function toggleVoice() {
+      if (isRecording) {
+        stopRecording();
+      } else {
+        startRecording();
+      }
+    }
+
+    async function startRecording() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm;codecs=opus' });
+        audioChunks = [];
+
+        mediaRecorder.ondataavailable = e => { if (e.data.size > 0) audioChunks.push(e.data); };
+        mediaRecorder.onstop = () => {
+          stream.getTracks().forEach(t => t.stop());
+          sendAudioToSTT();
+        };
+
+        mediaRecorder.start();
+        isRecording = true;
+
+        const micBtn = document.getElementById('micBtn');
+        micBtn.className = 'w-10 h-10 flex items-center justify-center rounded-xl bg-red-500 text-white transition mic-pulse';
+        document.getElementById('micIcon').innerHTML = '<rect x="6" y="4" width="12" height="16" rx="2" fill="currentColor"/>';
+
+        const status = document.getElementById('voiceStatus');
+        status.classList.remove('hidden');
+        document.getElementById('voiceText').textContent = 'Listening... speak in Hindi or English. Click to stop.';
+      } catch (err) {
+        alert('Microphone access denied. Please allow microphone permissions.');
+      }
+    }
+
+    function stopRecording() {
+      if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+        mediaRecorder.stop();
+      }
+      isRecording = false;
+
+      const micBtn = document.getElementById('micBtn');
+      micBtn.className = 'w-10 h-10 flex items-center justify-center rounded-xl bg-surface-100 hover:bg-surface-200 text-surface-800 transition';
+      document.getElementById('micIcon').innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4M12 15a3 3 0 003-3V5a3 3 0 00-6 0v7a3 3 0 003 3z"/>';
+
+      document.getElementById('voiceText').textContent = 'Processing speech...';
+    }
+
+    async function sendAudioToSTT() {
+      const blob = new Blob(audioChunks, { type: 'audio/webm' });
+      const formData = new FormData();
+      formData.append('file', blob, 'recording.webm');
+
+      const status = document.getElementById('voiceStatus');
+      document.getElementById('voiceText').textContent = 'Transcribing with Sarvam AI...';
+
+      try {
+        const resp = await fetch('/api/voice', { method: 'POST', body: formData });
+        if (!resp.ok) {
+          const errData = await resp.json().catch(() => ({}));
+          throw new Error(errData.detail || `STT failed (${resp.status})`);
+        }
+        const data = await resp.json();
+        const transcript = data.transcript || '';
+
+        if (transcript) {
+          document.getElementById('searchInput').value = transcript;
+          const lang = data.language === 'hi-IN' ? 'Hindi' : data.language === 'en-IN' ? 'English' : data.language || 'auto';
+          document.getElementById('voiceText').textContent = `Detected ${lang}: "${transcript}"`;
+          setTimeout(() => {
+            status.classList.add('hidden');
+            doSearch();
+          }, 1500);
+        } else {
+          document.getElementById('voiceText').textContent = 'No speech detected. Try again.';
+          setTimeout(() => status.classList.add('hidden'), 2000);
+        }
+      } catch (err) {
+        document.getElementById('voiceText').textContent = `Voice error: ${err.message}`;
+        setTimeout(() => status.classList.add('hidden'), 3000);
+      }
+    }
+  </script>
+</body>
+</html>
