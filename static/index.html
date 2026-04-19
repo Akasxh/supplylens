@@ -28,6 +28,8 @@
     .glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
     .mic-pulse { animation: micPulse 1.2s ease-in-out infinite; }
     @keyframes micPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); } 50% { box-shadow: 0 0 0 12px rgba(239,68,68,0); } }
+    #draftPanel { transform: translateX(100%); transition: transform 0.25s ease-out; }
+    #draftPanel.open { transform: translateX(0); }
   </style>
 </head>
 <body class="bg-surface-50 text-surface-900 min-h-screen">
@@ -109,6 +111,40 @@
   <div id="error" class="hidden max-w-7xl mx-auto px-6">
     <div class="bg-red-50 border border-red-200 rounded-xl p-6 text-center">
       <p class="text-red-700 font-medium" id="errorMsg"></p>
+    </div>
+  </div>
+
+  <!-- Draft Email Panel (slides in from right) -->
+  <div id="draftPanel" class="hidden fixed top-0 right-0 h-full w-full sm:w-[520px] bg-white shadow-2xl z-[60] flex flex-col border-l border-surface-200">
+    <div class="px-5 py-4 border-b border-surface-200 flex items-start justify-between gap-3">
+      <div class="min-w-0">
+        <h3 id="draftHeader" class="font-semibold text-base truncate">Draft email</h3>
+        <p id="draftSubtitle" class="text-xs text-surface-300 truncate"></p>
+      </div>
+      <button onclick="closeDraftPanel()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-100 transition shrink-0">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto p-5 space-y-4">
+      <div>
+        <label class="text-xs font-medium text-surface-800 block mb-1">To</label>
+        <select id="draftTo" class="w-full px-3 py-2 rounded-lg border border-surface-200 bg-surface-50 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500"></select>
+        <p class="text-[10px] text-surface-300 mt-1">Verified emails come from Crustdata. Predicted emails are guessed from name + company domain — deliverability not guaranteed.</p>
+      </div>
+      <div>
+        <label class="text-xs font-medium text-surface-800 block mb-1">Subject</label>
+        <input id="draftSubject" type="text" class="w-full px-3 py-2 rounded-lg border border-surface-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+      </div>
+      <div>
+        <label class="text-xs font-medium text-surface-800 block mb-1">Body</label>
+        <div id="draftBody" class="hidden bg-brand-50 rounded-lg p-3 mb-2"></div>
+        <textarea id="draftBodyInput" rows="14" class="w-full px-3 py-2 rounded-lg border border-surface-200 text-sm font-mono leading-relaxed focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+      </div>
+    </div>
+    <div class="px-5 py-3 border-t border-surface-200 bg-surface-50 flex items-center justify-end gap-2">
+      <button id="copyDraftBtn" onclick="copyDraft()" class="px-3 py-2 text-sm rounded-lg bg-white border border-surface-200 hover:bg-surface-100 transition">Copy</button>
+      <button onclick="openInMailto()" class="px-3 py-2 text-sm rounded-lg bg-white border border-surface-200 hover:bg-surface-100 transition">Mail app</button>
+      <button onclick="openInGmail()" class="px-3 py-2 text-sm rounded-lg bg-brand-600 text-white hover:bg-brand-700 transition font-medium">Open in Gmail</button>
     </div>
   </div>
 
@@ -360,27 +396,53 @@
         if (!resp.ok) throw new Error('Failed to load contacts');
         const data = await resp.json();
         modalContacts = data.contacts || [];
+        const groups = data.groups || [];
 
         if (modalContacts.length === 0) {
           container.innerHTML = '<p class="text-sm text-surface-300 py-2">No contacts found for this company.</p>';
           return;
         }
 
-        container.innerHTML = modalContacts.map((c, idx) => `
-          <div class="flex items-center justify-between py-3 border-b border-surface-100 last:border-0">
-            <div>
-              <div class="font-medium text-sm">${c.name || 'Unknown'}</div>
-              <div class="text-xs text-surface-300">${c.title || ''} ${c.department ? '&middot; ' + c.department : ''}</div>
-              ${c.location ? `<div class="text-xs text-surface-300">${c.location}</div>` : ''}
+        let globalIdx = 0;
+        const indexMap = new Map();
+        modalContacts.forEach((c, i) => indexMap.set(c, i));
+
+        container.innerHTML = groups.map(g => {
+          const rows = g.contacts.map(c => {
+            const idx = indexMap.get(c);
+            const verifiedCount = (c.business_emails || []).length;
+            const predictedCount = (c.predicted_emails || []).length;
+            const emailBadge = verifiedCount > 0
+              ? `<span class="text-[10px] px-2 py-0.5 bg-green-50 text-green-700 rounded">${verifiedCount} verified email${verifiedCount>1?'s':''}</span>`
+              : predictedCount > 0
+                ? `<span class="text-[10px] px-2 py-0.5 bg-yellow-50 text-yellow-700 rounded" title="Guessed from name + domain">${predictedCount} predicted</span>`
+                : '';
+            return `
+              <div class="flex items-center justify-between py-2.5 pl-3 border-l-2 border-brand-100 mb-1.5 bg-surface-50/40 rounded-r">
+                <div class="min-w-0 flex-1">
+                  <div class="font-medium text-sm truncate">${c.name || 'Unknown'}</div>
+                  <div class="text-xs text-surface-300 truncate">${c.title || ''}${c.seniority ? ' &middot; ' + c.seniority : ''}</div>
+                  <div class="flex items-center gap-1.5 mt-1">${emailBadge}${c.location ? `<span class="text-[10px] text-surface-300">${c.location}</span>` : ''}</div>
+                </div>
+                <div class="flex items-center gap-1.5 shrink-0 ml-2">
+                  ${c.linkedin ? `<a href="${c.linkedin}" target="_blank" class="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded hover:bg-blue-100 transition">in</a>` : ''}
+                  <button onclick="openDraftPanel(${idx})"
+                    class="text-xs px-2.5 py-1 bg-brand-600 text-white rounded hover:bg-brand-700 transition font-medium">Draft Email</button>
+                </div>
+              </div>
+            `;
+          }).join('');
+          return `
+            <div class="mb-4">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="text-xs font-semibold uppercase tracking-wider text-brand-700">${g.department}</span>
+                <span class="text-[10px] px-1.5 py-0.5 bg-brand-50 text-brand-700 rounded">${g.contacts.length}</span>
+                <div class="flex-1 border-t border-surface-200"></div>
+              </div>
+              ${rows}
             </div>
-            <div class="flex items-center gap-2">
-              ${c.linkedin ? `<a href="${c.linkedin}" target="_blank" class="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded hover:bg-blue-100 transition">LinkedIn</a>` : ''}
-              ${(c.business_emails || []).length > 0 ? `<span class="text-xs px-2 py-1 bg-green-50 text-green-700 rounded">Email available</span>` : ''}
-              <button onclick="generateOutreach(${idx})"
-                class="text-xs px-2 py-1 bg-brand-50 text-brand-700 rounded hover:bg-brand-100 transition">Draft Email</button>
-            </div>
-          </div>
-        `).join('');
+          `;
+        }).join('');
       } catch {
         container.innerHTML = '<p class="text-sm text-surface-300 py-2">Could not load contacts. The company may not be indexed for people search.</p>';
       }
@@ -437,15 +499,36 @@
       }
     }
 
-    async function generateOutreach(contactIdx) {
+    async function openDraftPanel(contactIdx) {
       const contact = modalContacts[contactIdx];
       if (!contact || !modalCompanyData) return;
 
-      const container = document.getElementById('contactsContainer');
-      const outreachDiv = document.createElement('div');
-      outreachDiv.className = 'mt-4 bg-brand-50 rounded-xl p-4 fade-in';
-      outreachDiv.innerHTML = '<div class="shimmer h-4 w-full rounded mb-2"></div><div class="shimmer h-4 w-2/3 rounded"></div><p class="text-xs text-surface-300 mt-2">Crafting personalized email with company intelligence...</p>';
-      container.appendChild(outreachDiv);
+      const panel = document.getElementById('draftPanel');
+      const body = document.getElementById('draftBody');
+      const subjectInput = document.getElementById('draftSubject');
+      const toSelect = document.getElementById('draftTo');
+      const header = document.getElementById('draftHeader');
+      const bodyInput = document.getElementById('draftBodyInput');
+
+      header.textContent = `Draft email to ${contact.name || 'contact'}`;
+      document.getElementById('draftSubtitle').textContent = `${contact.title || ''}${contact.department ? ' · ' + contact.department : ''}`;
+
+      const verified = contact.business_emails || [];
+      const predicted = contact.predicted_emails || [];
+      const opts = [];
+      verified.forEach(e => opts.push({ value: e, label: `${e} (verified)`, verified: true }));
+      predicted.forEach(e => opts.push({ value: e, label: `${e} (predicted)`, verified: false }));
+      if (opts.length === 0) opts.push({ value: '', label: 'No email available — use LinkedIn', verified: false });
+      toSelect.innerHTML = opts.map(o => `<option value="${o.value}">${o.label}</option>`).join('');
+
+      const defaultSubject = `Partnership inquiry: ${(currentQuery || 'supply chain').slice(0, 80)}`;
+      subjectInput.value = defaultSubject;
+      bodyInput.value = '';
+      body.classList.remove('hidden');
+      body.innerHTML = '<div class="shimmer h-4 w-full rounded mb-2"></div><div class="shimmer h-4 w-5/6 rounded mb-2"></div><div class="shimmer h-4 w-2/3 rounded"></div><p class="text-xs text-surface-300 mt-2">Crafting personalized email with company + contact intelligence…</p>';
+
+      panel.classList.remove('hidden');
+      setTimeout(() => panel.classList.add('open'), 10);
 
       try {
         const resp = await fetch('/api/outreach', {
@@ -462,16 +545,47 @@
         });
         if (!resp.ok) throw new Error('Failed');
         const data = await resp.json();
-        outreachDiv.innerHTML = `
-          <div class="flex items-center justify-between mb-2">
-            <span class="text-sm font-semibold text-brand-800">Personalized Email to ${contact.name}</span>
-            <button onclick="navigator.clipboard.writeText(this.closest('.fade-in').querySelector('.email-body').textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})" class="text-xs px-2 py-1 bg-white rounded hover:bg-brand-100 transition">Copy</button>
-          </div>
-          <p class="email-body text-sm text-surface-800 whitespace-pre-wrap leading-relaxed">${data.email}</p>
-        `;
+        bodyInput.value = `Hi ${((contact.name || '').split(' ')[0]) || 'there'},\n\n${data.email}`;
+        body.classList.add('hidden');
       } catch {
-        outreachDiv.innerHTML = '<p class="text-sm text-red-600">Could not generate outreach email.</p>';
+        body.innerHTML = '<p class="text-sm text-red-600">Could not generate email. You can still write one below.</p>';
+        bodyInput.value = `Hi ${((contact.name || '').split(' ')[0]) || 'there'},\n\n`;
       }
+    }
+
+    function closeDraftPanel() {
+      const panel = document.getElementById('draftPanel');
+      panel.classList.remove('open');
+      setTimeout(() => panel.classList.add('hidden'), 200);
+    }
+
+    function copyDraft() {
+      const subject = document.getElementById('draftSubject').value;
+      const body = document.getElementById('draftBodyInput').value;
+      const text = `Subject: ${subject}\n\n${body}`;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copyDraftBtn');
+        const orig = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = orig, 1500);
+      });
+    }
+
+    function openInGmail() {
+      const to = document.getElementById('draftTo').value;
+      const subject = encodeURIComponent(document.getElementById('draftSubject').value);
+      const body = encodeURIComponent(document.getElementById('draftBodyInput').value);
+      if (!to) { alert('No email address selected. Use LinkedIn or copy the draft.'); return; }
+      const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${subject}&body=${body}`;
+      window.open(url, '_blank');
+    }
+
+    function openInMailto() {
+      const to = document.getElementById('draftTo').value;
+      const subject = encodeURIComponent(document.getElementById('draftSubject').value);
+      const body = encodeURIComponent(document.getElementById('draftBodyInput').value);
+      if (!to) { alert('No email address selected.'); return; }
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
     }
 
     function closeModal() {

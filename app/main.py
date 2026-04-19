@@ -136,14 +136,71 @@ async def outreach(req: OutreachRequest) -> dict[str, str]:
     return {"email": email}
 
 
+DEPT_KEYWORDS: dict[str, list[str]] = {
+    "Sales & Business Development": ["sales", "business development", "bd ", "account executive", "revenue"],
+    "Procurement & Supply Chain": ["procurement", "purchasing", "supply chain", "sourcing", "buyer", "logistics"],
+    "Engineering & R&D": ["engineer", "cto", "r&d", "research", "developer", "architect", "technical"],
+    "Operations & Manufacturing": ["operations", "coo", "manufacturing", "production", "plant", "factory"],
+    "Executive & Leadership": ["ceo", "founder", "co-founder", "president", "managing director", "owner"],
+    "Finance": ["cfo", "finance", "accounting", "controller", "treasurer"],
+    "Marketing": ["marketing", "cmo", "brand", "communications", "pr "],
+    "Human Resources": ["hr", "people", "talent", "recruit", "chro"],
+    "Product": ["product manager", "product owner", "cpo"],
+    "Legal & Compliance": ["legal", "counsel", "compliance", "regulatory"],
+}
+
+
+def _infer_department(department: str, title: str) -> str:
+    if department:
+        return department
+    t = (title or "").lower()
+    for dept, keywords in DEPT_KEYWORDS.items():
+        if any(k in t for k in keywords):
+            return dept
+    return "Other"
+
+
+def _normalize_name_part(s: str) -> str:
+    return "".join(ch for ch in s.lower() if ch.isalpha())
+
+
+def _predict_emails(name: str, domain: str) -> list[str]:
+    if not name or not domain:
+        return []
+    parts = [p for p in name.strip().split() if p]
+    if len(parts) < 1:
+        return []
+    first = _normalize_name_part(parts[0])
+    last = _normalize_name_part(parts[-1]) if len(parts) > 1 else ""
+    if not first:
+        return []
+    patterns: list[str] = []
+    if last:
+        patterns.extend([
+            f"{first}.{last}@{domain}",
+            f"{first}{last}@{domain}",
+            f"{first[0]}{last}@{domain}",
+            f"{first}_{last}@{domain}",
+            f"{first}-{last}@{domain}",
+        ])
+    patterns.append(f"{first}@{domain}")
+    seen: list[str] = []
+    for p in patterns:
+        if p not in seen:
+            seen.append(p)
+    return seen[:5]
+
+
 @app.get("/api/contacts")
 async def get_contacts(domain: str = Query(...)) -> dict[str, Any]:
     if not client:
         raise HTTPException(status_code=500, detail="Client not initialized")
     try:
-        data = await client.search_people(domain, limit=10)
+        data = await client.search_people(domain, limit=25)
+    except httpx.HTTPStatusError as e:
+        raise HTTPException(status_code=502, detail=f"Crustdata API error {e.response.status_code}: {e.response.text[:300]}")
     except Exception as e:
-        raise HTTPException(status_code=502, detail=f"Crustdata API error: {e}")
+        raise HTTPException(status_code=502, detail=f"Crustdata API error: {type(e).__name__}: {e}")
 
     people = data.get("profiles", data.get("people", []))
     contacts = []
@@ -159,17 +216,34 @@ async def get_contacts(domain: str = Query(...)) -> dict[str, Any]:
         if isinstance(loc, dict):
             loc = loc.get("raw", "")
 
+        title = current.get("title", "")
+        raw_dept = current.get("function_category", "")
+        department = _infer_department(raw_dept, title)
+        business_emails = contact_info.get("business_emails", []) or []
+        predicted = _predict_emails(name, domain) if not business_emails else []
+
         contacts.append({
             "name": name,
-            "title": current.get("title", ""),
+            "title": title,
             "seniority": current.get("seniority_level", ""),
-            "department": current.get("function_category", ""),
+            "department": department,
             "linkedin": basic.get("professional_network_url", ""),
-            "business_emails": contact_info.get("business_emails", []),
+            "business_emails": business_emails,
+            "predicted_emails": predicted,
             "location": loc,
         })
 
-    return {"contacts": contacts, "total": len(contacts)}
+    groups: dict[str, list[dict[str, Any]]] = {}
+    for c in contacts:
+        groups.setdefault(c["department"], []).append(c)
+
+    dept_order = list(DEPT_KEYWORDS.keys()) + ["Other"]
+    ordered = [{"department": d, "contacts": groups[d]} for d in dept_order if d in groups]
+    for d in groups:
+        if d not in dept_order:
+            ordered.append({"department": d, "contacts": groups[d]})
+
+    return {"contacts": contacts, "groups": ordered, "total": len(contacts)}
 
 
 @app.get("/api/enrich")
@@ -207,7 +281,7 @@ async def voice_to_text(file: UploadFile = File(...)) -> dict[str, str]:
             files={"file": (file.filename or "audio.webm", audio_bytes, file.content_type or "audio/webm")},
             data={
                 "model": "saarika:v2.5",
-                "language_code": "hi-IN",
+                "language_code": "unknown",
             },
         )
 
